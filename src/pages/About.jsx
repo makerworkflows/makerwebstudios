@@ -1,7 +1,7 @@
 import { CheckCircle } from 'lucide-react';
 
 const About = () => (
-  <div className="container fade-in" style={{ padding: '5rem 1.5rem', minHeight: '80vh' }}>
+  <div id="about" className="container fade-in" style={{ padding: '5rem 1.5rem', minHeight: '80vh' }}>
     <h1 style={{ textAlign: 'center', marginBottom: '1rem' }}>Our Story</h1>
     <p style={{ textAlign: 'center', color: 'var(--text-muted)', marginBottom: '4rem', fontSize: '1.25rem' }}>
       16 Years on the floor. Now building your digital presence.

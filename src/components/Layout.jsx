@@ -1,8 +1,7 @@
-import { Outlet, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
-const Layout = () => {
+const Layout = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -14,23 +13,23 @@ const Layout = () => {
         padding: '1.25rem 0'
       }}>
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Link to="/" style={{ color: 'var(--text-dark)', fontSize: '1.5rem', fontWeight: '800', letterSpacing: '-0.05em', textDecoration: 'none' }}>
+          <a href="#home" style={{ color: 'var(--text-dark)', fontSize: '1.5rem', fontWeight: '800', letterSpacing: '-0.05em', textDecoration: 'none' }}>
             MAKER WEB STUDIO
-          </Link>
+          </a>
 
           {/* Desktop Nav */}
           <nav style={{ display: 'flex', gap: '2.5rem', alignItems: 'center' }} className="desktop-nav">
-            <Link to="/services" style={{ color: 'var(--text-dark)', fontWeight: '500' }}>Services</Link>
-            <Link to="/process" style={{ color: 'var(--text-dark)', fontWeight: '500' }}>Process</Link>
-            <Link to="/portfolio" style={{ color: 'var(--text-dark)', fontWeight: '500' }}>Portfolio</Link>
-            <Link to="/about" style={{ color: 'var(--text-dark)', fontWeight: '500' }}>About</Link>
-            <Link to="/contact" className="btn btn-primary">Get Free Audit</Link>
+            <a href="#services" style={{ color: 'var(--text-dark)', fontWeight: '500' }}>Services</a>
+            <a href="#process" style={{ color: 'var(--text-dark)', fontWeight: '500' }}>Process</a>
+            <a href="#portfolio" style={{ color: 'var(--text-dark)', fontWeight: '500' }}>Portfolio</a>
+            <a href="#about" style={{ color: 'var(--text-dark)', fontWeight: '500' }}>About</a>
+            <a href="#contact" className="btn btn-primary">Get Free Audit</a>
           </nav>
         </div>
       </header>
 
       <main style={{ flex: 1 }}>
-        <Outlet />
+        {children}
       </main>
 
       <footer className="dark-section" style={{ 
@@ -46,15 +45,15 @@ const Layout = () => {
             <div>
               <h4 style={{ color: 'var(--clean-white)', marginBottom: '1.5rem', fontSize: '1.1rem' }}>Quick Links</h4>
               <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                <li><Link to="/services" style={{ color: 'var(--text-muted)' }}>Services</Link></li>
-                <li><Link to="/portfolio" style={{ color: 'var(--text-muted)' }}>Portfolio</Link></li>
-                <li><Link to="/about" style={{ color: 'var(--text-muted)' }}>About</Link></li>
+                <li><a href="#services" style={{ color: 'var(--text-muted)' }}>Services</a></li>
+                <li><a href="#portfolio" style={{ color: 'var(--text-muted)' }}>Portfolio</a></li>
+                <li><a href="#about" style={{ color: 'var(--text-muted)' }}>About</a></li>
               </ul>
             </div>
             <div>
               <h4 style={{ color: 'var(--clean-white)', marginBottom: '1.5rem', fontSize: '1.1rem' }}>Contact</h4>
               <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem' }}>Mission, TX</p>
-              <Link to="/contact" className="btn btn-primary">Request a Quote</Link>
+              <a href="#contact" className="btn btn-primary">Request a Quote</a>
             </div>
           </div>
           <div style={{ textAlign: 'center', paddingTop: '2.5rem', borderTop: '1px solid rgba(255,255,255,0.1)', color: 'var(--text-muted)', fontSize: '0.875rem' }}>

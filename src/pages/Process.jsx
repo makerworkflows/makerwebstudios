@@ -1,5 +1,5 @@
 const Process = () => (
-  <div className="fade-in" style={{ backgroundColor: 'var(--bg-color)', minHeight: '100vh', paddingBottom: '6rem' }}>
+  <div id="process" className="fade-in" style={{ backgroundColor: 'var(--bg-color)', minHeight: '100vh', paddingBottom: '6rem' }}>
     
     {/* Header / Intro */}
     <section className="dark-section blueprint-bg" style={{ padding: '8rem 0 6rem', textAlign: 'center' }}>

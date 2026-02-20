@@ -1,5 +1,5 @@
 const Services = () => (
-  <div className="container fade-in" style={{ padding: '4rem 1.5rem' }}>
+  <div id="services" className="container fade-in" style={{ padding: '4rem 1.5rem' }}>
     <h1 style={{ marginBottom: '1rem', textAlign: 'center' }}>Transparent Pricing for Manufacturers</h1>
     <p style={{ textAlign: 'center', marginBottom: '4rem', color: 'var(--text-muted)' }}>
       No surprise invoices. Fixed-price packages tailored to industrial B2B companies.

@@ -1,5 +1,5 @@
 const Portfolio = () => (
-  <div className="container fade-in" style={{ padding: '5rem 1.5rem', minHeight: '80vh' }}>
+  <div id="portfolio" className="container fade-in" style={{ padding: '5rem 1.5rem', minHeight: '80vh' }}>
     <h1 style={{ textAlign: 'center', marginBottom: '1rem' }}>Our Work</h1>
     <p style={{ textAlign: 'center', color: 'var(--text-muted)', marginBottom: '4rem', fontSize: '1.25rem' }}>
       Real results for real manufacturers.

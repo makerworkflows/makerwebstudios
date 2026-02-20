@@ -1,9 +1,8 @@
-import { Link } from 'react-router-dom';
 import { ShieldCheck, MapPin, Code, DollarSign, Clock, CheckCircle2 } from 'lucide-react';
 
 const Home = () => {
   return (
-    <div className="fade-in">
+    <div id="home" className="fade-in">
       {/* Hero Section */}
       <section className="dark-section blueprint-bg" style={{ 
         padding: '8rem 0 6rem',
@@ -37,8 +36,8 @@ const Home = () => {
             77% of B2B buyers research suppliers online before making contact. If your site is slow, outdated, or missing a capabilities page — they're choosing your competitor before they ever call you.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link to="/contact" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.125rem' }}>Get a Free Website Audit</Link>
-            <Link to="/portfolio" className="btn btn-secondary" style={{ padding: '1rem 2rem', fontSize: '1.125rem', borderColor: 'rgba(255,255,255,0.2)', color: 'var(--clean-white)' }}>View Case Studies</Link>
+            <a href="#contact" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.125rem' }}>Get a Free Website Audit</a>
+            <a href="#portfolio" className="btn btn-secondary" style={{ padding: '1rem 2rem', fontSize: '1.125rem', borderColor: 'rgba(255,255,255,0.2)', color: 'var(--clean-white)' }}>View Case Studies</a>
           </div>
         </div>
       </section>
@@ -129,9 +128,9 @@ const Home = () => {
               ))}
             </ul>
             
-            <Link to="/contact" className="btn btn-primary" style={{ padding: '1rem 3rem', fontSize: '1.25rem' }}>
+            <a href="#contact" className="btn btn-primary" style={{ padding: '1rem 3rem', fontSize: '1.25rem' }}>
               Get Your Free Audit — No Obligation
-            </Link>
+            </a>
           </div>
         </div>
       </section>
