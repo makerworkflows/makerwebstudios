@@ -36,8 +36,8 @@ const Home = () => {
             77% of B2B buyers research suppliers online before making contact. If your site is slow, outdated, or missing a capabilities page — they're choosing your competitor before they ever call you.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="#contact" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.125rem' }}>Get a Free Website Audit</a>
-            <a href="#portfolio" className="btn btn-secondary" style={{ padding: '1rem 2rem', fontSize: '1.125rem', borderColor: 'rgba(255,255,255,0.2)', color: 'var(--clean-white)' }}>View Case Studies</a>
+            <a href="#contact" className="btn btn-transparent" style={{ padding: '1rem 2rem', fontSize: '1.125rem' }}>Book a Call</a>
+            <a href="https://buy.stripe.com/00wcN497hb25dXtfLJ87K01" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.125rem' }}>Get Started — $3,500</a>
           </div>
         </div>
       </section>
@@ -128,9 +128,14 @@ const Home = () => {
               ))}
             </ul>
             
-            <a href="#contact" className="btn btn-primary" style={{ padding: '1rem 3rem', fontSize: '1.25rem' }}>
-              Get Your Free Audit — No Obligation
-            </a>
+            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <a href="#contact" className="btn btn-transparent" style={{ padding: '1rem 3rem', fontSize: '1.25rem', color: 'var(--clean-white)' }}>
+                Book a Call
+              </a>
+              <a href="https://buy.stripe.com/00wcN497hb25dXtfLJ87K01" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '1rem 3rem', fontSize: '1.25rem' }}>
+                Get Started — $3,500
+              </a>
+            </div>
           </div>
         </div>
       </section>

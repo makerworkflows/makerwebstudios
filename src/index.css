@@ -13,7 +13,7 @@ html {
   --industrial-orange: #ff6b00; /* More vibrant electric orange */
   --industrial-orange-light: #ffaa66;
   --industrial-orange-dark: #cc5500;
-  
+
   --accent-blue: #8eb9fa; /* Soft vibrant blue inspired by Knit Studios */
 
   --clean-white: #ffffff;
@@ -128,6 +128,24 @@ a:hover {
   transform: translateY(-2px);
 }
 
+.btn-sm {
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: var(--border-radius-sm);
+}
+
+.btn-transparent {
+  background-color: transparent;
+  color: var(--text-dark);
+  border: 2px solid var(--text-dark);
+}
+
+.btn-transparent:hover {
+  background-color: var(--text-dark);
+  color: var(--clean-white);
+}
+
 /* UI Structure Utilities */
 .dark-section {
   background-color: var(--dark-bg);
@@ -172,7 +190,9 @@ a:hover {
   border-radius: var(--border-radius);
   padding: 2.5rem;
   box-shadow: var(--box-shadow);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
   position: relative;
 }
@@ -184,14 +204,16 @@ a:hover {
 
 /* Grid Lines Accents (Manufacturing context) */
 .blueprint-bg {
-  background-image: linear-gradient(var(--border-color) 1px, transparent 1px),
+  background-image:
+    linear-gradient(var(--border-color) 1px, transparent 1px),
     linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
   background-size: 40px 40px;
   background-position: center top;
 }
 
 .dark-section.blueprint-bg {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
 }
 
