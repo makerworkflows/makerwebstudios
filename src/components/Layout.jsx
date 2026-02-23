@@ -94,7 +94,7 @@ const Layout = ({ children }) => {
                 rel="noopener noreferrer"
                 className="btn btn-sm btn-primary"
               >
-                Get Started
+                Get Started — $3,500
               </a>
             </div>
           </nav>
