@@ -1,45 +1,23 @@
-import { Mail, Phone, MapPin } from 'lucide-react';
-
 const Contact = () => {
   return (
-    <div id="contact" className="container fade-in" style={{ padding: '5rem 1.5rem', minHeight: '80vh' }}>
-      <h1 style={{ textAlign: 'center', marginBottom: '1rem' }}>Get In Touch</h1>
-      <p style={{ textAlign: 'center', color: 'var(--text-muted)', marginBottom: '4rem', fontSize: '1.25rem' }}>
-        We are always happy to discuss your specific needs before moving forward.
-      </p>
-
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', maxWidth: '400px', margin: '0 auto', backgroundColor: 'var(--clean-white)', padding: '3rem', borderRadius: 'var(--border-radius)', boxShadow: 'var(--box-shadow)' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <div style={{ backgroundColor: '#e2e8f0', padding: '1rem', borderRadius: '50%' }}>
-            <MapPin color="var(--industrial-orange)" />
-          </div>
-          <div>
-            <h4 style={{ margin: 0, color: 'var(--steel-blue-dark)' }}>Location</h4>
-            <p style={{ color: 'var(--text-muted)', margin: 0 }}>Mission, Texas (Serving RGV & Statewide)</p>
-          </div>
-        </div>
-
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <div style={{ backgroundColor: '#e2e8f0', padding: '1rem', borderRadius: '50%' }}>
-            <Mail color="var(--industrial-orange)" />
-          </div>
-          <div>
-            <h4 style={{ margin: 0, color: 'var(--steel-blue-dark)' }}>Email</h4>
-            <p style={{ color: 'var(--text-muted)', margin: 0 }}>hello@makerwebstudio.com</p>
-          </div>
-        </div>
-
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <div style={{ backgroundColor: '#e2e8f0', padding: '1rem', borderRadius: '50%' }}>
-            <Phone color="var(--industrial-orange)" />
-          </div>
-          <div>
-            <h4 style={{ margin: 0, color: 'var(--steel-blue-dark)' }}>Call Us</h4>
-            <p style={{ color: 'var(--text-muted)', margin: 0 }}>(956) 555-0123</p>
-          </div>
+    <section id="contact" className="dark-section" style={{ padding: '8rem 0', textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+      <div className="container fade-in" style={{ maxWidth: '800px', margin: '0 auto' }}>
+        <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', marginBottom: '1.5rem', fontWeight: '800', letterSpacing: '-0.02em', color: 'var(--clean-white)' }}>
+          Ready to Get Started?
+        </h2>
+        <p style={{ fontSize: '1.25rem', color: 'var(--text-muted)', marginBottom: '3rem', lineHeight: '1.7', maxWidth: '600px', margin: '0 auto 3rem' }}>
+          Stop losing bids to competitors with better digital presence. Book a discovery call or get started right away.
+        </p>
+        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
+          <a href="#contact" className="btn btn-transparent" style={{ padding: '1rem 2.5rem', fontSize: '1.125rem' }}>
+            Book a Call
+          </a>
+          <a href="https://buy.stripe.com/00wcN497hb25dXtfLJ87K01" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '1rem 2.5rem', fontSize: '1.125rem' }}>
+            Get Started
+          </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
