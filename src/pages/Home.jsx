@@ -27,7 +27,7 @@ const Home = () => {
         
         <div className="container text-center" style={{ position: 'relative', zIndex: 1, maxWidth: '900px' }}>
           <div style={{ display: 'inline-block', padding: '0.5rem 1rem', background: 'rgba(255,107,0,0.1)', border: '1px solid rgba(255,107,0,0.2)', borderRadius: '2rem', color: 'var(--industrial-orange)', fontSize: '0.875rem', fontWeight: '600', marginBottom: '2rem', letterSpacing: '0.05em' }}>
-            WEB DESIGN FOR MANUFACTURERS
+            WEB DESIGN FOR MANUFACTURERS, BY MANUFACTURERS
           </div>
           <h1 style={{ marginBottom: '1.5rem', fontSize: 'clamp(3rem, 5vw, 4.5rem)', fontWeight: '800', lineHeight: '1.05', letterSpacing: '-0.03em' }}>
             Your Website Is Losing You Bids <span style={{ color: 'var(--accent-blue)' }}>You Don't Even Know About.</span>
