@@ -30,6 +30,17 @@ html {
   --box-shadow-hover: 0 12px 24px -4px rgba(0, 0, 0, 0.1);
 }
 
+[data-theme='dark'] {
+  --clean-white: #1e293b;
+  --bg-color: #0f172a;
+  --dark-bg: #020617;
+  --text-dark: #f8fafc;
+  --text-muted: #cbd5e1;
+  --border-color: #334155;
+  --box-shadow: 0 4px 9px 0px rgba(0, 0, 0, 0.4);
+  --box-shadow-hover: 0 12px 24px -4px rgba(0, 0, 0, 0.6);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -158,7 +169,13 @@ a:hover {
 .dark-section h4,
 .dark-section h5,
 .dark-section h6 {
-  color: var(--clean-white);
+  color: #ffffff !important;
+}
+
+.dark-section p,
+.dark-section div,
+.dark-section span {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .glass-nav {
@@ -166,6 +183,11 @@ a:hover {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+[data-theme='dark'] .glass-nav {
+  background: rgba(15, 23, 42, 0.75);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Bento Grid System */

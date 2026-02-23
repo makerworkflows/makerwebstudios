@@ -1,8 +1,24 @@
-import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const Layout = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const initialTheme = savedTheme ? savedTheme : (prefersDark ? "dark" : "light");
+    setTheme(initialTheme);
+    document.documentElement.setAttribute("data-theme", initialTheme);
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+    document.documentElement.setAttribute("data-theme", newTheme);
+  };
 
   return (
     <div
@@ -49,36 +65,28 @@ const Layout = ({ children }) => {
 
           {/* Desktop Nav */}
           <nav
-            style={{ display: "flex", gap: "2.5rem", alignItems: "center" }}
+            style={{ display: "flex", gap: "1.5rem", alignItems: "center" }}
             className="desktop-nav"
           >
-            <a
-              href="#services"
-              style={{ color: "var(--text-dark)", fontWeight: "500" }}
+            <button
+              onClick={toggleTheme}
+              style={{
+                background: "transparent",
+                border: "none",
+                cursor: "pointer",
+                color: "var(--text-dark)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: "0.5rem",
+              }}
+              title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
             >
-              Services
-            </a>
-            <a
-              href="#process"
-              style={{ color: "var(--text-dark)", fontWeight: "500" }}
-            >
-              Process
-            </a>
-            <a
-              href="#portfolio"
-              style={{ color: "var(--text-dark)", fontWeight: "500" }}
-            >
-              Portfolio
-            </a>
-            <a
-              href="#about"
-              style={{ color: "var(--text-dark)", fontWeight: "500" }}
-            >
-              About
-            </a>
+              {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
+            </button>
             <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
               <a href="#contact" className="btn btn-sm btn-transparent">
-                Book a Call
+                Book Now
               </a>
               <a
                 href="https://buy.stripe.com/00wcN497hb25dXtfLJ87K01"
@@ -86,7 +94,7 @@ const Layout = ({ children }) => {
                 rel="noopener noreferrer"
                 className="btn btn-sm btn-primary"
               >
-                Get Started — $3,500
+                Get Started
               </a>
             </div>
           </nav>
@@ -254,7 +262,17 @@ const Layout = ({ children }) => {
       {/* Basic responsive styles hack for now */}
       <style>{`
         @media (max-width: 768px) {
-          .desktop-nav { display: none !important; }
+          .desktop-nav { 
+            gap: 0.75rem !important; 
+          }
+          header .container {
+            flex-direction: column;
+            gap: 1rem;
+          }
+          .btn-sm {
+            padding: 6px 12px !important;
+            font-size: 0.8rem !important;
+          }
         }
         .desktop-nav a {
           transition: color 0.2s ease, transform 0.2s ease;
