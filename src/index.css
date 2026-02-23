@@ -147,14 +147,29 @@ a:hover {
 }
 
 .btn-transparent {
-  background-color: transparent;
+  background-color: rgba(255, 107, 0, 0.05);
   color: var(--text-dark);
-  border: 2px solid var(--text-dark);
+  border: 1px solid var(--border-color);
 }
 
 .btn-transparent:hover {
-  background-color: var(--text-dark);
+  background-color: rgba(255, 107, 0, 0.1);
+  color: var(--industrial-orange);
+  border-color: var(--industrial-orange);
+}
+
+[data-theme='dark'] .btn-transparent,
+.dark-section .btn-transparent {
+  background-color: rgba(255, 255, 255, 0.05);
   color: var(--clean-white);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+[data-theme='dark'] .btn-transparent:hover,
+.dark-section .btn-transparent:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--industrial-orange);
+  border-color: var(--industrial-orange);
 }
 
 /* UI Structure Utilities */

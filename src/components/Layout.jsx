@@ -195,10 +195,6 @@ const Layout = ({ children }) => {
                 <a
                   href="#contact"
                   className="btn btn-transparent"
-                  style={{
-                    color: "var(--clean-white)",
-                    borderColor: "var(--clean-white)",
-                  }}
                 >
                   Book a Call
                 </a>
