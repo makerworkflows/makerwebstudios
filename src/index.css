@@ -30,7 +30,7 @@ html {
   --box-shadow-hover: 0 12px 24px -4px rgba(0, 0, 0, 0.1);
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
   --clean-white: #1e293b;
   --bg-color: #0f172a;
   --dark-bg: #020617;
@@ -158,14 +158,14 @@ a:hover {
   border-color: var(--industrial-orange);
 }
 
-[data-theme='dark'] .btn-transparent,
+[data-theme="dark"] .btn-transparent,
 .dark-section .btn-transparent {
-  background-color: var(--clean-white);
-  color: var(--dark-bg);
-  border: 1px solid var(--clean-white);
+  background-color: transparent;
+  color: var(--text-dark);
+  border: 1px solid var(--text-dark);
 }
 
-[data-theme='dark'] .btn-transparent:hover,
+[data-theme="dark"] .btn-transparent:hover,
 .dark-section .btn-transparent:hover {
   background-color: var(--industrial-orange);
   color: var(--clean-white);
@@ -200,7 +200,7 @@ a:hover {
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-[data-theme='dark'] .glass-nav {
+[data-theme="dark"] .glass-nav {
   background: rgba(15, 23, 42, 0.75);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }

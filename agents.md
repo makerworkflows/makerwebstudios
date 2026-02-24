@@ -7,16 +7,19 @@ You operate within a 3-layer architecture that separates concerns to maximize re
 ## The 3-Layer Architecture
 
 **Layer 1: Directive (What to do)**
+
 - Basically just SOPs written in Markdown, live in `directives/`
 - Define the goals, inputs, tools/scripts to use, outputs, and edge cases
 - Natural language instructions, like you'd give a mid-level employee
 
 **Layer 2: Orchestration (Decision making)**
+
 - This is you. Your job: intelligent routing.
 - Read directives, call execution tools in the right order, handle errors, ask for clarification, update directives with learnings
 - You're the glue between intent and execution. E.g you don't try scraping websites yourself—you read `directives/scrape_website.md` and come up with inputs/outputs and then run `execution/scrape_single_site.py`
 
 **Layer 3: Execution (Doing the work)**
+
 - Deterministic Python scripts in `execution/`
 - Environment variables, api tokens, etc are stored in `.env`
 - Handle API calls, data processing, file operations, database interactions
@@ -30,6 +33,7 @@ You operate within a 3-layer architecture that separates concerns to maximize re
 Before writing a script, check `execution/` per your directive. Only create new scripts if none exist.
 
 **2. Self-anneal when things break**
+
 - Read error message and stack trace
 - Fix the script and test it again (unless it uses paid tokens/credits/etc—in which case you check w user first)
 - Update the directive with what you learned (API limits, timing, edge cases)
@@ -41,6 +45,7 @@ Directives are living documents. When you discover API constraints, better appro
 ## Self-annealing loop
 
 Errors are learning opportunities. When something breaks:
+
 1. Fix it
 2. Update the tool
 3. Test tool, make sure it works
@@ -48,17 +53,19 @@ Errors are learning opportunities. When something breaks:
 5. System is now stronger
 
 **4. Auto-Push to GitHub**
+
 - After any set of approved changes to the project files (especially website code), automatically push the changes to the connected GitHub repository.
 - Ensure the remote is always in sync with the local state.
-
 
 ## File Organization
 
 **Deliverables vs Intermediates:**
+
 - **Deliverables**: Google Sheets, Google Slides, or other cloud-based outputs that the user can access
 - **Intermediates**: Temporary files needed during processing
 
 **Directory structure:**
+
 - `.tmp/` - All intermediate files (dossiers, scraped data, temp exports). Never commit, always regenerated.
 - `execution/` - Python scripts (the deterministic tools)
 - `directives/` - SOPs in Markdown (the instruction set)
@@ -66,6 +73,16 @@ Errors are learning opportunities. When something breaks:
 - `credentials.json`, `token.json` - Google OAuth credentials (required files, in `.gitignore`)
 
 **Key principle:** Local files are only for processing. Deliverables live in cloud services (Google Sheets, Slides, etc.) where the user can access them. Everything in `.tmp/` can be deleted and regenerated.
+
+## GitHub Repositories and LocalHost
+
+- If there is a GitHub repository connected, always push the changes to the connected GitHub repository.
+- If there is a localhost server running, always push the changes to the connected GitHub repository.
+- After every change, always offer a localhost link to the user to view the changes.
+
+## Desktop & Mobile Version Control
+
+- After every successful update or change to the code, always remember to curate the mobile version so that both versions, Desktop & Mobile, are always in sync.
 
 ## Summary
 
