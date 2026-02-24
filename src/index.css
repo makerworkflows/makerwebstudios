@@ -125,9 +125,7 @@ a:hover {
 
 .btn-primary:hover {
   background-color: var(--industrial-orange-dark);
-  color: var(
-    --industrial-orange-dark
-  ); /* Hide text on hover by matching background */
+  color: var(--clean-white);
 }
 
 .btn-secondary {
