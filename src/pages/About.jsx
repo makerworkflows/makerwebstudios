@@ -1,33 +1,28 @@
 import { CheckCircle } from 'lucide-react';
 
 const About = () => (
-  <div id="about" className="container fade-in" style={{ padding: '5rem 1.5rem', minHeight: '80vh' }}>
-    <h1 style={{ textAlign: 'center', marginBottom: '1rem' }}>Our Story</h1>
-    <p style={{ textAlign: 'center', color: 'var(--text-muted)', marginBottom: '4rem', fontSize: '1.25rem' }}>
-      16 Years on the floor. Now building your digital presence.
-    </p>
+  <div id="about" className="container fade-in" style={{ padding: '8rem 1.5rem', minHeight: '80vh' }}>
+    <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+      <h1 style={{ textAlign: 'center', marginBottom: '1.5rem', fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>Our Story</h1>
+      <p style={{ textAlign: 'center', color: 'var(--industrial-orange)', marginBottom: '5rem', fontSize: '1.5rem', fontWeight: '600', lineHeight: '1.4' }}>
+        16 years on the shop floor. Now building digital presences that win manufacturing contracts.
+      </p>
 
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'center' }}>
-      <div>
-        <h2 style={{ marginBottom: '1.5rem' }}>We know what a Mill Spec is.</h2>
-        <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', lineHeight: '1.8' }}>
-          Most web studios are run by designers who have never set foot inside a machine shop. They don't know the difference between 6061 and 7075 aluminum, and they certainly don't know what a procurement manager looks for when vetting suppliers.
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
+        <p style={{ fontSize: '1.25rem', color: 'var(--text-muted)', lineHeight: '1.8' }}>
+          Most web agencies have never run a production line, optimized a supply chain, or survived a regulatory audit.
         </p>
-        <p style={{ color: 'var(--text-muted)', marginBottom: '2rem', lineHeight: '1.8' }}>
-          We spent 16 years building and running manufacturing operations in the Rio Grande Valley. We've hired machinists, bought Haas mills, undergone ISO audits, and fought for aerospace contracts. We know exactly what your buyers need to see to give you the PO.
+        
+        <p style={{ fontSize: '2.5rem', fontWeight: '800', color: 'var(--text-dark)', margin: '0' }}>
+          We have.
         </p>
-        <ul style={{ listStyleType: 'none', padding: 0 }}>
-          {['Deep understanding of industrial B2B sales cycles', 'We write your technical copy for you', 'No explaining what a "tolerance" is'].map((item, i) => (
-            <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', color: 'var(--steel-blue-dark)', fontWeight: '500' }}>
-              <CheckCircle size={18} color="var(--industrial-orange)" /> {item}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div style={{ backgroundColor: '#f1f5f9', padding: '3rem', borderRadius: 'var(--border-radius)', border: '1px solid var(--border-color)' }}>
-        <h3 style={{ marginBottom: '1rem', color: 'var(--industrial-orange)' }}>The RGV Advantage</h3>
-        <p style={{ color: 'var(--text-muted)', lineHeight: '1.8' }}>
-          Located in Mission, TX, we are perfectly positioned to serve the booming manufacturing corridor along the US-Mexico border and throughout Texas. We understand bilingual requirements, maquiladora supplier networks, and the unique challenges of South Texas manufacturing.
+
+        <p style={{ fontSize: '1.125rem', color: 'var(--text-muted)', lineHeight: '1.9' }}>
+          For 16 years, we scaled regulated manufacturing operations in the Rio Grande Valley — leading teams, implementing ISO 9001 systems (70+ procedures), driving 4x revenue growth, and maintaining certifications like GMP, HACCP, SQF, and more. We know what procurement demands: proven compliance, process discipline, and reliable capability.
+        </p>
+
+        <p style={{ fontSize: '1.125rem', color: 'var(--text-muted)', lineHeight: '1.9', padding: '2rem', borderLeft: '4px solid var(--industrial-orange)', backgroundColor: 'rgba(255,107,0,0.03)', borderRadius: '0 12px 12px 0' }}>
+          Now we craft websites, messaging, and visuals that pass the buyer gut-check instantly — so you close more deals and focus on production.
         </p>
       </div>
     </div>

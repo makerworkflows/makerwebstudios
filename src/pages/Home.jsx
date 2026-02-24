@@ -32,7 +32,7 @@ const Home = () => {
           <h1 style={{ marginBottom: '1.5rem', fontSize: 'clamp(3rem, 5vw, 4.5rem)', fontWeight: '800', lineHeight: '1.05', letterSpacing: '-0.03em' }}>
             Your Website Is Losing You Bids <span style={{ color: 'var(--accent-blue)' }}>You Don't Even Know About.</span>
           </h1>
-          <p style={{ fontSize: '1.25rem', color: 'var(--text-muted)', margin: '0 auto 3rem', lineHeight: '1.7', maxWidth: '750px' }}>
+          <p style={{ fontSize: '1.25rem', color: 'var(--text-muted)', margin: '0 auto 3rem', lineHeight: '1.7', maxWidth: '750px', fontWeight: '700' }}>
             77% of B2B buyers research suppliers online before making contact. If your site is slow, outdated, or missing a capabilities page — they're choosing your competitor before they ever call you.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>

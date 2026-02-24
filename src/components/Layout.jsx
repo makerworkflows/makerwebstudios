@@ -182,9 +182,6 @@ const Layout = ({ children }) => {
               >
                 Contact
               </h4>
-              <p style={{ color: "var(--text-muted)", marginBottom: "1.5rem" }}>
-                Mission, TX
-              </p>
               <div
                 style={{
                   display: "flex",
@@ -261,15 +258,20 @@ const Layout = ({ children }) => {
       <style>{`
         @media (max-width: 768px) {
           .desktop-nav { 
-            gap: 0.75rem !important; 
+            gap: 0.5rem !important; 
           }
           header .container {
-            flex-direction: column;
-            gap: 1rem;
+            flex-direction: row !important;
+            justify-content: space-between !important;
+            gap: 0.5rem !important;
+            padding: 0 1rem !important;
+          }
+          header .container a:first-of-type {
+            font-size: 1.1rem !important;
           }
           .btn-sm {
-            padding: 6px 12px !important;
-            font-size: 0.8rem !important;
+            padding: 6px 10px !important;
+            font-size: 0.75rem !important;
           }
         }
         .desktop-nav a {
