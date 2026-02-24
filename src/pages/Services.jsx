@@ -17,7 +17,7 @@ const Services = () => (
             <li key={i} style={{ padding: '0.5rem 0', borderBottom: '1px solid #e2e8f0' }}>{item}</li>
           ))}
         </ul>
-        <button className="btn btn-primary" style={{ width: '100%' }}>Get Started</button>
+        <a href="https://buy.stripe.com/00w28q5V5dad6v1fLJ87K02" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ display: 'block', textAlign: 'center', width: '100%', textDecoration: 'none' }}>Get Started</a>
       </div>
 
       {/* Modernization Package */}
@@ -31,7 +31,7 @@ const Services = () => (
             <li key={i} style={{ padding: '0.5rem 0', borderBottom: '1px solid #e2e8f0' }}>{item}</li>
           ))}
         </ul>
-        <button className="btn btn-primary" style={{ width: '100%' }}>Get Started</button>
+        <a href="https://buy.stripe.com/00w28q5V5dad6v1fLJ87K02" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ display: 'block', textAlign: 'center', width: '100%', textDecoration: 'none' }}>Get Started</a>
       </div>
       
     </div>

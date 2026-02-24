@@ -85,11 +85,11 @@ const Layout = ({ children }) => {
               {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
             </button>
             <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
-              <a href="https://calendly.com/makerworkflows/compliancecore-gmp-batch-record-auditor" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-transparent">
+              <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-transparent">
                 Book A Call
               </a>
               <a
-                href="https://buy.stripe.com/00wcN497hb25dXtfLJ87K01"
+                href="https://buy.stripe.com/00w28q5V5dad6v1fLJ87K02"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-sm btn-primary"
@@ -193,7 +193,7 @@ const Layout = ({ children }) => {
                 }}
               >
                 <a
-                  href="https://calendly.com/makerworkflows/compliancecore-gmp-batch-record-auditor"
+                  href="https://calendly.com/hello-makerwebstudios/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-transparent"
@@ -201,7 +201,7 @@ const Layout = ({ children }) => {
                   Book a Call
                 </a>
                 <a
-                  href="https://buy.stripe.com/00wcN497hb25dXtfLJ87K01"
+                  href="https://buy.stripe.com/00w28q5V5dad6v1fLJ87K02"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-primary"

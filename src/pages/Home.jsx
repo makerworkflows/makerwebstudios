@@ -36,7 +36,7 @@ const Home = () => {
             77% of B2B buyers research suppliers online before making contact. If your site is slow, outdated, or missing a capabilities page — they're choosing your competitor before they ever call you.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="https://buy.stripe.com/00wcN497hb25dXtfLJ87K01" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.125rem' }}>Get Started — $3,500</a>
+            <a href="https://buy.stripe.com/00w28q5V5dad6v1fLJ87K02" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.125rem' }}>Get Started — $3,500</a>
           </div>
         </div>
       </section>
@@ -128,10 +128,10 @@ const Home = () => {
             </ul>
             
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <a href="https://calendly.com/makerworkflows/compliancecore-gmp-batch-record-auditor" target="_blank" rel="noopener noreferrer" className="btn btn-transparent" style={{ padding: '1rem 3rem', fontSize: '1.25rem' }}>
+              <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-transparent" style={{ padding: '1rem 3rem', fontSize: '1.25rem' }}>
                 Book a Call
               </a>
-              <a href="https://buy.stripe.com/00wcN497hb25dXtfLJ87K01" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '1rem 3rem', fontSize: '1.25rem' }}>
+              <a href="https://buy.stripe.com/00w28q5V5dad6v1fLJ87K02" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '1rem 3rem', fontSize: '1.25rem' }}>
                 Get Started — $3,500
               </a>
             </div>

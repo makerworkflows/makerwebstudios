@@ -9,10 +9,10 @@ const Contact = () => {
           Stop losing bids to competitors with better digital presence. Book a discovery call or get started right away.
         </p>
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
-          <a href="https://calendly.com/makerworkflows/compliancecore-gmp-batch-record-auditor" target="_blank" rel="noopener noreferrer" className="btn btn-transparent" style={{ padding: '1rem 2.5rem', fontSize: '1.125rem' }}>
+          <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-transparent" style={{ padding: '1rem 2.5rem', fontSize: '1.125rem' }}>
             Book a Call
           </a>
-          <a href="https://buy.stripe.com/00wcN497hb25dXtfLJ87K01" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '1rem 2.5rem', fontSize: '1.125rem' }}>
+          <a href="https://buy.stripe.com/00w28q5V5dad6v1fLJ87K02" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '1rem 2.5rem', fontSize: '1.125rem' }}>
             Get Started
           </a>
         </div>
