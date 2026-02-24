@@ -125,7 +125,9 @@ a:hover {
 
 .btn-primary:hover {
   background-color: var(--industrial-orange-dark);
-  color: var(--industrial-orange-dark); /* Hide text on hover by matching background */
+  color: var(
+    --industrial-orange-dark
+  ); /* Hide text on hover by matching background */
 }
 
 .btn-secondary {
@@ -149,27 +151,28 @@ a:hover {
 
 .btn-transparent {
   background-color: transparent;
-  color: var(--text-dark);
-  border: 1px solid var(--text-dark);
+  color: #ffffff; /* Explicit white for visibility */
+  border: 1px solid #ffffff; /* Explicit white outline */
 }
 
 .btn-transparent:hover {
   background-color: var(--industrial-orange);
-  color: var(--clean-white);
+  color: #ffffff;
   border-color: var(--industrial-orange);
 }
 
 /* Ensure navbar button stays solid as per user hint "not the Navbar" */
 .glass-nav .btn-transparent {
-  background-color: var(--text-dark);
-  color: var(--clean-white);
+  background-color: var(--text-dark) !important;
+  color: var(--clean-white) !important;
+  border: none !important;
 }
 
 [data-theme="dark"] .btn-transparent,
 .dark-section .btn-transparent {
   background-color: transparent;
-  color: var(--text-dark);
-  border: 1px solid var(--text-dark);
+  color: #ffffff;
+  border: 1px solid #ffffff;
 }
 
 [data-theme="dark"] .btn-transparent:hover,
