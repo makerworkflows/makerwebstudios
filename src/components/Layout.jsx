@@ -85,8 +85,8 @@ const Layout = ({ children }) => {
               {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
             </button>
             <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
-              <a href="#contact" className="btn btn-sm btn-transparent">
-                Book Now
+              <a href="https://calendly.com/makerworkflows/compliancecore-gmp-batch-record-auditor" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-transparent">
+                Book A Call
               </a>
               <a
                 href="https://buy.stripe.com/00wcN497hb25dXtfLJ87K01"
@@ -193,7 +193,9 @@ const Layout = ({ children }) => {
                 }}
               >
                 <a
-                  href="#contact"
+                  href="https://calendly.com/makerworkflows/compliancecore-gmp-batch-record-auditor"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn btn-transparent"
                 >
                   Book a Call

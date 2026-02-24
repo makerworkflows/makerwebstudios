@@ -128,7 +128,7 @@ const Home = () => {
             </ul>
             
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <a href="#contact" className="btn btn-transparent" style={{ padding: '1rem 3rem', fontSize: '1.25rem' }}>
+              <a href="https://calendly.com/makerworkflows/compliancecore-gmp-batch-record-auditor" target="_blank" rel="noopener noreferrer" className="btn btn-transparent" style={{ padding: '1rem 3rem', fontSize: '1.25rem' }}>
                 Book a Call
               </a>
               <a href="https://buy.stripe.com/00wcN497hb25dXtfLJ87K01" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '1rem 3rem', fontSize: '1.25rem' }}>
