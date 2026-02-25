@@ -58,7 +58,11 @@ const Layout = ({ children }) => {
               fontWeight: "800",
               letterSpacing: "-0.05em",
               textDecoration: "none",
+              whiteSpace: "nowrap",
+              display: "flex",
+              alignItems: "center"
             }}
+            className="brand-logo"
           >
             MAKER WEB STUDIO
           </a>
@@ -84,7 +88,7 @@ const Layout = ({ children }) => {
             >
               {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
             </button>
-            <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
+            <div className="nav-button-group" style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
               <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-transparent">
                 Book A Call
               </a>
@@ -256,24 +260,83 @@ const Layout = ({ children }) => {
 
       {/* Basic responsive styles hack for now */}
       <style>{`
+        /* Stage 1: > 768px */
+        @media (min-width: 769px) {
+           .nav-button-group .btn-sm {
+              font-size: 18px !important;
+              max-height: 60.79px !important;
+           }
+           .brand-logo {
+              font-size: 1.5rem !important;
+           }
+        }
+
+        /* Stage 2: 528px - 768px */
         @media (max-width: 768px) {
-          .desktop-nav { 
-            gap: 0.5rem !important; 
-          }
+          .desktop-nav { gap: 0.3rem !important; }
           header .container {
             flex-direction: row !important;
             justify-content: space-between !important;
-            gap: 0.5rem !important;
-            padding: 0 1rem !important;
+            gap: 0.2rem !important;
+            padding: 0 0.5rem !important;
           }
-          header .container a:first-of-type {
+          
+          .brand-logo {
+            height: 38px !important;
             font-size: 1.1rem !important;
           }
-          .btn-sm {
-            padding: 6px 10px !important;
-            font-size: 0.75rem !important;
+
+          .nav-button-group {
+            display: flex !important;
+            gap: 0.4rem !important;
+            flex: 1;
+            justify-content: flex-end;
+            align-items: center !important;
+          }
+          
+          .nav-button-group .btn-sm {
+            height: 38px !important;
+            font-size: 13px !important;
+            padding: 0 10px !important;
+            white-space: nowrap !important;
+            word-break: keep-all !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            flex-shrink: 0 !important;
           }
         }
+
+        /* Stage 3: < 528px */
+        @media (max-width: 528px) {
+          .desktop-nav { gap: 0.2rem !important; }
+          header .container {
+            padding: 0 0.4rem !important;
+          }
+          
+          .brand-logo {
+            height: auto !important;
+            font-size: 0.85rem !important;
+            letter-spacing: -0.05em !important;
+          }
+
+          .nav-button-group {
+            gap: 0.25rem !important;
+          }
+          
+          .nav-button-group .btn-sm {
+            height: 34px !important;
+            font-size: 10px !important;
+            padding: 0 6px !important;
+            white-space: nowrap !important;
+            word-break: keep-all !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            flex-shrink: 0 !important;
+          }
+        }
+
         .desktop-nav a {
           transition: color 0.2s ease, transform 0.2s ease;
         }

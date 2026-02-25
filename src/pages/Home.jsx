@@ -14,7 +14,7 @@ const Home = () => {
       <section
         className="dark-section blueprint-bg"
         style={{
-          padding: "8rem 0 6rem",
+          padding: "4rem 0 6rem",
           minHeight: "85vh",
           display: "flex",
           alignItems: "center",
