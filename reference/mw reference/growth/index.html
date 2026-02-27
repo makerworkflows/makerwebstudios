@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="GrowthEngine gets regulated manufacturers and ingredient suppliers found on Google, ranking for the right keywords, and generating inbound B2B leads."
+    />
+    <title>GrowthEngine — Digital Growth for Manufacturers | Maker Workflows</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <meta property="og:title" content="GrowthEngine — Digital Growth for Manufacturers" />
+    <meta property="og:description" content="GrowthEngine gets regulated manufacturers and ingredient suppliers found on Google, ranking for the right keywords, and generating inbound B2B leads." />
+    <meta property="og:url" content="https://makerworkflows.com/growth" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://makerworkflows.com/og_image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Maker Workflows Logo" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="GrowthEngine — Digital Growth for Manufacturers" />
+    <meta name="twitter:description" content="GrowthEngine gets regulated manufacturers and ingredient suppliers found on Google, ranking for the right keywords, and generating inbound B2B leads." />
+    <meta name="twitter:image" content="https://makerworkflows.com/og_image.png" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <a href="/"
+        ><img
+          id="navbar-logo"
+          src="/logo_white.png"
+          alt="Maker Workflows Logo"
+          class="logo-img"
+      /></a>
+
+      <div style="display: flex; gap: 15px; align-items: center">
+        <!-- Theme toggle — keep as is -->
+        <button
+          id="theme-toggle"
+          style="
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            color: var(--text);
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            transition: background 0.2s;
+          "
+        >
+          <!-- Moon Icon (Default Dark Mode) -->
+          <svg
+            id="moon-icon"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            style="display: none"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <!-- Sun Icon (Light Mode) -->
+          <svg
+            id="sun-icon"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <a
+          href="https://calendly.com/makerworkflows/growthengine-discovery"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-sm"
+          style="
+            background: transparent;
+            border: 1px solid var(--text);
+            color: var(--text);
+          "
+          >Book A Call</a
+        >
+        <a
+          href="https://buy.stripe.com/00w28q5V5dad6v1fLJ87K02"
+          class="btn-sm btn-get-started"
+          style="
+            background: var(--text);
+            color: var(--bg);
+            border: 1px solid var(--text);
+            font-weight: 600;
+          "
+          >Get Started — $1,997</a
+        >
+
+        <!-- Hamburger button — visible on all screens -->
+        <button id="hamburger-btn" aria-label="Toggle menu"
+          style="background: transparent; border: none; cursor: pointer;
+          color: var(--text); padding: 5px; display: flex;
+          align-items: center; justify-content: center;
+          border-radius: 4px; width: 36px; height: 36px;">
+          <svg id="hamburger-icon" width="22" height="22" 
+          viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <svg id="close-icon" width="22" height="22"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          style="display: none;">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Dropdown menu — hidden by default -->
+    <div id="nav-dropdown" style="
+      display: none;
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      z-index: 999;
+      padding: 20px 24px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    ">
+      <p style="font-size: 0.75rem; font-weight: 600; 
+      text-transform: uppercase; letter-spacing: 1px;
+      color: var(--text-muted); margin-bottom: 12px;">
+        Products
+      </p>
+      
+      <a href="/" style="display: flex; align-items: center; gap: 12px;
+        padding: 12px 0; text-decoration: none; color: var(--text); opacity: 0.6;
+        border-bottom: 1px solid var(--border);">
+        <span style="font-size: 1.4rem;">📋</span>
+        <div>
+          <div style="font-weight: 600; font-size: 0.95rem;">
+            ComplianceCore
+          </div>
+          <div style="font-size: 0.8rem; color: var(--text-muted);">
+            GMP Batch Record Auditor
+          </div>
+        </div>
+      </a>
+
+      <a href="/growth" style="display: flex; align-items: center;
+        gap: 12px; padding: 12px 0; text-decoration: none;
+        color: var(--text);">
+        <span style="font-size: 1.4rem;">📈</span>
+        <div>
+          <div style="font-weight: 600; font-size: 0.95rem;">
+            GrowthEngine
+          </div>
+          <div style="font-size: 0.8rem; color: var(--text-muted);">
+            Digital Visibility for Manufacturers
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <header class="hero">
+      <div class="container">
+        <div class="hero-badge">Compliance Automation & Digital Growth for Regulated Manufacturers</div>
+        <h1>Your Buyers Are Searching.<br />Are They Finding You?</h1>
+        <p class="subhead">
+          GrowthEngine gets regulated manufacturers and ingredient suppliers found on Google, ranking for the right keywords, and generating inbound B2B leads — without a generic marketing agency that doesn't know your industry.
+        </p>
+        <p
+          class="credibility-line"
+          style="
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+          "
+        >
+          <strong
+            style="
+              font-size: 0.85em;
+              letter-spacing: 0.5px;
+              opacity: 0.8;
+              display: block;
+              margin-bottom: 0.3rem;
+            "
+            >BUILT BY MANUFACTURERS, FOR MANUFACTURERS</strong
+          >
+          Guillermo Aristi grew a regulated manufacturing business for 8 years
+          knowing his online presence was invisible. He built GrowthEngine
+          because his own buyers couldn't find him either.
+        </p>
+        <div class="cta-group" style="flex-direction: row; justify-content: center; flex-wrap: wrap; gap: 15px;">
+          <a
+            href="https://buy.stripe.com/00w28q5V5dad6v1fLJ87K02"
+            class="btn-primary"
+            >Get Started — $1,997</a
+          >
+          <a
+            href="https://calendly.com/makerworkflows/growthengine-discovery"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primary"
+            style="
+              background: transparent;
+              border: 2px solid var(--text);
+              color: var(--text);
+            "
+            >Book a Discovery Call</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <section class="pain">
+      <div class="container">
+        <h2>Most regulated manufacturers are invisible online.</h2>
+        <div class="grid-3">
+          <div class="card">
+            <span class="icon" style="font-size: 2rem; display: block; margin-bottom: 1rem;">🔍</span>
+            <h3>Not Ranking</h3>
+            <p>
+              Your buyers search "aloe vera extract wholesale" or "private label nutraceutical manufacturer Texas" — and your competitors show up. You don't.
+            </p>
+          </div>
+          <div class="card">
+            <span class="icon" style="font-size: 2rem; display: block; margin-bottom: 1rem;">📉</span>
+            <h3>No Inbound Leads</h3>
+            <p>
+              Your website gets visitors who leave without doing anything. No sample requests. No inquiries. No pipeline.
+            </p>
+          </div>
+          <div class="card">
+            <span class="icon" style="font-size: 2rem; display: block; margin-bottom: 1rem;">🏭</span>
+            <h3>Built for Trade Shows, Not the Internet</h3>
+            <p>
+              Your business grew on relationships and referrals. That still works — but the buyers who don't know you yet are finding someone else online.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="suite" style="background: var(--surface)">
+      <div class="container">
+        <h2>What We Do</h2>
+        <div class="grid-4">
+          <div class="suite-card">
+            <div class="icon">🏗️</div>
+            <h3>Foundation</h3>
+            <p>
+              We audit your digital presence, fix your SEO, and build or optimize your website so buyers can actually find and convert.
+            </p>
+          </div>
+          <div class="suite-card">
+            <div class="icon">👀</div>
+            <h3>Visibility</h3>
+            <p>
+              Monthly content targeting your buyers' search terms. Google Ads for immediate inbound. Directory listings on the platforms your buyers use.
+            </p>
+          </div>
+          <div class="suite-card">
+            <div class="icon">🧲</div>
+            <h3>Conversion</h3>
+            <p>
+              Sample request funnels, lead capture, product spec sheets, and email sequences that turn visitors into qualified buyers.
+            </p>
+          </div>
+          <div class="suite-card">
+            <div class="icon">🎯</div>
+            <h3>Outreach</h3>
+            <p>
+              Qualified buyer lists and outreach campaigns reaching formulators, supplement brands, and manufacturers who need your ingredients.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="solution" id="how-it-works">
+      <div class="container">
+        <div class="split-layout">
+          <div class="content">
+            <h2>Three Simple Steps to Pipeline Growth.</h2>
+            <ul class="feature-list">
+              <li>
+                <span class="check">✓</span>
+                <div>
+                  <strong>Check Out</strong>
+                  <p>Book your kickoff call and secure your spot.</p>
+                </div>
+              </li>
+              <li>
+                <span class="check">✓</span>
+                <div>
+                  <strong>We Build</strong>
+                  <p>In 30 days we build your foundation, launch your SEO, and deploy your visibility engine.</p>
+                </div>
+              </li>
+              <li>
+                <span class="check">✓</span>
+                <div>
+                  <strong>You Get Found</strong>
+                  <p>
+                    Rankings climb. Buyers find you. You get sample requests and qualified leads directly in your inbox.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="visual">
+            <div class="step-card">
+              <div class="step-num">01</div>
+              <p>Check Out</p>
+            </div>
+            <div class="connector">↓</div>
+            <div class="step-card active">
+              <div class="step-num">02</div>
+              <p>We Build</p>
+            </div>
+            <div class="connector">↓</div>
+            <div class="step-card">
+              <div class="step-num">03</div>
+              <p>You Get Found</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="suite" id="packages">
+      <div class="container">
+        <h2>The GrowthEngine Roadmap</h2>
+        <p style="text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto 40px; font-size: 1.1rem;">
+          We don't sell you a massive retainer right out of the gate. We prove ROI first, then scale as your leads grow.
+        </p>
+        <div class="grid-3" style="align-items: stretch;">
+
+          <div class="card" style="border-color: var(--accent); box-shadow: 0 0 20px rgba(59, 130, 246, 0.1); display: flex; flex-direction: column;">
+            <div style="background: var(--accent); color: white; margin: -32px -32px 24px; padding: 12px; text-align: center; border-radius: 12px 12px 0 0; font-weight: 600; font-size: 0.9rem; text-transform: uppercase;">Most Popular Entry Point</div>
+            <h3>GrowthEngine Starter</h3>
+            <p style="font-size: 1.5rem; color: var(--text); font-weight: 700; margin-bottom: 24px;">$1,997 <span style="font-size: 0.9rem; font-weight: 400; color: var(--text-muted);">one-time</span></p>
+            <p style="margin-bottom: 24px; font-size: 0.95rem;">For manufacturers with no baseline digital presence who need to get found fast.</p>
+            <ul style="list-style: none; margin-bottom: 32px; font-size: 0.9rem; flex-grow: 1;">
+              <li style="margin-bottom: 12px;"><span style="color: var(--success); margin-right: 8px;">✓</span> Complete Digital Website Audit</li>
+              <li style="margin-bottom: 12px;"><span style="color: var(--success); margin-right: 8px;">✓</span> On-page SEO fixes (up to 10 pages)</li>
+              <li style="margin-bottom: 12px;"><span style="color: var(--success); margin-right: 8px;">✓</span> Competitor keyword analysis</li>
+              <li style="margin-bottom: 12px;"><span style="color: var(--success); margin-right: 8px;">✓</span> Google Business Profile Setup</li>
+              <li style="margin-bottom: 12px;"><span style="color: var(--success); margin-right: 8px;">✓</span> Google Search Console Config</li>
+              <li style="margin-bottom: 12px;"><span style="color: var(--success); margin-right: 8px;">✓</span> Google Analytics 4 Setup</li>
+              <li style="margin-bottom: 12px;"><span style="color: var(--success); margin-right: 8px;">✓</span> 5 Industry Directory Listings</li>
+              <li style="margin-bottom: 12px;"><span style="color: var(--success); margin-right: 8px;">✓</span> 3 Product Spec Sheets (PDF)</li>
+              <li style="margin-bottom: 12px;"><span style="color: var(--success); margin-right: 8px;">✓</span> 90-Day Growth Roadmap written report</li>
+              <li style="margin-bottom: 12px;"><span style="color: var(--success); margin-right: 8px;">✓</span> 60-min Strategy Delivery Call</li>
+            </ul>
+            <a href="https://buy.stripe.com/00w28q5V5dad6v1fLJ87K02" class="btn-primary" style="text-align: center; display: block; width: 100%; padding: 12px 0;">Get Started</a>
+            <p style="text-align:center; font-size:0.8rem; color:var(--text-muted); margin-top:12px;">Full refund if every deliverable isn't complete within 30 days of your onboarding form.</p>
+          </div>
+
+          <div class="card" style="display: flex; flex-direction: column;">
+            <h3>Visibility Engine</h3>
+            <p style="font-size: 1.5rem; color: var(--text); font-weight: 700; margin-bottom: 24px;">$1,500<span style="font-size: 0.9rem; font-weight: 400; color: var(--text-muted);">/mo</span></p>
+            <p style="margin-bottom: 24px; font-size: 0.95rem;">Natural next step after Starter. Consistent SEO content targeting your buyers.</p>
+            <ul style="list-style: none; margin-bottom: 32px; font-size: 0.9rem; flex-grow: 1;">
+              <li style="margin-bottom: 12px;"><span style="color: var(--text-muted); margin-right: 8px;">✓</span> 2 SEO-optimized posts per month</li>
+              <li style="margin-bottom: 12px;"><span style="color: var(--text-muted); margin-right: 8px;">✓</span> Targeted B2B keyword writing</li>
+              <li style="margin-bottom: 12px;"><span style="color: var(--text-muted); margin-right: 8px;">✓</span> Active Rank Tracking</li>
+              <li style="margin-bottom: 12px;"><span style="color: var(--text-muted); margin-right: 8px;">✓</span> Monthly performance reporting</li>
+            </ul>
+            <a href="https://calendly.com/makerworkflows/growthengine-discovery" target="_blank" rel="noopener noreferrer" class="btn-primary" style="background: transparent; border: 2px solid var(--text); color: var(--text); text-align: center; display: block; width: 100%; padding: 12px 0;">Book a Call</a>
+          </div>
+
+          <div class="card" style="display: flex; flex-direction: column;">
+            <h3>Google Ads Management</h3>
+            <p style="font-size: 1.5rem; color: var(--text); font-weight: 700; margin-bottom: 24px;">$1,000<span style="font-size: 0.9rem; font-weight: 400; color: var(--text-muted);">/mo + spend</span></p>
+            <p style="margin-bottom: 24px; font-size: 0.95rem;">For suppliers looking to capture immediate, high-intent buyer searches.</p>
+            <ul style="list-style: none; margin-bottom: 32px; font-size: 0.9rem; flex-grow: 1;">
+              <li style="margin-bottom: 12px;"><span style="color: var(--text-muted); margin-right: 8px;">✓</span> High-intent keyword targeting</li>
+              <li style="margin-bottom: 12px;"><span style="color: var(--text-muted); margin-right: 8px;">✓</span> Ad copy written for formulators</li>
+              <li style="margin-bottom: 12px;"><span style="color: var(--text-muted); margin-right: 8px;">✓</span> Landing page optimization advice</li>
+              <li style="margin-bottom: 12px;"><span style="color: var(--text-muted); margin-right: 8px;">✓</span> Monthly ROI/Spend reporting</li>
+            </ul>
+            <a href="https://calendly.com/makerworkflows/growthengine-discovery" target="_blank" rel="noopener noreferrer" class="btn-primary" style="background: transparent; border: 2px solid var(--text); color: var(--text); text-align: center; display: block; width: 100%; padding: 12px 0;">Book a Call</a>
+          </div>
+
+        </div>
+        
+        <p style="text-align: center; margin-top: 3rem; font-size: 1.05rem; color: var(--text-muted);">
+          Need a custom scope for your full digital presence? <a href="https://calendly.com/makerworkflows/growthengine-discovery" target="_blank" rel="noopener noreferrer" style="color: var(--text); font-weight: 500; text-decoration: underline;">Book a discovery call</a> — most full engagements start at $3,500.
+        </p>
+      </div>
+    </section>
+
+    <section class="industries">
+      <div class="container">
+        <h2>Built for Regulated Manufacturing</h2>
+        <div class="industry-grid">
+          <div class="industry-card">
+            <span class="icon">💄</span>
+            <h3>Personal Care</h3>
+          </div>
+          <div class="industry-card">
+            <span class="icon">💊</span>
+            <h3>Nutraceuticals</h3>
+          </div>
+          <div class="industry-card">
+            <span class="icon">🩹</span>
+            <h3>OTCs</h3>
+          </div>
+          <div class="industry-card">
+            <span class="icon">🥗</span>
+            <h3>Food & Beverage</h3>
+          </div>
+          <div class="industry-card">
+            <span class="icon">🍺</span>
+            <h3>Breweries</h3>
+          </div>
+          <div class="industry-card">
+            <span class="icon">🍷</span>
+            <h3>Wineries</h3>
+          </div>
+          <div class="industry-card">
+            <span class="icon">🥃</span>
+            <h3>Distilleries</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container">
+        <h2>Common Questions</h2>
+        <div class="grid-3" style="max-width: 900px; margin: 0 auto;">
+          <div class="card">
+            <h3>Do I need a new website?</h3>
+            <p>
+              No. We start with the $1,997 Audit & Setup to optimize what you already have. We only recommend a rebuild if your current platform fundamentally cannot rank on Google or capture inbound leads.
+            </p>
+          </div>
+          <div class="card">
+            <h3>How are you different from an agency?</h3>
+            <p>
+              We are not generic marketers. We understand INCI names, cGMP compliance, formulation specs, and how a purchasing manager evaluates an ingredient supplier.
+            </p>
+          </div>
+          <div class="card">
+            <h3>What do you need from my team?</h3>
+            <p>
+              Very little. We do a 60-minute kickoff to understand your ideal client and products, and then we execute. You review and approve via email.
+            </p>
+          </div>
+          <div class="card">
+            <h3>When will I see results?</h3>
+            <p>
+              Setup is completed in 30 days. Most clients begin seeing their organic keyword rankings climb within 60 days of the new infrastructure going live.
+            </p>
+          </div>
+          <div class="card">
+            <h3>What if I need more than the Starter package?</h3>
+            <p>
+              Most clients do. The Starter phase simply ensures your foundation is solid before we start pouring money into monthly content engines or paid ads.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="pricing">
+      <div class="container" style="max-width: 800px;">
+        <h2>Ready to get found?</h2>
+        <p style="margin-bottom: 40px; font-size: 1.1rem; line-height: 1.8;">
+          Start with the GrowthEngine Starter — $1,997, delivered in 30 days, money-back guarantee. Or book a call if you'd like to talk through a custom scope first.
+        </p>
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 24px;
+            margin-top: 30px;
+          "
+        >
+          <a
+            href="https://buy.stripe.com/00w28q5V5dad6v1fLJ87K02"
+            class="btn-primary"
+            >Get Started — $1,997</a
+          >
+          <a
+            href="https://calendly.com/makerworkflows/growthengine-discovery"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primary"
+            style="
+              background: transparent;
+              border: 2px solid var(--text);
+              color: var(--text);
+            "
+            >Book a Discovery Call</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div
+        class="container"
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+        "
+      >
+        <p>&copy; 2026 Maker Workflows</p>
+        <a
+          href="https://www.linkedin.com/company/makerworkflows/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="opacity: 0.6; transition: opacity 0.2s"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            style="color: var(--text)"
+          >
+            <path
+              d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+            ></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+      </div>
+    </footer>
+
+    <script src="/script.js"></script>
+    <script>
+      const themeToggleBtn = document.getElementById("theme-toggle");
+      const moonIcon = document.getElementById("moon-icon");
+      const sunIcon = document.getElementById("sun-icon");
+      const navbarLogo = document.getElementById("navbar-logo");
+
+      const currentTheme = localStorage.getItem("theme") || "dark";
+
+      if (currentTheme === "light") {
+        document.documentElement.setAttribute("data-theme", "light");
+        moonIcon.style.display = "block";
+        sunIcon.style.display = "none";
+        navbarLogo.src = "/logo_black.png";
+      }
+
+      themeToggleBtn.addEventListener("click", () => {
+        let theme = document.documentElement.getAttribute("data-theme");
+
+        if (theme === "light") {
+          document.documentElement.removeAttribute("data-theme");
+          localStorage.setItem("theme", "dark");
+          moonIcon.style.display = "none";
+          sunIcon.style.display = "block";
+          navbarLogo.src = "/logo_white.png";
+        } else {
+          document.documentElement.setAttribute("data-theme", "light");
+          localStorage.setItem("theme", "light");
+          moonIcon.style.display = "block";
+          sunIcon.style.display = "none";
+          navbarLogo.src = "/logo_black.png";
+        }
+      });
+
+      // Hamburger menu toggle
+      const hamburgerBtn = document.getElementById('hamburger-btn');
+      const navDropdown = document.getElementById('nav-dropdown');
+      const hamburgerIcon = document.getElementById('hamburger-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      if (hamburgerBtn && navDropdown) {
+        hamburgerBtn.addEventListener('click', () => {
+          const isOpen = navDropdown.style.display === 'block';
+          
+          navDropdown.style.display = isOpen ? 'none' : 'block';
+          hamburgerIcon.style.display = isOpen ? 'block' : 'none';
+          closeIcon.style.display = isOpen ? 'none' : 'block';
+        });
+
+        // Close dropdown when clicking anywhere outside
+        document.addEventListener('click', (e) => {
+          if (!hamburgerBtn.contains(e.target) && 
+              !navDropdown.contains(e.target)) {
+            navDropdown.style.display = 'none';
+            hamburgerIcon.style.display = 'block';
+            closeIcon.style.display = 'none';
+          }
+        });
+
+        // Close dropdown when a nav link is clicked
+        navDropdown.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            navDropdown.style.display = 'none';
+            hamburgerIcon.style.display = 'block';
+            closeIcon.style.display = 'none';
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

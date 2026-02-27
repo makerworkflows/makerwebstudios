@@ -1,22 +1,42 @@
 const Contact = () => {
   return (
-    <section id="contact" className="dark-section" style={{ padding: '8rem 0', textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
-      <div className="container fade-in" style={{ maxWidth: '800px', margin: '0 auto' }}>
-        <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', marginBottom: '1.5rem', fontWeight: '800', letterSpacing: '-0.02em', color: 'var(--clean-white)' }}>
+    <section id="contact" className="dark-section blueprint-bg contact-premium">
+      <div className="container relative z-10 text-center">
+        <h2 className="cta-title reveal-anim visible">
           Ready to Get Started?
         </h2>
-        <p style={{ fontSize: '1.25rem', color: 'var(--text-muted)', marginBottom: '3rem', lineHeight: '1.7', maxWidth: '600px', margin: '0 auto 3rem' }}>
+        <p className="cta-subtitle reveal-anim visible" style={{ animationDelay: "0.1s" }}>
           Stop losing bids to competitors with better digital presence. Book a discovery call or get started right away.
         </p>
-        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
-          <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-transparent" style={{ padding: '1rem 2.5rem', fontSize: '1.125rem' }}>
+        <div className="hero-actions reveal-anim visible" style={{ animationDelay: "0.2s" }}>
+          <a
+            href="https://calendly.com/hello-makerwebstudios/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-transparent btn-lg-premium"
+          >
             Book a Call
           </a>
-          <a href="https://buy.stripe.com/00w28q5V5dad6v1fLJ87K02" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '1rem 2.5rem', fontSize: '1.125rem' }}>
+          <a
+            href="https://buy.stripe.com/00w28q5V5dad6v1fLJ87K02"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary btn-lg-premium"
+          >
             Get Started
           </a>
         </div>
       </div>
+      <div className="hero-glow" style={{ opacity: 0.1 }} />
+
+      <style>{`
+        .contact-premium {
+          padding: 12rem 0;
+          position: relative;
+          overflow: hidden;
+          border-top: 1px solid var(--glass-border);
+        }
+      `}</style>
     </section>
   );
 };

@@ -1,21 +1,13 @@
-import Layout from './components/Layout';
-import Home from './pages/Home';
-import Services from './pages/Services';
-import Process from './pages/Process';
-import Portfolio from './pages/Portfolio';
-import About from './pages/About';
-import Contact from './pages/Contact';
+import { Routes, Route } from 'react-router-dom';
+import MainSite from './pages/MainSite';
+import GrowthEngine from './pages/GrowthEngine';
 
 function App() {
   return (
-    <Layout>
-      <Home />
-      <Services />
-      <Process />
-      <Portfolio />
-      <About />
-      <Contact />
-    </Layout>
+    <Routes>
+      <Route path="/" element={<MainSite />} />
+      <Route path="/growth" element={<GrowthEngine />} />
+    </Routes>
   );
 }
 

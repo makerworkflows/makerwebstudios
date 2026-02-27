@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Automated FDA compliance for Manufacturers. Audit Batch Records in <60 Seconds."
+    />
+    <title>ComplianceCore — GMP Batch Record Auditor | Maker Workflows</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta
+      property="og:title"
+      content="ComplianceCore — GMP Batch Record Auditor | Maker Workflows"
+    />
+    <meta
+      property="og:description"
+      content="Automated FDA compliance for Manufacturers. Audit Batch Records in <60 Seconds."
+    />
+    <meta property="og:url" content="https://makerworkflows.com" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://makerworkflows.com/og_image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Maker Workflows Logo" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="ComplianceCore — GMP Batch Record Auditor | Maker Workflows"
+    />
+    <meta
+      name="twitter:description"
+      content="Automated FDA compliance for Manufacturers. Audit Batch Records in <60 Seconds."
+    />
+    <meta
+      name="twitter:image"
+      content="https://makerworkflows.com/og_image.png"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <a href="#"
+        ><img
+          id="navbar-logo"
+          src="logo_white.png"
+          alt="Maker Workflows Logo"
+          class="logo-img"
+      /></a>
+
+      <div style="display: flex; gap: 15px; align-items: center">
+        <!-- Theme toggle — keep as is -->
+        <button
+          id="theme-toggle"
+          style="
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            color: var(--text);
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            transition: background 0.2s;
+          "
+        >
+          <!-- Moon Icon (Default Dark Mode) -->
+          <svg
+            id="moon-icon"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            style="display: none"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <!-- Sun Icon (Light Mode) -->
+          <svg
+            id="sun-icon"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <a
+          href="https://calendly.com/makerworkflows/compliancecore-gmp-batch-record-auditor"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-sm"
+          style="
+            background: transparent;
+            border: 1px solid var(--text);
+            color: var(--text);
+          "
+          >Book A Call</a
+        >
+        <a
+          href="https://buy.stripe.com/00wcN497hb25dXtfLJ87K01"
+          class="btn-sm"
+          style="
+            background: var(--text);
+            color: var(--bg);
+            border: 1px solid var(--text);
+            font-weight: 600;
+          "
+          >Get Started — $3,500</a
+        >
+
+        <!-- Hamburger button — visible on all screens -->
+        <button id="hamburger-btn" aria-label="Toggle menu"
+          style="background: transparent; border: none; cursor: pointer;
+          color: var(--text); padding: 5px; display: flex;
+          align-items: center; justify-content: center;
+          border-radius: 4px; width: 36px; height: 36px;">
+          <svg id="hamburger-icon" width="22" height="22" 
+          viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <svg id="close-icon" width="22" height="22"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          style="display: none;">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Dropdown menu — hidden by default -->
+    <div id="nav-dropdown" style="
+      display: none;
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      z-index: 999;
+      padding: 20px 24px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    ">
+      <p style="font-size: 0.75rem; font-weight: 600; 
+      text-transform: uppercase; letter-spacing: 1px;
+      color: var(--text-muted); margin-bottom: 12px;">
+        Products
+      </p>
+      
+      <a href="/" style="display: flex; align-items: center; gap: 12px;
+        padding: 12px 0; text-decoration: none; color: var(--text);
+        border-bottom: 1px solid var(--border);">
+        <span style="font-size: 1.4rem;">📋</span>
+        <div>
+          <div style="font-weight: 600; font-size: 0.95rem;">
+            ComplianceCore
+          </div>
+          <div style="font-size: 0.8rem; color: var(--text-muted);">
+            GMP Batch Record Auditor
+          </div>
+        </div>
+      </a>
+
+      <a href="/growth" style="display: flex; align-items: center;
+        gap: 12px; padding: 12px 0; text-decoration: none;
+        color: var(--text); opacity: 0.6;">
+        <span style="font-size: 1.4rem;">📈</span>
+        <div>
+          <div style="font-weight: 600; font-size: 0.95rem;">
+            GrowthEngine
+          </div>
+          <div style="font-size: 0.8rem; color: var(--text-muted);">
+            Digital Visibility for Manufacturers
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <header class="hero">
+      <div class="container">
+        <div class="hero-badge">
+          Compliance Automation & Digital Growth for Regulated Manufacturers
+        </div>
+        <h1>Your GMP Batch Records.<br />Audited by AI. In 45 Seconds.</h1>
+        <p class="subhead">
+          Installed in your Google Workspace in 48 hours.<br />Your data never
+          leaves your environment.
+        </p>
+        <p
+          class="credibility-line"
+          style="
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+          "
+        >
+          <strong
+            style="
+              font-size: 0.85em;
+              letter-spacing: 0.5px;
+              opacity: 0.8;
+              display: block;
+              margin-bottom: 0.3rem;
+            "
+            >BUILT BY MANUFACTURERS, FOR MANUFACTURERS</strong
+          >
+          Guillermo Aristi ran a GMP and ISO 9001-certified manufacturing
+          facility in McAllen for 8 years. He built this system for his own
+          batch records. Now he installs it for yours.
+        </p>
+        <div class="cta-group">
+          <a
+            href="https://buy.stripe.com/00wcN497hb25dXtfLJ87K01"
+            class="btn-primary"
+            >Get Started — $3,500</a
+          >
+          <span class="muted-text">Zero integration headache.</span>
+        </div>
+        <div class="hero-visual">
+          <div class="glow"></div>
+          <!-- Abstract UI Representation -->
+          <div class="ui-mockup" style="padding: 2rem; text-align: center">
+            <p
+              style="
+                font-size: 1.1rem;
+                line-height: 1.6;
+                margin: 0;
+                color: var(--text);
+                font-weight: 500;
+              "
+            >
+              "Drop a PDF in Drive. AI checks 12 GMP fields. You get an alert in
+              under 60 seconds."
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="suite" id="suite">
+      <div class="container">
+        <h2>Start Here: What We Install</h2>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            justify-content: center;
+            max-width: 600px;
+            margin: 0 auto;
+          "
+        >
+          <!-- 1 -->
+          <div class="suite-card">
+            <div class="icon">📋</div>
+            <h3>ComplianceCore</h3>
+            <p style="text-align: center; font-size: 0.95rem">
+              <strong>GMP Batch Record Auditor</strong><br /><br />
+              Drop a batch record PDF into your Google Drive. AI checks 12
+              compliance fields in 45 seconds — lot numbers, expiration dates,
+              CoA references, signatures, yield calculations, and more.
+              Incomplete records trigger an automatic CAPA and alert your QA
+              lead before anything ships.<br /><br />
+              Your data stays in your Google environment. Always.<br /><br />
+              <strong>Starting at $3,500 — installed in 48 hours.</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="industries">
+      <div class="container">
+        <h2>Built for Regulated Manufacturing</h2>
+        <div class="industry-grid">
+          <div class="industry-card">
+            <span class="icon">💄</span>
+            <h3>Personal Care</h3>
+          </div>
+          <div class="industry-card">
+            <span class="icon">💊</span>
+            <h3>Nutraceuticals</h3>
+          </div>
+          <div class="industry-card">
+            <span class="icon">🩹</span>
+            <h3>OTCs</h3>
+          </div>
+          <div class="industry-card">
+            <span class="icon">🥗</span>
+            <h3>Food & Beverage</h3>
+          </div>
+          <div class="industry-card">
+            <span class="icon">🍺</span>
+            <h3>Breweries</h3>
+          </div>
+          <div class="industry-card">
+            <span class="icon">🍷</span>
+            <h3>Wineries</h3>
+          </div>
+          <div class="industry-card">
+            <span class="icon">🥃</span>
+            <h3>Distilleries</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pain">
+      <div class="container">
+        <h2>The Cost of Manual Audits</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h3>FDA 483s</h3>
+            <p>
+              Incomplete records are the #1 citation in supplements/OTC. Don't
+              risk a warning letter.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Human Error</h3>
+            <p>
+              Tired eyes miss missing signatures. AI doesn't sleep and checks
+              12+ fields instantly.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Slow Release</h3>
+            <p>
+              Manual review bottlenecks production. Ship faster with instant QA
+              pre-checks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="solution" id="how-it-works">
+      <div class="container">
+        <div class="split-layout">
+          <div class="content">
+            <h2>Your Drive. Our AI. <br />Instant Compliance.</h2>
+            <ul class="feature-list">
+              <li>
+                <span class="check">✓</span>
+                <div>
+                  <strong>Connects to Google Drive</strong>
+                  <p>No new software to learn. Just drop PDFs in a folder.</p>
+                </div>
+              </li>
+              <li>
+                <span class="check">✓</span>
+                <div>
+                  <strong>AI Checks 12 GMP Fields</strong>
+                  <p>Lot #, Expiry, Signatures, Cleaning logs, and CoAs.</p>
+                </div>
+              </li>
+              <li>
+                <span class="check">✓</span>
+                <div>
+                  <strong>Instant Email/Chat Alerts</strong>
+                  <p>
+                    Email alert sent to your QA lead with every field result.
+                    HOLD records get an auto-generated CAPA document.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="visual">
+            <div class="step-card">
+              <div class="step-num">01</div>
+              <p>Drop PDF in Drive</p>
+            </div>
+            <div class="connector">↓</div>
+            <div class="step-card active">
+              <div class="step-num">02</div>
+              <p>AI Audits (45s)</p>
+            </div>
+            <div class="connector">↓</div>
+            <div class="step-card">
+              <div class="step-num">03</div>
+              <p>Email Alert Sent</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container">
+        <h2>Common Questions</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Do I need an ERP system?</h3>
+            <p>
+              No. The system runs entirely inside your existing Google Workspace
+              account. No new software, no ERP required.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Is this 21 CFR Compliant?</h3>
+            <p>
+              The system creates a complete audit log of every check performed
+              in your Google Sheets — date-stamped and reviewer-attributed. It
+              is an AI pre-screening tool that supplements, not replaces, human
+              QA review and release authorization.
+            </p>
+          </div>
+          <div class="card">
+            <h3>How long is setup?</h3>
+            <p>
+              We can have you running in 48 hours. It's a plug-and-play
+              solution.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="book">
+      <div class="container">
+        <h2>Stop fearing the FDA audit.</h2>
+        <p>Get the peace of mind of automated compliance today.</p>
+        <div
+          style="
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 24px;
+          "
+        >
+          <a
+            href="https://buy.stripe.com/00wcN497hb25dXtfLJ87K01"
+            class="btn-primary"
+            >Get Started — $3,500</a
+          >
+          <a
+            href="https://calendly.com/makerworkflows/compliancecore-gmp-batch-record-auditor"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primary"
+            style="
+              background: transparent;
+              border: 2px solid var(--text);
+              color: var(--text);
+            "
+            >Book a Call</a
+          >
+        </div>
+        <p class="micro-copy" style="line-height: 1.8">
+          <span class="mobile-break">Start your first audit tomorrow.</span>
+          <span class="mobile-break">One-time setup: $3,500.</span>
+          <span class="mobile-break"
+            >Money-back guarantee if it's not running in 7 days.</span
+          >
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div
+        class="container"
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+        "
+      >
+        <p>&copy; 2026 Maker Workflows</p>
+        <a
+          href="https://www.linkedin.com/company/makerworkflows/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="opacity: 0.6; transition: opacity 0.2s"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            style="color: var(--text)"
+          >
+            <path
+              d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+            ></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      const themeToggleBtn = document.getElementById("theme-toggle");
+      const moonIcon = document.getElementById("moon-icon");
+      const sunIcon = document.getElementById("sun-icon");
+      const navbarLogo = document.getElementById("navbar-logo");
+
+      // Check local storage for preference, default to dark
+      const currentTheme = localStorage.getItem("theme") || "dark";
+
+      if (currentTheme === "light") {
+        document.documentElement.setAttribute("data-theme", "light");
+        moonIcon.style.display = "block";
+        sunIcon.style.display = "none";
+        navbarLogo.src = "logo_black.png";
+      }
+
+      themeToggleBtn.addEventListener("click", () => {
+        let theme = document.documentElement.getAttribute("data-theme");
+
+        if (theme === "light") {
+          document.documentElement.removeAttribute("data-theme");
+          localStorage.setItem("theme", "dark");
+          moonIcon.style.display = "none";
+          sunIcon.style.display = "block";
+          navbarLogo.src = "logo_white.png";
+        } else {
+          document.documentElement.setAttribute("data-theme", "light");
+          localStorage.setItem("theme", "light");
+          moonIcon.style.display = "block";
+          sunIcon.style.display = "none";
+          navbarLogo.src = "logo_black.png";
+        }
+      });
+
+      // Hamburger menu toggle
+      const hamburgerBtn = document.getElementById("hamburger-btn");
+      const navDropdown = document.getElementById("nav-dropdown");
+      const hamburgerIcon = document.getElementById("hamburger-icon");
+      const closeIcon = document.getElementById("close-icon");
+
+      if (hamburgerBtn && navDropdown) {
+        hamburgerBtn.addEventListener("click", () => {
+          const isOpen = navDropdown.style.display === "block";
+
+          navDropdown.style.display = isOpen ? "none" : "block";
+          hamburgerIcon.style.display = isOpen ? "block" : "none";
+          closeIcon.style.display = isOpen ? "none" : "block";
+        });
+
+        // Close dropdown when clicking anywhere outside
+        document.addEventListener("click", (e) => {
+          if (
+            !hamburgerBtn.contains(e.target) &&
+            !navDropdown.contains(e.target)
+          ) {
+            navDropdown.style.display = "none";
+            hamburgerIcon.style.display = "block";
+            closeIcon.style.display = "none";
+          }
+        });
+
+        // Close dropdown when a nav link is clicked
+        navDropdown.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            navDropdown.style.display = "none";
+            hamburgerIcon.style.display = "block";
+            closeIcon.style.display = "none";
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
