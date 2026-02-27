@@ -283,36 +283,40 @@ a:hover {
   border-color: var(--industrial-orange);
 }
 
-/* Grid Lines Accents (Manufacturing context) */
+/* Manufacturing Section Styles */
+.dark-section {
+  background-color: var(--dark-bg);
+  color: white;
+  position: relative;
+}
+
+.dark-section h1,
+.dark-section h2,
+.dark-section h3,
+.dark-section h4 {
+  color: white !important;
+}
+
+.dark-section .section-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 .blueprint-bg {
   position: relative;
-  background-color: var(--bg-color);
+  background-color: #0c1222;
+  overflow: hidden;
 }
 
 .blueprint-bg::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
-  background-image: 
-    linear-gradient(var(--border-color) 1px, transparent 1px),
-    linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
-  background-size: 50px 50px;
-  background-position: center top;
-  opacity: 0.4;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
   pointer-events: none;
   z-index: 0;
-}
-
-.dark-section.blueprint-bg::before {
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  opacity: 1;
-}
-
-/* Animations and Utilities */
-.fade-in {
-  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @keyframes fadeIn {
@@ -369,28 +373,36 @@ a:hover {
   color: var(--industrial-orange);
 }
 
+.glass-nav {
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  background: transparent;
+  backdrop-filter: blur(0px);
+}
+
+.glass-nav.scrolled {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: var(--box-shadow-lg);
+}
+
 .desktop-nav {
   display: flex;
   gap: 2rem;
   align-items: center;
 }
 
-.nav-link {
-  font-weight: 600;
-  font-size: 0.95rem;
-  color: var(--text-dark);
-  transition: color 0.2s ease;
-}
-
-.nav-link:hover {
-  color: var(--industrial-orange);
-}
-
 .theme-toggle {
   background: transparent;
   border: none;
   cursor: pointer;
-  color: var(--text-dark);
+  color: inherit;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -407,6 +419,27 @@ a:hover {
   display: flex;
   gap: 1rem;
   align-items: center;
+}
+
+.nav-link:hover {
+  color: var(--industrial-orange);
+}
+
+/* On dark sections at the top (hero), links should be white until scrolled */
+.glass-nav:not(.scrolled) .nav-link,
+.glass-nav:not(.scrolled) .brand-logo,
+.glass-nav:not(.scrolled) .theme-toggle {
+  color: white;
+}
+
+.glass-nav.scrolled .nav-link,
+.glass-nav.scrolled .brand-logo,
+.glass-nav.scrolled .theme-toggle {
+  color: var(--text-dark);
+}
+
+.nav-cta {
+  white-space: nowrap;
 }
 
 /* Footer Styling */
@@ -427,6 +460,14 @@ a:hover {
   letter-spacing: 0.05em;
   color: var(--industrial-orange);
   margin-bottom: 1.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
 }
 
 .footer-tagline {
