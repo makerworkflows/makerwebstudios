@@ -8,14 +8,8 @@ const Layout = ({ children }) => {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)",
-    ).matches;
-    const initialTheme = savedTheme
-      ? savedTheme
-      : prefersDark
-        ? "dark"
-        : "light";
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const initialTheme = savedTheme ? savedTheme : (prefersDark ? "dark" : "light");
     setTheme(initialTheme);
     document.documentElement.setAttribute("data-theme", initialTheme);
 
@@ -46,20 +40,13 @@ const Layout = ({ children }) => {
               }
             }}
             className="brand-logo"
-            style={{ fontSize: "1.25rem", fontWeight: "800" }}
           >
-            MAKER WEB <span className="text-accent">STUDIO</span>
+            MAKER <span className="text-accent">WEB STUDIO</span>
           </a>
 
           <nav className="desktop-nav">
-            <a href="#about" className="nav-link">
-              About
-            </a>
-            <a href="#pricing" className="nav-link">
-              Roadmap
-            </a>
-            <a href="#faq" className="nav-link">
-              FAQ
+            <a href="/growth" className="nav-link">
+              GrowthEngine
             </a>
             <button
               onClick={toggleTheme}
@@ -69,21 +56,16 @@ const Layout = ({ children }) => {
               {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
             </button>
             <div className="nav-button-group">
-              <a
-                href="https://calendly.com/makerworkflows/growthengine-discovery"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-sm btn-transparent"
-              >
+              <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-transparent">
                 Book A Call
               </a>
               <a
                 href="https://buy.stripe.com/00w28q5V5dad6v1fLJ87K02"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-sm btn-primary nav-cta"
+                className="btn btn-sm btn-primary"
               >
-                Get Started — $3,500
+                Get Started
               </a>
             </div>
           </nav>
@@ -96,38 +78,36 @@ const Layout = ({ children }) => {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-brand">
-              <h3 className="footer-logo">MAKER WEB STUDIOS</h3>
+              <h3 className="footer-logo">MAKER WEB STUDIO</h3>
               <p className="footer-tagline">
-                Websites Built for Makers, By a Maker.
-                <br />
-                Serving Manufacturers Across the Rio Grande Valley and Texas.
+                Websites Built for Makers, By a Maker.<br />
+                Serving Texas Manufacturers.
               </p>
             </div>
             <div className="footer-links">
               <h4>Quick Links</h4>
               <ul>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-            </div>
-            <div className="footer-links">
-              <h4>GrowthEngine</h4>
-              <ul style={{ listStyle: 'none', padding: 0 }}>
-                <li><a href="#pricing">Roadmap</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="https://calendly.com/makerworkflows/growthengine-discovery">Book a Call</a></li>
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/#portfolio">Portfolio</a></li>
+                <li><a href="/#about">About</a></li>
               </ul>
             </div>
             <div className="footer-contact">
               <h4>Ready to Start?</h4>
               <div className="footer-actions">
                 <a
+                  href="https://calendly.com/hello-makerwebstudios/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-transparent"
+                >
+                  Book a Call
+                </a>
+                <a
                   href="https://buy.stripe.com/00w28q5V5dad6v1fLJ87K02"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-primary btn-full"
+                  className="btn btn-primary"
                 >
                   Get Started — $3,500
                 </a>
@@ -135,7 +115,9 @@ const Layout = ({ children }) => {
             </div>
           </div>
           <div className="footer-bottom">
-            <div>&copy; {new Date().getFullYear()} Maker Web Studios.</div>
+            <div>
+              &copy; {new Date().getFullYear()} Maker Web Studio.
+            </div>
             <a
               href="https://www.linkedin.com/company/makerwebstudios/"
               target="_blank"
@@ -160,6 +142,7 @@ const Layout = ({ children }) => {
           </div>
         </div>
       </footer>
+
     </div>
   );
 };
