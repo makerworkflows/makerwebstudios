@@ -406,53 +406,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 4-Step Process Section */}
-      <section className="dark-section blueprint-bg" style={{ padding: "8rem 0" }} id="process">
-        <div className="container" style={{ maxWidth: "1100px" }}>
-          <div style={{ textAlign: "center", marginBottom: "5rem" }}>
-            <div className="badge-premium" style={{ color: "var(--industrial-orange)", background: "transparent", border: "none", padding: 0, marginBottom: "1rem" }}>HOW IT WORKS</div>
-            <h2 className="section-title" style={{ color: "white" }}>Process Transparency.<br/>30 Days to Launch.</h2>
-            <p className="section-subtitle" style={{ maxWidth: "700px", margin: "0 auto", color: "rgba(255,255,255,0.7)" }}>
-              Engineers pay for certainty, not surprises. We follow a strict operational procedure to get you online fast.
-            </p>
-          </div>
-
-          <div className="bento-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", position: "relative" }}>
-            {/* Using transparent background cards for process steps to match the dark section */}
-            {[
-              {
-                step: "01",
-                title: "Discovery & Audit",
-                desc: "We audit your current capabilities, machines, and certifications. We identify exactly who your buyer is and what technical data they need to see to send an RFQ.",
-              },
-              {
-                step: "02",
-                title: "Messaging Architecture",
-                desc: "No design until the copy is right. We build a messaging framework that speaks directly to procurement teams and engineers — stripping out the fluff.",
-              },
-              {
-                step: "03",
-                title: "Blueprint & Build",
-                desc: "We build your mobile-optimized site using proven B2B manufacturing architecture. Speedy, responsive, and built to convert traffic into RFQ requests.",
-              },
-              {
-                step: "04",
-                title: "Deployment & SEO",
-                desc: "We coordinate the domain switch, technical SEO setup, and Google Business Profile launch. Your digital factory floor is officially open for business.",
-              }
-            ].map((item, idx) => (
-              <div key={idx} className="reveal-anim visible" style={{ animationDelay: `0.${idx + 1}s`, padding: "0 1rem", textAlign: "center", position: "relative", zIndex: 1 }}>
-                <div style={{ width: "80px", height: "80px", borderRadius: "50%", background: "var(--dark-bg)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 1.5rem", fontFamily: "'Outfit', sans-serif", fontSize: "1.75rem", fontWeight: "900", color: "var(--industrial-orange)", border: "3px solid rgba(255,255,255,0.1)", boxShadow: "0 0 0 2px var(--dark-bg)" }}>
-                  {item.step}
-                </div>
-                <h3 className="card-title" style={{ color: "white", marginBottom: "0.75rem", fontSize: "1.25rem", fontFamily: "'Outfit', sans-serif", fontWeight: "800" }}>{item.title}</h3>
-                <p className="card-text" style={{ color: "rgba(255,255,255,0.65)", fontSize: "0.9rem", lineHeight: "1.6" }}>{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* The GrowthEngine Section (Optional Add-On) */}
       <section style={{ padding: "8rem 0", background: "linear-gradient(135deg, var(--steel-blue-dark) 0%, var(--dark-bg) 100%)", position: "relative", overflow: "hidden" }} id="growth-engine">
         <div style={{ position: "absolute", right: "-40px", top: "50%", transform: "translateY(-50%)", fontFamily: "'Outfit', sans-serif", fontSize: "400px", fontWeight: "900", color: "rgba(255,255,255,0.02)", pointerEvents: "none", userSelect: "none", lineHeight: "1" }}>
