@@ -45,9 +45,6 @@ const Layout = ({ children }) => {
           </a>
 
           <nav className="desktop-nav">
-            <a href="/growth" className="nav-link">
-              GrowthEngine
-            </a>
             <button
               onClick={toggleTheme}
               className="theme-toggle"
