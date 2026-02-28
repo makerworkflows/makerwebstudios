@@ -53,7 +53,7 @@ const Layout = ({ children }) => {
               {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
             </button>
             <div className="nav-button-group">
-              <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-transparent">
+              <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-dark">
                 Book A Call
               </a>
               <a
@@ -96,7 +96,7 @@ const Layout = ({ children }) => {
                   href="https://calendly.com/hello-makerwebstudios/30min"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-transparent"
+                  className="btn btn-dark"
                 >
                   Book a Call
                 </a>

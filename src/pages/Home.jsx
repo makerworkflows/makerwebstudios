@@ -32,11 +32,10 @@ const Home = () => {
               If your site is slow, outdated, or missing a capabilities page —
               they're choosing your competitor before they ever call you.
             </p>
-            <div className="hero-actions reveal-anim visible" style={{ animationDelay: "0.3s" }}>
+            <div className="hero-actions reveal-anim visible" style={{ animationDelay: "0.3s", display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "1rem" }}>
               <a
                 href="#pricing"
                 className="btn btn-primary btn-lg-premium"
-                style={{ marginRight: "1rem" }}
               >
                 Get Started — $3,500
               </a>
@@ -44,7 +43,7 @@ const Home = () => {
                 href="https://calendly.com/hello-makerwebstudios/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-transparent btn-lg-premium"
+                className="btn btn-dark btn-lg-premium"
               >
                 Book a Call
               </a>
@@ -397,7 +396,7 @@ const Home = () => {
                    </li>
                  ))}
                </ul>
-               <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ width: "100%" }}>
+               <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-dark" style={{ width: "100%" }}>
                  Book a Call
                </a>
             </div>
@@ -561,7 +560,7 @@ const Home = () => {
              <a href="https://buy.stripe.com/00w28q5V5dad6v1fLJ87K02" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: "white", color: "var(--industrial-orange)", padding: "1.125rem 3rem", fontSize: "1.125rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", borderRadius: "4px", boxShadow: "0 4px 14px 0 rgba(0,0,0,0.1)" }}>
                GET STARTED
              </a>
-             <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: "transparent", color: "white", border: "2px solid rgba(255,255,255,0.3)", padding: "1.125rem 3rem", fontSize: "1.125rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", borderRadius: "4px" }}>
+             <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-dark" style={{ padding: "1.125rem 3rem", fontSize: "1.125rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", borderRadius: "4px" }}>
                BOOK A CALL
              </a>
           </div>
