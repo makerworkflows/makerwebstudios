@@ -552,9 +552,9 @@ const Home = () => {
 
       {/* Final CTA Section */}
       <section style={{ padding: "6rem 0", background: "var(--industrial-orange)", textAlign: "center" }}>
-        <div className="container" style={{ maxWidth: "700px" }}>
-          <h2 className="section-title" style={{ color: "white", marginBottom: "1.5rem", fontSize: "clamp(2.75rem, 6vw, 4.5rem)", lineHeight: "1" }}>Ready to Get Started?</h2>
-          <p style={{ fontSize: "1.125rem", color: "rgba(255,255,255,0.8)", marginBottom: "2.5rem", lineHeight: "1.55" }}>
+        <div className="container" style={{ maxWidth: "700px", margin: "0 auto", textAlign: "center" }}>
+          <h2 className="section-title" style={{ color: "var(--navy)", marginBottom: "1.5rem", fontSize: "clamp(2.75rem, 6vw, 4.5rem)", lineHeight: "1", fontFamily: "'Outfit', sans-serif", fontWeight: "900" }}>Ready to Get Started?</h2>
+          <p style={{ fontSize: "1.125rem", color: "var(--navy)", marginBottom: "2.5rem", lineHeight: "1.55", fontWeight: "500" }}>
             Stop losing bids to competitors with better digital presence. Book a discovery call or get started right away.
           </p>
           <div style={{ display: "flex", gap: "1.5rem", justifyContent: "center", flexWrap: "wrap" }}>
