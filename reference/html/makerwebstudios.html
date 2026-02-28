@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Websites Built for Manufacturers | Maker Web Studios</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0f1f3d;
+      --navy-light: #1a3060;
+      --orange: #f05a1a;
+      --orange-dark: #c94a10;
+      --white: #ffffff;
+      --off-white: #f7f6f3;
+      --gray: #6b7280;
+      --light-gray: #e5e7eb;
+      --text: #1a1a2e;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Barlow', sans-serif;
+      background: var(--off-white);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px;
+      height: 72px;
+      background: rgba(15, 31, 61, 0.97);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .nav-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: 22px; letter-spacing: 0.04em;
+      color: var(--white); text-decoration: none;
+    }
+    .nav-logo span { color: var(--orange); }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a {
+      color: rgba(255,255,255,0.7); text-decoration: none;
+      font-size: 14px; font-weight: 500; letter-spacing: 0.04em;
+      text-transform: uppercase; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta {
+      background: var(--orange); color: var(--white) !important;
+      padding: 10px 24px; border-radius: 4px;
+      font-weight: 700 !important; letter-spacing: 0.06em !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--orange-dark) !important; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: var(--navy);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(240,90,26,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 20% 100%, rgba(26,48,96,0.8) 0%, transparent 50%);
+    }
+    /* Grid texture */
+    .hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+    .hero-inner { position: relative; z-index: 1; max-width: 860px; }
+    .hero-badge {
+      display: inline-block;
+      border: 1px solid rgba(240,90,26,0.5);
+      color: var(--orange);
+      padding: 6px 18px; border-radius: 100px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; margin-bottom: 32px;
+      background: rgba(240,90,26,0.08);
+    }
+    .hero h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(52px, 8vw, 96px);
+      line-height: 0.95;
+      letter-spacing: -0.01em;
+      color: var(--white);
+      margin-bottom: 28px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--orange);
+    }
+    .hero-sub {
+      font-size: clamp(17px, 2.5vw, 21px);
+      color: rgba(255,255,255,0.65);
+      line-height: 1.55;
+      max-width: 620px; margin: 0 auto 48px;
+      font-weight: 400;
+    }
+    .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--orange); color: var(--white);
+      padding: 18px 40px; border-radius: 4px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800; font-size: 17px; letter-spacing: 0.08em;
+      text-transform: uppercase; text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--orange-dark); transform: translateY(-1px); }
+    .btn-secondary {
+      background: transparent; color: var(--white);
+      padding: 17px 40px; border-radius: 4px;
+      border: 1px solid rgba(255,255,255,0.25);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700; font-size: 17px; letter-spacing: 0.08em;
+      text-transform: uppercase; text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+      display: inline-block;
+    }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.05); }
+    .hero-stat {
+      margin-top: 72px;
+      display: flex; gap: 64px; justify-content: center; flex-wrap: wrap;
+    }
+    .stat-item { text-align: center; }
+    .stat-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 48px; font-weight: 900; color: var(--orange);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 13px; color: rgba(255,255,255,0.5);
+      letter-spacing: 0.06em; text-transform: uppercase;
+      margin-top: 6px;
+    }
+
+    /* ── SECTIONS SHARED ── */
+    section { padding: 100px 24px; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--orange);
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(38px, 5vw, 60px);
+      line-height: 1.0;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+    .section-title.light { color: var(--white); }
+    .section-sub {
+      font-size: 18px; color: var(--gray);
+      line-height: 1.6; max-width: 600px;
+    }
+
+    /* ── PAIN SECTION ── */
+    .pain { background: var(--white); }
+    .pain-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 2px; margin-top: 64px;
+      border: 2px solid var(--light-gray);
+      border-radius: 8px; overflow: hidden;
+    }
+    .pain-card {
+      padding: 48px 36px;
+      background: var(--white);
+      border-right: 2px solid var(--light-gray);
+      transition: background 0.25s;
+    }
+    .pain-card:last-child { border-right: none; }
+    .pain-card:hover { background: #fafafa; }
+    .pain-icon {
+      width: 48px; height: 48px; border-radius: 8px;
+      background: rgba(240,90,26,0.1);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 24px;
+      font-size: 22px;
+    }
+    .pain-card h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800; font-size: 24px; color: var(--navy);
+      margin-bottom: 12px; line-height: 1.1;
+    }
+    .pain-card p { font-size: 15px; color: var(--gray); line-height: 1.6; }
+
+    /* ── WE HAVE ── */
+    .we-have {
+      background: var(--navy);
+      position: relative; overflow: hidden;
+    }
+    .we-have::before {
+      content: '';
+      position: absolute;
+      top: -200px; right: -200px;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(240,90,26,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .we-have-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; align-items: center;
+      position: relative; z-index: 1;
+    }
+    .we-have-quote {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 300; font-style: italic;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.25; margin-bottom: 32px;
+    }
+    .we-have-statement {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(64px, 9vw, 110px);
+      font-weight: 900; color: var(--white);
+      line-height: 0.9; letter-spacing: -0.02em;
+    }
+    .we-have-statement span { color: var(--orange); display: block; }
+    .we-have-body { color: rgba(255,255,255,0.65); font-size: 17px; line-height: 1.7; }
+    .we-have-certs {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      margin-top: 32px;
+    }
+    .cert-badge {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.8);
+      padding: 6px 14px; border-radius: 100px;
+      font-size: 12px; font-weight: 600; letter-spacing: 0.06em;
+    }
+
+    /* ── SERVICES ── */
+    .services { background: var(--off-white); }
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px; margin-top: 64px;
+    }
+    .service-card {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 44px 36px;
+      border: 1px solid var(--light-gray);
+      position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+    }
+    .service-card.featured {
+      border-color: var(--orange);
+      border-width: 2px;
+    }
+    .featured-badge {
+      position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+      background: var(--orange); color: var(--white);
+      padding: 4px 16px; border-radius: 100px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; white-space: nowrap;
+    }
+    .service-type {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--orange);
+      margin-bottom: 12px;
+    }
+    .service-card h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: 32px;
+      color: var(--navy); margin-bottom: 8px; line-height: 1.0;
+    }
+    .service-price {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 42px; font-weight: 900; color: var(--orange);
+      line-height: 1; margin-bottom: 6px;
+    }
+    .service-price-note { font-size: 13px; color: var(--gray); margin-bottom: 24px; }
+    .service-desc { font-size: 15px; color: var(--gray); line-height: 1.6; margin-bottom: 28px; }
+    .service-features { list-style: none; margin-bottom: 36px; }
+    .service-features li {
+      padding: 9px 0;
+      border-bottom: 1px solid var(--light-gray);
+      font-size: 14px; color: var(--text);
+      display: flex; align-items: flex-start; gap: 10px;
+    }
+    .service-features li:last-child { border-bottom: none; }
+    .check { color: var(--orange); font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+    .service-cta {
+      display: block; width: 100%;
+      background: var(--navy); color: var(--white);
+      text-align: center; text-decoration: none;
+      padding: 14px; border-radius: 4px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800; font-size: 15px; letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: background 0.2s;
+    }
+    .service-cta:hover { background: var(--navy-light); }
+    .service-cta.primary { background: var(--orange); }
+    .service-cta.primary:hover { background: var(--orange-dark); }
+
+    /* ── PROCESS ── */
+    .process { background: var(--white); }
+    .process-steps {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 0; margin-top: 64px;
+      position: relative;
+    }
+    .process-steps::after {
+      content: '';
+      position: absolute;
+      top: 40px; left: calc(12.5% + 20px); right: calc(12.5% + 20px);
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), rgba(240,90,26,0.2));
+      z-index: 0;
+    }
+    .step {
+      padding: 0 24px 0; text-align: center;
+      position: relative; z-index: 1;
+    }
+    .step-num {
+      width: 80px; height: 80px; border-radius: 50%;
+      background: var(--navy);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 28px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 28px; font-weight: 900; color: var(--orange);
+      border: 3px solid var(--off-white);
+      box-shadow: 0 0 0 2px var(--navy);
+    }
+    .step h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800; font-size: 22px;
+      color: var(--navy); margin-bottom: 12px;
+    }
+    .step p { font-size: 14px; color: var(--gray); line-height: 1.6; }
+
+    /* ── GROWTH ENGINE ── */
+    .growth-engine {
+      background: linear-gradient(135deg, var(--navy) 0%, #162444 100%);
+      position: relative; overflow: hidden;
+    }
+    .growth-engine::before {
+      content: 'GE';
+      position: absolute;
+      right: -40px; top: 50%; transform: translateY(-50%);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 400px; font-weight: 900;
+      color: rgba(255,255,255,0.02);
+      pointer-events: none; user-select: none;
+      line-height: 1;
+    }
+    .growth-inner {
+      max-width: 1100px; margin: 0 auto;
+      position: relative; z-index: 1;
+    }
+    .growth-header { margin-bottom: 64px; }
+    .growth-header .section-sub { color: rgba(255,255,255,0.55); max-width: 560px; }
+    .growth-tiers {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .growth-tier {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px; padding: 36px 28px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .growth-tier:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(240,90,26,0.3);
+    }
+    .tier-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--orange);
+      margin-bottom: 12px;
+    }
+    .growth-tier h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: 26px;
+      color: var(--white); margin-bottom: 8px;
+    }
+    .tier-price {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 36px; font-weight: 900; color: var(--orange);
+      line-height: 1; margin-bottom: 4px;
+    }
+    .tier-note { font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 20px; }
+    .tier-desc { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.6; margin-bottom: 24px; }
+    .tier-features { list-style: none; }
+    .tier-features li {
+      padding: 7px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      font-size: 13px; color: rgba(255,255,255,0.7);
+      display: flex; align-items: flex-start; gap: 8px;
+    }
+    .tier-features li:last-child { border-bottom: none; }
+    .growth-cta-row {
+      margin-top: 48px; text-align: center;
+      color: rgba(255,255,255,0.5); font-size: 15px;
+    }
+    .growth-cta-row a {
+      color: var(--orange); text-decoration: none; font-weight: 600;
+    }
+
+    /* ── FAQ ── */
+    .faq { background: var(--off-white); }
+    .faq-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 24px; margin-top: 64px;
+    }
+    .faq-item {
+      background: var(--white);
+      border-radius: 8px; padding: 36px;
+      border: 1px solid var(--light-gray);
+    }
+    .faq-item h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800; font-size: 20px;
+      color: var(--navy); margin-bottom: 12px;
+    }
+    .faq-item p { font-size: 15px; color: var(--gray); line-height: 1.65; }
+
+    /* ── CTA SECTION ── */
+    .cta-section {
+      background: var(--orange);
+      text-align: center; padding: 100px 24px;
+    }
+    .cta-section h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: clamp(44px, 6vw, 72px);
+      color: var(--white); line-height: 1.0;
+      margin-bottom: 20px;
+    }
+    .cta-section p {
+      font-size: 18px; color: rgba(255,255,255,0.8);
+      max-width: 520px; margin: 0 auto 40px;
+      line-height: 1.55;
+    }
+    .cta-section .btn-white {
+      background: var(--white); color: var(--orange);
+      padding: 18px 48px; border-radius: 4px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: 18px; letter-spacing: 0.08em;
+      text-transform: uppercase; text-decoration: none;
+      display: inline-block;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .cta-section .btn-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      padding: 60px 48px 40px;
+    }
+    .footer-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: flex-start;
+      gap: 48px; flex-wrap: wrap;
+    }
+    .footer-brand .nav-logo { font-size: 20px; }
+    .footer-brand p {
+      color: rgba(255,255,255,0.4); font-size: 14px;
+      margin-top: 10px; max-width: 260px; line-height: 1.5;
+    }
+    .footer-links h4 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700; font-size: 12px; letter-spacing: 0.12em;
+      text-transform: uppercase; color: rgba(255,255,255,0.4);
+      margin-bottom: 16px;
+    }
+    .footer-links a {
+      display: block; color: rgba(255,255,255,0.65);
+      text-decoration: none; font-size: 14px; margin-bottom: 10px;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--white); }
+    .footer-bottom {
+      max-width: 1100px; margin: 40px auto 0;
+      padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.07);
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 13px; color: rgba(255,255,255,0.3);
+    }
+
+    /* ── SCROLL ANIMATIONS ── */
+    .fade-up {
+      opacity: 0; transform: translateY(32px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .fade-up:nth-child(2) { transition-delay: 0.1s; }
+    .fade-up:nth-child(3) { transition-delay: 0.2s; }
+    .fade-up:nth-child(4) { transition-delay: 0.3s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .pain-grid, .services-grid, .growth-tiers, .faq-grid {
+        grid-template-columns: 1fr;
+      }
+      .we-have-inner { grid-template-columns: 1fr; gap: 40px; }
+      .process-steps { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .process-steps::after { display: none; }
+      .hero-stat { gap: 36px; }
+    }
+    @media (max-width: 600px) {
+      section { padding: 72px 20px; }
+      .process-steps { grid-template-columns: 1fr; }
+      footer { padding: 48px 24px 32px; }
+      .footer-inner { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">MAKER <span>WEB</span> STUDIOS</a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#growth-engine">GrowthEngine</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="nav-cta">Book a Call</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">Web Design for Manufacturers, By Manufacturers</div>
+      <h1>Your Website Is<br>Losing You Bids<br>You Don't Even<br><em>Know About.</em></h1>
+      <p class="hero-sub">
+        77% of B2B buyers research suppliers online before making contact.
+        If your site is slow, outdated, or missing a capabilities page —
+        they're choosing your competitor before they ever call you.
+      </p>
+      <div class="hero-actions">
+        <a href="#services" class="btn-primary">Get Started — $3,500</a>
+        <a href="#contact" class="btn-secondary">Book a Call</a>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-item">
+          <div class="stat-num">77%</div>
+          <div class="stat-label">of B2B buyers research<br>suppliers online first</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">30</div>
+          <div class="stat-label">days to launch<br>your new site</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">16+</div>
+          <div class="stat-label">years on the<br>shop floor</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIN -->
+  <section class="pain">
+    <div class="container">
+      <div class="section-label">The Problem</div>
+      <h2 class="section-title">Most Manufacturers<br>Are Invisible Online.</h2>
+      <p class="section-sub">Your business grew on relationships and referrals. That still works — but the buyers who don't know you yet are finding someone else online.</p>
+      <div class="pain-grid">
+        <div class="pain-card fade-up">
+          <div class="pain-icon">📉</div>
+          <h3>Not Ranking on Google</h3>
+          <p>Your buyers search for manufacturers in your category and your competitors show up on page one. You don't appear until page three — or not at all.</p>
+        </div>
+        <div class="pain-card fade-up">
+          <div class="pain-icon">🔇</div>
+          <h3>No Inbound Leads</h3>
+          <p>Your website gets visitors who leave without doing anything. No RFQ submissions. No sample requests. No inquiries. No pipeline.</p>
+        </div>
+        <div class="pain-card fade-up">
+          <div class="pain-icon">🏭</div>
+          <h3>Built for Trade Shows, Not the Internet</h3>
+          <p>Your brochure site was fine in 2012. Today's procurement managers Google you before they call you — and what they find isn't winning you business.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WE HAVE -->
+  <section class="we-have">
+    <div class="we-have-inner">
+      <div>
+        <p class="we-have-quote">"Most web agencies have never run a production line, optimized a supply chain, or survived a regulatory audit."</p>
+        <div class="we-have-statement">We<span>Have.</span></div>
+      </div>
+      <div>
+        <p class="we-have-body">
+          For 16 years, we scaled regulated manufacturing operations in the Rio Grande Valley —
+          leading teams, implementing ISO 9001 quality systems across 70+ procedures,
+          driving 4x revenue growth, and maintaining certifications that procurement
+          managers actually care about.
+        </p>
+        <p class="we-have-body" style="margin-top: 20px;">
+          We build websites, messaging, and digital presence that passes the buyer
+          gut-check instantly — because we know exactly what procurement demands.
+          We speak your language because we lived it.
+        </p>
+        <div class="we-have-certs">
+          <span class="cert-badge">ISO 9001</span>
+          <span class="cert-badge">GMP</span>
+          <span class="cert-badge">SQF</span>
+          <span class="cert-badge">HACCP</span>
+          <span class="cert-badge">USDA Organic</span>
+          <span class="cert-badge">OTC</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-label">Transparent Pricing</div>
+      <h2 class="section-title">No Surprise Invoices.<br>Fixed-Price Packages.</h2>
+      <p class="section-sub">Tailored for industrial B2B manufacturers. Every engagement starts with a solid foundation before we pour resources into growth.</p>
+      <div class="services-grid" style="margin-top: 64px;">
+
+        <!-- Digital Foundation -->
+        <div class="service-card fade-up">
+          <div class="service-type">One-Time Build</div>
+          <h3>Digital Foundation</h3>
+          <div class="service-price">$3,500</div>
+          <div class="service-price-note">One-time · 30-day delivery</div>
+          <p class="service-desc">Perfect for manufacturers with an outdated site who need to get the fundamentals right and get found online.</p>
+          <ul class="service-features">
+            <li><span class="check">✓</span> Modern 5–6 page website</li>
+            <li><span class="check">✓</span> Capabilities page</li>
+            <li><span class="check">✓</span> RFQ form setup</li>
+            <li><span class="check">✓</span> On-page SEO</li>
+            <li><span class="check">✓</span> Google Business Profile setup</li>
+            <li><span class="check">✓</span> Analytics + Search Console</li>
+          </ul>
+          <a href="#contact" class="service-cta">Get Started</a>
+        </div>
+
+        <!-- Full Modernization -->
+        <div class="service-card featured fade-up">
+          <div class="featured-badge">Most Popular</div>
+          <div class="service-type">One-Time Build</div>
+          <h3>Full Modernization</h3>
+          <div class="service-price">$4,500</div>
+          <div class="service-price-note">One-time · 30-day delivery</div>
+          <p class="service-desc">For manufacturers ready to turn their website into a lead generation asset that works around the clock.</p>
+          <ul class="service-features">
+            <li><span class="check">✓</span> Everything in Foundation</li>
+            <li><span class="check">✓</span> 8–10 pages</li>
+            <li><span class="check">✓</span> Photography coordination</li>
+            <li><span class="check">✓</span> Full capabilities + certs page</li>
+            <li><span class="check">✓</span> 90-day post-launch support</li>
+            <li><span class="check">✓</span> Messaging architecture</li>
+          </ul>
+          <a href="#contact" class="service-cta primary">Get Started</a>
+        </div>
+
+        <!-- Care Plan -->
+        <div class="service-card fade-up">
+          <div class="service-type">Monthly Retainer</div>
+          <h3>Care Plan</h3>
+          <div class="service-price">$500</div>
+          <div class="service-price-note">Per month · Cancel anytime</div>
+          <p class="service-desc">Keep your site fast, secure, and up to date. We handle maintenance so you can focus on production.</p>
+          <ul class="service-features">
+            <li><span class="check">✓</span> Hosting + security updates</li>
+            <li><span class="check">✓</span> Monthly performance monitoring</li>
+            <li><span class="check">✓</span> Content updates (up to 4/mo)</li>
+            <li><span class="check">✓</span> Uptime monitoring</li>
+            <li><span class="check">✓</span> Priority support</li>
+            <li><span class="check">✓</span> Monthly analytics report</li>
+          </ul>
+          <a href="#contact" class="service-cta">Book a Call</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">Process Transparency.<br>30 Days to Launch.</h2>
+      <p class="section-sub">Engineers pay for certainty, not surprises. We follow a strict operational procedure to get you online fast.</p>
+      <div class="process-steps">
+        <div class="step fade-up">
+          <div class="step-num">01</div>
+          <h3>Discovery &amp; Audit</h3>
+          <p>We audit your current capabilities, machines, and certifications. We identify exactly who your buyer is and what technical data they need to see to send an RFQ.</p>
+        </div>
+        <div class="step fade-up">
+          <div class="step-num">02</div>
+          <h3>Messaging Architecture</h3>
+          <p>No design until the copy is right. We build a messaging framework that speaks directly to procurement teams and engineers — stripping out the fluff.</p>
+        </div>
+        <div class="step fade-up">
+          <div class="step-num">03</div>
+          <h3>Blueprint &amp; Build</h3>
+          <p>We build your mobile-optimized site using proven B2B manufacturing architecture. Speedy, responsive, and built to convert traffic into RFQ requests.</p>
+        </div>
+        <div class="step fade-up">
+          <div class="step-num">04</div>
+          <h3>Deployment &amp; SEO</h3>
+          <p>We coordinate the domain switch, technical SEO setup, and Google Business Profile launch. Your digital factory floor is officially open for business.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GROWTH ENGINE -->
+  <section class="growth-engine" id="growth-engine">
+    <div class="growth-inner">
+      <div class="growth-header">
+        <div class="section-label" style="color: var(--orange);">Optional Add-On</div>
+        <h2 class="section-title light">The GrowthEngine</h2>
+        <p class="section-sub">Your buyers are searching. Are they finding you? After your site is built, GrowthEngine keeps it climbing — ranking higher, generating inbound leads, and building your digital pipeline month after month.</p>
+      </div>
+      <div class="growth-tiers">
+
+        <div class="growth-tier fade-up">
+          <div class="tier-label">Entry Point</div>
+          <h3>Foundation Audit</h3>
+          <div class="tier-price">$1,997</div>
+          <div class="tier-note">One-time · 30-day delivery</div>
+          <p class="tier-desc">For manufacturers with no digital baseline who need to get found fast before committing to a monthly retainer.</p>
+          <ul class="tier-features">
+            <li><span class="check">✓</span> Complete digital presence audit</li>
+            <li><span class="check">✓</span> On-page SEO fixes (up to 10 pages)</li>
+            <li><span class="check">✓</span> Competitor keyword analysis</li>
+            <li><span class="check">✓</span> Google Business Profile setup</li>
+            <li><span class="check">✓</span> Google Search Console + GA4</li>
+            <li><span class="check">✓</span> 5 industry directory listings</li>
+            <li><span class="check">✓</span> 90-day growth roadmap</li>
+            <li><span class="check">✓</span> 60-min strategy delivery call</li>
+          </ul>
+        </div>
+
+        <div class="growth-tier fade-up">
+          <div class="tier-label">Monthly Retainer</div>
+          <h3>Visibility Engine</h3>
+          <div class="tier-price">$1,500</div>
+          <div class="tier-note">Per month</div>
+          <p class="tier-desc">Consistent SEO content targeting your buyers' exact search terms. Rankings climb. Leads follow.</p>
+          <ul class="tier-features">
+            <li><span class="check">✓</span> 2 SEO-optimized posts/month</li>
+            <li><span class="check">✓</span> Targeted B2B keyword writing</li>
+            <li><span class="check">✓</span> Active rank tracking</li>
+            <li><span class="check">✓</span> Monthly performance reporting</li>
+            <li><span class="check">✓</span> Google Business Profile management</li>
+            <li><span class="check">✓</span> Directory listing maintenance</li>
+          </ul>
+        </div>
+
+        <div class="growth-tier fade-up">
+          <div class="tier-label">Paid Acquisition</div>
+          <h3>Google Ads</h3>
+          <div class="tier-price">$1,000</div>
+          <div class="tier-note">Per month + ad spend</div>
+          <p class="tier-desc">For manufacturers ready to capture immediate, high-intent buyer searches. We manage the campaigns. You handle the RFQs.</p>
+          <ul class="tier-features">
+            <li><span class="check">✓</span> High-intent keyword targeting</li>
+            <li><span class="check">✓</span> Ad copy written for your buyers</li>
+            <li><span class="check">✓</span> Landing page optimization</li>
+            <li><span class="check">✓</span> Monthly ROI + spend reporting</li>
+            <li><span class="check">✓</span> Negative keyword management</li>
+            <li><span class="check">✓</span> Conversion tracking setup</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="growth-cta-row">
+        We don't sell you a massive retainer right out of the gate. We prove ROI first, then scale as your leads grow.
+        <a href="#contact"> Book a discovery call →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-label">Common Questions</div>
+      <h2 class="section-title">Straight Answers.</h2>
+      <div class="faq-grid">
+        <div class="faq-item fade-up">
+          <h3>Do I need a completely new website?</h3>
+          <p>Not always. We start with the $1,997 Foundation Audit to optimize what you already have. We only recommend a full rebuild if your current platform fundamentally cannot rank on Google or capture inbound leads.</p>
+        </div>
+        <div class="faq-item fade-up">
+          <h3>How are you different from a regular agency?</h3>
+          <p>We're not generic marketers. We understand GMP compliance, ISO 9001 systems, how a procurement manager evaluates a supplier, and what a capabilities page actually needs to say to win an RFQ.</p>
+        </div>
+        <div class="faq-item fade-up">
+          <h3>What do you need from my team?</h3>
+          <p>Very little. We do a 60-minute kickoff to understand your ideal buyer and product line, then we execute. You review and approve via email. Most clients spend under 3 hours total with us before launch.</p>
+        </div>
+        <div class="faq-item fade-up">
+          <h3>When will I see results?</h3>
+          <p>Your site launches in 30 days. Most clients begin seeing organic keyword rankings climb within 60 days of the new SEO infrastructure going live. Paid ads drive leads from day one.</p>
+        </div>
+        <div class="faq-item fade-up">
+          <h3>What if I need more than one package?</h3>
+          <p>Most clients do. The Foundation or Modernization build gives you the asset. The Care Plan keeps it current. GrowthEngine makes it a lead machine. We sequence them so each phase proves ROI before the next investment.</p>
+        </div>
+        <div class="faq-item fade-up">
+          <h3>Do you work with manufacturers outside Texas?</h3>
+          <p>Yes. While we're based in Texas and have deep roots serving Gulf Coast manufacturers, we work with regulated manufacturers across the US. The website and SEO work applies everywhere.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="contact">
+    <h2>Stop Losing Bids to Competitors<br>With Better Digital Presence.</h2>
+    <p>Book a discovery call or get started right away. Most engagements begin within one week of your first conversation with us.</p>
+    <a href="mailto:hello@makerwebstudios.com" class="btn-white">Book a Discovery Call</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo">MAKER <span>WEB</span> STUDIOS</a>
+        <p>Websites Built for Manufacturers, By a Manufacturer. Serving Industrial B2B Companies Across the US.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <a href="#services">Digital Foundation — $3,500</a>
+        <a href="#services">Full Modernization — $4,500</a>
+        <a href="#services">Care Plan — $500/mo</a>
+        <a href="#growth-engine">GrowthEngine</a>
+      </div>
+      <div class="footer-links">
+        <h4>Company</h4>
+        <a href="#process">How We Work</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Book a Call</a>
+        <a href="mailto:hello@makerwebstudios.com">hello@makerwebstudios.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Maker Web Studios. All rights reserved.</span>
+      <span>Serving Texas Manufacturers &amp; Beyond.</span>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll-triggered fade-up animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Smooth active nav highlight
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 100) current = s.id;
+      });
+      navLinks.forEach(a => {
+        a.style.color = a.getAttribute('href') === '#' + current
+          ? '#ffffff' : '';
+      });
+    });
+  </script>
+
+</body>
+</html>
