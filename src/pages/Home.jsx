@@ -5,13 +5,22 @@ import {
   DollarSign,
   Clock,
   CheckCircle2,
+  Search,
+  TrendingDown,
+  Factory,
+  Hammer,
+  Eye,
+  Magnet,
+  Target,
+  ArrowRight,
+  HelpCircle,
 } from "lucide-react";
 
 const Home = () => {
   return (
     <div id="home" className="fade-in">
       {/* Hero Section */}
-      <section className="dark-section blueprint-bg hero-premium">
+      <section className="blueprint-bg hero-premium">
         <div className="container relative z-10">
           <div className="hero-content text-center">
             <div className="badge-premium reveal-anim visible">
@@ -49,9 +58,17 @@ const Home = () => {
           min-height: 85vh;
           display: flex;
           align-items: center;
+          justify-content: center;
           padding-top: 8rem;
           padding-bottom: 10rem;
           overflow: hidden;
+        }
+
+        .hero-content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
         }
 
         .relative { position: relative; }
@@ -77,12 +94,12 @@ const Home = () => {
           max-width: 1000px;
           margin-left: auto;
           margin-right: auto;
-          color: white !important;
+          color: var(--text-dark);
         }
 
         .hero-subtext {
           font-size: 1.25rem;
-          color: rgba(255, 255, 255, 0.7);
+          color: var(--text-muted);
           margin: 0 auto 3.5rem;
           line-height: 1.7;
           max-width: 750px;
@@ -181,14 +198,53 @@ const Home = () => {
         }
       `}</style>
 
+      {/* The Pain Section */}
+      <section style={{ padding: "8rem 0", background: "var(--bg-color)" }}>
+        <div className="container">
+          <div style={{ maxWidth: "800px", marginBottom: "4rem", marginLeft: "auto", marginRight: "auto", textAlign: "center" }}>
+            <h2 className="section-title">Most regulated manufacturers are invisible online.</h2>
+          </div>
+
+          <div className="bento-grid">
+            {[
+              {
+                title: "Not Ranking",
+                desc: 'Your buyers search "aloe vera extract wholesale" or "private label nutraceutical manufacturer Texas" — and your competitors show up. You don\'t.',
+                icon: <Search />,
+                delay: "0.1s",
+              },
+              {
+                title: "No Inbound Leads",
+                desc: "Your website gets visitors who leave without doing anything. No sample requests. No inquiries. No pipeline.",
+                icon: <TrendingDown />,
+                delay: "0.2s",
+              },
+              {
+                title: "Built for Trade Shows, Not the Internet",
+                desc: "Your business grew on relationships and referrals. That still works — but the buyers who don't know you yet are finding someone else online.",
+                icon: <Factory />,
+                delay: "0.3s",
+              },
+            ].map((item, idx) => (
+              <div key={idx} className="bento-card reveal-anim visible" style={{ animationDelay: item.delay }}>
+                <div className="icon-badge orange-badge">
+                  {item.icon}
+                </div>
+                <h3 className="card-title">{item.title}</h3>
+                <p className="card-text">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services Overview Bento Grid */}
       <section style={{ padding: "10rem 0", background: "var(--bg-color)" }}>
         <div className="container">
-          <div style={{ maxWidth: "700px", marginBottom: "5rem" }}>
-            <h2 className="section-title">Built for the Shop Floor.</h2>
+          <div style={{ maxWidth: "700px", marginBottom: "5rem", marginLeft: "auto", marginRight: "auto", textAlign: "center" }}>
+            <h2 className="section-title">Your Buyers Are Searching.<br />Are They Finding You?</h2>
             <p className="section-subtitle">
-              Most web agencies don't know what a tolerance is or why your RFQ
-              form is your most important asset. We do.
+              Maker Web Studios gets manufacturers found on Google, ranking for the right keywords, and generating inbound B2B leads — without a generic marketing agency that doesn't know your industry.
             </p>
           </div>
 
@@ -196,13 +252,11 @@ const Home = () => {
             {/* Large Feature Card */}
             <div className="bento-card bento-grid-wide premium-card-dark">
               <div className="icon-badge blue-badge">
-                <CheckCircle2 size={24} />
+                <Hammer size={24} />
               </div>
-              <h3 className="card-title-lg">Capabilities Pages That Sell</h3>
+              <h3 className="card-title-lg">Built By Manufacturers, For Manufacturers</h3>
               <p className="card-text-lg">
-                You have no capabilities page — we build one that qualifies
-                procurement teams before they call, saving your sales team hours
-                of wasted time.
+                Guillermo Aristi grew a manufacturing business for 8 years knowing his online presence was invisible. He built Maker Web Studios because his own buyers couldn't find him either.
               </p>
               <div className="card-decoration" />
             </div>
@@ -210,27 +264,27 @@ const Home = () => {
             {/* Standard Feature Cards */}
             {[
               {
-                title: "Lightning Speed",
-                desc: "Your website loads in 10s on mobile. We get it under 2s.",
-                icon: <Clock />,
+                title: "Foundation",
+                desc: "We audit your digital presence, fix your SEO, and build or optimize your website so buyers can actually find and convert.",
+                icon: <Code />,
                 delay: "0.1s",
               },
               {
-                title: "Lead Conversions",
-                desc: "Your RFQ form is buried. We rebuild it as your #1 tool.",
-                icon: <CheckCircle2 />,
+                title: "Visibility",
+                desc: "Monthly content targeting your buyers' search terms. Google Ads for immediate inbound. Directory listings on the platforms your buyers use.",
+                icon: <Eye />,
                 delay: "0.2s",
               },
               {
-                title: "Local Visibility",
-                desc: "Invisible on Google? We setup your SEO so engineers find you.",
-                icon: <ShieldCheck />,
+                title: "Conversion",
+                desc: "Sample request funnels, lead capture, product spec sheets, and email sequences that turn visitors into qualified buyers.",
+                icon: <Magnet />,
                 delay: "0.3s",
               },
               {
-                title: "Modern Blueprint",
-                desc: "Your site looks like 2003. We modernize it for under $5K.",
-                icon: <Code />,
+                title: "Outreach",
+                desc: "Qualified buyer lists and outreach campaigns reaching formulators, supplement brands, and manufacturers who need your ingredients.",
+                icon: <Target />,
                 delay: "0.4s",
               },
             ].map((item, idx) => (
@@ -323,125 +377,245 @@ const Home = () => {
         }
       `}</style>
 
-      {/* The Offer CTA */}
-      <section className="dark-section blueprint-bg offer-section">
+      {/* Three Simple Steps Section (Process) */}
+      <section className="dark-section blueprint-bg" style={{ padding: "8rem 0" }}>
         <div className="container">
-          <div className="offer-card premium-glass reveal-anim visible">
-            <h2 className="offer-title">The Manufacturer's Digital Foundation</h2>
-            <p className="offer-price">Starting at $3,500</p>
+          <div style={{ textAlign: "center", marginBottom: "5rem" }}>
+            <h2 className="section-title" style={{ color: "white" }}>Three Simple Steps to Pipeline Growth.</h2>
+            <p className="section-subtitle" style={{ maxWidth: "700px", margin: "0 auto", color: "rgba(255,255,255,0.7)" }}>
+              Process transparency. Engineers pay for certainty, not surprises. We follow a strict operational procedure to get you online in 30 days.
+            </p>
+          </div>
 
-            <ul className="offer-features">
-              {[
-                "Modern mobile-responsive website",
-                "Capabilities & RFQ pages",
-                "Google Business Profile setup",
-                "On-page SEO included",
-                "SSL + speed optimization",
-                "Professional site copywriting",
-              ].map((feat, i) => (
-                <li key={i} className="offer-feature">
-                  <CheckCircle2
-                    size={24}
-                    className="feature-icon"
-                  />
-                  <span>{feat}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="offer-actions">
-              <a
-                href="https://calendly.com/hello-makerwebstudios/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-transparent btn-lg-premium"
-              >
-                Book a Call
-              </a>
-              <a
-                href="https://buy.stripe.com/00w28q5V5dad6v1fLJ87K02"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary btn-lg-premium"
-              >
-                Get Started — $3,500
-              </a>
-            </div>
+          <div className="bento-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }}>
+            {[
+              {
+                step: "01",
+                title: "Check Out",
+                desc: "Book your kickoff call and secure your spot.",
+              },
+              {
+                step: "02",
+                title: "We Build",
+                desc: "In 30 days we build your foundation, launch your SEO, and deploy your visibility engine.",
+              },
+              {
+                step: "03",
+                title: "You Get Found",
+                desc: "Rankings climb. Buyers find you. You get sample requests and qualified leads directly in your inbox.",
+              }
+            ].map((item, idx) => (
+              <div key={idx} className="bento-card premium-glass reveal-anim visible" style={{ animationDelay: `0.${idx + 1}s`, backgroundColor: "var(--dark-bg)", position: "relative" }}>
+                <div style={{ fontSize: "3rem", fontWeight: "800", color: "rgba(255,107,0,0.1)", position: "absolute", top: "20px", right: "20px", fontFamily: "'Outfit', sans-serif" }}>
+                  {item.step}
+                </div>
+                <h3 className="card-title" style={{ color: "white", marginTop: "1rem", fontSize: "1.5rem" }}>{item.title}</h3>
+                <p className="card-text" style={{ color: "rgba(255,255,255,0.7)" }}>{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <style>{`
-        .offer-section {
-          padding: 10rem 0;
-        }
+      {/* The GrowthEngine Roadmap (Pricing) */}
+      <section style={{ padding: "8rem 0", background: "var(--bg-color)" }} id="roadmap">
+        <div className="container">
+          <div style={{ textAlign: "center", marginBottom: "5rem" }}>
+            <h2 className="section-title">The GrowthEngine Roadmap</h2>
+            <p className="section-subtitle" style={{ maxWidth: "700px", margin: "0 auto" }}>
+              We don't sell you a massive retainer right out of the gate. We prove ROI first, then scale as your leads grow.
+            </p>
+          </div>
 
-        .offer-card {
-          padding: 5rem;
-          text-align: center;
-          max-width: 1000px;
-          margin: 0 auto;
-          border-radius: var(--border-radius-lg);
-        }
+          <div className="bento-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", alignItems: "start" }}>
+            
+            {/* Starter Package (Most Popular) */}
+            <div className="bento-card reveal-anim visible" style={{ border: "2px solid var(--industrial-orange)", position: "relative" }}>
+               <div style={{ position: "absolute", top: 0, left: "50%", transform: "translate(-50%, -50%)", background: "var(--industrial-orange)", color: "white", padding: "4px 12px", borderRadius: "100px", fontSize: "0.75rem", fontWeight: "bold", textTransform: "uppercase", letterSpacing: "1px" }}>
+                 Most Popular Entry Point
+               </div>
+               <h3 className="card-title-lg" style={{ color: "var(--text-dark)", fontSize: "1.75rem", marginBottom: "0.5rem" }}>GrowthEngine Starter</h3>
+               <div style={{ fontSize: "2rem", fontWeight: "800", fontFamily: "'Outfit', sans-serif", color: "var(--industrial-orange)", marginBottom: "1rem" }}>
+                 $1,997 <span style={{ fontSize: "1rem", color: "var(--text-muted)", fontWeight: "500" }}>one-time</span>
+               </div>
+               <p style={{ color: "var(--text-muted)", marginBottom: "2rem", fontSize: "0.95rem" }}>
+                 For manufacturers with no baseline digital presence who need to get found fast.
+               </p>
+               <ul style={{ listStyle: "none", padding: 0, marginBottom: "2rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+                 {[
+                   "Complete Digital Website Audit", "On-page SEO fixes (up to 10 pages)", "Competitor keyword analysis", 
+                   "Google Business Profile Setup", "Google Search Console Config", "Google Analytics 4 Setup",
+                   "5 Industry Directory Listings", "3 Product Spec Sheets (PDF)", "90-Day Growth Roadmap report", "60-min Strategy Delivery Call"
+                 ].map((feat, i) => (
+                   <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "0.9rem", color: "var(--text-dark)" }}>
+                     <CheckCircle2 size={16} color="var(--industrial-orange)" style={{ flexShrink: 0, marginTop: "2px" }} />
+                     <span>{feat}</span>
+                   </li>
+                 ))}
+               </ul>
+               <a href="https://buy.stripe.com/00w28q5V5dad6v1fLJ87K02" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: "100%" }}>
+                 Get Started <ArrowRight size={18} style={{ marginLeft: "8px" }} />
+               </a>
+               <p style={{ fontSize: "0.75rem", color: "var(--text-muted)", textAlign: "center", marginTop: "1rem" }}>
+                 Full refund if every deliverable isn't complete within 30 days of your onboarding form.
+               </p>
+            </div>
 
-        .offer-title {
-          font-size: clamp(2rem, 3.5vw, 3rem);
-          margin-bottom: 1.5rem;
-          color: white !important;
-        }
+            {/* Visibility Engine Package */}
+            <div className="bento-card reveal-anim visible" style={{ animationDelay: "0.2s" }}>
+               <h3 className="card-title-lg" style={{ color: "var(--text-dark)", fontSize: "1.75rem", marginBottom: "0.5rem" }}>Visibility Engine</h3>
+               <div style={{ fontSize: "2rem", fontWeight: "800", fontFamily: "'Outfit', sans-serif", color: "var(--text-dark)", marginBottom: "1rem" }}>
+                 $1,500<span style={{ fontSize: "1rem", color: "var(--text-muted)", fontWeight: "500" }}>/mo</span>
+               </div>
+               <p style={{ color: "var(--text-muted)", marginBottom: "2rem", fontSize: "0.95rem" }}>
+                 Natural next step after Starter. Consistent SEO content targeting your buyers.
+               </p>
+               <ul style={{ listStyle: "none", padding: 0, marginBottom: "2rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+                 {[
+                   "2 SEO-optimized posts per month", "Targeted B2B keyword writing", "Active Rank Tracking", "Monthly performance reporting"
+                 ].map((feat, i) => (
+                   <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "0.9rem", color: "var(--text-dark)" }}>
+                     <CheckCircle2 size={16} color="var(--steel-blue)" style={{ flexShrink: 0, marginTop: "2px" }} />
+                     <span>{feat}</span>
+                   </li>
+                 ))}
+               </ul>
+               <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-transparent" style={{ width: "100%" }}>
+                 Book a Call <ArrowRight size={18} style={{ marginLeft: "8px" }} />
+               </a>
+            </div>
 
-        .offer-price {
-          font-size: 1.75rem;
-          font-weight: 700;
-          color: var(--industrial-orange);
-          margin-bottom: 4rem;
-          font-family: "Outfit", sans-serif;
-        }
+            {/* Google Ads Package */}
+            <div className="bento-card reveal-anim visible" style={{ animationDelay: "0.4s" }}>
+               <h3 className="card-title-lg" style={{ color: "var(--text-dark)", fontSize: "1.75rem", marginBottom: "0.5rem" }}>Google Ads Management</h3>
+               <div style={{ fontSize: "2rem", fontWeight: "800", fontFamily: "'Outfit', sans-serif", color: "var(--text-dark)", marginBottom: "1rem" }}>
+                 $1,000<span style={{ fontSize: "1rem", color: "var(--text-muted)", fontWeight: "500" }}>/mo + spend</span>
+               </div>
+               <p style={{ color: "var(--text-muted)", marginBottom: "2rem", fontSize: "0.95rem" }}>
+                 For suppliers looking to capture immediate, high-intent buyer searches.
+               </p>
+               <ul style={{ listStyle: "none", padding: 0, marginBottom: "2rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+                 {[
+                   "High-intent keyword targeting", "Ad copy written for formulators", "Landing page optimization advice", "Monthly ROI/Spend reporting"
+                 ].map((feat, i) => (
+                   <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "0.9rem", color: "var(--text-dark)" }}>
+                     <CheckCircle2 size={16} color="var(--steel-blue)" style={{ flexShrink: 0, marginTop: "2px" }} />
+                     <span>{feat}</span>
+                   </li>
+                 ))}
+               </ul>
+               <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-transparent" style={{ width: "100%" }}>
+                 Book a Call <ArrowRight size={18} style={{ marginLeft: "8px" }} />
+               </a>
+            </div>
 
-        .offer-features {
-          list-style: none;
-          padding: 0;
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-          gap: 2rem;
-          text-align: left;
-          margin-bottom: 5rem;
-        }
+          </div>
+          
+          <div style={{ textAlign: "center", marginTop: "4rem", color: "var(--text-muted)" }}>
+            Need a custom scope for your full digital presence? <a href="https://calendly.com/hello-makerwebstudios/30min" style={{ fontWeight: "600" }}>Book a discovery call</a> — most full engagements start at $3,500.
+          </div>
+        </div>
+      </section>
 
-        .offer-feature {
-          display: flex;
-          align-items: flex-start;
-          gap: 1rem;
-          color: rgba(255, 255, 255, 0.8);
-          font-size: 1.125rem;
-          font-weight: 500;
-        }
+      {/* FAQ Section */}
+      <section style={{ padding: "8rem 0", background: "var(--dark-bg)" }} id="faq" className="dark-section blueprint-bg">
+        <div className="container">
+          <div style={{ textAlign: "center", marginBottom: "4rem" }}>
+            <h2 className="section-title" style={{ color: "white" }}>Common Questions</h2>
+          </div>
 
-        .feature-icon {
-          color: var(--industrial-orange);
-          flex-shrink: 0;
-        }
+          <div className="bento-grid" style={{ gridTemplateColumns: "1fr", maxWidth: "800px", margin: "0 auto", gap: "1rem" }}>
+            {[
+              {
+                q: "Do I need a new website?",
+                a: "No. We start with the $1,997 Audit & Setup to optimize what you already have. We only recommend a rebuild if your current platform fundamentally cannot rank on Google or capture inbound leads."
+              },
+              {
+                q: "How are you different from an agency?",
+                a: "We are not generic marketers. We understand INCI names, cGMP compliance, formulation specs, and how a purchasing manager evaluates an ingredient supplier."
+              },
+              {
+                q: "What do you need from my team?",
+                a: "Very little. We do a 60-minute kickoff to understand your ideal client and products, and then we execute. You review and approve via email."
+              },
+              {
+                q: "When will I see results?",
+                a: "Setup is completed in 30 days. Most clients begin seeing their organic keyword rankings climb within 60 days of the new infrastructure going live."
+              },
+              {
+                q: "What if I need more than the Starter package?",
+                a: "Most clients do. The Starter phase simply ensures your foundation is solid before we start pouring money into monthly content engines or paid ads."
+              }
+            ].map((faq, idx) => (
+              <div key={idx} className="bento-card premium-glass reveal-anim visible" style={{ padding: "2rem", display: "flex", gap: "1.5rem", alignItems: "flex-start", backgroundColor: "rgba(15, 23, 42, 0.4)" }}>
+                <HelpCircle size={24} color="var(--industrial-orange)" style={{ flexShrink: 0, marginTop: "4px" }} />
+                <div>
+                  <h3 style={{ fontSize: "1.25rem", color: "white", marginBottom: "0.5rem", fontFamily: "'Inter', sans-serif" }}>{faq.q}</h3>
+                  <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "1rem", lineHeight: "1.6" }}>{faq.a}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        .offer-actions {
-          display: flex;
-          gap: 1.5rem;
-          justify-content: center;
-          flex-wrap: wrap;
-        }
+      {/* Our Work Sections */}
+      <section style={{ padding: "8rem 0", background: "var(--bg-color)" }} id="portfolio">
+        <div className="container">
+          <div style={{ textAlign: "center", marginBottom: "4rem" }}>
+             <h2 className="section-title">Our Work</h2>
+             <p className="section-subtitle" style={{ maxWidth: "700px", margin: "0 auto" }}>
+               Real results for real manufacturers.
+             </p>
+          </div>
+          
+          <div className="bento-card reveal-anim visible" style={{ textAlign: "center", padding: "4rem", borderStyle: "dashed", borderColor: "var(--border-color)", background: "transparent", boxShadow: "none" }}>
+            <h3 style={{ fontSize: "1.5rem", color: "var(--text-dark)", marginBottom: "1rem" }}>Case studies coming soon.</h3>
+            <p style={{ color: "var(--text-muted)", maxWidth: "600px", margin: "0 auto" }}>
+              We are continually adding new projects measuring real ROI and lead generation metrics for industrial B2B clients.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        @media (max-width: 768px) {
-          .offer-card {
-            padding: 3rem 1.5rem;
-          }
-          .offer-features {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-          }
-          .offer-actions .btn {
-            width: 100%;
-          }
-        }
-      `}</style>
+      {/* Our Story Section */}
+      <section style={{ padding: "8rem 0", background: "var(--dark-bg)" }} id="about" className="dark-section blueprint-bg">
+        <div className="container" style={{ maxWidth: "800px", margin: "0 auto" }}>
+           <h2 className="section-title" style={{ color: "white", marginBottom: "2rem" }}>Our Story</h2>
+           <h3 style={{ fontSize: "1.5rem", color: "var(--industrial-orange)", marginBottom: "2rem", fontWeight: "600", fontFamily: "'Inter', sans-serif", lineHeight: "1.4" }}>
+             16 years on the shop floor. Now building digital presences that win manufacturing contracts.
+           </h3>
+           <div style={{ color: "rgba(255,255,255,0.8)", fontSize: "1.125rem", lineHeight: "1.8", display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+             <p>Most web agencies have never run a production line, optimized a supply chain, or survived a regulatory audit.</p>
+             <p style={{ fontSize: "1.5rem", color: "white", fontWeight: "bold" }}>We have.</p>
+             <p>
+               For 16 years, we scaled regulated manufacturing operations in the Rio Grande Valley — leading teams, implementing ISO 9001 systems (70+ procedures), driving 4x revenue growth, and maintaining certifications like GMP, HACCP, SQF, and more. We know what procurement demands: proven compliance, process discipline, and reliable capability.
+             </p>
+             <p>
+               Now we craft websites, messaging, and visuals that pass the buyer gut-check instantly — so you close more deals and focus on production.
+             </p>
+           </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section style={{ padding: "8rem 0", background: "var(--bg-color)", textAlign: "center" }}>
+        <div className="container" style={{ maxWidth: "700px" }}>
+          <h2 className="section-title" style={{ marginBottom: "1.5rem" }}>Ready to Get Started?</h2>
+          <p style={{ fontSize: "1.25rem", color: "var(--text-muted)", marginBottom: "3rem" }}>
+            Stop losing bids to competitors with better digital presence. Book a discovery call or get started right away.
+          </p>
+          <div style={{ display: "flex", gap: "1.5rem", justifyContent: "center", flexWrap: "wrap" }}>
+             <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-transparent btn-lg-premium" style={{ borderColor: "var(--border-color)", color: "var(--text-dark)" }}>
+               Book a Call
+             </a>
+             <a href="https://buy.stripe.com/00w28q5V5dad6v1fLJ87K02" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg-premium">
+               Get Started
+             </a>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 };
