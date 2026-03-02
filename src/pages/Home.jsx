@@ -246,7 +246,7 @@ const Home = () => {
                  For manufacturers ready to turn their website into a lead generation asset that works around the clock.
                </p>
                
-               <ul style={{ listStyle: "none", padding: 0, marginBottom: "2.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1.5rem", flex: 1 }}>
+               <ul style={{ listStyle: "none", padding: 0, marginBottom: "2.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1.5rem" }}>
                  {[
                    "Modern 8–10 page website built for B2B manufacturers", 
                    "Capabilities page that qualifies procurement teams before they call", 
@@ -266,9 +266,11 @@ const Home = () => {
                    </li>
                  ))}
                </ul>
-               <a href="https://buy.stripe.com/4gM00idnx9Y16v10QP87K03" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: "100%" }}>
-                 Get Started
-               </a>
+               <div style={{ marginTop: "auto" }}>
+                 <a href="https://buy.stripe.com/4gM00idnx9Y16v10QP87K03" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: "100%" }}>
+                   Get Started
+                 </a>
+               </div>
             </div>
 
             {/* Care Plan Package */}
@@ -286,7 +288,7 @@ const Home = () => {
                  Keep your site fast, secure, and up to date. We handle maintenance so you can focus on production.
                </p>
                
-               <ul style={{ listStyle: "none", padding: 0, marginBottom: "2.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1.5rem", flex: 1 }}>
+               <ul style={{ listStyle: "none", padding: 0, marginBottom: "2.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1.5rem" }}>
                  {[
                    "Hosting + security updates handled for you", 
                    "Monthly PageSpeed + performance monitoring", 
@@ -303,9 +305,11 @@ const Home = () => {
                    </li>
                  ))}
                </ul>
-               <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-dark" style={{ width: "100%" }}>
-                 Book a Call
-               </a>
+               <div style={{ marginTop: "auto" }}>
+                 <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-dark" style={{ width: "100%" }}>
+                   Book a Call
+                 </a>
+               </div>
             </div>
 
           </div>

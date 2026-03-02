@@ -96,8 +96,7 @@ const Layout = ({ children }) => {
                   href="https://calendly.com/hello-makerwebstudios/30min"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn"
-                  style={{ background: "black", color: "white" }}
+                  className="btn btn-dark"
                 >
                   Book a Call
                 </a>
