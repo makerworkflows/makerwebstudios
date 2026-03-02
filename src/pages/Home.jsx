@@ -310,7 +310,7 @@ const Home = () => {
              <a href="https://buy.stripe.com/4gM00idnx9Y16v10QP87K03" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: "1.125rem 3rem", fontSize: "1.125rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", borderRadius: "4px" }}>
                GET STARTED
              </a>
-             <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-dark" style={{ background: "var(--text-dark)", color: "var(--clean-white)", borderColor: "var(--text-dark)" }}>
+             <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-dark" style={{ background: "var(--text-dark)", color: "var(--clean-white)", border: "2px solid black" }}>
                BOOK A CALL
              </a>
           </div>
