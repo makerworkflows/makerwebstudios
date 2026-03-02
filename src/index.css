@@ -175,6 +175,11 @@ a:hover {
   border: 1px solid var(--text-dark);
 }
 
+[data-theme="dark"] .btn-dark,
+.dark-section .btn-dark {
+  color: #000000;
+}
+
 .btn-dark:hover {
   background-color: var(--industrial-orange);
   border-color: var(--industrial-orange);
@@ -306,7 +311,7 @@ a:hover {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: 
+  background-image:
     linear-gradient(var(--border-color) 1px, transparent 1px),
     linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -317,7 +322,7 @@ a:hover {
 }
 
 .dark-section.blueprint-bg::before {
-  background-image: 
+  background-image:
     linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   opacity: 1;
@@ -503,14 +508,16 @@ a:hover {
 
 /* Responsive Overrides */
 @media (max-width: 1024px) {
-  .desktop-nav { gap: 1rem; }
+  .desktop-nav {
+    gap: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
   .nav-container {
     padding: 1rem;
   }
-  
+
   .brand-logo {
     font-size: 1.1rem;
   }
@@ -518,7 +525,7 @@ a:hover {
   .desktop-nav {
     gap: 0.5rem;
   }
-  
+
   .nav-link {
     display: none; /* Hide text links on mobile for now, focus on buttons */
   }
@@ -527,7 +534,7 @@ a:hover {
     padding: 0.5rem 0.75rem;
     font-size: 0.75rem;
   }
-  
+
   .footer-grid {
     gap: 2rem;
   }
@@ -537,11 +544,11 @@ a:hover {
   .brand-logo {
     font-size: 0.9rem;
   }
-  
+
   .nav-button-group {
     gap: 0.5rem;
   }
-  
+
   .nav-button-group .btn-sm {
     padding: 0.4rem 0.5rem;
     font-size: 0.65rem;
