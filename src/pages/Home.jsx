@@ -231,37 +231,6 @@ const Home = () => {
 
           <div className="bento-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", alignItems: "stretch" }}>
             
-            {/* Digital Foundation Package */}
-            <div className="bento-card reveal-anim visible" style={{ display: "flex", flexDirection: "column" }}>
-               <div style={{ color: "var(--industrial-orange)", fontSize: "0.75rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.75rem" }}>
-                 One-Time Build
-               </div>
-               <h3 className="card-title-lg" style={{ color: "var(--text-dark)", fontSize: "2rem", marginBottom: "0.5rem", fontFamily: "'Outfit', sans-serif", fontWeight: "900", lineHeight: "1" }}>Digital Foundation</h3>
-               <div style={{ fontSize: "2.5rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", color: "var(--industrial-orange)", marginBottom: "0.5rem", lineHeight: "1" }}>
-                 $3,500
-               </div>
-               <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>One-time · 30-day delivery</div>
-               
-               <p style={{ color: "var(--text-muted)", marginBottom: "2rem", fontSize: "0.95rem", flex: 1 }}>
-                 Perfect for manufacturers with an outdated site who need to get the fundamentals right and get found online.
-               </p>
-               
-               <ul style={{ listStyle: "none", padding: 0, marginBottom: "2.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1.5rem" }}>
-                 {[
-                   "Modern 5–6 page website", "Capabilities page", "RFQ form setup", 
-                   "On-page SEO", "Google Business Profile setup", "Analytics + Search Console"
-                 ].map((feat, i) => (
-                   <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "0.9rem", color: "var(--text-dark)" }}>
-                     <CheckCircle2 size={16} color="var(--industrial-orange)" style={{ flexShrink: 0, marginTop: "2px" }} />
-                     <span>{feat}</span>
-                   </li>
-                 ))}
-               </ul>
-               <a href="https://buy.stripe.com/00w28q5V5dad6v1fLJ87K02" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ width: "100%" }}>
-                 Get Started
-               </a>
-            </div>
-
             {/* Full Modernization Package (Featured) */}
             <div className="bento-card reveal-anim visible" style={{ border: "2px solid var(--industrial-orange)", position: "relative", display: "flex", flexDirection: "column" }}>
                <div style={{ position: "absolute", top: "-14px", left: "50%", transform: "translateX(-50%)", background: "var(--industrial-orange)", color: "white", padding: "4px 16px", borderRadius: "100px", fontSize: "0.75rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", whiteSpace: "nowrap" }}>
