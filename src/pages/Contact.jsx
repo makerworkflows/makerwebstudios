@@ -14,11 +14,12 @@ const Contact = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-dark"
+            style={{ background: "var(--text-dark)", color: "var(--clean-white)", borderColor: "var(--text-dark)" }}
           >
             Book a Call
           </a>
           <a
-            href="https://buy.stripe.com/00w28q5V5dad6v1fLJ87K02"
+            href="https://buy.stripe.com/4gM00idnx9Y16v10QP87K03"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary"
