@@ -14,7 +14,7 @@ const Contact = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-dark"
-            style={{ background: "var(--text-dark)", color: "var(--clean-white)", border: "2px solid black" }}
+            style={{ background: "transparent", color: "black", border: "2px solid black" }}
           >
             Book a Call
           </a>
