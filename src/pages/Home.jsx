@@ -222,7 +222,7 @@ const Home = () => {
         <div className="container" style={{ maxWidth: "1100px" }}>
           <div style={{ marginBottom: "5rem" }}>
             <div className="badge-premium" style={{ color: "var(--industrial-orange)", background: "transparent", border: "none", padding: 0, marginBottom: "1rem" }}>TRANSPARENT PRICING</div>
-            <h2 className="section-title">The Growth Engine</h2>
+            <h2 className="section-title">GrowthEngine</h2>
             <p className="section-subtitle" style={{ maxWidth: "700px" }}>
               Modern Digital Transformation<br/>
               Tailored for industrial B2B companies.
