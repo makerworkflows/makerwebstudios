@@ -31,7 +31,6 @@ const Services = () => (
 
         {/* Modernization Package */}
         <div className="package-card premium-glass reveal-anim visible" style={{ border: "2px solid var(--industrial-orange)", animationDelay: "0.1s" }}>
-          <div className="package-badge">MOST POPULAR</div>
           <h3 className="package-name">Full Modernization</h3>
           <div className="package-price">
             $4,500 <span className="price-label">One-Time Build</span>

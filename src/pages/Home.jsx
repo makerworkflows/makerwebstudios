@@ -232,10 +232,7 @@ const Home = () => {
           <div className="bento-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", alignItems: "stretch" }}>
             
             {/* Full Modernization Package (Featured) */}
-            <div className="bento-card reveal-anim visible" style={{ border: "2px solid var(--industrial-orange)", position: "relative", display: "flex", flexDirection: "column" }}>
-               <div style={{ position: "absolute", top: "-14px", left: "50%", transform: "translateX(-50%)", background: "var(--industrial-orange)", color: "white", padding: "4px 16px", borderRadius: "100px", fontSize: "0.75rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", whiteSpace: "nowrap" }}>
-                 Most Popular
-               </div>
+            <div className="bento-card reveal-anim visible" style={{ border: "2px solid var(--industrial-orange)", display: "flex", flexDirection: "column" }}>
                <div style={{ color: "var(--industrial-orange)", fontSize: "0.75rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.75rem" }}>
                  One-Time Build
                </div>
@@ -249,7 +246,7 @@ const Home = () => {
                  For manufacturers ready to turn their website into a lead generation asset that works around the clock.
                </p>
                
-               <ul style={{ listStyle: "none", padding: 0, marginBottom: "2.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1.5rem" }}>
+               <ul style={{ listStyle: "none", padding: 0, marginBottom: "2.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1.5rem", marginTop: "auto" }}>
                  {[
                    "Modern 8–10 page website built for B2B manufacturers", 
                    "Capabilities page that qualifies procurement teams before they call", 
@@ -289,7 +286,7 @@ const Home = () => {
                  Keep your site fast, secure, and up to date. We handle maintenance so you can focus on production.
                </p>
                
-               <ul style={{ listStyle: "none", padding: 0, marginBottom: "2.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1.5rem" }}>
+               <ul style={{ listStyle: "none", padding: 0, marginBottom: "2.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1.5rem", marginTop: "auto" }}>
                  {[
                    "Hosting + security updates handled for you", 
                    "Monthly PageSpeed + performance monitoring", 
