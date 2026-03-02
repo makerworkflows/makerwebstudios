@@ -143,78 +143,6 @@ const Home = () => {
         }
       `}</style>
 
-      {/* Credibility Bar */}
-      <section className="credibility-bar premium-glass">
-        <div className="container">
-          <div className="credibility-items">
-            {[
-              { icon: <ShieldCheck size={20} />, text: "16 Years in Manufacturing" },
-              { icon: <MapPin size={20} />, text: "RGV & Texas Focused" },
-              { icon: <Code size={20} />, text: "No Custom Code Required" },
-              { icon: <DollarSign size={20} />, text: "Fixed-Price Packages" },
-              { icon: <Clock size={20} />, text: "Results in 30 Days" },
-            ].map((item, i) => (
-              <div key={i} className="credibility-item">
-                <span className="icon-wrapper">{item.icon}</span>
-                <span className="item-text">{item.text}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <style>{`
-        .credibility-bar {
-          margin-top: -3rem;
-          margin-bottom: 2rem;
-          padding: 2rem 0;
-          z-index: 20;
-          position: relative;
-          border-radius: var(--border-radius-lg);
-          max-width: 1100px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-
-        .credibility-items {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 3rem;
-        }
-
-        .credibility-item {
-          display: flex;
-          align-items: center;
-          gap: 0.75rem;
-        }
-
-        .icon-wrapper {
-          color: var(--industrial-orange);
-          display: flex;
-          align-items: center;
-        }
-
-        .item-text {
-          font-weight: 600;
-          font-size: 0.9rem;
-          color: var(--text-dark);
-        }
-
-        [data-theme="dark"] .item-text {
-          color: #ffffff;
-        }
-
-        @media (max-width: 768px) {
-          .credibility-bar {
-            margin-top: -2rem;
-            border-radius: 0;
-            width: 100%;
-            max-width: 100%;
-          }
-          .credibility-items { gap: 1.5rem; }
-        }
-      `}</style>
 
       {/* The Problem (Pain) Section */}
       <section style={{ padding: "8rem 0", background: "var(--bg-color)" }}>
@@ -271,10 +199,7 @@ const Home = () => {
            </div>
            <div style={{ color: "rgba(255,255,255,0.65)", fontSize: "1.125rem", lineHeight: "1.8", display: "flex", flexDirection: "column", gap: "1.5rem" }}>
              <p>
-               For 16 years, we scaled regulated manufacturing operations in the Rio Grande Valley —
-               leading teams, implementing ISO 9001 quality systems across 70+ procedures,
-               driving 4x revenue growth, and maintaining certifications that procurement
-               managers actually care about.
+               For 16 years, we scaled regulated manufacturing operations in Texas — leading teams, implementing ISO 9001 quality systems across 70+ procedures, driving 4x revenue growth, and maintaining certifications that procurement managers actually care about.
              </p>
              <p>
                We build websites, messaging, and digital presence that passes the buyer
@@ -297,9 +222,10 @@ const Home = () => {
         <div className="container" style={{ maxWidth: "1100px" }}>
           <div style={{ marginBottom: "5rem" }}>
             <div className="badge-premium" style={{ color: "var(--industrial-orange)", background: "transparent", border: "none", padding: 0, marginBottom: "1rem" }}>TRANSPARENT PRICING</div>
-            <h2 className="section-title">No Surprise Invoices.<br/>Fixed-Price Packages.</h2>
+            <h2 className="section-title">The Growth Engine</h2>
             <p className="section-subtitle" style={{ maxWidth: "700px" }}>
-              Tailored for industrial B2B manufacturers. Every engagement starts with a solid foundation before we pour resources into growth.
+              Modern Digital Transformation<br/>
+              Tailored for industrial B2B companies.
             </p>
           </div>
 
