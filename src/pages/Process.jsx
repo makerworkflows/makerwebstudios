@@ -1,11 +1,20 @@
 const Process = () => (
-  <div id="process" className="fade-in" style={{ background: "var(--bg-color)" }}>
-    
-    <header className="dark-section blueprint-bg hero-sub">
-      <div className="container text-center">
-        <h2 className="section-title">How We Build Systems.</h2>
-        <p className="section-subtitle" style={{ color: "rgba(255, 255, 255, 0.7)" }}>
-          Process transparency. Engineers pay for certainty, not surprises. We follow a strict operational procedure to get you online in 30 days.
+  <div
+    id="process"
+    className="fade-in"
+    style={{ background: "var(--bg-color)" }}
+  >
+    <header className="hero-sub" style={{ background: "white", textAlign: "center", width: "100%" }}>
+      <div className="container" style={{ margin: "0 auto" }}>
+        <h2 className="section-title" style={{ color: "black", textAlign: "center", marginBottom: "1.5rem" }}>
+          How We Build Systems.
+        </h2>
+        <p
+          className="section-subtitle"
+          style={{ color: "black", opacity: 0.9, textAlign: "center", margin: "0 auto", maxWidth: "800px" }}
+        >
+          Process transparency. Engineers pay for certainty, not surprises. We
+          follow a strict operational procedure to get you online in 30 days.
         </p>
       </div>
     </header>
@@ -14,19 +23,39 @@ const Process = () => (
       <div className="container" style={{ maxWidth: "1000px" }}>
         <div className="process-timeline">
           {[
-            { step: '01', title: 'Discovery & Audit', desc: 'We audit your current capabilities, machines, and tolerances. We figure out exactly who your buyer is and what technical data they need to see.' },
-            { step: '02', title: 'Messaging Architecture', desc: 'No design until the copy is written. We put together a messaging framework that speaks directly to procurement teams and engineers, stripping out the fluff.' },
-            { step: '03', title: 'Blueprint & Build', desc: 'We build your mobile-optimized Foundation site using our proven architecture. Speedy, responsive, and hardcoded to convert traffic into RFQs.' },
-            { step: '04', title: 'Deployment & SEO', desc: 'We coordinate the domain switch, technical SEO setup, and Google Business Profile launch. Your digital factory floor is officially open for business.' },
+            {
+              step: "01",
+              title: "Discovery & Audit",
+              desc: "We audit your current capabilities, machines, and tolerances. We figure out exactly who your buyer is and what technical data they need to see.",
+            },
+            {
+              step: "02",
+              title: "Messaging Architecture",
+              desc: "No design until the copy is written. We put together a messaging framework that speaks directly to procurement teams and engineers, stripping out the fluff.",
+            },
+            {
+              step: "03",
+              title: "Blueprint & Build",
+              desc: "We build your mobile-optimized Foundation site using our proven architecture. Speedy, responsive, and hardcoded to convert traffic into RFQs.",
+            },
+            {
+              step: "04",
+              title: "Deployment & SEO",
+              desc: "We coordinate the domain switch, technical SEO setup, and Google Business Profile launch. Your digital factory floor is officially open for business.",
+            },
           ].map((item, idx) => (
-            <div key={idx} className="process-step premium-glass reveal-anim visible" style={{ animationDelay: `${idx * 0.1}s` }}>
+            <div
+              key={idx}
+              className="process-step premium-glass reveal-anim visible"
+              style={{ animationDelay: `${idx * 0.1}s` }}
+            >
               <div className="step-number-bg">{item.step}</div>
-              
+
               <div className="step-header">
                 <div className="step-badge">{item.step}</div>
                 <h3 className="step-title">{item.title}</h3>
               </div>
-              
+
               <p className="step-desc">{item.desc}</p>
             </div>
           ))}

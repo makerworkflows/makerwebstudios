@@ -405,162 +405,17 @@ const Home = () => {
         </div>
       </section>
 
-      {/* The GrowthEngine Section (Optional Add-On) */}
-      <section style={{ padding: "8rem 0", background: "linear-gradient(135deg, var(--steel-blue-dark) 0%, var(--dark-bg) 100%)", position: "relative", overflow: "hidden" }} id="growth-engine">
-        <div style={{ position: "absolute", right: "-40px", top: "50%", transform: "translateY(-50%)", fontFamily: "'Outfit', sans-serif", fontSize: "400px", fontWeight: "900", color: "rgba(255,255,255,0.02)", pointerEvents: "none", userSelect: "none", lineHeight: "1" }}>
-          GE
-        </div>
-        
-        <div className="container" style={{ maxWidth: "1100px", position: "relative", zIndex: 1 }}>
-          <div style={{ marginBottom: "4rem" }}>
-            <div className="badge-premium" style={{ color: "var(--industrial-orange)", background: "transparent", border: "none", padding: 0, marginBottom: "1rem" }}>OPTIONAL ADD-ON</div>
-            <h2 className="section-title" style={{ color: "white" }}>The GrowthEngine</h2>
-            <p className="section-subtitle" style={{ maxWidth: "700px", color: "rgba(255,255,255,0.55)" }}>
-              Your buyers are searching. Are they finding you? After your site is built, GrowthEngine keeps it climbing — ranking higher, generating inbound leads, and building your digital pipeline month after month.
-            </p>
-          </div>
-
-          <div className="bento-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", alignItems: "stretch" }}>
-            
-            {/* Audit Package */}
-            <div className="bento-card reveal-anim visible" style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "8px", padding: "2.5rem 1.75rem", display: "flex", flexDirection: "column" }}>
-               <div style={{ color: "var(--industrial-orange)", fontSize: "0.75rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.75rem" }}>
-                 Entry Point
-               </div>
-               <h3 className="card-title-lg" style={{ color: "white", fontSize: "1.75rem", marginBottom: "0.5rem", fontFamily: "'Outfit', sans-serif", fontWeight: "900", lineHeight: "1" }}>Foundation Audit</h3>
-               <div style={{ fontSize: "2.25rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", color: "var(--industrial-orange)", marginBottom: "0.25rem", lineHeight: "1" }}>
-                 $1,997
-               </div>
-               <div style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.4)", marginBottom: "1.25rem" }}>One-time · 30-day delivery</div>
-               
-               <p style={{ color: "rgba(255,255,255,0.55)", marginBottom: "1.5rem", fontSize: "0.9rem", flex: 1 }}>
-                 For manufacturers with no digital baseline who need to get found fast before committing to a monthly retainer.
-               </p>
-               
-               <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "0.5rem", borderTop: "1px solid rgba(255,255,255,0.07)", paddingTop: "1rem" }}>
-                 {[
-                   "Complete digital presence audit", "On-page SEO fixes (up to 10 pages)", "Competitor keyword analysis", 
-                   "Google Business Profile setup", "Google Search Console + GA4", "5 industry directory listings", "90-day growth roadmap", "60-min strategy delivery call"
-                 ].map((feat, i) => (
-                   <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "8px", fontSize: "0.85rem", color: "rgba(255,255,255,0.7)" }}>
-                     <CheckCircle2 size={16} color="var(--industrial-orange)" style={{ flexShrink: 0 }} />
-                     <span>{feat}</span>
-                   </li>
-                 ))}
-               </ul>
-            </div>
-
-            {/* Visibility Engine Package */}
-            <div className="bento-card reveal-anim visible" style={{ animationDelay: "0.2s", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "8px", padding: "2.5rem 1.75rem", display: "flex", flexDirection: "column" }}>
-               <div style={{ color: "var(--industrial-orange)", fontSize: "0.75rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.75rem" }}>
-                 Monthly Retainer
-               </div>
-               <h3 className="card-title-lg" style={{ color: "white", fontSize: "1.75rem", marginBottom: "0.5rem", fontFamily: "'Outfit', sans-serif", fontWeight: "900", lineHeight: "1" }}>Visibility Engine</h3>
-               <div style={{ fontSize: "2.25rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", color: "var(--industrial-orange)", marginBottom: "0.25rem", lineHeight: "1" }}>
-                 $1,500
-               </div>
-               <div style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.4)", marginBottom: "1.25rem" }}>Per month</div>
-               
-               <p style={{ color: "rgba(255,255,255,0.55)", marginBottom: "1.5rem", fontSize: "0.9rem", flex: 1 }}>
-                 Consistent SEO content targeting your buyers' exact search terms. Rankings climb. Leads follow.
-               </p>
-               
-               <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "0.5rem", borderTop: "1px solid rgba(255,255,255,0.07)", paddingTop: "1rem" }}>
-                 {[
-                   "2 SEO-optimized posts/month", "Targeted B2B keyword writing", "Active rank tracking", 
-                   "Monthly performance reporting", "Google Business Profile management", "Directory listing maintenance"
-                 ].map((feat, i) => (
-                   <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "8px", fontSize: "0.85rem", color: "rgba(255,255,255,0.7)" }}>
-                     <CheckCircle2 size={16} color="var(--industrial-orange)" style={{ flexShrink: 0 }} />
-                     <span>{feat}</span>
-                   </li>
-                 ))}
-               </ul>
-            </div>
-
-            {/* Google Ads Package */}
-            <div className="bento-card reveal-anim visible" style={{ animationDelay: "0.4s", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "8px", padding: "2.5rem 1.75rem", display: "flex", flexDirection: "column" }}>
-               <div style={{ color: "var(--industrial-orange)", fontSize: "0.75rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.75rem" }}>
-                 Paid Acquisition
-               </div>
-               <h3 className="card-title-lg" style={{ color: "white", fontSize: "1.75rem", marginBottom: "0.5rem", fontFamily: "'Outfit', sans-serif", fontWeight: "900", lineHeight: "1" }}>Google Ads</h3>
-               <div style={{ fontSize: "2.25rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", color: "var(--industrial-orange)", marginBottom: "0.25rem", lineHeight: "1" }}>
-                 $1,000
-               </div>
-               <div style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.4)", marginBottom: "1.25rem" }}>Per month + ad spend</div>
-               
-               <p style={{ color: "rgba(255,255,255,0.55)", marginBottom: "1.5rem", fontSize: "0.9rem", flex: 1 }}>
-                 For manufacturers ready to capture immediate, high-intent buyer searches. We manage the campaigns. You handle the RFQs.
-               </p>
-               
-               <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "0.5rem", borderTop: "1px solid rgba(255,255,255,0.07)", paddingTop: "1rem" }}>
-                 {[
-                   "High-intent keyword targeting", "Ad copy written for formulators", "Landing page optimization advice", 
-                   "Monthly ROI/Spend reporting", "Ad spend management", "A/B testing ad variations"
-                 ].map((feat, i) => (
-                   <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "8px", fontSize: "0.85rem", color: "rgba(255,255,255,0.7)" }}>
-                     <CheckCircle2 size={16} color="var(--industrial-orange)" style={{ flexShrink: 0 }} />
-                     <span>{feat}</span>
-                   </li>
-                 ))}
-               </ul>
-            </div>
-
-          </div>
-          
-          <div style={{ textAlign: "center", marginTop: "4rem", color: "rgba(255,255,255,0.5)", fontSize: "0.95rem" }}>
-            Ready to add GrowthEngine to your pipeline? <a href="https://calendly.com/hello-makerwebstudios/30min" style={{ color: "var(--industrial-orange)", fontWeight: "600", textDecoration: "none" }}>Book a Call</a>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section style={{ padding: "8rem 0", background: "var(--bg-color)" }} id="faq">
-        <div className="container" style={{ maxWidth: "1100px" }}>
-          <div style={{ textAlign: "center", marginBottom: "4rem" }}>
-            <h2 className="section-title">Common Questions</h2>
-          </div>
-
-          <div className="bento-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))", gap: "1.5rem" }}>
-            {[
-              {
-                q: "Do I need a new website?",
-                a: "No. We start with the $1,997 Audit & Setup to optimize what you already have. We only recommend a rebuild if your current platform fundamentally cannot rank on Google or capture inbound leads."
-              },
-              {
-                q: "How are you different from an agency?",
-                a: "We are not generic marketers. We understand INCI names, cGMP compliance, formulation specs, and how a purchasing manager evaluates an ingredient supplier."
-              },
-              {
-                q: "What do you need from my team?",
-                a: "Very little. We do a 60-minute kickoff to understand your ideal client and products, and then we execute. You review and approve via email."
-              },
-              {
-                q: "When will I see results?",
-                a: "Setup is completed in 30 days. Most clients begin seeing their organic keyword rankings climb within 60 days of the new infrastructure going live."
-              },
-            ].map((faq, idx) => (
-              <div key={idx} className="bento-card reveal-anim visible" style={{ padding: "2.25rem", display: "flex", flexDirection: "column", gap: "1rem", backgroundColor: "var(--surface-color)", boxShadow: "0 4px 6px -1px rgb(0 0 0 / 0.05)" }}>
-                <h3 style={{ fontSize: "1.25rem", color: "var(--navy)", marginBottom: "0.25rem", fontFamily: "'Outfit', sans-serif", fontWeight: "800" }}>{faq.q}</h3>
-                <p style={{ color: "var(--gray)", fontSize: "0.95rem", lineHeight: "1.65" }}>{faq.a}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA Section */}
-      <section style={{ padding: "6rem 0", background: "var(--industrial-orange)", textAlign: "center" }}>
+      <section style={{ padding: "8rem 0", background: "white", textAlign: "center", borderTop: "1px solid var(--border-color)" }}>
         <div className="container" style={{ maxWidth: "700px", margin: "0 auto", textAlign: "center" }}>
-          <h2 className="section-title" style={{ color: "var(--navy)", marginBottom: "1.5rem", fontSize: "clamp(2.75rem, 6vw, 4.5rem)", lineHeight: "1", fontFamily: "'Outfit', sans-serif", fontWeight: "900" }}>Ready to Get Started?</h2>
-          <p style={{ fontSize: "1.125rem", color: "var(--navy)", marginBottom: "2.5rem", lineHeight: "1.55", fontWeight: "500" }}>
+          <h2 className="section-title" style={{ color: "black", marginBottom: "1.5rem", fontSize: "clamp(2.75rem, 6vw, 4.5rem)", lineHeight: "1", fontFamily: "'Outfit', sans-serif", fontWeight: "900" }}>Ready to Get Started?</h2>
+          <p style={{ fontSize: "1.125rem", color: "black", marginBottom: "2.5rem", lineHeight: "1.55", fontWeight: "500", opacity: 0.9 }}>
             Stop losing bids to competitors with better digital presence. Book a discovery call or get started right away.
           </p>
           <div style={{ display: "flex", gap: "1.5rem", justifyContent: "center", flexWrap: "wrap" }}>
-             <a href="https://buy.stripe.com/00w28q5V5dad6v1fLJ87K02" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: "white", color: "var(--industrial-orange)", padding: "1.125rem 3rem", fontSize: "1.125rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", borderRadius: "4px", boxShadow: "0 4px 14px 0 rgba(0,0,0,0.1)" }}>
+             <a href="https://buy.stripe.com/00w28q5V5dad6v1fLJ87K02" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: "1.125rem 3rem", fontSize: "1.125rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", borderRadius: "4px" }}>
                GET STARTED
              </a>
-             <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-dark" style={{ padding: "1.125rem 3rem", fontSize: "1.125rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", borderRadius: "4px" }}>
+             <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: "black", color: "white", padding: "1.125rem 3rem", fontSize: "1.125rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", borderRadius: "4px" }}>
                BOOK A CALL
              </a>
           </div>

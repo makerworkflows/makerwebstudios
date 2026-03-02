@@ -2,7 +2,7 @@ const Services = () => (
   <div id="services" className="section-padding fade-in" style={{ background: "var(--bg-color)" }}>
     <div className="container">
       <div className="text-center" style={{ maxWidth: "800px", margin: "0 auto 6rem" }}>
-        <h2 className="section-title">Transparent Pricing for Manufacturers</h2>
+        <h2 className="section-title">The Growth Engine</h2>
         <p className="section-subtitle">
           No surprise invoices. Fixed-price packages tailored to industrial B2B companies.
         </p>
@@ -13,7 +13,7 @@ const Services = () => (
         <div className="package-card premium-glass reveal-anim visible">
           <h3 className="package-name">Digital Foundation</h3>
           <div className="package-price">
-            $3,500 <span className="price-label">one-time</span>
+            $3,500 <span className="price-label">One-Time Build</span>
           </div>
           <p className="package-desc">Perfect for updating an old site and getting the fundamentals right.</p>
           <ul className="package-features">
@@ -34,7 +34,7 @@ const Services = () => (
           <div className="package-badge">MOST POPULAR</div>
           <h3 className="package-name">Full Modernization</h3>
           <div className="package-price">
-            $4,500 <span className="price-label">one-time</span>
+            $4,500 <span className="price-label">One-Time Build</span>
           </div>
           <p className="package-desc">For manufacturers ready to turn their site into a lead-gen asset.</p>
           <ul className="package-features">
@@ -48,6 +48,26 @@ const Services = () => (
             ))}
           </ul>
           <a href="https://buy.stripe.com/00w28q5V5dad6v1fLJ87K02" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-full">Get Started</a>
+        </div>
+        
+        {/* Care Plan Package */}
+        <div className="package-card premium-glass reveal-anim visible" style={{ animationDelay: "0.2s" }}>
+          <h3 className="package-name">Care Plan</h3>
+          <div className="package-price">
+            $500 <span className="price-label">Monthly Retainer</span>
+          </div>
+          <p className="package-desc">Ongoing support, security, and updates to keep your site performing.</p>
+          <ul className="package-features">
+            {['Premium hosting', 'Daily backups', 'Security monitoring', 'Content updates', 'Monthly performance reports'].map((item, i) => (
+              <li key={i} className="package-feature">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--industrial-orange)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feature-icon">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          <a href="https://buy.stripe.com/00w28q5V5dad6v1fLJ87K02" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-full" style={{ background: "transparent", border: "1px solid var(--glass-border)", color: "var(--text-dark)" }}>Get Started</a>
         </div>
       </div>
     </div>
