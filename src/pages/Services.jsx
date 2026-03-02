@@ -36,9 +36,21 @@ const Services = () => (
           <div className="package-price">
             $4,500 <span className="price-label">One-Time Build</span>
           </div>
-          <p className="package-desc">For manufacturers ready to turn their site into a lead-gen asset.</p>
+          <p className="package-desc">For manufacturers ready to turn their website into a lead generation asset that works around the clock.</p>
           <ul className="package-features">
-            {['Everything in Foundation', '8-10 pages', 'Photography coordination', 'Full capabilities + certs list', '90-day post-launch support'].map((item, i) => (
+            {[
+                   "Modern 8–10 page website built for B2B manufacturers", 
+                   "Capabilities page that qualifies procurement teams before they call", 
+                   "RFQ form engineered as your #1 lead conversion tool", 
+                   "Messaging architecture written for engineers and buyers — not fluff", 
+                   "Photography coordination included", 
+                   "Full certifications + equipment list page",
+                   "On-page SEO + Google Business Profile setup",
+                   "Analytics + Search Console connected",
+                   "SSL + speed optimization (PageSpeed 85+ target)",
+                   "90-day post-launch support",
+                   "30-day delivery"
+            ].map((item, i) => (
               <li key={i} className="package-feature">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--industrial-orange)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feature-icon">
                   <polyline points="20 6 9 17 4 12"></polyline>
@@ -56,9 +68,18 @@ const Services = () => (
           <div className="package-price">
             $500 <span className="price-label">Monthly Retainer</span>
           </div>
-          <p className="package-desc">Ongoing support, security, and updates to keep your site performing.</p>
+          <p className="package-desc">Keep your site fast, secure, and up to date. We handle maintenance so you can focus on production.</p>
           <ul className="package-features">
-            {['Premium hosting', 'Daily backups', 'Security monitoring', 'Content updates', 'Monthly performance reports'].map((item, i) => (
+            {[
+                   "Hosting + security updates handled for you", 
+                   "Monthly PageSpeed + performance monitoring", 
+                   "Content updates (up to 4 per month)", 
+                   "Uptime monitoring with instant alerts", 
+                   "Google Business Profile management", 
+                   "Monthly analytics report delivered to your inbox",
+                   "Priority support — real response times, not a ticket queue",
+                   "Cancel anytime — no contracts, no surprises"
+            ].map((item, i) => (
               <li key={i} className="package-feature">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--industrial-orange)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feature-icon">
                   <polyline points="20 6 9 17 4 12"></polyline>

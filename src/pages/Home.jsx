@@ -251,8 +251,17 @@ const Home = () => {
                
                <ul style={{ listStyle: "none", padding: 0, marginBottom: "2.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1.5rem" }}>
                  {[
-                   "Everything in Foundation", "8–10 pages", "Photography coordination", 
-                   "Full capabilities + certs page", "90-day post-launch support", "Messaging architecture"
+                   "Modern 8–10 page website built for B2B manufacturers", 
+                   "Capabilities page that qualifies procurement teams before they call", 
+                   "RFQ form engineered as your #1 lead conversion tool", 
+                   "Messaging architecture written for engineers and buyers — not fluff", 
+                   "Photography coordination included", 
+                   "Full certifications + equipment list page",
+                   "On-page SEO + Google Business Profile setup",
+                   "Analytics + Search Console connected",
+                   "SSL + speed optimization (PageSpeed 85+ target)",
+                   "90-day post-launch support",
+                   "30-day delivery"
                  ].map((feat, i) => (
                    <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "0.9rem", color: "var(--text-dark)" }}>
                      <CheckCircle2 size={16} color="var(--industrial-orange)" style={{ flexShrink: 0, marginTop: "2px" }} />
@@ -282,8 +291,14 @@ const Home = () => {
                
                <ul style={{ listStyle: "none", padding: 0, marginBottom: "2.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1.5rem" }}>
                  {[
-                   "Hosting + security updates", "Monthly performance monitoring", "Content updates (up to 4/mo)", 
-                   "Uptime monitoring", "Priority support", "Monthly analytics report"
+                   "Hosting + security updates handled for you", 
+                   "Monthly PageSpeed + performance monitoring", 
+                   "Content updates (up to 4 per month)", 
+                   "Uptime monitoring with instant alerts", 
+                   "Google Business Profile management", 
+                   "Monthly analytics report delivered to your inbox",
+                   "Priority support — real response times, not a ticket queue",
+                   "Cancel anytime — no contracts, no surprises"
                  ].map((feat, i) => (
                    <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "0.9rem", color: "var(--text-dark)" }}>
                      <CheckCircle2 size={16} color="var(--industrial-orange)" style={{ flexShrink: 0, marginTop: "2px" }} />
