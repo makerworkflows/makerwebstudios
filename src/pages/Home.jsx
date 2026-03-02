@@ -242,11 +242,11 @@ const Home = () => {
                </div>
                <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>One-time · 30-day delivery</div>
                
-               <p style={{ color: "var(--text-muted)", marginBottom: "2rem", fontSize: "0.95rem", flex: 1 }}>
+               <p style={{ color: "var(--text-muted)", marginBottom: "2rem", fontSize: "0.95rem", minHeight: "4.5rem" }}>
                  For manufacturers ready to turn their website into a lead generation asset that works around the clock.
                </p>
                
-               <ul style={{ listStyle: "none", padding: 0, marginBottom: "2.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1.5rem", marginTop: "auto" }}>
+               <ul style={{ listStyle: "none", padding: 0, marginBottom: "2.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1.5rem", flex: 1 }}>
                  {[
                    "Modern 8–10 page website built for B2B manufacturers", 
                    "Capabilities page that qualifies procurement teams before they call", 
@@ -282,11 +282,11 @@ const Home = () => {
                </div>
                <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>Per month · Cancel anytime</div>
                
-               <p style={{ color: "var(--text-muted)", marginBottom: "2rem", fontSize: "0.95rem", flex: 1 }}>
+               <p style={{ color: "var(--text-muted)", marginBottom: "2rem", fontSize: "0.95rem", minHeight: "4.5rem" }}>
                  Keep your site fast, secure, and up to date. We handle maintenance so you can focus on production.
                </p>
                
-               <ul style={{ listStyle: "none", padding: 0, marginBottom: "2.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1.5rem", marginTop: "auto" }}>
+               <ul style={{ listStyle: "none", padding: 0, marginBottom: "2.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1.5rem", flex: 1 }}>
                  {[
                    "Hosting + security updates handled for you", 
                    "Monthly PageSpeed + performance monitoring", 
@@ -312,17 +312,17 @@ const Home = () => {
         </div>
       </section>
 
-      <section style={{ padding: "8rem 0", background: "white", textAlign: "center", borderTop: "1px solid var(--border-color)" }}>
+      <section style={{ padding: "8rem 0", background: "var(--surface-color)", textAlign: "center", borderTop: "1px solid var(--border-color)" }}>
         <div className="container" style={{ maxWidth: "700px", margin: "0 auto", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
-          <h2 className="section-title" style={{ color: "black", textAlign: "center", marginBottom: "1.5rem", fontSize: "clamp(2.75rem, 6vw, 4.5rem)", lineHeight: "1", fontFamily: "'Outfit', sans-serif", fontWeight: "900" }}>Ready to Get Started?</h2>
-          <p style={{ fontSize: "1.125rem", color: "black", textAlign: "center", marginBottom: "2.5rem", lineHeight: "1.55", fontWeight: "500", opacity: 0.9, maxWidth: "600px", margin: "0 auto 2.5rem" }}>
+          <h2 className="section-title" style={{ color: "var(--text-dark)", textAlign: "center", marginBottom: "1.5rem", fontSize: "clamp(2.75rem, 6vw, 4.5rem)", lineHeight: "1", fontFamily: "'Outfit', sans-serif", fontWeight: "900" }}>Ready to Get Started?</h2>
+          <p style={{ fontSize: "1.125rem", color: "var(--text-muted)", textAlign: "center", marginBottom: "2.5rem", lineHeight: "1.55", fontWeight: "500", opacity: 0.9, maxWidth: "600px", margin: "0 auto 2.5rem" }}>
             Stop losing bids to competitors with better digital presence. Book a discovery call or get started right away.
           </p>
           <div style={{ display: "flex", gap: "1.5rem", justifyContent: "center", flexWrap: "wrap" }}>
              <a href="https://buy.stripe.com/4gM00idnx9Y16v10QP87K03" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: "1.125rem 3rem", fontSize: "1.125rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", borderRadius: "4px" }}>
                GET STARTED
              </a>
-             <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-dark" style={{ background: "transparent", color: "black", border: "2px solid black" }}>
+             <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-dark" style={{ padding: "1.125rem 3rem", fontSize: "1.125rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", borderRadius: "4px" }}>
                BOOK A CALL
              </a>
           </div>
