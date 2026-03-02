@@ -4,8 +4,8 @@ const Process = () => (
     className="fade-in"
     style={{ background: "var(--bg-color)" }}
   >
-    <header className="hero-sub" style={{ background: "white", textAlign: "center", width: "100%" }}>
-      <div className="container" style={{ margin: "0 auto" }}>
+    <header className="hero-sub" style={{ background: "white", textAlign: "center", width: "100%", display: "flex", flexDirection: "column", alignItems: "center", padding: "8rem 0" }}>
+      <div className="container" style={{ margin: "0 auto", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
         <h2 className="section-title" style={{ color: "black", textAlign: "center", marginBottom: "1.5rem" }}>
           How We Build Systems.
         </h2>

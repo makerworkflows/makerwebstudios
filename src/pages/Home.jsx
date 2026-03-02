@@ -406,16 +406,16 @@ const Home = () => {
       </section>
 
       <section style={{ padding: "8rem 0", background: "white", textAlign: "center", borderTop: "1px solid var(--border-color)" }}>
-        <div className="container" style={{ maxWidth: "700px", margin: "0 auto", textAlign: "center" }}>
-          <h2 className="section-title" style={{ color: "black", marginBottom: "1.5rem", fontSize: "clamp(2.75rem, 6vw, 4.5rem)", lineHeight: "1", fontFamily: "'Outfit', sans-serif", fontWeight: "900" }}>Ready to Get Started?</h2>
-          <p style={{ fontSize: "1.125rem", color: "black", marginBottom: "2.5rem", lineHeight: "1.55", fontWeight: "500", opacity: 0.9 }}>
+        <div className="container" style={{ maxWidth: "700px", margin: "0 auto", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
+          <h2 className="section-title" style={{ color: "black", textAlign: "center", marginBottom: "1.5rem", fontSize: "clamp(2.75rem, 6vw, 4.5rem)", lineHeight: "1", fontFamily: "'Outfit', sans-serif", fontWeight: "900" }}>Ready to Get Started?</h2>
+          <p style={{ fontSize: "1.125rem", color: "black", textAlign: "center", marginBottom: "2.5rem", lineHeight: "1.55", fontWeight: "500", opacity: 0.9, maxWidth: "600px", margin: "0 auto 2.5rem" }}>
             Stop losing bids to competitors with better digital presence. Book a discovery call or get started right away.
           </p>
           <div style={{ display: "flex", gap: "1.5rem", justifyContent: "center", flexWrap: "wrap" }}>
              <a href="https://buy.stripe.com/00w28q5V5dad6v1fLJ87K02" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: "1.125rem 3rem", fontSize: "1.125rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", borderRadius: "4px" }}>
                GET STARTED
              </a>
-             <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: "black", color: "white", padding: "1.125rem 3rem", fontSize: "1.125rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", borderRadius: "4px" }}>
+             <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-dark">
                BOOK A CALL
              </a>
           </div>
