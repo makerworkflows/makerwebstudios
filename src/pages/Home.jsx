@@ -225,7 +225,7 @@ const Home = () => {
             <h2 className="section-title">GrowthEngine</h2>
             <p className="section-subtitle" style={{ maxWidth: "700px" }}>
               Modern Digital Transformation<br/>
-              Tailored for industrial B2B companies.
+              Tailored for industrial B2B manufacturing companies.
             </p>
           </div>
 

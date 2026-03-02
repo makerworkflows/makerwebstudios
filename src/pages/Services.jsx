@@ -4,7 +4,7 @@ const Services = () => (
       <div className="text-center" style={{ maxWidth: "800px", margin: "0 auto 6rem" }}>
         <h2 className="section-title">The Growth Engine</h2>
         <p className="section-subtitle">
-          No surprise invoices. Fixed-price packages tailored to industrial B2B companies.
+          No surprise invoices. Fixed-price packages tailored to industrial B2B manufacturing companies.
         </p>
       </div>
 
