@@ -84,9 +84,9 @@ const Layout = ({ children }) => {
             <div className="footer-links">
               <h4>Quick Links</h4>
               <ul>
-                <li><a href="/#services">Services</a></li>
-                <li><a href="/#portfolio">Portfolio</a></li>
-                <li><a href="/#about">About</a></li>
+                <li><a href="/#pricing">Services</a></li>
+                <li><a href="/#process">Process</a></li>
+                <li><a href="/#difference">About</a></li>
               </ul>
             </div>
             <div className="footer-contact">
