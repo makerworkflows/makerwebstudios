@@ -269,6 +269,7 @@ const Home = () => {
                    "On-page SEO + Google Business Profile setup",
                    "Analytics + Search Console connected",
                    "SSL + speed optimization (PageSpeed 85+ target)",
+                   "No Proprietary Code – You own your site, and your team can edit it without calling a developer every time you buy a new machine.",
                    "90-day post-launch support",
                    "30-day delivery"
                  ].map((feat, i) => (

@@ -15,7 +15,7 @@ const Services = () => (
           <div className="package-price">
             $3,500 <span className="price-label">One-Time Build</span>
           </div>
-          <p className="package-desc">Perfect for updating an old site and getting the fundamentals right.</p>
+          <p className="package-desc">Not ready for a full rebuild? Start here to fix what you already have and lay the prerequisite groundwork.</p>
           <ul className="package-features">
             {['Modern 5-6 page website', 'Capabilities page', 'RFQ form setup', 'On-page SEO', 'GBP Profile Setup', 'Analytics + Search Console'].map((item, i) => (
               <li key={i} className="package-feature">
@@ -47,6 +47,7 @@ const Services = () => (
                    "On-page SEO + Google Business Profile setup",
                    "Analytics + Search Console connected",
                    "SSL + speed optimization (PageSpeed 85+ target)",
+                   "No Proprietary Code – You own your site, and your team can edit it without calling a developer every time you buy a new machine.",
                    "90-day post-launch support",
                    "30-day delivery"
             ].map((item, i) => (

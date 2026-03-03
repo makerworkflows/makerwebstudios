@@ -2,7 +2,7 @@ const About = () => (
   <div id="about" className="section-padding fade-in" style={{ background: "var(--bg-color)" }}>
     <div className="container" style={{ maxWidth: "900px" }}>
       <div className="text-center" style={{ marginBottom: "6rem" }}>
-        <h2 className="section-title">Our Story</h2>
+        <h2 className="section-title">Why We Traded the Shop Floor for the Keyboard</h2>
         <p className="about-intro">
           16 years on the shop floor. Now building digital presences that win manufacturing contracts.
         </p>

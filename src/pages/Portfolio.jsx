@@ -6,9 +6,27 @@ const Portfolio = () => (
         <p className="section-subtitle">Real results for real manufacturers.</p>
       </div>
       
-      <div className="portfolio-empty premium-glass reveal-anim visible">
-        <h3 className="empty-title">Case studies coming soon.</h3>
-        <p className="empty-text">We are continually adding new projects measuring real ROI and lead generation metrics for industrial B2B clients.</p>
+      <div className="portfolio-checklist premium-glass reveal-anim visible" style={{ padding: "4rem 3rem", background: "rgba(255,255,255,0.02)", border: "1px solid var(--glass-border)", borderRadius: "var(--border-radius-lg)", maxWidth: "900px", margin: "0 auto", position: "relative", overflow: "hidden" }}>
+        <h3 className="empty-title" style={{ color: "var(--text-dark)", fontSize: "2rem", marginBottom: "1.5rem", fontFamily: "'Outfit', sans-serif" }}>The Manufacturer's Checklist</h3>
+        <p className="empty-text" style={{ color: "var(--text-muted)", fontSize: "1.125rem", marginBottom: "2.5rem", lineHeight: "1.7" }}>
+          Until our newest real-world ROI case studies launch, verify your current site against these 5 critical markers of a high-converting supplier asset:
+        </p>
+        <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "1.25rem" }}>
+          {[
+            "A \"Capabilities\" page written for engineers, not marketers.",
+            "An RFQ form that qualifies leads automatically.",
+            "Clear, upfront equipment and tolerance lists.",
+            "ISO/Certifications prominently displayed.",
+            "Mobile-responsive design for shop-floor accessibility."
+          ].map((item, i) => (
+            <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "1rem" }}>
+              <div style={{ background: "var(--industrial-orange)", color: "white", borderRadius: "50%", width: "24px", height: "24px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.85rem", fontWeight: "700", flexShrink: 0, marginTop: "2px" }}>
+                {i + 1}
+              </div>
+              <span style={{ fontSize: "1.125rem", color: "var(--text-dark)", lineHeight: "1.4" }}>{item}</span>
+            </li>
+          ))}
+        </ul>
         <div className="empty-decoration" />
       </div>
     </div>
