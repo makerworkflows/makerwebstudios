@@ -26,7 +26,7 @@ const Services = () => (
               </li>
             ))}
           </ul>
-          <a href="https://buy.stripe.com/4gM00idnx9Y16v10QP87K03" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-full">Get Started</a>
+          <a href="https://buy.stripe.com/4gM00idnx9Y16v10QP87K03" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-full">Analyze & Upgrade My Site</a>
         </div>
 
         {/* Modernization Package */}
@@ -59,7 +59,7 @@ const Services = () => (
               </li>
             ))}
           </ul>
-          <a href="https://buy.stripe.com/4gM00idnx9Y16v10QP87K03" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-full">Get Started</a>
+          <a href="https://buy.stripe.com/4gM00idnx9Y16v10QP87K03" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-full">Analyze & Upgrade My Site</a>
         </div>
         
         {/* Care Plan Package */}
@@ -88,7 +88,7 @@ const Services = () => (
               </li>
             ))}
           </ul>
-          <a href="https://buy.stripe.com/4gM00idnx9Y16v10QP87K03" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-full" style={{ background: "transparent", border: "1px solid var(--glass-border)", color: "var(--text-dark)" }}>Get Started</a>
+          <a href="https://buy.stripe.com/4gM00idnx9Y16v10QP87K03" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-full" style={{ background: "transparent", border: "1px solid var(--glass-border)", color: "var(--text-dark)" }}>Analyze & Upgrade My Site</a>
         </div>
       </div>
     </div>

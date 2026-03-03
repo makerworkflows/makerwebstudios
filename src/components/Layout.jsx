@@ -107,7 +107,7 @@ const Layout = ({ children }) => {
                   rel="noopener noreferrer"
                   className="btn btn-primary"
                 >
-                  Claim Your Build Spot
+                  Analyze & Upgrade My Site
                 </a>
               </div>
             </div>

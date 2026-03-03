@@ -35,7 +35,7 @@ const Home = () => {
                 href="#pricing"
                 className="btn btn-primary btn-lg-premium"
               >
-                Get a Custom Quote in 24 Hours
+                Analyze & Upgrade My Site
               </a>
               <a
                 href="https://calendly.com/hello-makerwebstudios/30min"
@@ -281,7 +281,7 @@ const Home = () => {
                </ul>
                <div style={{ marginTop: "auto" }}>
                  <a href="https://buy.stripe.com/4gM00idnx9Y16v10QP87K03" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: "100%" }}>
-                   Claim Your Build Spot
+                   Analyze & Upgrade My Site
                  </a>
                  <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", marginTop: "0.75rem", textAlign: "center", fontStyle: "italic" }}>
                    Join businesses that scaled their reach with Maker Web Studios.
@@ -325,6 +325,9 @@ const Home = () => {
                  <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-dark" style={{ width: "100%" }}>
                    Book Your Discovery Call
                  </a>
+                 <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", marginTop: "0.75rem", textAlign: "center", fontStyle: "italic" }}>
+                   Stop agonizing over updates. Let us handle it.
+                 </div>
                </div>
             </div>
 
@@ -340,7 +343,7 @@ const Home = () => {
           </p>
           <div style={{ display: "flex", gap: "1.5rem", justifyContent: "center", flexWrap: "wrap", marginBottom: "1.5rem" }}>
              <a href="https://buy.stripe.com/4gM00idnx9Y16v10QP87K03" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: "1.125rem 3rem", fontSize: "1.125rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", borderRadius: "4px" }}>
-               CLAIM YOUR BUILD SPOT
+               ANALYZE & UPGRADE MY SITE
              </a>
              <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-dark" style={{ padding: "1.125rem 3rem", fontSize: "1.125rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", borderRadius: "4px" }}>
                BOOK YOUR DISCOVERY CALL
