@@ -52,10 +52,12 @@ Errors are learning opportunities. When something breaks:
 4. Update directive to include new flow
 5. System is now stronger
 
-**4. Auto-Push to GitHub**
+**4. Auto-Push and Deploy to Live**
 
-- After any set of approved changes to the project files (especially website code), automatically push the changes to the connected GitHub repository.
-- Ensure the remote is always in sync with the local state.
+- After any set of approved changes to the project files (especially website code):
+  1. **Push** the changes to the connected GitHub repository so the remote is in sync.
+  2. **Deploy** the site to live: run `npm run deploy` (builds and publishes to GitHub Pages) so the live site (e.g. makerwebstudios.com) is updated.
+- Every website update or improvement must result in both a push and a deploy to live.
 
 ## File Organization
 
@@ -74,11 +76,10 @@ Errors are learning opportunities. When something breaks:
 
 **Key principle:** Local files are only for processing. Deliverables live in cloud services (Google Sheets, Slides, etc.) where the user can access them. Everything in `.tmp/` can be deleted and regenerated.
 
-## GitHub Repositories and LocalHost
+## GitHub Repositories, Deploy, and LocalHost
 
-- If there is a GitHub repository connected, always push the changes to the connected GitHub repository.
-- If there is a localhost server running, always push the changes to the connected GitHub repository.
-- After every change, always offer a localhost link to the user to view the changes.
+- If there is a GitHub repository connected, push changes and then deploy: run `npm run deploy` so the live site is updated after every website change.
+- After every change, offer a localhost link to the user to view the changes (e.g. run `npm run dev` and share the URL).
 
 ## Desktop & Mobile Version Control
 
