@@ -11,6 +11,9 @@ import {
   Factory,
   ArrowRight,
   HelpCircle,
+  Wrench,
+  FileText,
+  Eye,
 } from "lucide-react";
 
 const Home = () => {
@@ -226,6 +229,65 @@ const Home = () => {
                </p>
              </div>
            </div>
+        </div>
+      </section>
+
+      {/* The Maker Web Difference — Legitimacy / Founder's Note */}
+      <section style={{ padding: "8rem 0", background: "var(--bg-color)" }} id="difference" className="blueprint-bg">
+        <div className="container" style={{ maxWidth: "1100px" }}>
+          <div style={{ marginBottom: "4rem" }}>
+            <div className="badge-premium" style={{ color: "var(--industrial-orange)", background: "transparent", border: "none", padding: 0, marginBottom: "1rem" }}>THE MAKER WEB DIFFERENCE</div>
+            <h2 className="section-title">Built by a Manufacturer, for Manufacturers.</h2>
+            <p className="section-subtitle" style={{ maxWidth: "700px" }}>
+              With 16+ years on the shop floor, I know exactly what procurement officers are looking for on your site.
+            </p>
+          </div>
+
+          {/* Founder's Note — prominent quote block */}
+          <div
+            className="bento-card reveal-anim visible"
+            style={{
+              borderLeft: "4px solid var(--industrial-orange)",
+              marginBottom: "3rem",
+              padding: "2.5rem 2.5rem 2.5rem 2.25rem",
+            }}
+          >
+            <p style={{ fontSize: "1.2rem", lineHeight: "1.75", color: "var(--text-dark)", fontStyle: "italic", marginBottom: "0" }}>
+              I spent 16 years on the shop floor before I ever touched a line of code. I've run the machines, managed the production lines, and seen how many bids are lost because a website looks like a liability. I didn't build Maker Web Studios to be a "creative agency"—I built it to be the digital arm of your machine shop.
+            </p>
+          </div>
+
+          {/* Legitimacy checklist — 3 pillars */}
+          <div className="bento-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }}>
+            {[
+              {
+                title: "Shop floor roots",
+                desc: "Blue-collar experience in production environments. No hand-holding—I speak your language from day one.",
+                icon: <Wrench size={28} />,
+                delay: "0.1s",
+              },
+              {
+                title: "The language that wins bids",
+                desc: "Quality manuals, equipment lists, RFIs—I build sites that put the right information where engineers and procurement officers expect it.",
+                icon: <FileText size={28} />,
+                delay: "0.2s",
+              },
+              {
+                title: "Pass the eye test",
+                desc: "Sites that look credible to technical buyers. Fewer meetings, less explaining. Your website works as a sales tool.",
+                icon: <Eye size={28} />,
+                delay: "0.3s",
+              },
+            ].map((item, idx) => (
+              <div key={idx} className="bento-card reveal-anim visible" style={{ animationDelay: item.delay }}>
+                <div className="icon-badge orange-badge">
+                  {item.icon}
+                </div>
+                <h3 className="card-title" style={{ fontSize: "1.25rem", fontWeight: "800", fontFamily: "'Outfit', sans-serif" }}>{item.title}</h3>
+                <p className="card-text">{item.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
