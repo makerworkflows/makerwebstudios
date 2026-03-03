@@ -90,7 +90,7 @@ const Layout = ({ children }) => {
               </ul>
             </div>
             <div className="footer-contact">
-              <h4>Ready to Start?</h4>
+              <h4>Ready to Scale Your Reach?</h4>
               <div className="footer-actions">
                 <a
                   href="https://calendly.com/hello-makerwebstudios/30min"
@@ -99,7 +99,7 @@ const Layout = ({ children }) => {
                   className="btn"
                   style={{ background: "white", color: "black", border: "1px solid white", fontWeight: "700" }}
                 >
-                  Book a Call
+                  Book Your Discovery Call
                 </a>
                 <a
                   href="https://buy.stripe.com/4gM00idnx9Y16v10QP87K03"
@@ -107,7 +107,7 @@ const Layout = ({ children }) => {
                   rel="noopener noreferrer"
                   className="btn btn-primary"
                 >
-                  Get Started — $3,500
+                  Claim Your Build Spot
                 </a>
               </div>
             </div>
