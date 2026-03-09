@@ -1,0 +1,17 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="500" fill="#FF6B00" />
+  
+  <text 
+    x="-15" 
+    y="66.6%"
+    dominant-baseline="middle"
+    text-anchor="start" 
+    fill="white" 
+    font-family="Impact, Arial Black, sans-serif" 
+    font-size="180" 
+    font-weight="900" 
+    textLength="530"
+    lengthAdjust="spacingAndGlyphs">
+    MAKER
+  </text>
+</svg>

@@ -27,18 +27,18 @@ const Home = () => {
               WEB DESIGN FOR MANUFACTURERS, BY MANUFACTURERS
             </div>
             <h1 className="hero-title reveal-anim visible" style={{ animationDelay: "0.1s" }}>
-              Your Website Is Losing You Bids <br />
-              <span className="text-accent">You Don't Even Know About.</span>
+              Your Website Should Work as Hard as <br />
+              <span className="text-accent">Your Plant Does.</span>
             </h1>
             <p className="hero-subtext reveal-anim visible" style={{ animationDelay: "0.2s" }}>
-              77% of B2B buyers research suppliers online before making contact. We build custom, SEO-optimized digital foundations that turn procurement managers from browsers into buyers—so your pipeline stays full.
+              We build high-performance websites for manufacturers — faster and smarter than a traditional agency, because we combine 16 years on the shop floor with AI-powered workflows that cut build time in half.
             </p>
             <div className="hero-actions reveal-anim visible" style={{ animationDelay: "0.3s", display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "1rem" }}>
               <a
                 href="#pricing"
                 className="btn btn-primary btn-lg-premium"
               >
-                Analyze & Upgrade My Site
+                Get Your Free Site Audit
               </a>
               <a
                 href="https://calendly.com/hello-makerwebstudios/30min"
@@ -343,7 +343,7 @@ const Home = () => {
                </ul>
                <div style={{ marginTop: "auto" }}>
                  <a href="https://buy.stripe.com/4gM00idnx9Y16v10QP87K03" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: "100%" }}>
-                   Analyze & Upgrade My Site
+                   Get Your Free Site Audit
                  </a>
                  <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", marginTop: "0.75rem", textAlign: "center", fontStyle: "italic" }}>
                    Join businesses that scaled their reach with Maker Web Studios.
@@ -405,7 +405,7 @@ const Home = () => {
           </p>
           <div style={{ display: "flex", gap: "1.5rem", justifyContent: "center", flexWrap: "wrap", marginBottom: "1.5rem" }}>
              <a href="https://buy.stripe.com/4gM00idnx9Y16v10QP87K03" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: "1.125rem 3rem", fontSize: "1.125rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", borderRadius: "4px" }}>
-               ANALYZE & UPGRADE MY SITE
+               GET YOUR FREE SITE AUDIT
              </a>
              <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-dark" style={{ padding: "1.125rem 3rem", fontSize: "1.125rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", borderRadius: "4px" }}>
                BOOK YOUR DISCOVERY CALL
