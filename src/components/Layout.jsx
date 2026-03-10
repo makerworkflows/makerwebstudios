@@ -8,8 +8,14 @@ const Layout = ({ children }) => {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const initialTheme = savedTheme ? savedTheme : (prefersDark ? "dark" : "light");
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
+    const initialTheme = savedTheme
+      ? savedTheme
+      : prefersDark
+        ? "dark"
+        : "light";
     setTheme(initialTheme);
     document.documentElement.setAttribute("data-theme", initialTheme);
 
@@ -41,7 +47,12 @@ const Layout = ({ children }) => {
             }}
             className="brand-logo"
           >
-            MAKER <span className="text-accent">WEB STUDIO</span>
+            <img
+              src="/logos/Maker Logo - Official.png"
+              alt="Maker Web Studio"
+              className="navbar-logo"
+              style={{ height: "48px", width: "auto", objectFit: "contain" }}
+            />
           </a>
 
           <nav className="desktop-nav">
@@ -53,7 +64,12 @@ const Layout = ({ children }) => {
               {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
             </button>
             <div className="nav-button-group">
-              <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-dark">
+              <a
+                href="https://calendly.com/hello-makerwebstudios/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-sm btn-dark"
+              >
                 Book A Call
               </a>
               <a
@@ -77,16 +93,23 @@ const Layout = ({ children }) => {
             <div className="footer-brand">
               <h3 className="footer-logo">MAKER WEB STUDIO</h3>
               <p className="footer-tagline">
-                Websites Built for Makers, By a Maker.<br />
+                Websites Built for Makers, By a Maker.
+                <br />
                 Serving Texas Manufacturers.
               </p>
             </div>
             <div className="footer-links">
               <h4>Quick Links</h4>
               <ul>
-                <li><a href="/#pricing">Services</a></li>
-                <li><a href="/#process">Process</a></li>
-                <li><a href="/#difference">About</a></li>
+                <li>
+                  <a href="/#pricing">Services</a>
+                </li>
+                <li>
+                  <a href="/#process">Process</a>
+                </li>
+                <li>
+                  <a href="/#difference">About</a>
+                </li>
               </ul>
             </div>
             <div className="footer-contact">
@@ -97,7 +120,12 @@ const Layout = ({ children }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn"
-                  style={{ background: "white", color: "black", border: "1px solid white", fontWeight: "700" }}
+                  style={{
+                    background: "white",
+                    color: "black",
+                    border: "1px solid white",
+                    fontWeight: "700",
+                  }}
                 >
                   Book Your Discovery Call
                 </a>
@@ -113,9 +141,7 @@ const Layout = ({ children }) => {
             </div>
           </div>
           <div className="footer-bottom">
-            <div>
-              &copy; {new Date().getFullYear()} Maker Web Studio.
-            </div>
+            <div>&copy; {new Date().getFullYear()} Maker Web Studio.</div>
             <a
               href="https://www.linkedin.com/company/makerwebstudios/"
               target="_blank"
@@ -140,7 +166,6 @@ const Layout = ({ children }) => {
           </div>
         </div>
       </footer>
-
     </div>
   );
 };
