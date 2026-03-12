@@ -1,19 +1,9 @@
 import {
-  ShieldCheck,
-  MapPin,
-  Code,
-  DollarSign,
-  Clock,
   CheckCircle2,
-  Search,
   TrendingDown,
   VolumeX,
   Factory,
   ArrowRight,
-  HelpCircle,
-  Wrench,
-  FileText,
-  Eye,
 } from "lucide-react";
 
 const Home = () => {
@@ -24,29 +14,24 @@ const Home = () => {
         <div className="container relative z-10">
           <div className="hero-content text-center">
             <div className="badge-premium reveal-anim visible">
-              WEB DESIGN FOR MANUFACTURERS, BY MANUFACTURERS
+              WEBSITES FOR MANUFACTURERS
             </div>
             <h1 className="hero-title reveal-anim visible" style={{ animationDelay: "0.1s" }}>
               Your Website Should Work as Hard as <br />
               <span className="text-accent">Your Plant Does.</span>
             </h1>
             <p className="hero-subtext reveal-anim visible" style={{ animationDelay: "0.2s" }}>
-              We build high-performance websites for manufacturers — faster and smarter than a traditional agency, because we combine 16 years on the shop floor with AI-powered workflows that cut build time in half.
+              We build websites that turn online searches into RFQs.<br />
+              Built by a manufacturer with 16 years on the shop floor.
             </p>
-            <div className="hero-actions reveal-anim visible" style={{ animationDelay: "0.3s", display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "1rem" }}>
-              <a
-                href="#pricing"
-                className="btn btn-primary btn-lg-premium"
-              >
-                Get Your Free Site Audit
-              </a>
+            <div className="hero-actions reveal-anim visible" style={{ animationDelay: "0.3s", display: "flex", justifyContent: "center" }}>
               <a
                 href="https://calendly.com/hello-makerwebstudios/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-dark btn-lg-premium"
+                className="btn btn-primary btn-lg-premium"
               >
-                Book Your Discovery Call
+                Book Your Free Strategy Call
               </a>
             </div>
 
@@ -66,8 +51,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        
-        {/* Decorative elements */}
+
         <div className="hero-glow" />
       </section>
 
@@ -145,14 +129,14 @@ const Home = () => {
       `}</style>
 
 
-      {/* The Problem (Pain) Section */}
+      {/* The Problem Section */}
       <section style={{ padding: "8rem 0", background: "var(--bg-color)" }}>
         <div className="container" style={{ maxWidth: "1100px" }}>
           <div style={{ marginBottom: "4rem" }}>
             <div className="badge-premium" style={{ color: "var(--industrial-orange)", background: "transparent", border: "none", padding: 0, marginBottom: "1rem" }}>THE PROBLEM</div>
             <h2 className="section-title">Most Manufacturers Are Invisible Online.</h2>
             <p className="section-subtitle" style={{ maxWidth: "700px" }}>
-              Your business grew on relationships and referrals. That still works — but the buyers who don't know you yet are finding someone else online.
+              Your competitors aren't better. They're just easier to find.
             </p>
           </div>
 
@@ -160,19 +144,19 @@ const Home = () => {
             {[
               {
                 title: "Not Ranking on Google",
-                desc: "Stop hiding on page 10. We get you found by procurement teams actively searching for your services today, right when they need you.",
+                desc: "Procurement teams search for your exact service every day. If you're not on page one, someone else gets the call.",
                 icon: <TrendingDown size={28} />,
                 delay: "0.1s",
               },
               {
                 title: "No Inbound Leads",
-                desc: "Turn your website from a digital brochure into a 24/7 sales rep. We build RFQ systems that qualify and convert visitors while you sleep.",
+                desc: "Your site looks fine. But it doesn't convert. We build RFQ systems that qualify buyers before they pick up the phone.",
                 icon: <VolumeX size={28} />,
                 delay: "0.2s",
               },
               {
-                title: "Built for Trade Shows",
-                desc: "Your brochure site worked in 2012, but today's buyers Google you first. We replace outdated designs with instant credibility that passes the buyer gut-check.",
+                title: "Outdated Presence",
+                desc: "If your site looks like it was built for a trade show in 2012, buyers move on in seconds. First impressions are digital now.",
                 icon: <Factory size={28} />,
                 delay: "0.3s",
               },
@@ -189,122 +173,87 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Our Process Section */}
+      {/* How It Works */}
       <section style={{ padding: "8rem 0", background: "var(--dark-bg)" }} id="process" className="dark-section blueprint-bg">
         <div className="container" style={{ maxWidth: "1100px", margin: "0 auto" }}>
            <div style={{ textAlign: "center", marginBottom: "4rem" }}>
              <h2 className="section-title" style={{ color: "white", marginBottom: "1rem", fontSize: "clamp(2.5rem, 5vw, 4rem)", letterSpacing: "-0.02em" }}>
-               From Vision to Launch in <span style={{ color: "var(--industrial-orange)" }}>3 Simple Steps</span>
+               From Vision to Launch in <span style={{ color: "var(--industrial-orange)" }}>3 Steps</span>
              </h2>
              <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "1.125rem", maxWidth: "700px", margin: "0 auto" }}>
-               We take the stress out of your tech with a proven system that turns your expertise into a digital asset.
+               A proven system that turns your expertise into a digital asset.
              </p>
            </div>
-           
+
            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "2rem" }}>
              {/* Step 1 */}
              <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "var(--border-radius)", padding: "2.5rem", position: "relative" }}>
                <div style={{ fontSize: "4rem", fontWeight: "900", color: "var(--industrial-orange)", opacity: 0.2, position: "absolute", top: "1.5rem", right: "2rem", lineHeight: 1 }}>01</div>
-               <h3 style={{ fontSize: "1.5rem", color: "white", marginBottom: "1rem", fontWeight: "700" }}>Discovery & Strategy</h3>
+               <h3 style={{ fontSize: "1.5rem", color: "white", marginBottom: "1rem", fontWeight: "700" }}>Audit & Strategy</h3>
                <p style={{ color: "rgba(255,255,255,0.65)", lineHeight: "1.7" }}>
-                 We map out your buyers' exact pain points and craft the messaging that proves you are the most reliable supplier.
+                 We study your buyers, your competitors, and your current site. You get a clear plan before we write a single line of code.
                </p>
              </div>
-             
+
              {/* Step 2 */}
              <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "var(--border-radius)", padding: "2.5rem", position: "relative" }}>
                <div style={{ fontSize: "4rem", fontWeight: "900", color: "var(--industrial-orange)", opacity: 0.2, position: "absolute", top: "1.5rem", right: "2rem", lineHeight: 1 }}>02</div>
                <h3 style={{ fontSize: "1.5rem", color: "white", marginBottom: "1rem", fontWeight: "700" }}>Design & Build</h3>
                <p style={{ color: "rgba(255,255,255,0.65)", lineHeight: "1.7" }}>
-                 We build a fast, secure, and mobile-responsive asset that works flawlessly whether your client is at their desk or on the shop floor.
+                 A fast, mobile-ready site built for B2B buyers — not a template with your logo slapped on it. Delivered in 30 days.
                </p>
              </div>
-             
+
              {/* Step 3 */}
              <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "var(--border-radius)", padding: "2.5rem", position: "relative" }}>
                <div style={{ fontSize: "4rem", fontWeight: "900", color: "var(--industrial-orange)", opacity: 0.2, position: "absolute", top: "1.5rem", right: "2rem", lineHeight: 1 }}>03</div>
                <h3 style={{ fontSize: "1.5rem", color: "white", marginBottom: "1rem", fontWeight: "700" }}>Launch & Grow</h3>
                <p style={{ color: "rgba(255,255,255,0.65)", lineHeight: "1.7" }}>
-                 Launched in under 30 days. You take the wheel, or let us handle the maintenance so you can focus entirely on production.
+                 Your site goes live. We connect analytics, Google Business Profile, and search console. You start showing up where buyers are looking.
                </p>
              </div>
            </div>
         </div>
       </section>
 
-      {/* The Maker Web Difference — Legitimacy / Founder's Note */}
+      {/* Built by a Manufacturer */}
       <section style={{ padding: "8rem 0", background: "var(--bg-color)" }} id="difference" className="blueprint-bg">
-        <div className="container" style={{ maxWidth: "1100px" }}>
-          <div style={{ marginBottom: "4rem" }}>
+        <div className="container" style={{ maxWidth: "900px" }}>
+          <div style={{ marginBottom: "2rem" }}>
             <div className="badge-premium" style={{ color: "var(--industrial-orange)", background: "transparent", border: "none", padding: 0, marginBottom: "1rem" }}>THE MAKER WEB DIFFERENCE</div>
-            <h2 className="section-title">Built by a Manufacturer, for Manufacturers.</h2>
-            <p className="section-subtitle" style={{ maxWidth: "700px" }}>
-              With 16+ years on the shop floor, I know exactly what procurement officers are looking for on your site.
-            </p>
+            <h2 className="section-title">Built by a Manufacturer.</h2>
           </div>
 
-          {/* Founder's Note — prominent quote block */}
           <div
             className="bento-card reveal-anim visible"
             style={{
               borderLeft: "4px solid var(--industrial-orange)",
-              marginBottom: "3rem",
               padding: "2.5rem 2.5rem 2.5rem 2.25rem",
             }}
           >
-            <p style={{ fontSize: "1.2rem", lineHeight: "1.75", color: "var(--text-dark)", fontStyle: "italic", marginBottom: "0" }}>
-              I spent 16 years on the shop floor before I ever touched a line of code. I've run the machines, managed the production lines, and seen how many bids are lost because a website looks like a liability. I didn't build Maker Web Studios to be a "creative agency"—I built it to be the digital arm of your machine shop.
+            <p style={{ fontSize: "1.2rem", lineHeight: "1.75", color: "var(--text-dark)", fontStyle: "italic", marginBottom: "1.5rem" }}>
+              "I spent 16 years on the shop floor before I ever touched a line of code. I've run the machines, managed the production lines, and seen how many bids are lost because a website looks like a liability. I didn't build Maker Web Studios to be a 'creative agency' — I built it to be the digital arm of your machine shop."
             </p>
-          </div>
-
-          {/* Legitimacy checklist — 3 pillars */}
-          <div className="bento-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }}>
-            {[
-              {
-                title: "Shop floor roots",
-                desc: "Blue-collar experience in production environments. No hand-holding—I speak your language from day one.",
-                icon: <Wrench size={28} />,
-                delay: "0.1s",
-              },
-              {
-                title: "The language that wins bids",
-                desc: "Quality manuals, equipment lists, RFIs—I build sites that put the right information where engineers and procurement officers expect it.",
-                icon: <FileText size={28} />,
-                delay: "0.2s",
-              },
-              {
-                title: "Pass the eye test",
-                desc: "Sites that look credible to technical buyers. Fewer meetings, less explaining. Your website works as a sales tool.",
-                icon: <Eye size={28} />,
-                delay: "0.3s",
-              },
-            ].map((item, idx) => (
-              <div key={idx} className="bento-card reveal-anim visible" style={{ animationDelay: item.delay }}>
-                <div className="icon-badge orange-badge">
-                  {item.icon}
-                </div>
-                <h3 className="card-title" style={{ fontSize: "1.25rem", fontWeight: "800", fontFamily: "'Outfit', sans-serif" }}>{item.title}</h3>
-                <p className="card-text">{item.desc}</p>
-              </div>
-            ))}
+            <p style={{ fontSize: "1.05rem", color: "var(--text-muted)", fontWeight: "600", marginBottom: "0" }}>
+              That's why our sites are built for engineers and procurement officers — not for design awards.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Services (Pricing) Section */}
+      {/* Pricing */}
       <section style={{ padding: "10rem 0", background: "var(--bg-color)" }} id="pricing">
         <div className="container" style={{ maxWidth: "1100px" }}>
           <div style={{ marginBottom: "5rem" }}>
             <div className="badge-premium" style={{ color: "var(--industrial-orange)", background: "transparent", border: "none", padding: 0, marginBottom: "1rem" }}>TRANSPARENT PRICING</div>
-            <h2 className="section-title">GrowthEngine</h2>
+            <h2 className="section-title">No Surprise Invoices.</h2>
             <p className="section-subtitle" style={{ maxWidth: "700px" }}>
-              Modern Digital Transformation<br/>
-              Tailored for industrial B2B manufacturing companies.
+              You know what you're paying before we start. Fixed-price packages tailored for B2B manufacturers.
             </p>
           </div>
 
           <div className="bento-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", alignItems: "stretch" }}>
-            
+
             {/* Full Modernization Package (Featured) */}
             <div className="bento-card reveal-anim visible" style={{ border: "2px solid var(--industrial-orange)", display: "flex", flexDirection: "column" }}>
                <div style={{ color: "var(--industrial-orange)", fontSize: "0.75rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.75rem" }}>
@@ -315,23 +264,23 @@ const Home = () => {
                  $4,500
                </div>
                <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>One-time · 30-day delivery</div>
-               
-               <p style={{ color: "var(--text-muted)", marginBottom: "2rem", fontSize: "0.95rem", minHeight: "4.5rem" }}>
-                 For manufacturers ready to turn their website into a lead generation asset that works around the clock.
+
+               <p style={{ color: "var(--text-muted)", marginBottom: "2rem", fontSize: "0.95rem", minHeight: "3rem" }}>
+                 Turn your website into a lead generation asset that works around the clock.
                </p>
-               
+
                <ul style={{ listStyle: "none", padding: 0, marginBottom: "2.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1.5rem" }}>
                  {[
-                   "Modern 8–10 page website built for B2B manufacturers", 
-                   "Capabilities page that qualifies procurement teams before they call", 
-                   "RFQ form engineered as your #1 lead conversion tool", 
-                   "Messaging architecture written for engineers and buyers — not fluff", 
-                   "Photography coordination included", 
+                   "Modern 8–10 page website built for B2B manufacturers",
+                   "Capabilities page that qualifies procurement teams before they call",
+                   "RFQ form engineered as your #1 lead conversion tool",
+                   "Messaging written for engineers and buyers — not fluff",
+                   "Photography coordination included",
                    "Full certifications + equipment list page",
                    "On-page SEO + Google Business Profile setup",
                    "Analytics + Search Console connected",
                    "SSL + speed optimization (PageSpeed 85+ target)",
-                   "No Proprietary Code – You own your site, and your team can edit it without calling a developer every time you buy a new machine.",
+                   "You own your code — no lock-in, no proprietary builders",
                    "90-day post-launch support",
                    "30-day delivery"
                  ].map((feat, i) => (
@@ -342,12 +291,9 @@ const Home = () => {
                  ))}
                </ul>
                <div style={{ marginTop: "auto" }}>
-                 <a href="https://buy.stripe.com/4gM00idnx9Y16v10QP87K03" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: "100%" }}>
-                   Get Your Free Site Audit
+                 <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: "100%" }}>
+                   Book Your Strategy Call
                  </a>
-                 <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", marginTop: "0.75rem", textAlign: "center", fontStyle: "italic" }}>
-                   Join businesses that scaled their reach with Maker Web Studios.
-                 </div>
                </div>
             </div>
 
@@ -361,21 +307,21 @@ const Home = () => {
                  $1,500
                </div>
                <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>Per month · Cancel anytime</div>
-               
-               <p style={{ color: "var(--text-muted)", marginBottom: "2rem", fontSize: "0.95rem", minHeight: "4.5rem" }}>
-                 Keep your site fast, secure, and up to date. We handle maintenance so you can focus on production.
+
+               <p style={{ color: "var(--text-muted)", marginBottom: "2rem", fontSize: "0.95rem", minHeight: "3rem" }}>
+                 Keep your site fast, secure, and up to date while you focus on production.
                </p>
-               
+
                <ul style={{ listStyle: "none", padding: 0, marginBottom: "2.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1.5rem" }}>
                  {[
-                   "Hosting + security updates handled for you", 
-                   "Monthly PageSpeed + performance monitoring", 
-                   "Content updates (up to 4 per month)", 
-                   "Uptime monitoring with instant alerts", 
-                   "Google Business Profile management", 
+                   "Hosting + security updates handled for you",
+                   "Monthly PageSpeed + performance monitoring",
+                   "Content updates (up to 4 per month)",
+                   "Uptime monitoring with instant alerts",
+                   "Google Business Profile management",
                    "Monthly analytics report delivered to your inbox",
                    "Priority support — real response times, not a ticket queue",
-                   "Cancel anytime — no contracts, no surprises"
+                   "No contracts — cancel anytime"
                  ].map((feat, i) => (
                    <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "0.9rem", color: "var(--text-dark)" }}>
                      <CheckCircle2 size={16} color="var(--industrial-orange)" style={{ flexShrink: 0, marginTop: "2px" }} />
@@ -385,11 +331,8 @@ const Home = () => {
                </ul>
                <div style={{ marginTop: "auto" }}>
                  <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-dark" style={{ width: "100%" }}>
-                   Book Your Discovery Call
+                   Book Your Strategy Call
                  </a>
-                 <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", marginTop: "0.75rem", textAlign: "center", fontStyle: "italic" }}>
-                   Stop agonizing over updates. Let us handle it.
-                 </div>
                </div>
             </div>
 
@@ -397,23 +340,25 @@ const Home = () => {
         </div>
       </section>
 
-      <section style={{ padding: "8rem 0", background: "var(--surface-color)", textAlign: "center", borderTop: "1px solid var(--border-color)" }}>
-        <div className="container" style={{ maxWidth: "700px", margin: "0 auto", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
-          <h2 className="section-title" style={{ color: "var(--text-dark)", textAlign: "center", marginBottom: "1.5rem", fontSize: "clamp(2.75rem, 6vw, 4.5rem)", lineHeight: "1", fontFamily: "'Outfit', sans-serif", fontWeight: "900" }}>Ready to Scale Your Reach?</h2>
-          <p style={{ fontSize: "1.125rem", color: "var(--text-muted)", textAlign: "center", marginBottom: "2.5rem", lineHeight: "1.55", fontWeight: "500", opacity: 0.9, maxWidth: "600px", margin: "0 auto 2.5rem" }}>
-            Stop losing bids to competitors with better digital presence. Book a discovery call or get started right away.
+      {/* Social Proof */}
+      <section style={{ padding: "5rem 0", background: "var(--surface-color)", borderTop: "1px solid var(--border-color)", borderBottom: "1px solid var(--border-color)" }}>
+        <div className="container" style={{ maxWidth: "900px", textAlign: "center" }}>
+          <p style={{ fontSize: "1rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.1em", fontWeight: "700", marginBottom: "0" }}>
+            Trusted by manufacturers across Texas
           </p>
-          <div style={{ display: "flex", gap: "1.5rem", justifyContent: "center", flexWrap: "wrap", marginBottom: "1.5rem" }}>
-             <a href="https://buy.stripe.com/4gM00idnx9Y16v10QP87K03" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: "1.125rem 3rem", fontSize: "1.125rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", borderRadius: "4px" }}>
-               GET YOUR FREE SITE AUDIT
-             </a>
-             <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-dark" style={{ padding: "1.125rem 3rem", fontSize: "1.125rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", borderRadius: "4px" }}>
-               BOOK YOUR DISCOVERY CALL
-             </a>
-          </div>
-          <div style={{ fontSize: "0.95rem", color: "var(--text-muted)", fontStyle: "italic" }}>
-            Join 20+ businesses that scaled their reach with Maker Web Studios.
-          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section style={{ padding: "8rem 0", background: "var(--bg-color)", textAlign: "center" }}>
+        <div className="container" style={{ maxWidth: "700px", margin: "0 auto", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
+          <h2 className="section-title" style={{ color: "var(--text-dark)", textAlign: "center", marginBottom: "1.5rem", fontSize: "clamp(2.75rem, 6vw, 4.5rem)", lineHeight: "1", fontFamily: "'Outfit', sans-serif", fontWeight: "900" }}>Stop Losing Bids to a Better Website.</h2>
+          <p style={{ fontSize: "1.125rem", color: "var(--text-muted)", textAlign: "center", marginBottom: "2.5rem", lineHeight: "1.55", fontWeight: "500", opacity: 0.9, maxWidth: "600px", margin: "0 auto 2.5rem" }}>
+            Book a free strategy call. We'll audit your current site and show you exactly where you're losing buyers.
+          </p>
+          <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: "1.25rem 3rem", fontSize: "1.125rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", borderRadius: "4px" }}>
+            BOOK YOUR FREE STRATEGY CALL
+          </a>
         </div>
       </section>
 

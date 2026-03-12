@@ -1,23 +1,10 @@
-import { Sun, Moon } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const Layout = ({ children }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [theme, setTheme] = useState("light");
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)",
-    ).matches;
-    const initialTheme = savedTheme
-      ? savedTheme
-      : prefersDark
-        ? "dark"
-        : "light";
-    setTheme(initialTheme);
-    document.documentElement.setAttribute("data-theme", initialTheme);
+    document.documentElement.setAttribute("data-theme", "light");
 
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -25,13 +12,6 @@ const Layout = ({ children }) => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
-    document.documentElement.setAttribute("data-theme", newTheme);
-  };
 
   return (
     <div className="app-wrapper">
@@ -56,29 +36,14 @@ const Layout = ({ children }) => {
           </a>
 
           <nav className="desktop-nav">
-            <button
-              onClick={toggleTheme}
-              className="theme-toggle"
-              title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
-            >
-              {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
-            </button>
             <div className="nav-button-group">
               <a
                 href="https://calendly.com/hello-makerwebstudios/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-sm btn-dark"
-              >
-                Book A Call
-              </a>
-              <a
-                href="https://buy.stripe.com/4gM00idnx9Y16v10QP87K03"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="btn btn-sm btn-primary"
               >
-                Get Started
+                Book a Call
               </a>
             </div>
           </nav>
@@ -93,49 +58,35 @@ const Layout = ({ children }) => {
             <div className="footer-brand">
               <h3 className="footer-logo">MAKER WEB STUDIO</h3>
               <p className="footer-tagline">
-                Websites Built for Makers, By a Maker.
+                Websites Built for Manufacturers.
                 <br />
-                Serving Texas Manufacturers.
+                16+ Years on the Shop Floor.
               </p>
             </div>
             <div className="footer-links">
               <h4>Quick Links</h4>
               <ul>
                 <li>
-                  <a href="/#pricing">Services</a>
-                </li>
-                <li>
-                  <a href="/#process">Process</a>
+                  <a href="/#process">How It Works</a>
                 </li>
                 <li>
                   <a href="/#difference">About</a>
                 </li>
+                <li>
+                  <a href="/#pricing">Pricing</a>
+                </li>
               </ul>
             </div>
             <div className="footer-contact">
-              <h4>Ready to Scale Your Reach?</h4>
+              <h4>Ready to Get Found?</h4>
               <div className="footer-actions">
                 <a
                   href="https://calendly.com/hello-makerwebstudios/30min"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn"
-                  style={{
-                    background: "white",
-                    color: "black",
-                    border: "1px solid white",
-                    fontWeight: "700",
-                  }}
-                >
-                  Book Your Discovery Call
-                </a>
-                <a
-                  href="https://buy.stripe.com/4gM00idnx9Y16v10QP87K03"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="btn btn-primary"
                 >
-                  Analyze & Upgrade My Site
+                  Book Your Strategy Call
                 </a>
               </div>
             </div>
