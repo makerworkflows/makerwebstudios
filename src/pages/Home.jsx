@@ -290,9 +290,12 @@ const Home = () => {
                    </li>
                  ))}
                </ul>
-               <div style={{ marginTop: "auto" }}>
-                 <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: "100%" }}>
-                   Book Your Strategy Call
+               <div style={{ marginTop: "auto", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+                 <a href="https://buy.stripe.com/4gM00idnx9Y16v10QP87K03" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: "100%" }}>
+                   Get Started
+                 </a>
+                 <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-dark" style={{ width: "100%" }}>
+                   Book a Call First
                  </a>
                </div>
             </div>
@@ -329,9 +332,12 @@ const Home = () => {
                    </li>
                  ))}
                </ul>
-               <div style={{ marginTop: "auto" }}>
+               <div style={{ marginTop: "auto", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+                 <a href="https://buy.stripe.com/4gM00idnx9Y16v10QP87K03" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: "100%" }}>
+                   Get Started
+                 </a>
                  <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-dark" style={{ width: "100%" }}>
-                   Book Your Strategy Call
+                   Book a Call First
                  </a>
                </div>
             </div>
