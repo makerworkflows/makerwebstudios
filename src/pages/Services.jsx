@@ -9,42 +9,57 @@ const Services = () => (
         className="text-center"
         style={{ maxWidth: "800px", margin: "0 auto 6rem" }}
       >
-        <h2 className="section-title">The Growth Engine</h2>
+        <h2 className="section-title">No Surprise Invoices.</h2>
         <p className="section-subtitle">
-          No surprise invoices. Fixed-price packages tailored to industrial B2B
-          manufacturing companies.
+          You know what you're paying before we start. Fixed-price packages
+          tailored for B2B manufacturers.
         </p>
       </div>
 
       <div className="packages-grid">
-        {/* GrowthEngine — One-Time Build */}
+        {/* GrowthEngine — $4,500 one-time + $1,500/month */}
         <div
           className="package-card premium-glass reveal-anim visible"
           style={{
             border: "2px solid var(--industrial-orange)",
           }}
         >
+          <div style={{ color: "var(--industrial-orange)", fontSize: "0.75rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.5rem" }}>
+            Full Build + Growth
+          </div>
           <h3 className="package-name">GrowthEngine</h3>
           <div className="package-price">
-            $4,500 <span className="price-label">One-Time Build</span>
+            $4,500 <span className="price-label">one-time</span>
+          </div>
+          <div style={{ fontSize: "1.5rem", fontWeight: "800", color: "var(--industrial-orange)", fontFamily: "'Outfit', sans-serif", marginBottom: "1.5rem" }}>
+            + $1,500<span className="price-label">/month</span>
           </div>
           <p className="package-desc">
-            Turn your website into a lead generation asset that works around the
-            clock.
+            A complete website build and ongoing SEO growth engine. We build the
+            asset, then drive buyers to it every month.
           </p>
+
+          <div className="section-label">Deliverables</div>
           <ul className="package-features">
             {[
-              "Modern 8\u201310 page website built for B2B manufacturers",
+              "Full website design and modernization \u2014 8\u201310 pages built for B2B buyers",
               "Capabilities page that qualifies procurement teams before they call",
               "RFQ form engineered as your #1 lead conversion tool",
               "Messaging written for engineers and buyers \u2014 not fluff",
+              "On-page SEO foundation built into every page from day one",
+              "Keyword research and buyer-intent targeting \u2014 updated quarterly",
+              "Google Business Profile setup and full optimization",
+              "2\u20134 SEO pages or blog posts published monthly",
+              "Monthly keyword rank tracking and position reports",
+              "Competitor SEO analysis \u2014 quarterly gap review",
+              "Backlink building \u2014 directories, associations, industry listings",
+              "Technical SEO monitoring \u2014 Core Web Vitals, crawl health, broken links",
+              "Google Analytics 4 and Search Console connected and monitored",
+              "Monthly performance report \u2014 rankings, traffic, leads, next steps",
+              "Monthly strategy call \u2014 30 minutes, results review and priority alignment",
               "Photography coordination included",
-              "Full certifications + equipment list page",
-              "On-page SEO + Google Business Profile setup",
-              "Analytics + Search Console connected",
-              "PageSpeed 90+ guaranteed",
-              "You own your code \u2014 no lock-in, no proprietary traps",
-              "30-day delivery",
+              "SSL and speed optimization",
+              "You own your code \u2014 no lock-in, no proprietary builders",
             ].map((item, i) => (
               <li key={i} className="package-feature">
                 <svg
@@ -64,6 +79,35 @@ const Services = () => (
               </li>
             ))}
           </ul>
+
+          <div className="section-label">Guarantees</div>
+          <ul className="package-features guarantee-list">
+            {[
+              "Site delivered in 30 days or you don\u2019t pay for that month",
+              "PageSpeed score of 85+ or we keep working until it hits",
+              "If the finished site doesn\u2019t match approved design and scope we rebuild at no charge",
+              "90-day ranking check-in \u2014 if no measurable keyword movement we audit and adjust strategy at no cost",
+              "You own everything \u2014 code, domain, content \u2014 from day one",
+            ].map((item, i) => (
+              <li key={i} className="package-feature" style={{ fontWeight: "600" }}>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--industrial-orange)"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="feature-icon"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+
           <a
             href="https://buy.stripe.com/5kQ6oJ6Zb2sg5tO3hXejK01"
             target="_blank"
@@ -74,28 +118,39 @@ const Services = () => (
           </a>
         </div>
 
-        {/* CarePlan — Monthly Retainer */}
+        {/* Care Plan — $500/month */}
         <div
           className="package-card premium-glass reveal-anim visible"
           style={{ animationDelay: "0.1s" }}
         >
-          <h3 className="package-name">CarePlan</h3>
+          <div style={{ color: "var(--industrial-orange)", fontSize: "0.75rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.5rem" }}>
+            Maintenance & Support
+          </div>
+          <h3 className="package-name">Care Plan</h3>
           <div className="package-price">
-            $1,500 <span className="price-label">Monthly Retainer</span>
+            $500<span className="price-label">/month</span>
+          </div>
+          <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>
+            Cancel anytime &middot; No contracts
           </div>
           <p className="package-desc">
-            Active SEO growth, monthly content, and full site maintenance so you
-            can focus on production.
+            Keep your site fast, secure, and up to date while you focus on
+            production.
           </p>
+
+          <div className="section-label">Deliverables</div>
           <ul className="package-features">
             {[
-              "Keyword research and buyer-intent targeting",
-              "2\u20134 SEO pages or blog posts published monthly",
-              "Monthly rank tracking and competitor analysis",
-              "Backlink building and technical SEO monitoring",
-              "Google Business Profile management",
-              "Hosting + security updates handled for you",
-              "Monthly performance report and strategy call",
+              "Hosting management and uptime monitoring with instant alerts",
+              "Security monitoring \u2014 malware scans, firewall, threat detection",
+              "Monthly CMS, plugin, and theme updates",
+              "Up to 4 content updates per month \u2014 hours, staff, services, pricing",
+              "Google Business Profile basic maintenance \u2014 hours, address, reviews current",
+              "Monthly PageSpeed and Core Web Vitals check",
+              "Broken link and 404 error monitoring \u2014 monthly crawl",
+              "SSL certificate management \u2014 active and auto-renewing",
+              "Weekly offsite backups \u2014 full site restore capability",
+              "Monthly uptime and performance report delivered to your inbox",
               "Priority support \u2014 real response times, not a ticket queue",
             ].map((item, i) => (
               <li key={i} className="package-feature">
@@ -116,6 +171,33 @@ const Services = () => (
               </li>
             ))}
           </ul>
+
+          <div className="section-label">Guarantees</div>
+          <ul className="package-features guarantee-list">
+            {[
+              "99% uptime or we credit that month\u2019s retainer",
+              "Any site-breaking issue resolved within 24 business hours or your next month is free",
+              "Cancel anytime \u2014 no contracts, no penalties",
+            ].map((item, i) => (
+              <li key={i} className="package-feature" style={{ fontWeight: "600" }}>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--industrial-orange)"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="feature-icon"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+
           <a
             href="https://buy.stripe.com/5kQ6oJ6Zb2sg5tO3hXejK01"
             target="_blank"
@@ -133,7 +215,7 @@ const Services = () => (
       </div>
 
       <p className="sequence-line">
-        The $4,500 builds the factory. The $1,500/month runs it.
+        $4,500 builds the factory. $1,500/month runs it. $500/month keeps it running.
       </p>
     </div>
 
@@ -208,6 +290,15 @@ const Services = () => (
         margin-right: 12px;
         margin-top: 2px;
         flex-shrink: 0;
+      }
+
+      .section-label {
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--text-dark);
+        margin-bottom: 0.75rem;
       }
 
       .btn-full {

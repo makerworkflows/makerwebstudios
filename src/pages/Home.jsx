@@ -254,41 +254,69 @@ const Home = () => {
 
           <div className="bento-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", alignItems: "stretch" }}>
 
-            {/* GrowthEngine — One-Time Build */}
+            {/* GrowthEngine — $4,500 one-time + $1,500/month */}
             <div className="bento-card reveal-anim visible" style={{ border: "2px solid var(--industrial-orange)", display: "flex", flexDirection: "column" }}>
                <div style={{ color: "var(--industrial-orange)", fontSize: "0.75rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.75rem" }}>
-                 One-Time Build
+                 Full Build + Growth
                </div>
                <h3 className="card-title-lg" style={{ color: "var(--text-dark)", fontSize: "2rem", marginBottom: "0.5rem", fontFamily: "'Outfit', sans-serif", fontWeight: "900", lineHeight: "1" }}>GrowthEngine</h3>
-               <div style={{ fontSize: "2.5rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", color: "var(--industrial-orange)", marginBottom: "0.5rem", lineHeight: "1" }}>
-                 $4,500
+               <div style={{ fontSize: "2.5rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", color: "var(--industrial-orange)", marginBottom: "0.25rem", lineHeight: "1" }}>
+                 $4,500 <span style={{ fontSize: "1rem", fontWeight: "600", color: "var(--text-muted)" }}>one-time</span>
                </div>
-               <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>One-time &middot; 30-day delivery</div>
+               <div style={{ fontSize: "1.5rem", fontWeight: "800", fontFamily: "'Outfit', sans-serif", color: "var(--industrial-orange)", marginBottom: "0.5rem", lineHeight: "1" }}>
+                 + $1,500<span style={{ fontSize: "0.85rem", fontWeight: "500", color: "var(--text-muted)" }}>/month</span>
+               </div>
+               <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>Build in 30 days &middot; Grow every month after</div>
 
-               <p style={{ color: "var(--text-muted)", marginBottom: "2rem", fontSize: "0.95rem", minHeight: "3rem" }}>
-                 Turn your website into a lead generation asset that works around the clock.
+               <p style={{ color: "var(--text-muted)", marginBottom: "1.5rem", fontSize: "0.95rem" }}>
+                 A complete website build and ongoing SEO growth engine. We build the asset, then drive buyers to it every month.
                </p>
 
-               <ul style={{ listStyle: "none", padding: 0, marginBottom: "2.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1.5rem" }}>
+               <div style={{ fontSize: "0.8rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-dark)", marginBottom: "0.75rem" }}>Deliverables</div>
+               <ul style={{ listStyle: "none", padding: 0, marginBottom: "1.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1rem" }}>
                  {[
-                   "Modern 8\u201310 page website built for B2B manufacturers",
+                   "Full website design and modernization \u2014 8\u201310 pages built for B2B buyers",
                    "Capabilities page that qualifies procurement teams before they call",
                    "RFQ form engineered as your #1 lead conversion tool",
                    "Messaging written for engineers and buyers \u2014 not fluff",
+                   "On-page SEO foundation built into every page from day one",
+                   "Keyword research and buyer-intent targeting \u2014 updated quarterly",
+                   "Google Business Profile setup and full optimization",
+                   "2\u20134 SEO pages or blog posts published monthly",
+                   "Monthly keyword rank tracking and position reports",
+                   "Competitor SEO analysis \u2014 quarterly gap review",
+                   "Backlink building \u2014 directories, associations, industry listings",
+                   "Technical SEO monitoring \u2014 Core Web Vitals, crawl health, broken links",
+                   "Google Analytics 4 and Search Console connected and monitored",
+                   "Monthly performance report \u2014 rankings, traffic, leads, next steps",
+                   "Monthly strategy call \u2014 30 minutes, results review and priority alignment",
                    "Photography coordination included",
-                   "Full certifications + equipment list page",
-                   "On-page SEO + Google Business Profile setup",
-                   "Analytics + Search Console connected",
-                   "PageSpeed 90+ guaranteed",
-                   "You own your code \u2014 no lock-in, no proprietary traps",
-                   "30-day delivery",
+                   "SSL and speed optimization",
+                   "You own your code \u2014 no lock-in, no proprietary builders",
                  ].map((feat, i) => (
                    <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "0.9rem", color: "var(--text-dark)" }}>
                      <CheckCircle2 size={16} color="var(--industrial-orange)" style={{ flexShrink: 0, marginTop: "2px" }} />
-                     <span style={{ fontWeight: i === 0 ? "600" : "400" }}>{feat}</span>
+                     <span>{feat}</span>
                    </li>
                  ))}
                </ul>
+
+               <div style={{ fontSize: "0.8rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-dark)", marginBottom: "0.75rem" }}>Guarantees</div>
+               <ul style={{ listStyle: "none", padding: 0, marginBottom: "2.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1rem" }}>
+                 {[
+                   "Site delivered in 30 days or you don\u2019t pay for that month",
+                   "PageSpeed score of 85+ or we keep working until it hits",
+                   "If the finished site doesn\u2019t match approved design and scope we rebuild at no charge",
+                   "90-day ranking check-in \u2014 if no measurable keyword movement we audit and adjust strategy at no cost",
+                   "You own everything \u2014 code, domain, content \u2014 from day one",
+                 ].map((feat, i) => (
+                   <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "0.9rem", color: "var(--text-dark)" }}>
+                     <CheckCircle2 size={16} color="var(--industrial-orange)" style={{ flexShrink: 0, marginTop: "2px" }} />
+                     <span style={{ fontWeight: "600" }}>{feat}</span>
+                   </li>
+                 ))}
+               </ul>
+
                <div style={{ marginTop: "auto", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
                  <a href="https://buy.stripe.com/5kQ6oJ6Zb2sg5tO3hXejK01" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: "100%" }}>
                    Get Started
@@ -299,30 +327,34 @@ const Home = () => {
                </div>
             </div>
 
-            {/* CarePlan — Monthly Retainer */}
+            {/* Care Plan — $500/month */}
             <div className="bento-card reveal-anim visible" style={{ display: "flex", flexDirection: "column" }}>
                <div style={{ color: "var(--industrial-orange)", fontSize: "0.75rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.75rem" }}>
-                 Monthly Retainer
+                 Maintenance & Support
                </div>
-               <h3 className="card-title-lg" style={{ color: "var(--text-dark)", fontSize: "2rem", marginBottom: "0.5rem", fontFamily: "'Outfit', sans-serif", fontWeight: "900", lineHeight: "1" }}>CarePlan</h3>
+               <h3 className="card-title-lg" style={{ color: "var(--text-dark)", fontSize: "2rem", marginBottom: "0.5rem", fontFamily: "'Outfit', sans-serif", fontWeight: "900", lineHeight: "1" }}>Care Plan</h3>
                <div style={{ fontSize: "2.5rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", color: "var(--industrial-orange)", marginBottom: "0.5rem", lineHeight: "1" }}>
-                 $1,500
+                 $500<span style={{ fontSize: "0.85rem", fontWeight: "500", color: "var(--text-muted)" }}>/month</span>
                </div>
-               <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>Per month &middot; Cancel anytime</div>
+               <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>Cancel anytime &middot; No contracts</div>
 
-               <p style={{ color: "var(--text-muted)", marginBottom: "2rem", fontSize: "0.95rem", minHeight: "3rem" }}>
-                 Active SEO growth, monthly content, and full site maintenance so you can focus on production.
+               <p style={{ color: "var(--text-muted)", marginBottom: "1.5rem", fontSize: "0.95rem" }}>
+                 Keep your site fast, secure, and up to date while you focus on production.
                </p>
 
-               <ul style={{ listStyle: "none", padding: 0, marginBottom: "2.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1.5rem" }}>
+               <div style={{ fontSize: "0.8rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-dark)", marginBottom: "0.75rem" }}>Deliverables</div>
+               <ul style={{ listStyle: "none", padding: 0, marginBottom: "1.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1rem" }}>
                  {[
-                   "Keyword research and buyer-intent targeting",
-                   "2\u20134 SEO pages or blog posts published monthly",
-                   "Monthly rank tracking and competitor analysis",
-                   "Backlink building and technical SEO monitoring",
-                   "Google Business Profile management",
-                   "Hosting + security updates handled for you",
-                   "Monthly performance report and strategy call",
+                   "Hosting management and uptime monitoring with instant alerts",
+                   "Security monitoring \u2014 malware scans, firewall, threat detection",
+                   "Monthly CMS, plugin, and theme updates",
+                   "Up to 4 content updates per month \u2014 hours, staff, services, pricing",
+                   "Google Business Profile basic maintenance \u2014 hours, address, reviews current",
+                   "Monthly PageSpeed and Core Web Vitals check",
+                   "Broken link and 404 error monitoring \u2014 monthly crawl",
+                   "SSL certificate management \u2014 active and auto-renewing",
+                   "Weekly offsite backups \u2014 full site restore capability",
+                   "Monthly uptime and performance report delivered to your inbox",
                    "Priority support \u2014 real response times, not a ticket queue",
                  ].map((feat, i) => (
                    <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "0.9rem", color: "var(--text-dark)" }}>
@@ -331,6 +363,21 @@ const Home = () => {
                    </li>
                  ))}
                </ul>
+
+               <div style={{ fontSize: "0.8rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-dark)", marginBottom: "0.75rem" }}>Guarantees</div>
+               <ul style={{ listStyle: "none", padding: 0, marginBottom: "2.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1rem" }}>
+                 {[
+                   "99% uptime or we credit that month\u2019s retainer",
+                   "Any site-breaking issue resolved within 24 business hours or your next month is free",
+                   "Cancel anytime \u2014 no contracts, no penalties",
+                 ].map((feat, i) => (
+                   <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "0.9rem", color: "var(--text-dark)" }}>
+                     <CheckCircle2 size={16} color="var(--industrial-orange)" style={{ flexShrink: 0, marginTop: "2px" }} />
+                     <span style={{ fontWeight: "600" }}>{feat}</span>
+                   </li>
+                 ))}
+               </ul>
+
                <div style={{ marginTop: "auto", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
                  <a href="https://buy.stripe.com/5kQ6oJ6Zb2sg5tO3hXejK01" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: "100%" }}>
                    Get Started
@@ -344,7 +391,7 @@ const Home = () => {
           </div>
 
           <p style={{ textAlign: "center", marginTop: "2.5rem", fontSize: "1.1rem", fontWeight: "600", color: "var(--text-muted)", fontStyle: "italic" }}>
-            The $4,500 builds the factory. The $1,500/month runs it.
+            $4,500 builds the factory. $1,500/month runs it. $500/month keeps it running.
           </p>
         </div>
       </section>
