@@ -17,7 +17,7 @@ const Services = () => (
       </div>
 
       <div className="packages-grid">
-        {/* GrowthEngine — $4,500 one-time + $1,500/month */}
+        {/* GrowthEngine — $4,500 one-time */}
         <div
           className="package-card premium-glass reveal-anim visible"
           style={{
@@ -25,18 +25,15 @@ const Services = () => (
           }}
         >
           <div style={{ color: "var(--industrial-orange)", fontSize: "0.75rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.5rem" }}>
-            Full Build + Growth
+            One-Time Build
           </div>
           <h3 className="package-name">GrowthEngine</h3>
           <div className="package-price">
-            $4,500 <span className="price-label">one-time</span>
-          </div>
-          <div style={{ fontSize: "1.5rem", fontWeight: "800", color: "var(--industrial-orange)", fontFamily: "'Outfit', sans-serif", marginBottom: "1.5rem" }}>
-            + $1,500<span className="price-label">/month</span>
+            $4,500 <span className="price-label">One-Time</span>
           </div>
           <p className="package-desc">
-            A complete website build and ongoing SEO growth engine. We build the
-            asset, then drive buyers to it every month.
+            Turn your website into a lead generation asset that works around the
+            clock.
           </p>
 
           <div className="section-label">Deliverables</div>
@@ -47,16 +44,8 @@ const Services = () => (
               "RFQ form engineered as your #1 lead conversion tool",
               "Messaging written for engineers and buyers \u2014 not fluff",
               "On-page SEO foundation built into every page from day one",
-              "Keyword research and buyer-intent targeting \u2014 updated quarterly",
               "Google Business Profile setup and full optimization",
-              "2\u20134 SEO pages or blog posts published monthly",
-              "Monthly keyword rank tracking and position reports",
-              "Competitor SEO analysis \u2014 quarterly gap review",
-              "Backlink building \u2014 directories, associations, industry listings",
-              "Technical SEO monitoring \u2014 Core Web Vitals, crawl health, broken links",
               "Google Analytics 4 and Search Console connected and monitored",
-              "Monthly performance report \u2014 rankings, traffic, leads, next steps",
-              "Monthly strategy call \u2014 30 minutes, results review and priority alignment",
               "Photography coordination included",
               "SSL and speed optimization",
               "You own your code \u2014 no lock-in, no proprietary builders",
@@ -86,7 +75,6 @@ const Services = () => (
               "Site delivered in 30 days or you don\u2019t pay for that month",
               "PageSpeed score of 85+ or we keep working until it hits",
               "If the finished site doesn\u2019t match approved design and scope we rebuild at no charge",
-              "90-day ranking check-in \u2014 if no measurable keyword movement we audit and adjust strategy at no cost",
               "You own everything \u2014 code, domain, content \u2014 from day one",
             ].map((item, i) => (
               <li key={i} className="package-feature" style={{ fontWeight: "600" }}>
@@ -118,39 +106,38 @@ const Services = () => (
           </a>
         </div>
 
-        {/* Care Plan — $500/month */}
+        {/* CarePlan — $1,500/month */}
         <div
           className="package-card premium-glass reveal-anim visible"
           style={{ animationDelay: "0.1s" }}
         >
           <div style={{ color: "var(--industrial-orange)", fontSize: "0.75rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.5rem" }}>
-            Maintenance & Support
+            Monthly Retainer
           </div>
-          <h3 className="package-name">Care Plan</h3>
+          <h3 className="package-name">CarePlan</h3>
           <div className="package-price">
-            $500<span className="price-label">/month</span>
-          </div>
-          <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>
-            Cancel anytime &middot; No contracts
+            $1,500<span className="price-label">/month</span>
           </div>
           <p className="package-desc">
-            Keep your site fast, secure, and up to date while you focus on
-            production.
+            Ongoing SEO growth, monthly content, and full site maintenance so you
+            can focus on production.
           </p>
 
           <div className="section-label">Deliverables</div>
           <ul className="package-features">
             {[
-              "Hosting management and uptime monitoring with instant alerts",
-              "Security monitoring \u2014 malware scans, firewall, threat detection",
-              "Monthly CMS, plugin, and theme updates",
-              "Up to 4 content updates per month \u2014 hours, staff, services, pricing",
-              "Google Business Profile basic maintenance \u2014 hours, address, reviews current",
-              "Monthly PageSpeed and Core Web Vitals check",
-              "Broken link and 404 error monitoring \u2014 monthly crawl",
-              "SSL certificate management \u2014 active and auto-renewing",
+              "Keyword research and buyer-intent targeting \u2014 updated quarterly",
+              "2\u20134 SEO pages or blog posts published monthly",
+              "Monthly keyword rank tracking and position reports",
+              "Competitor SEO analysis \u2014 quarterly gap review",
+              "Backlink building \u2014 directories, associations, industry listings",
+              "Technical SEO monitoring \u2014 Core Web Vitals, crawl health, broken links",
+              "Monthly performance report \u2014 rankings, traffic, leads, next steps",
+              "Monthly strategy call \u2014 30 minutes, results review and priority alignment",
+              "Hosting management and uptime monitoring",
+              "Security monitoring, CMS and plugin updates",
+              "Up to 4 content updates per month",
               "Weekly offsite backups \u2014 full site restore capability",
-              "Monthly uptime and performance report delivered to your inbox",
               "Priority support \u2014 real response times, not a ticket queue",
             ].map((item, i) => (
               <li key={i} className="package-feature">
@@ -175,6 +162,7 @@ const Services = () => (
           <div className="section-label">Guarantees</div>
           <ul className="package-features guarantee-list">
             {[
+              "90-day ranking check-in \u2014 if no measurable keyword movement we audit and adjust at no cost",
               "99% uptime or we credit that month\u2019s retainer",
               "Any site-breaking issue resolved within 24 business hours or your next month is free",
               "Cancel anytime \u2014 no contracts, no penalties",
@@ -215,7 +203,7 @@ const Services = () => (
       </div>
 
       <p className="sequence-line">
-        $4,500 builds the factory. $1,500/month runs it. $500/month keeps it running.
+        The $4,500 builds the factory. The $1,500/month runs it.
       </p>
     </div>
 
