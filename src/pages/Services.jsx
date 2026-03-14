@@ -74,12 +74,12 @@ const Services = () => (
           </a>
         </div>
 
-        {/* Care Plan — Monthly Retainer */}
+        {/* CarePlan — Monthly Retainer */}
         <div
           className="package-card premium-glass reveal-anim visible"
           style={{ animationDelay: "0.1s" }}
         >
-          <h3 className="package-name">Care Plan</h3>
+          <h3 className="package-name">CarePlan</h3>
           <div className="package-price">
             $1,500 <span className="price-label">Monthly Retainer</span>
           </div>

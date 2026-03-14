@@ -299,12 +299,12 @@ const Home = () => {
                </div>
             </div>
 
-            {/* Care Plan — Monthly Retainer */}
+            {/* CarePlan — Monthly Retainer */}
             <div className="bento-card reveal-anim visible" style={{ display: "flex", flexDirection: "column" }}>
                <div style={{ color: "var(--industrial-orange)", fontSize: "0.75rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.75rem" }}>
                  Monthly Retainer
                </div>
-               <h3 className="card-title-lg" style={{ color: "var(--text-dark)", fontSize: "2rem", marginBottom: "0.5rem", fontFamily: "'Outfit', sans-serif", fontWeight: "900", lineHeight: "1" }}>Care Plan</h3>
+               <h3 className="card-title-lg" style={{ color: "var(--text-dark)", fontSize: "2rem", marginBottom: "0.5rem", fontFamily: "'Outfit', sans-serif", fontWeight: "900", lineHeight: "1" }}>CarePlan</h3>
                <div style={{ fontSize: "2.5rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", color: "var(--industrial-orange)", marginBottom: "0.5rem", lineHeight: "1" }}>
                  $1,500
                </div>
