@@ -17,82 +17,33 @@ const Services = () => (
       </div>
 
       <div className="packages-grid">
-        {/* Foundation Package */}
-        <div className="package-card premium-glass reveal-anim visible">
-          <h3 className="package-name">Digital Foundation</h3>
-          <div className="package-price">
-            $3,500 <span className="price-label">One-Time Build</span>
-          </div>
-          <p className="package-desc">
-            Not ready for a full rebuild? Start here to fix what you already
-            have and lay the prerequisite groundwork.
-          </p>
-          <ul className="package-features">
-            {[
-              "Modern 5-6 page website",
-              "Capabilities page",
-              "RFQ form setup",
-              "On-page SEO",
-              "GBP Profile Setup",
-              "Analytics + Search Console",
-            ].map((item, i) => (
-              <li key={i} className="package-feature">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="var(--industrial-orange)"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="feature-icon"
-                >
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-          <a
-            href="https://buy.stripe.com/4gM00idnx9Y16v10QP87K03"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-primary btn-full"
-          >
-            Analyze & Upgrade My Site
-          </a>
-        </div>
-
-        {/* Modernization Package */}
+        {/* GrowthEngine — One-Time Build */}
         <div
           className="package-card premium-glass reveal-anim visible"
           style={{
             border: "2px solid var(--industrial-orange)",
-            animationDelay: "0.1s",
           }}
         >
-          <h3 className="package-name">Full Modernization</h3>
+          <h3 className="package-name">GrowthEngine</h3>
           <div className="package-price">
             $4,500 <span className="price-label">One-Time Build</span>
           </div>
           <p className="package-desc">
-            For manufacturers ready to turn their website into a lead generation
-            asset that works around the clock.
+            Turn your website into a lead generation asset that works around the
+            clock.
           </p>
           <ul className="package-features">
             {[
-              "Modern 8–10 page website built for B2B manufacturers",
+              "Modern 8\u201310 page website built for B2B manufacturers",
               "Capabilities page that qualifies procurement teams before they call",
               "RFQ form engineered as your #1 lead conversion tool",
-              "Messaging architecture written for engineers and buyers — not fluff",
+              "Messaging written for engineers and buyers \u2014 not fluff",
               "Photography coordination included",
               "Full certifications + equipment list page",
               "On-page SEO + Google Business Profile setup",
               "Analytics + Search Console connected",
-              "SSL + speed optimization (PageSpeed 85+ target)",
-              "No Proprietary Code – You own your site, and your team can edit it without calling a developer every time you buy a new machine.",
-              "90-day post-launch support",
+              "PageSpeed 90+ guaranteed",
+              "You own your code \u2014 no lock-in, no proprietary traps",
               "30-day delivery",
             ].map((item, i) => (
               <li key={i} className="package-feature">
@@ -114,38 +65,38 @@ const Services = () => (
             ))}
           </ul>
           <a
-            href="https://buy.stripe.com/4gM00idnx9Y16v10QP87K03"
+            href="https://buy.stripe.com/5kQ6oJ6Zb2sg5tO3hXejK01"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary btn-full"
           >
-            Analyze & Upgrade My Site
+            Get Started
           </a>
         </div>
 
-        {/* Care Plan Package */}
+        {/* Care Plan — Monthly Retainer */}
         <div
           className="package-card premium-glass reveal-anim visible"
-          style={{ animationDelay: "0.2s" }}
+          style={{ animationDelay: "0.1s" }}
         >
           <h3 className="package-name">Care Plan</h3>
           <div className="package-price">
             $1,500 <span className="price-label">Monthly Retainer</span>
           </div>
           <p className="package-desc">
-            Keep your site fast, secure, and up to date. We handle maintenance
-            so you can focus on production.
+            Active SEO growth, monthly content, and full site maintenance so you
+            can focus on production.
           </p>
           <ul className="package-features">
             {[
-              "Hosting + security updates handled for you",
-              "Monthly PageSpeed + performance monitoring",
-              "Content updates (up to 4 per month)",
-              "Uptime monitoring with instant alerts",
+              "Keyword research and buyer-intent targeting",
+              "2\u20134 SEO pages or blog posts published monthly",
+              "Monthly rank tracking and competitor analysis",
+              "Backlink building and technical SEO monitoring",
               "Google Business Profile management",
-              "Monthly analytics report delivered to your inbox",
-              "Priority support — real response times, not a ticket queue",
-              "Cancel anytime — no contracts, no surprises",
+              "Hosting + security updates handled for you",
+              "Monthly performance report and strategy call",
+              "Priority support \u2014 real response times, not a ticket queue",
             ].map((item, i) => (
               <li key={i} className="package-feature">
                 <svg
@@ -166,7 +117,7 @@ const Services = () => (
             ))}
           </ul>
           <a
-            href="https://buy.stripe.com/4gM00idnx9Y16v10QP87K03"
+            href="https://buy.stripe.com/5kQ6oJ6Zb2sg5tO3hXejK01"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary btn-full"
@@ -176,17 +127,21 @@ const Services = () => (
               color: "var(--text-dark)",
             }}
           >
-            Analyze & Upgrade My Site
+            Get Started
           </a>
         </div>
       </div>
+
+      <p className="sequence-line">
+        The $4,500 builds the factory. The $1,500/month runs it.
+      </p>
     </div>
 
     <style>{`
       .section-padding {
         padding: 10rem 0;
       }
-      
+
       .packages-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -201,21 +156,6 @@ const Services = () => (
         display: flex;
         flex-direction: column;
         position: relative;
-      }
-
-      .package-badge {
-        position: absolute;
-        top: -15px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: var(--industrial-orange);
-        color: white;
-        padding: 0.5rem 1.5rem;
-        border-radius: 100px;
-        font-weight: 700;
-        font-size: 0.8125rem;
-        white-space: nowrap;
-        letter-spacing: 0.05em;
       }
 
       .package-name {
@@ -273,6 +213,15 @@ const Services = () => (
       .btn-full {
         width: 100%;
         justify-content: center;
+      }
+
+      .sequence-line {
+        text-align: center;
+        margin-top: 3rem;
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        font-style: italic;
       }
 
       @media (max-width: 768px) {

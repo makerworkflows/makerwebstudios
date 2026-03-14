@@ -254,16 +254,16 @@ const Home = () => {
 
           <div className="bento-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", alignItems: "stretch" }}>
 
-            {/* Full Modernization Package (Featured) */}
+            {/* GrowthEngine — One-Time Build */}
             <div className="bento-card reveal-anim visible" style={{ border: "2px solid var(--industrial-orange)", display: "flex", flexDirection: "column" }}>
                <div style={{ color: "var(--industrial-orange)", fontSize: "0.75rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.75rem" }}>
                  One-Time Build
                </div>
-               <h3 className="card-title-lg" style={{ color: "var(--text-dark)", fontSize: "2rem", marginBottom: "0.5rem", fontFamily: "'Outfit', sans-serif", fontWeight: "900", lineHeight: "1" }}>Full Modernization</h3>
+               <h3 className="card-title-lg" style={{ color: "var(--text-dark)", fontSize: "2rem", marginBottom: "0.5rem", fontFamily: "'Outfit', sans-serif", fontWeight: "900", lineHeight: "1" }}>GrowthEngine</h3>
                <div style={{ fontSize: "2.5rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", color: "var(--industrial-orange)", marginBottom: "0.5rem", lineHeight: "1" }}>
                  $4,500
                </div>
-               <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>One-time · 30-day delivery</div>
+               <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>One-time &middot; 30-day delivery</div>
 
                <p style={{ color: "var(--text-muted)", marginBottom: "2rem", fontSize: "0.95rem", minHeight: "3rem" }}>
                  Turn your website into a lead generation asset that works around the clock.
@@ -271,18 +271,17 @@ const Home = () => {
 
                <ul style={{ listStyle: "none", padding: 0, marginBottom: "2.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1.5rem" }}>
                  {[
-                   "Modern 8–10 page website built for B2B manufacturers",
+                   "Modern 8\u201310 page website built for B2B manufacturers",
                    "Capabilities page that qualifies procurement teams before they call",
                    "RFQ form engineered as your #1 lead conversion tool",
-                   "Messaging written for engineers and buyers — not fluff",
+                   "Messaging written for engineers and buyers \u2014 not fluff",
                    "Photography coordination included",
                    "Full certifications + equipment list page",
                    "On-page SEO + Google Business Profile setup",
                    "Analytics + Search Console connected",
-                   "SSL + speed optimization (PageSpeed 85+ target)",
-                   "You own your code — no lock-in, no proprietary builders",
-                   "90-day post-launch support",
-                   "30-day delivery"
+                   "PageSpeed 90+ guaranteed",
+                   "You own your code \u2014 no lock-in, no proprietary traps",
+                   "30-day delivery",
                  ].map((feat, i) => (
                    <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "0.9rem", color: "var(--text-dark)" }}>
                      <CheckCircle2 size={16} color="var(--industrial-orange)" style={{ flexShrink: 0, marginTop: "2px" }} />
@@ -291,7 +290,7 @@ const Home = () => {
                  ))}
                </ul>
                <div style={{ marginTop: "auto", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-                 <a href="https://buy.stripe.com/4gM00idnx9Y16v10QP87K03" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: "100%" }}>
+                 <a href="https://buy.stripe.com/5kQ6oJ6Zb2sg5tO3hXejK01" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: "100%" }}>
                    Get Started
                  </a>
                  <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-dark" style={{ width: "100%" }}>
@@ -300,7 +299,7 @@ const Home = () => {
                </div>
             </div>
 
-            {/* Care Plan Package */}
+            {/* Care Plan — Monthly Retainer */}
             <div className="bento-card reveal-anim visible" style={{ display: "flex", flexDirection: "column" }}>
                <div style={{ color: "var(--industrial-orange)", fontSize: "0.75rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.75rem" }}>
                  Monthly Retainer
@@ -309,22 +308,22 @@ const Home = () => {
                <div style={{ fontSize: "2.5rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", color: "var(--industrial-orange)", marginBottom: "0.5rem", lineHeight: "1" }}>
                  $1,500
                </div>
-               <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>Per month · Cancel anytime</div>
+               <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>Per month &middot; Cancel anytime</div>
 
                <p style={{ color: "var(--text-muted)", marginBottom: "2rem", fontSize: "0.95rem", minHeight: "3rem" }}>
-                 Keep your site fast, secure, and up to date while you focus on production.
+                 Active SEO growth, monthly content, and full site maintenance so you can focus on production.
                </p>
 
                <ul style={{ listStyle: "none", padding: 0, marginBottom: "2.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1.5rem" }}>
                  {[
-                   "Hosting + security updates handled for you",
-                   "Monthly PageSpeed + performance monitoring",
-                   "Content updates (up to 4 per month)",
-                   "Uptime monitoring with instant alerts",
+                   "Keyword research and buyer-intent targeting",
+                   "2\u20134 SEO pages or blog posts published monthly",
+                   "Monthly rank tracking and competitor analysis",
+                   "Backlink building and technical SEO monitoring",
                    "Google Business Profile management",
-                   "Monthly analytics report delivered to your inbox",
-                   "Priority support — real response times, not a ticket queue",
-                   "No contracts — cancel anytime"
+                   "Hosting + security updates handled for you",
+                   "Monthly performance report and strategy call",
+                   "Priority support \u2014 real response times, not a ticket queue",
                  ].map((feat, i) => (
                    <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "0.9rem", color: "var(--text-dark)" }}>
                      <CheckCircle2 size={16} color="var(--industrial-orange)" style={{ flexShrink: 0, marginTop: "2px" }} />
@@ -333,7 +332,7 @@ const Home = () => {
                  ))}
                </ul>
                <div style={{ marginTop: "auto", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-                 <a href="https://buy.stripe.com/4gM00idnx9Y16v10QP87K03" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: "100%" }}>
+                 <a href="https://buy.stripe.com/5kQ6oJ6Zb2sg5tO3hXejK01" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: "100%" }}>
                    Get Started
                  </a>
                  <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-dark" style={{ width: "100%" }}>
@@ -343,6 +342,10 @@ const Home = () => {
             </div>
 
           </div>
+
+          <p style={{ textAlign: "center", marginTop: "2.5rem", fontSize: "1.1rem", fontWeight: "600", color: "var(--text-muted)", fontStyle: "italic" }}>
+            The $4,500 builds the factory. The $1,500/month runs it.
+          </p>
         </div>
       </section>
 
