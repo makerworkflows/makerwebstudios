@@ -86,10 +86,25 @@ const Layout = ({ children }) => {
               </ul>
             </div>
             <div className="footer-contact">
-              <h4>Get in Touch</h4>
-              <p style={{ color: "rgba(255,255,255,0.55)", fontSize: "0.95rem", lineHeight: "1.7" }}>
-                <a href="mailto:hello@makerwebstudios.com" style={{ color: "var(--industrial-orange)", textDecoration: "none" }}>hello@makerwebstudios.com</a>
-              </p>
+              <h4>Ready to Get Found?</h4>
+              <div className="footer-actions" style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+                <a
+                  href="https://buy.stripe.com/5kQ6oJ6Zb2sg5tO3hXejK01"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-dark"
+                >
+                  Get Started
+                </a>
+                <a
+                  href="https://calendly.com/hello-makerwebstudios/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
+                >
+                  Book Your Strategy Call
+                </a>
+              </div>
             </div>
           </div>
           <div className="footer-bottom">

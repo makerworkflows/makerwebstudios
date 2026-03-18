@@ -100,7 +100,7 @@ const Services = () => (
             href="https://buy.stripe.com/5kQ6oJ6Zb2sg5tO3hXejK01"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-primary btn-full"
+            className="btn btn-dark btn-full"
           >
             Get Started
           </a>
@@ -190,12 +190,7 @@ const Services = () => (
             href="https://buy.stripe.com/5kQ6oJ6Zb2sg5tO3hXejK01"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-primary btn-full"
-            style={{
-              background: "transparent",
-              border: "1px solid var(--glass-border)",
-              color: "var(--text-dark)",
-            }}
+            className="btn btn-dark btn-full"
           >
             Get Started
           </a>

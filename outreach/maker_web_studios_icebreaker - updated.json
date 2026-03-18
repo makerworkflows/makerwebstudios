@@ -1,0 +1,530 @@
+{
+  "name": "Maker Web Studios — Manufacturing Cold Email Icebreaker",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [760, -380],
+      "id": "trigger-001",
+      "name": "When clicking 'Test workflow'"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_GOOGLE_SHEET_ID",
+          "mode": "list",
+          "cachedResultName": "MWS Cold Email System",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEET_ID"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Search URLs",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEET_ID/edit#gid=0"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [960, -380],
+      "id": "sheets-read-001",
+      "name": "Get Search URL",
+      "executeOnce": false,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YOUR_GOOGLE_SHEETS_CREDENTIAL_ID",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.apify.com/v2/acts/jljBwyyQakqrL1wae/run-sync-get-dataset-items",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Accept", "value": "application/json" },
+            { "name": "Authorization", "value": "Bearer YOUR_APIFY_API_KEY" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"getPersonalEmails\": true,\n    \"getWorkEmails\": true,\n    \"totalRecords\": 500,\n    \"url\": \"{{ $json.URL }}\"\n}",
+        "options": { "redirect": { "redirect": {} } }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1160, -380],
+      "id": "apify-001",
+      "name": "Call Apify Scraper"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "cond-website",
+              "leftValue": "={{ $json.organization.website_url }}",
+              "rightValue": "/",
+              "operator": {
+                "type": "string",
+                "operation": "exists",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "cond-email",
+              "leftValue": "={{ $json.email }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [1360, -380],
+      "id": "filter-001",
+      "name": "Only Websites & Emails"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.organization.website_url }}",
+        "options": {
+          "allowUnauthorizedCerts": false,
+          "redirect": { "redirect": {} }
+        }
+      },
+      "id": "scrape-home-001",
+      "name": "Scrape Home",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [760, -180],
+      "executeOnce": false,
+      "typeVersion": 4.2,
+      "alwaysOutputData": false,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "operation": "extractHtmlContent",
+        "extractionValues": {
+          "values": [
+            {
+              "key": "links",
+              "cssSelector": "a",
+              "returnValue": "attribute",
+              "attribute": "href",
+              "returnArray": true
+            }
+          ]
+        },
+        "options": {
+          "trimValues": true,
+          "cleanUpText": true
+        }
+      },
+      "type": "n8n-nodes-base.html",
+      "typeVersion": 1.2,
+      "position": [960, -180],
+      "id": "html-001",
+      "name": "HTML"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "field-first",
+              "name": "first_name",
+              "value": "={{ $('Only Websites & Emails').item.json.first_name }}",
+              "type": "string"
+            },
+            {
+              "id": "field-last",
+              "name": "last_name",
+              "value": "={{ $('Only Websites & Emails').item.json.last_name }}",
+              "type": "string"
+            },
+            {
+              "id": "field-email",
+              "name": "email",
+              "value": "={{ $('Only Websites & Emails').item.json.email }}",
+              "type": "string"
+            },
+            {
+              "id": "field-website",
+              "name": "website_url",
+              "value": "={{ $('Only Websites & Emails').item.json.organization.website_url }}",
+              "type": "string"
+            },
+            {
+              "id": "field-headline",
+              "name": "headline",
+              "value": "={{ $('Only Websites & Emails').item.json.headline }}",
+              "type": "string"
+            },
+            {
+              "id": "field-location",
+              "name": "location",
+              "value": "={{ $('Only Websites & Emails').item.json.city }} {{ $('Only Websites & Emails').item.json.country }}",
+              "type": "string"
+            },
+            {
+              "id": "field-phone",
+              "name": "phone_number",
+              "value": "=",
+              "type": "string"
+            },
+            {
+              "id": "field-links",
+              "name": "links",
+              "value": "={{ $json.links }}",
+              "type": "array"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [1160, -180],
+      "id": "edit-fields-001",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": { "options": {} },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [1360, -180],
+      "id": "loop-001",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "links",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [1580, -160],
+      "id": "splitout-001",
+      "name": "Split Out"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "cond-slash",
+              "leftValue": "={{ $json.links }}",
+              "rightValue": "/",
+              "operator": {
+                "type": "string",
+                "operation": "startsWith"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [1760, -120],
+      "id": "filter-002",
+      "name": "Filter"
+    },
+    {
+      "parameters": {
+        "jsCode": "const items = $input.all();\n\nconst updatedItems = items.map((item) => {\n  const link = item?.json?.links;\n\n  if (typeof link === \"string\") {\n    if (link.startsWith(\"/\")) {\n      item.json.links = link;\n    } else if (link.startsWith(\"http://\") || link.startsWith(\"https://\")) {\n      try {\n        const url = new URL(link);\n        let path = url.pathname;\n        if (path !== \"/\" && path.endsWith(\"/\")) {\n          path = path.slice(0, -1);\n        }\n        item.json.links = path || \"/\";\n      } catch (e) {\n        item.json.links = link;\n      }\n    } else {\n      item.json.links = link;\n    }\n  }\n\n  return item;\n});\n\nreturn updatedItems;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1940, -80],
+      "id": "code-001",
+      "name": "Code"
+    },
+    {
+      "parameters": {},
+      "id": "dedup-001",
+      "name": "Remove Duplicate URLs",
+      "type": "n8n-nodes-base.removeDuplicates",
+      "position": [2120, -120],
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": { "maxItems": 3 },
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [2320, -80],
+      "id": "limit-001",
+      "name": "Limit"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Loop Over Items').item.json.website_url }}{{ $json.links }}",
+        "options": {}
+      },
+      "id": "request-url-001",
+      "name": "Request web page for URL",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [2500, -80],
+      "typeVersion": 4.2,
+      "alwaysOutputData": false,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "html": "={{ $json.data ? $json.data : \"<div>empty</div>\" }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.markdown",
+      "typeVersion": 1,
+      "position": [2700, -80],
+      "id": "markdown-001",
+      "name": "Markdown"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4.1",
+          "mode": "list",
+          "cachedResultName": "GPT-4.1"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "You are a helpful, intelligent website scraping assistant specializing in B2B manufacturing companies.",
+              "role": "system"
+            },
+            {
+              "content": "You're provided a Markdown scrape of a manufacturing company's website page. Your task is to provide a two-paragraph abstract of what this page communicates.\n\nPay special attention to:\n- Industry certifications (ISO 9001, GMP, IATF 16949, HACCP, SQF, USDA Organic, etc.)\n- Manufacturing capabilities and specializations\n- Geographic location and cross-border operations (US/Mexico maquiladora, RGV corridor, etc.)\n- Years in operation and company history\n- Target buyer types (procurement managers, supply chain directors, OEM sourcing teams)\n- Any non-obvious positioning details or unique differentiators\n\nReturn in this JSON format:\n\n{\"abstract\":\"your abstract goes here\"}\n\nRules:\n- Be comprehensive — similar detail level to an academic paper abstract.\n- Use a straightforward, spartan tone.\n- Flag any specific certifications, niche capabilities, or cross-border advantages explicitly.\n- If page is empty, return {\"abstract\":\"no content\"}."
+            },
+            {
+              "content": "={{ $json.data }}"
+            }
+          ]
+        },
+        "jsonOutput": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.6,
+      "position": [2880, -80],
+      "id": "summarize-001",
+      "name": "Summarize Website Page",
+      "credentials": {
+        "openAiApi": {
+          "id": "YOUR_OPENAI_CREDENTIAL_ID",
+          "name": "OpenAI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            { "fieldToAggregate": "message.content.abstract" }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [3240, -80],
+      "id": "aggregate-001",
+      "name": "Aggregate"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4.1",
+          "mode": "list",
+          "cachedResultName": "GPT-4.1"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "You are a sharp, experienced B2B sales assistant writing cold outreach emails for Maker Web Studios — a web design and SEO agency built specifically for manufacturers in the RGV (Rio Grande Valley) and US-Mexico border corridor.\n\nThe founder is Guillermo Aristi — 16 years in manufacturing in McAllen TX, ran a GMP-certified facility, implemented ISO 9001 with 70+ procedures, scaled a company from $350K to $1.5M, and exited in 2024. He is not a generic web designer — he has lived the manufacturing floor. He speaks English, Spanish (Mexican), French, and Portuguese. He holds US, Mexico, and Portuguese citizenship.\n\nThe core service is called GrowthEngine — a full site rebuild plus ongoing SEO retainer for manufacturers:\n- Full website rebuild (conversion-ready)\n- Buyer-intent keyword research & targeting\n- 2–4 SEO-optimized blog posts or service pages per month\n- On-page SEO (titles, metas, structure) monthly\n- Google Business Profile management (weekly posts, photos, reviews)\n- Backlink building (directories, associations, listings)\n- Technical SEO monitoring (Core Web Vitals, crawl health)\n- Monthly keyword ranking reports\n- Quarterly competitor SEO analysis\n- Lead generation infrastructure (forms, call tracking, conversions)\n- Google Analytics & Search Console monthly review\n- Monthly performance summary (plain language)\n- 30-min monthly strategy call\n\nThere is also a Care Plan monthly maintenance retainer (hosting, security, backups, SSL, GBP basic maintenance, uptime reports, priority support).",
+              "role": "system"
+            },
+            {
+              "content": "You've scraped a series of web pages for a manufacturing company. Your task is to:\n\n1. Identify 2–3 SPECIFIC, non-obvious issues with their current digital presence based on the page abstracts — things a procurement manager or supply chain director would notice if they searched for this company. Think: missing GBP, buried certifications, blog content not targeting buyer-intent keywords, no RFQ form, maquiladora advantage not visible above the fold, etc.\n\n2. Write a cold email icebreaker using this exact format:\n\nParagraph 1 (1 sentence): One non-obvious observation about their business that shows you actually read their site — not \"Love your website\" but something specific like a product pivot, a certification, a market they serve. End with: \"Quería platicarte algo.\" (for Spanish) or \"Wanted to run something by you.\" (for English)\n\nParagraph 2 (the findings — numbered list of 2–3): Inline site issues specific to their domain. Lead with their domain name. Make each finding feel like it was discovered by someone who knows manufacturing procurement, not just SEO.\n\nParagraph 3 (credibility + offer): Introduce GrowthEngine. Reference Guillermo's 16 years in manufacturing in McAllen. Do NOT use the words \"digital presence system\" or \"AI-powered\" — these sound generic. Keep it spartan.\n\nParagraph 4 (soft close): Offer to send the full audit. End with a single low-friction question.\n\nRules:\n- For Spanish-speaking prospects: write in Mexican Spanish, casual register. Use \"platicarte\", \"sin rollo de agencia\", \"con gusto te mando\".\n- For English-speaking prospects: write in English, confident and direct. No fluff.\n- Shorten company names (\"Valley Pack\" not \"Valley Pack LLP\", \"Intercast\" not \"Intercast Inc.\")\n- Shorten locations (\"McAllen\" not \"McAllen Texas\", \"RGV\" not \"Rio Grande Valley\")\n- NEVER say \"Love your website\" or generic compliments\n- The icebreaker observation must come from something SMALL and non-obvious in their site — not their main headline\n- Always sign off as: Guillermo Aristi / Maker Web Studios / www.makerwebstudios.com / +1-512-635-9629\n\nReturn in this JSON format:\n{\"icebreaker\": \"full email body here\", \"subject_line\": \"subject line here\", \"language\": \"spanish or english\"}"
+            },
+            {
+              "content": "=Profile: {{ $('Loop Over Items').item.json.first_name }} {{ $('Loop Over Items').item.json.last_name }}, {{ $('Loop Over Items').item.json.headline }}, {{ $('Loop Over Items').item.json.city }} {{ $('Loop Over Items').item.json.country }}\n\nWebsite abstracts:\n{{ $json.abstract.join(\"/n\") }}"
+            }
+          ]
+        },
+        "jsonOutput": true,
+        "options": {
+          "temperature": 0.5
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.6,
+      "position": [3440, -80],
+      "id": "icebreaker-001",
+      "name": "Generate MWS Icebreaker",
+      "credentials": {
+        "openAiApi": {
+          "id": "YOUR_OPENAI_CREDENTIAL_ID",
+          "name": "OpenAI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_GOOGLE_SHEET_ID",
+          "mode": "list",
+          "cachedResultName": "MWS Cold Email System",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEET_ID/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Leads",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEET_ID/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "first_name": "={{ $('Edit Fields').item.json.first_name }}",
+            "last_name": "={{ $('Edit Fields').item.json.last_name }}",
+            "email": "={{ $('Edit Fields').item.json.email }}",
+            "website_url": "={{ $('Edit Fields').item.json.website_url }}",
+            "location": "={{ $('Edit Fields').item.json.location }}",
+            "phone_number": "={{ $('Edit Fields').item.json.phone_number }}",
+            "subject_line": "={{ $json.message.content.subject_line }}",
+            "language": "={{ $json.message.content.language }}",
+            "icebreaker_email": "={{ $json.message.content.icebreaker }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            { "id": "first_name", "displayName": "first_name", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "last_name", "displayName": "last_name", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "email", "displayName": "email", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "website_url", "displayName": "website_url", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "location", "displayName": "location", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "phone_number", "displayName": "phone_number", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "subject_line", "displayName": "subject_line", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "language", "displayName": "language", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "icebreaker_email", "displayName": "icebreaker_email", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true }
+          ]
+        },
+        "options": { "useAppend": true }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [3800, -80],
+      "id": "sheets-write-001",
+      "name": "Add Row",
+      "executeOnce": false,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YOUR_GOOGLE_SHEETS_CREDENTIAL_ID",
+          "name": "Google Sheets account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking 'Test workflow'": {
+      "main": [[{ "node": "Get Search URL", "type": "main", "index": 0 }]]
+    },
+    "Get Search URL": {
+      "main": [[{ "node": "Call Apify Scraper", "type": "main", "index": 0 }]]
+    },
+    "Call Apify Scraper": {
+      "main": [[{ "node": "Only Websites & Emails", "type": "main", "index": 0 }]]
+    },
+    "Only Websites & Emails": {
+      "main": [[{ "node": "Scrape Home", "type": "main", "index": 0 }]]
+    },
+    "Scrape Home": {
+      "main": [[{ "node": "HTML", "type": "main", "index": 0 }]]
+    },
+    "HTML": {
+      "main": [[{ "node": "Edit Fields", "type": "main", "index": 0 }]]
+    },
+    "Edit Fields": {
+      "main": [[{ "node": "Loop Over Items", "type": "main", "index": 0 }]]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [{ "node": "Split Out", "type": "main", "index": 0 }]
+      ]
+    },
+    "Split Out": {
+      "main": [[{ "node": "Filter", "type": "main", "index": 0 }]]
+    },
+    "Filter": {
+      "main": [[{ "node": "Code", "type": "main", "index": 0 }]]
+    },
+    "Code": {
+      "main": [[{ "node": "Remove Duplicate URLs", "type": "main", "index": 0 }]]
+    },
+    "Remove Duplicate URLs": {
+      "main": [[{ "node": "Limit", "type": "main", "index": 0 }]]
+    },
+    "Limit": {
+      "main": [[{ "node": "Request web page for URL", "type": "main", "index": 0 }]]
+    },
+    "Request web page for URL": {
+      "main": [[{ "node": "Markdown", "type": "main", "index": 0 }]]
+    },
+    "Markdown": {
+      "main": [[{ "node": "Summarize Website Page", "type": "main", "index": 0 }]]
+    },
+    "Summarize Website Page": {
+      "main": [[{ "node": "Aggregate", "type": "main", "index": 0 }]]
+    },
+    "Aggregate": {
+      "main": [[{ "node": "Generate MWS Icebreaker", "type": "main", "index": 0 }]]
+    },
+    "Generate MWS Icebreaker": {
+      "main": [[{ "node": "Add Row", "type": "main", "index": 0 }]]
+    },
+    "Add Row": {
+      "main": [[{ "node": "Loop Over Items", "type": "main", "index": 0 }]]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "instanceId": "maker-web-studios-cold-email-v1"
+  },
+  "tags": ["cold-email", "manufacturing", "MakerWebStudios", "GrowthEngine"]
+}
