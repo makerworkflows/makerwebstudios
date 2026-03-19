@@ -4,7 +4,6 @@ import {
   VolumeX,
   Factory,
   ArrowRight,
-  Star,
 } from "lucide-react";
 
 const Home = () => {
@@ -395,73 +394,6 @@ const Home = () => {
           <p style={{ textAlign: "center", marginTop: "2.5rem", fontSize: "1.1rem", fontWeight: "600", color: "var(--text-muted)", fontStyle: "italic" }}>
             The $4,500 builds the factory. The $1,500/month runs it.
           </p>
-        </div>
-      </section>
-
-      {/* Client Reviews */}
-      <section style={{ padding: "8rem 0", background: "var(--dark-bg)" }} className="dark-section blueprint-bg">
-        <div className="container" style={{ maxWidth: "1100px" }}>
-          <div style={{ textAlign: "center", marginBottom: "4rem" }}>
-            <div className="badge-premium" style={{ color: "var(--industrial-orange)", background: "transparent", border: "none", padding: 0, marginBottom: "1rem" }}>CLIENT REVIEWS</div>
-            <h2 className="section-title" style={{ color: "white", marginBottom: "1rem", fontSize: "clamp(2rem, 4vw, 3rem)", letterSpacing: "-0.02em" }}>
-              Trusted by Manufacturers Across <span style={{ color: "var(--industrial-orange)" }}>Texas</span>
-            </h2>
-            <p style={{ color: "rgba(255,255,255,0.55)", fontSize: "1.05rem", maxWidth: "600px", margin: "0 auto" }}>
-              Don't take our word for it. Here's what our clients say.
-            </p>
-          </div>
-
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "2rem" }}>
-            {[
-              {
-                quote: "They understood our industry from day one. No hand-holding required — just results. Our RFQs doubled within 90 days of launch.",
-                name: "Coming Soon",
-                title: "Operations Director",
-                company: "Manufacturing Client",
-              },
-              {
-                quote: "We went from invisible on Google to page one for our top three keywords. The site pays for itself every month.",
-                name: "Coming Soon",
-                title: "General Manager",
-                company: "Manufacturing Client",
-              },
-              {
-                quote: "Fast, professional, and they actually know what a clean room is. First web team that didn't need a crash course in our business.",
-                name: "Coming Soon",
-                title: "VP of Sales",
-                company: "Manufacturing Client",
-              },
-            ].map((review, idx) => (
-              <div
-                key={idx}
-                className="reveal-anim visible"
-                style={{
-                  background: "rgba(255,255,255,0.03)",
-                  border: "1px solid rgba(255,255,255,0.1)",
-                  borderRadius: "var(--border-radius)",
-                  padding: "2.5rem",
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "1.25rem",
-                }}
-              >
-                <div style={{ display: "flex", gap: "4px" }}>
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={18} fill="#facc15" color="#facc15" />
-                  ))}
-                </div>
-                <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "1rem", lineHeight: "1.75", fontStyle: "italic", margin: 0, flex: 1 }}>
-                  "{review.quote}"
-                </p>
-                <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: "1rem" }}>
-                  <div style={{ color: "white", fontWeight: "700", fontSize: "0.95rem" }}>{review.name}</div>
-                  <div style={{ color: "rgba(255,255,255,0.45)", fontSize: "0.85rem" }}>
-                    {review.title}, {review.company}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
