@@ -24,12 +24,22 @@ const Home = () => {
               We build websites that turn online searches into RFQs.<br />
               Built by a manufacturer with 16 years on the shop floor.
             </p>
-            <div className="hero-actions reveal-anim visible" style={{ animationDelay: "0.3s", display: "flex", justifyContent: "center" }}>
+            <div className="hero-actions reveal-anim visible" style={{ animationDelay: "0.3s", display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap" }}>
+              <a
+                href="https://buy.stripe.com/5kQ6oJ6Zb2sg5tO3hXejK01"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-dark btn-lg-premium"
+                style={{ minWidth: "320px", textAlign: "center" }}
+              >
+                Get Started
+              </a>
               <a
                 href="https://calendly.com/hello-makerwebstudios/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary btn-lg-premium"
+                style={{ minWidth: "320px", textAlign: "center" }}
               >
                 Book Your Free Strategy Call
               </a>
@@ -306,10 +316,10 @@ const Home = () => {
                </ul>
 
                <div style={{ marginTop: "auto", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-                 <a href="https://buy.stripe.com/5kQ6oJ6Zb2sg5tO3hXejK01" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: "100%" }}>
+                 <a href="https://buy.stripe.com/5kQ6oJ6Zb2sg5tO3hXejK01" target="_blank" rel="noopener noreferrer" className="btn btn-dark" style={{ width: "100%" }}>
                    Get Started
                  </a>
-                 <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-dark" style={{ width: "100%" }}>
+                 <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: "100%" }}>
                    Book a Call First
                  </a>
                </div>
@@ -370,10 +380,10 @@ const Home = () => {
                </ul>
 
                <div style={{ marginTop: "auto", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-                 <a href="https://buy.stripe.com/5kQ6oJ6Zb2sg5tO3hXejK01" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: "100%" }}>
+                 <a href="https://buy.stripe.com/5kQ6oJ6Zb2sg5tO3hXejK01" target="_blank" rel="noopener noreferrer" className="btn btn-dark" style={{ width: "100%" }}>
                    Get Started
                  </a>
-                 <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-dark" style={{ width: "100%" }}>
+                 <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: "100%" }}>
                    Book a Call First
                  </a>
                </div>
@@ -387,15 +397,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Social Proof */}
-      <section style={{ padding: "5rem 0", background: "var(--surface-color)", borderTop: "1px solid var(--border-color)", borderBottom: "1px solid var(--border-color)" }}>
-        <div className="container" style={{ maxWidth: "900px", textAlign: "center" }}>
-          <p style={{ fontSize: "1rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.1em", fontWeight: "700", marginBottom: "0" }}>
-            Trusted by manufacturers across Texas
-          </p>
-        </div>
-      </section>
-
       {/* Final CTA */}
       <section style={{ padding: "8rem 0", background: "var(--bg-color)", textAlign: "center" }}>
         <div className="container" style={{ maxWidth: "700px", margin: "0 auto", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
@@ -403,9 +404,14 @@ const Home = () => {
           <p style={{ fontSize: "1.125rem", color: "var(--text-muted)", textAlign: "center", marginBottom: "2.5rem", lineHeight: "1.55", fontWeight: "500", opacity: 0.9, maxWidth: "600px", margin: "0 auto 2.5rem" }}>
             Book a free strategy call. We'll audit your current site and show you exactly where you're losing buyers.
           </p>
-          <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: "1.25rem 3rem", fontSize: "1.125rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", borderRadius: "4px" }}>
-            BOOK YOUR FREE STRATEGY CALL
-          </a>
+          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
+            <a href="https://buy.stripe.com/5kQ6oJ6Zb2sg5tO3hXejK01" target="_blank" rel="noopener noreferrer" className="btn btn-dark" style={{ padding: "1.25rem 3rem", fontSize: "1.125rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", borderRadius: "4px", minWidth: "320px" }}>
+              GET STARTED
+            </a>
+            <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: "1.25rem 3rem", fontSize: "1.125rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", borderRadius: "4px", minWidth: "320px" }}>
+              BOOK YOUR FREE STRATEGY CALL
+            </a>
+          </div>
         </div>
       </section>
 
