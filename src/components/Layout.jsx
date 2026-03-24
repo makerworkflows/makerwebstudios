@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
             className="brand-logo"
           >
             <img
-              src="/logos/Maker Logo - Official.png"
+              src="/logos/Maker Logo - 300 x 300 px - Official.png"
               alt="Maker Web Studio"
               className="navbar-logo"
               style={{ height: "48px", width: "auto", objectFit: "contain" }}
