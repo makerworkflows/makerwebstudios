@@ -29,7 +29,7 @@ const Home = () => {
               For Texas Manufacturers
             </div>
             <h1 className="hero-title reveal-anim visible" style={{ animationDelay: "0.1s" }}>
-              The Revenue Builder System&#8482;
+              The Revenue Builder System
             </h1>
             <p className="hero-subtitle reveal-anim visible" style={{ animationDelay: "0.15s", fontSize: "1.5rem", color: "var(--industrial-orange)", fontWeight: "700", fontFamily: "'Outfit', sans-serif", marginBottom: "1.5rem", maxWidth: "750px", marginLeft: "auto", marginRight: "auto" }}>
               Your website should work as hard as your plant does.
@@ -270,13 +270,13 @@ const Home = () => {
         <div className="container" style={{ maxWidth: "1100px" }}>
           <div style={{ marginBottom: "4rem" }}>
             <div className="badge-premium" style={{ color: "var(--industrial-orange)", background: "transparent", border: "none", padding: 0, marginBottom: "1rem" }}>
-              The Revenue Builder System&#8482;
+              The Revenue Builder System
             </div>
             <h2 className="section-title" style={{ marginBottom: "1rem" }}>
               One system. Eight deliverables. Built for manufacturers.
             </h2>
             <p className="section-subtitle" style={{ maxWidth: "800px" }}>
-              The Revenue Builder System&#8482; is not a website package. It's a complete growth infrastructure &mdash; installed in your business, starting with your digital presence and scaling to every revenue-generating function you run.
+              The Revenue Builder System is not a website package. It's a complete growth infrastructure &mdash; installed in your business, starting with your digital presence and scaling to every revenue-generating function you run.
             </p>
           </div>
 
@@ -345,7 +345,7 @@ const Home = () => {
               What It's Worth
             </div>
             <h2 className="section-title" style={{ color: "white", marginBottom: "1rem" }}>
-              The total value of The Revenue Builder System&#8482;
+              The total value of The Revenue Builder System
             </h2>
           </div>
 
@@ -507,7 +507,7 @@ const Home = () => {
       {/* Footer Line */}
       <div style={{ padding: "2rem 0", textAlign: "center", borderTop: "1px solid var(--border-color)", background: "var(--bg-color)" }}>
         <p style={{ fontSize: "0.8rem", color: "var(--text-muted)", opacity: 0.6, margin: 0 }}>
-          &copy; 2026 Maker Web Studios. The Revenue Builder System&#8482; is a proprietary framework of Maker Web Studios.
+          &copy; 2026 Maker Web Studios. The Revenue Builder System is a proprietary framework of Maker Web Studios.
         </p>
       </div>
 
