@@ -54,7 +54,7 @@ const Home = () => {
               </a>
             </div>
 
-            <div className="hero-stat reveal-anim visible" style={{ animationDelay: "0.4s", marginTop: "4rem", display: "flex", gap: "3rem", justifyContent: "center", flexWrap: "wrap" }}>
+            <div className="hero-stat reveal-anim visible" style={{ animationDelay: "0.4s", marginTop: "4rem", display: "flex", gap: "3rem", justifyContent: "center", flexWrap: "wrap", textAlign: "center", width: "100%", maxWidth: "750px", marginLeft: "auto", marginRight: "auto" }}>
               <div className="stat-item">
                 <div className="stat-label" style={{ fontSize: "0.85rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: "600" }}>Texas Manufacturers</div>
               </div>
@@ -343,7 +343,7 @@ const Home = () => {
               What It's Worth
             </div>
             <h2 className="section-title" style={{ color: "white", marginBottom: "1rem" }}>
-              The total value of The Revenue Builder System
+              Total Value of The Revenue Builder System
             </h2>
           </div>
 
@@ -388,7 +388,7 @@ const Home = () => {
 
           {/* CTAs */}
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.75rem", maxWidth: "400px", margin: "0 auto", width: "100%" }}>
-            <a href="https://buy.stripe.com/5kQ6oJ6Zb2sg5tO3hXejK01" target="_blank" rel="noopener noreferrer" className="btn" style={{ padding: "1rem 2.5rem", fontSize: "1rem", background: "#000", color: "#fff", border: "1px solid rgba(255,255,255,0.2)", width: "100%", textAlign: "center" }}>
+            <a href="https://buy.stripe.com/5kQ6oJ6Zb2sg5tO3hXejK01" target="_blank" rel="noopener noreferrer" className="btn" style={{ padding: "1rem 2.5rem", fontSize: "1rem", background: "#fff", color: "#000", border: "1px solid rgba(255,255,255,0.2)", width: "100%", textAlign: "center", fontWeight: "700" }}>
               Get Started
             </a>
             <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: "1rem 2.5rem", fontSize: "1rem", width: "100%", textAlign: "center" }}>
