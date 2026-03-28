@@ -25,11 +25,9 @@ const Home = () => {
       <section className="blueprint-bg hero-premium">
         <div className="container relative z-10">
           <div className="hero-content text-center">
-            <div className="badge-premium reveal-anim visible">
-              For Texas Manufacturers
-            </div>
             <h1 className="hero-title reveal-anim visible" style={{ animationDelay: "0.1s" }}>
-              The Revenue Builder System
+              The Revenue Builder System<br />
+              <span className="text-accent">For Texas Manufacturers.</span>
             </h1>
             <p className="hero-subtitle reveal-anim visible" style={{ animationDelay: "0.15s", fontSize: "1.5rem", color: "var(--industrial-orange)", fontWeight: "700", fontFamily: "'Outfit', sans-serif", marginBottom: "1.5rem", maxWidth: "750px", marginLeft: "auto", marginRight: "auto" }}>
               Your website should work as hard as your plant does.
