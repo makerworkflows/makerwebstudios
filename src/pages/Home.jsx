@@ -319,7 +319,7 @@ const Home = () => {
               },
               {
                 num: "08",
-                title: "Master Plan Roadmap\u2122",
+                title: "Master Plan Roadmap",
                 desc: "A 12-month execution timeline that ties every deliverable together into a single, sequenced plan. This is your strategic GPS from launch to scale.",
               },
             ].map((item, idx) => (
@@ -359,7 +359,7 @@ const Home = () => {
               { label: "Revenue Builder Playbook", value: "$2,500" },
               { label: "Lead Flow Playbook", value: "$2,000" },
               { label: "Revenue Model Playbook", value: "$2,500" },
-              { label: "Master Plan Roadmap\u2122", value: "$1,500" },
+              { label: "Master Plan Roadmap", value: "$1,500" },
               { label: "12-Month Revenue Builder Retainer", value: "$18,000" },
             ].map((item, idx) => (
               <div key={idx} className="value-line-item">
