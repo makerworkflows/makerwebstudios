@@ -1,6 +1,6 @@
 // Inline SVG icons (replaces lucide-react to reduce bundle size)
-const CheckCircle2 = ({ size = 24, className = "" }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+const CheckCircle2 = ({ size = 24, className = "", color, style = {} }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color || "currentColor"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} style={style}><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
 );
 const TrendingDown = ({ size = 24, className = "" }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg>
@@ -18,30 +18,26 @@ const ArrowRight = ({ size = 24, className = "" }) => (
 const Home = () => {
   return (
     <div id="home" className="fade-in">
-      {/* Hero Section */}
+
+      {/* ============================================================ */}
+      {/* SECTION 1 -- HERO */}
+      {/* ============================================================ */}
       <section className="blueprint-bg hero-premium">
         <div className="container relative z-10">
           <div className="hero-content text-center">
             <div className="badge-premium reveal-anim visible">
-              THE 90-DAY REVENUE ENGINE
+              For Texas Manufacturers
             </div>
             <h1 className="hero-title reveal-anim visible" style={{ animationDelay: "0.1s" }}>
-              The Revenue Engine System for <br />
-              <span className="text-accent">Texas Manufacturers.</span>
+              The Revenue Builder System&#8482;
             </h1>
+            <p className="hero-subtitle reveal-anim visible" style={{ animationDelay: "0.15s", fontSize: "1.5rem", color: "var(--industrial-orange)", fontWeight: "700", fontFamily: "'Outfit', sans-serif", marginBottom: "1.5rem", maxWidth: "750px", marginLeft: "auto", marginRight: "auto" }}>
+              Your website should work as hard as your plant does.
+            </p>
             <p className="hero-subtext reveal-anim visible" style={{ animationDelay: "0.2s" }}>
-              We build you a website that gets you found, train your team to close the leads that come in, and guarantee at least 1 qualified customer in 90 days — or we keep working for free. We only take 3 new clients a month.
+              We build, optimize, and scale the digital infrastructure of manufacturing businesses across Texas &mdash; starting with a website that generates leads, and ending with a company worth selling.
             </p>
             <div className="hero-actions reveal-anim visible" style={{ animationDelay: "0.3s", display: "flex", flexDirection: "column", alignItems: "center", gap: "0.75rem", maxWidth: "400px", margin: "0 auto", width: "100%" }}>
-              <a
-                href="https://buy.stripe.com/5kQ6oJ6Zb2sg5tO3hXejK01"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-dark btn-lg-premium"
-                style={{ width: "100%", textAlign: "center" }}
-              >
-                Get Started
-              </a>
               <a
                 href="https://calendly.com/hello-makerwebstudios/30min"
                 target="_blank"
@@ -49,22 +45,32 @@ const Home = () => {
                 className="btn btn-primary btn-lg-premium"
                 style={{ width: "100%", textAlign: "center" }}
               >
-                Book a Strategy Call
+                Get Your Free Audit
+              </a>
+              <a
+                href="#system"
+                className="btn btn-dark btn-lg-premium"
+                style={{ width: "100%", textAlign: "center" }}
+              >
+                See What's Included
               </a>
             </div>
 
-            <div className="hero-stat reveal-anim visible" style={{ animationDelay: "0.4s", marginTop: "4rem", display: "flex", gap: "4rem", justifyContent: "center", flexWrap: "wrap" }}>
+            <div className="hero-stat reveal-anim visible" style={{ animationDelay: "0.4s", marginTop: "4rem", display: "flex", gap: "3rem", justifyContent: "center", flexWrap: "wrap" }}>
               <div className="stat-item">
-                <div className="stat-num" style={{ fontSize: "3rem", fontWeight: "900", color: "var(--industrial-orange)", fontFamily: "'Outfit', sans-serif", lineHeight: "1" }}>77%</div>
-                <div className="stat-label" style={{ fontSize: "0.85rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em", marginTop: "0.5rem", fontWeight: "600" }}>of B2B buyers research<br/>suppliers online first</div>
+                <div className="stat-label" style={{ fontSize: "0.85rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: "600" }}>Texas Manufacturers</div>
               </div>
+              <div className="stat-item" style={{ color: "var(--border-color)" }}>|</div>
               <div className="stat-item">
-                <div className="stat-num" style={{ fontSize: "3rem", fontWeight: "900", color: "var(--industrial-orange)", fontFamily: "'Outfit', sans-serif", lineHeight: "1" }}>30</div>
-                <div className="stat-label" style={{ fontSize: "0.85rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em", marginTop: "0.5rem", fontWeight: "600" }}>days to launch<br/>your new site</div>
+                <div className="stat-label" style={{ fontSize: "0.85rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: "600" }}>ISO &amp; GMP Specialists</div>
               </div>
+              <div className="stat-item" style={{ color: "var(--border-color)" }}>|</div>
               <div className="stat-item">
-                <div className="stat-num" style={{ fontSize: "3rem", fontWeight: "900", color: "var(--industrial-orange)", fontFamily: "'Outfit', sans-serif", lineHeight: "1" }}>16+</div>
-                <div className="stat-label" style={{ fontSize: "0.85rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em", marginTop: "0.5rem", fontWeight: "600" }}>years on the<br/>shop floor</div>
+                <div className="stat-label" style={{ fontSize: "0.85rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: "600" }}>16 Years on the Shop Floor</div>
+              </div>
+              <div className="stat-item" style={{ color: "var(--border-color)" }}>|</div>
+              <div className="stat-item">
+                <div className="stat-label" style={{ fontSize: "0.85rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: "600" }}>90-Day Lead Guarantee</div>
               </div>
             </div>
           </div>
@@ -110,7 +116,7 @@ const Home = () => {
         }
 
         .hero-title {
-          margin-bottom: 2rem;
+          margin-bottom: 1rem;
           line-height: 1.05;
           max-width: 1000px;
           margin-left: auto;
@@ -144,95 +150,81 @@ const Home = () => {
           pointer-events: none;
           z-index: 1;
         }
+
+        .system-cards-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 1.5rem;
+        }
+
+        .value-line-items {
+          display: flex;
+          flex-direction: column;
+          gap: 0;
+        }
+
+        .value-line-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem 0;
+          border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .value-line-item:last-child {
+          border-bottom: none;
+        }
+
+        @media (max-width: 900px) {
+          .system-cards-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+        }
+
+        @media (max-width: 600px) {
+          .system-cards-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
       `}</style>
 
 
 
-      {/* Value Stack */}
-      <section style={{ padding: "8rem 0", background: "var(--dark-bg)" }} className="dark-section blueprint-bg">
-        <div className="container" style={{ maxWidth: "1100px" }}>
-          <div style={{ textAlign: "center", marginBottom: "4rem" }}>
-            <div style={{ color: "var(--industrial-orange)", fontSize: "0.8125rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "1rem" }}>
-              WHAT YOU GET
-            </div>
-            <h2 className="section-title" style={{ color: "white", marginBottom: "1rem" }}>
-              Everything You Need to Win Customers Online
-            </h2>
-            <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "1.125rem", maxWidth: "700px", margin: "0 auto" }}>
-              Not a website. A complete revenue system — built by someone who's been on your shop floor.
-            </p>
-          </div>
-
-          <div className="value-stack-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "1.5rem", marginBottom: "4rem" }}>
-            {/* Core Offer */}
-            <div style={{ background: "rgba(255,255,255,0.03)", border: "2px solid var(--industrial-orange)", borderRadius: "var(--border-radius)", padding: "2.5rem" }}>
-              <div style={{ color: "var(--industrial-orange)", fontSize: "0.75rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.5rem" }}>Core</div>
-              <h3 style={{ fontSize: "1.5rem", color: "white", marginBottom: "0.5rem", fontWeight: "700" }}>Revenue Engine Build</h3>
-              <div style={{ fontSize: "1.25rem", color: "rgba(255,255,255,0.4)", fontWeight: "700", marginBottom: "1rem" }}>Valued at $8,500</div>
-              <p style={{ color: "rgba(255,255,255,0.65)", lineHeight: "1.7", fontSize: "0.95rem" }}>
-                Custom website built for manufacturers. Mobile-responsive, Cloudflare-powered, Google Business Profile optimized, on-page SEO foundation, RFQ form, tracked phone number. Delivered in 30 days.
-              </p>
-            </div>
-
-            {/* Bonus 1 */}
-            <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "var(--border-radius)", padding: "2.5rem" }}>
-              <div style={{ color: "var(--industrial-orange)", fontSize: "0.75rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.5rem" }}>Included</div>
-              <h3 style={{ fontSize: "1.5rem", color: "white", marginBottom: "0.5rem", fontWeight: "700" }}>Texas Manufacturer Sales Playbook</h3>
-              <div style={{ fontSize: "1.25rem", color: "rgba(255,255,255,0.4)", fontWeight: "700", marginBottom: "1rem" }}>Valued at $2,500</div>
-              <p style={{ color: "rgba(255,255,255,0.65)", lineHeight: "1.7", fontSize: "0.95rem" }}>
-                How to answer the phone when a lead comes in. The 3 questions to ask before quoting a price. The 3 objections every manufacturer faces and how to handle them. A follow-up sequence so leads don't go cold. Built from 16 years of manufacturing sales experience.
-              </p>
-            </div>
-
-            {/* Bonus 2 */}
-            <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "var(--border-radius)", padding: "2.5rem" }}>
-              <div style={{ color: "var(--industrial-orange)", fontSize: "0.75rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.5rem" }}>Included</div>
-              <h3 style={{ fontSize: "1.5rem", color: "white", marginBottom: "0.5rem", fontWeight: "700" }}>Texas Visibility Blueprint</h3>
-              <div style={{ fontSize: "1.25rem", color: "rgba(255,255,255,0.4)", fontWeight: "700", marginBottom: "1rem" }}>Valued at $1,500</div>
-              <p style={{ color: "rgba(255,255,255,0.65)", lineHeight: "1.7", fontSize: "0.95rem" }}>
-                3-competitor digital audit. Keyword map showing exactly what buyers search for your product. Google Business optimization checklist. Local SEO quick-win action list specific to your industry.
-              </p>
-            </div>
-
-            {/* Bonus 3 */}
-            <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "var(--border-radius)", padding: "2.5rem" }}>
-              <div style={{ color: "var(--industrial-orange)", fontSize: "0.75rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.5rem" }}>Included</div>
-              <h3 style={{ fontSize: "1.5rem", color: "white", marginBottom: "0.5rem", fontWeight: "700" }}>90-Day Revenue Launchpad Call</h3>
-              <div style={{ fontSize: "1.25rem", color: "rgba(255,255,255,0.4)", fontWeight: "700", marginBottom: "1rem" }}>Valued at $750</div>
-              <p style={{ color: "rgba(255,255,255,0.65)", lineHeight: "1.7", fontSize: "0.95rem" }}>
-                1-hour onboarding strategy call with Guillermo. Custom 90-day roadmap specific to your industry. KPI dashboard setup. First-month execution plan.
-              </p>
-            </div>
-          </div>
-
-          {/* Investment */}
-          <div style={{ textAlign: "center", padding: "3rem", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "var(--border-radius)" }}>
-            <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "1rem", fontWeight: "600", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "1rem" }}>
-              Your Investment
-            </p>
-            <div style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: "900", fontFamily: "'Outfit', sans-serif", color: "white", lineHeight: "1.2" }}>
-              $4,500 <span style={{ color: "rgba(255,255,255,0.4)", fontWeight: "500", fontSize: "1.25rem" }}>to build it</span> + $1,500/mo <span style={{ color: "rgba(255,255,255,0.4)", fontWeight: "500", fontSize: "1.25rem" }}>to grow it</span>
-            </div>
-            <div style={{ marginTop: "2rem", display: "flex", flexDirection: "column", alignItems: "center", gap: "0.75rem", maxWidth: "400px", margin: "2rem auto 0", width: "100%" }}>
-              <a href="https://buy.stripe.com/5kQ6oJ6Zb2sg5tO3hXejK01" target="_blank" rel="noopener noreferrer" className="btn" style={{ padding: "1rem 2.5rem", fontSize: "1rem", background: "#fff", color: "#000", border: "1px solid rgba(255,255,255,0.2)", width: "100%", textAlign: "center" }}>
-                Get Started
-              </a>
-              <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: "1rem 2.5rem", fontSize: "1rem", width: "100%", textAlign: "center" }}>
-                Book a Strategy Call
-              </a>
-            </div>
-          </div>
+      {/* ============================================================ */}
+      {/* SECTION 2 -- PHILOSOPHY DIVIDER */}
+      {/* ============================================================ */}
+      <section style={{ padding: "8rem 0", background: "var(--bg-color)", textAlign: "center" }}>
+        <div className="container" style={{ maxWidth: "900px" }}>
+          <p style={{
+            fontSize: "clamp(2rem, 4vw, 3.5rem)",
+            fontWeight: "900",
+            fontFamily: "'Outfit', sans-serif",
+            color: "var(--text-dark)",
+            lineHeight: "1.15",
+            letterSpacing: "-0.02em",
+            margin: 0,
+          }}>
+            &ldquo;Your website should work as hard as your plant does.&rdquo;
+          </p>
         </div>
       </section>
 
-      {/* The Problem Section */}
-      <section style={{ padding: "8rem 0", background: "var(--bg-color)" }}>
+
+
+      {/* ============================================================ */}
+      {/* SECTION 3 -- THE PROBLEM */}
+      {/* ============================================================ */}
+      <section style={{ padding: "8rem 0", background: "var(--dark-bg)" }} className="dark-section blueprint-bg">
         <div className="container" style={{ maxWidth: "1100px" }}>
           <div style={{ marginBottom: "4rem" }}>
-            <div className="badge-premium" style={{ color: "var(--industrial-orange)", background: "transparent", border: "none", padding: 0, marginBottom: "1rem" }}>THE PROBLEM</div>
-            <h2 className="section-title">Most Manufacturers Are Invisible Online.</h2>
-            <p className="section-subtitle" style={{ maxWidth: "700px" }}>
-              Your competitors aren't better. They're just easier to find.
+            <div style={{ color: "var(--industrial-orange)", fontSize: "0.8125rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "1rem" }}>
+              The Reality
+            </div>
+            <h2 className="section-title" style={{ color: "white", marginBottom: "1.5rem" }}>
+              You built a serious operation. Your website doesn't show it.
+            </h2>
+            <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "1.125rem", maxWidth: "800px", lineHeight: "1.75" }}>
+              Most manufacturers in Texas have websites that were built once and never touched again. No SEO. No lead capture. No credibility signal for buyers doing due diligence. Meanwhile, your competitors &mdash; even the ones with half your capabilities &mdash; are showing up first on Google, presenting their certifications front and center, and converting visitors into quote requests while you're waiting for the phone to ring. That's not a product problem. That's a digital presence problem. And it's fixable.
             </p>
           </div>
 
@@ -261,276 +253,263 @@ const Home = () => {
                 <div className="icon-badge orange-badge">
                   {item.icon}
                 </div>
-                <h3 className="card-title" style={{ fontSize: "1.5rem", fontWeight: "800", fontFamily: "'Outfit', sans-serif" }}>{item.title}</h3>
-                <p className="card-text">{item.desc}</p>
+                <h3 className="card-title" style={{ fontSize: "1.5rem", fontWeight: "800", fontFamily: "'Outfit', sans-serif", color: "white" }}>{item.title}</h3>
+                <p className="card-text" style={{ color: "rgba(255,255,255,0.65)" }}>{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* How It Works */}
-      <section style={{ padding: "8rem 0", background: "var(--dark-bg)" }} id="process" className="dark-section blueprint-bg">
-        <div className="container" style={{ maxWidth: "1100px", margin: "0 auto" }}>
-           <div style={{ textAlign: "center", marginBottom: "4rem" }}>
-             <h2 className="section-title" style={{ color: "white", marginBottom: "1rem", fontSize: "clamp(2.5rem, 5vw, 4rem)", letterSpacing: "-0.02em" }}>
-               From Vision to Launch in <span style={{ color: "var(--industrial-orange)" }}>3 Steps</span>
-             </h2>
-             <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "1.125rem", maxWidth: "700px", margin: "0 auto" }}>
-               A proven system that turns your expertise into a digital asset.
-             </p>
-           </div>
 
-           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "2rem" }}>
-             {/* Step 1 */}
-             <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "var(--border-radius)", padding: "2.5rem", position: "relative" }}>
-               <div style={{ fontSize: "4rem", fontWeight: "900", color: "var(--industrial-orange)", opacity: 0.2, position: "absolute", top: "1.5rem", right: "2rem", lineHeight: 1 }}>01</div>
-               <h3 style={{ fontSize: "1.5rem", color: "white", marginBottom: "1rem", fontWeight: "700" }}>Audit & Strategy</h3>
-               <p style={{ color: "rgba(255,255,255,0.65)", lineHeight: "1.7" }}>
-                 We study your buyers, your competitors, and your current site. You get a clear plan before we write a single line of code.
-               </p>
-             </div>
 
-             {/* Step 2 */}
-             <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "var(--border-radius)", padding: "2.5rem", position: "relative" }}>
-               <div style={{ fontSize: "4rem", fontWeight: "900", color: "var(--industrial-orange)", opacity: 0.2, position: "absolute", top: "1.5rem", right: "2rem", lineHeight: 1 }}>02</div>
-               <h3 style={{ fontSize: "1.5rem", color: "white", marginBottom: "1rem", fontWeight: "700" }}>Design & Build</h3>
-               <p style={{ color: "rgba(255,255,255,0.65)", lineHeight: "1.7" }}>
-                 A fast, mobile-ready site built for B2B buyers — not a template with your logo slapped on it. Delivered in 30 days.
-               </p>
-             </div>
+      {/* ============================================================ */}
+      {/* SECTION 4 -- THE SYSTEM */}
+      {/* ============================================================ */}
+      <section id="system" style={{ padding: "8rem 0", background: "var(--bg-color)" }} className="blueprint-bg">
+        <div className="container" style={{ maxWidth: "1100px" }}>
+          <div style={{ marginBottom: "4rem" }}>
+            <div className="badge-premium" style={{ color: "var(--industrial-orange)", background: "transparent", border: "none", padding: 0, marginBottom: "1rem" }}>
+              The Revenue Builder System&#8482;
+            </div>
+            <h2 className="section-title" style={{ marginBottom: "1rem" }}>
+              One system. Eight deliverables. Built for manufacturers.
+            </h2>
+            <p className="section-subtitle" style={{ maxWidth: "800px" }}>
+              The Revenue Builder System&#8482; is not a website package. It's a complete growth infrastructure &mdash; installed in your business, starting with your digital presence and scaling to every revenue-generating function you run.
+            </p>
+          </div>
 
-             {/* Step 3 */}
-             <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "var(--border-radius)", padding: "2.5rem", position: "relative" }}>
-               <div style={{ fontSize: "4rem", fontWeight: "900", color: "var(--industrial-orange)", opacity: 0.2, position: "absolute", top: "1.5rem", right: "2rem", lineHeight: 1 }}>03</div>
-               <h3 style={{ fontSize: "1.5rem", color: "white", marginBottom: "1rem", fontWeight: "700" }}>Launch & Grow</h3>
-               <p style={{ color: "rgba(255,255,255,0.65)", lineHeight: "1.7" }}>
-                 Your site goes live. We connect analytics, Google Business Profile, and search console. You start showing up where buyers are looking.
-               </p>
-             </div>
-           </div>
+          <div className="system-cards-grid">
+            {[
+              {
+                num: "01",
+                title: "Digital Presence Audit",
+                desc: "A full diagnostic of your current website, SEO performance, Google Business Profile, and online visibility. We find every gap costing you leads.",
+              },
+              {
+                num: "02",
+                title: "Blind Spot Audit",
+                desc: "We analyze what your competitors are doing that you are not. From backlinks to content strategy to paid media, we surface the opportunities hiding in plain sight.",
+              },
+              {
+                num: "03",
+                title: "Market Analysis & 5-Year Forecast",
+                desc: "Industry-specific research on your market, buyer trends, regulatory shifts, and growth projections. You see the landscape before you invest in it.",
+              },
+              {
+                num: "04",
+                title: "Revenue Growth Playbook",
+                desc: "A step-by-step plan to increase revenue from your existing operations. Pricing strategy, upsell frameworks, and margin optimization tailored to your business.",
+              },
+              {
+                num: "05",
+                title: "Revenue Builder Playbook",
+                desc: "The master execution plan. What to build, in what order, and why. This is the operating system for your digital growth engine.",
+              },
+              {
+                num: "06",
+                title: "Lead Flow Playbook",
+                desc: "How to generate, capture, qualify, and convert inbound leads consistently. From RFQ form design to follow-up sequences to CRM setup.",
+              },
+              {
+                num: "07",
+                title: "Revenue Model Playbook",
+                desc: "A financial model built around your actual numbers. Revenue targets, customer acquisition cost, lifetime value, and the levers that move each one.",
+              },
+              {
+                num: "08",
+                title: "Master Plan Roadmap\u2122",
+                desc: "A 12-month execution timeline that ties every deliverable together into a single, sequenced plan. This is your strategic GPS from launch to scale.",
+              },
+            ].map((item, idx) => (
+              <div key={idx} className="bento-card reveal-anim visible" style={{ animationDelay: `${0.05 * idx}s`, position: "relative" }}>
+                <div style={{ fontSize: "3rem", fontWeight: "900", color: "var(--industrial-orange)", opacity: 0.15, position: "absolute", top: "1.25rem", right: "1.5rem", lineHeight: 1, fontFamily: "'Outfit', sans-serif" }}>{item.num}</div>
+                <h3 className="card-title" style={{ fontSize: "1.25rem", fontWeight: "800", fontFamily: "'Outfit', sans-serif", marginBottom: "0.75rem" }}>{item.title}</h3>
+                <p className="card-text" style={{ fontSize: "0.95rem" }}>{item.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Built by a Manufacturer */}
-      <section style={{ padding: "8rem 0", background: "var(--bg-color)" }} id="difference" className="blueprint-bg">
-        <div className="container" style={{ maxWidth: "900px" }}>
-          <div style={{ marginBottom: "2rem" }}>
-            <div className="badge-premium" style={{ color: "var(--industrial-orange)", background: "transparent", border: "none", padding: 0, marginBottom: "1rem" }}>THE MAKER WEB DIFFERENCE</div>
-            <h2 className="section-title">Built by a Manufacturer.</h2>
-          </div>
 
-          <div
-            className="bento-card reveal-anim visible"
-            style={{
-              borderLeft: "4px solid var(--industrial-orange)",
-              padding: "2.5rem 2.5rem 2.5rem 2.25rem",
-            }}
-          >
-            <p style={{ fontSize: "1.2rem", lineHeight: "1.75", color: "var(--text-dark)", fontStyle: "italic", marginBottom: "1.5rem" }}>
-              "I spent 16 years on the shop floor before I ever touched a line of code. I've run the machines, managed the production lines, and seen how many bids are lost because a website looks like a liability. I didn't build Maker Web Studios to be a 'creative agency' — I built it to be the digital arm of your machine shop."
-            </p>
-            <p style={{ fontSize: "1.05rem", color: "var(--text-muted)", fontWeight: "600", marginBottom: "0" }}>
-              That's why our sites are built for engineers and procurement officers — not for design awards.
-            </p>
-          </div>
-        </div>
-      </section>
 
-      {/* Guarantee */}
+      {/* ============================================================ */}
+      {/* SECTION 5 -- VALUE STACK */}
+      {/* ============================================================ */}
       <section style={{ padding: "8rem 0", background: "var(--dark-bg)" }} className="dark-section blueprint-bg">
         <div className="container" style={{ maxWidth: "900px" }}>
           <div style={{ textAlign: "center", marginBottom: "4rem" }}>
             <div style={{ color: "var(--industrial-orange)", fontSize: "0.8125rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "1rem" }}>
-              OUR GUARANTEE
+              What It's Worth
             </div>
             <h2 className="section-title" style={{ color: "white", marginBottom: "1rem" }}>
-              We Put Our Money Where Our Mouth Is.
+              The total value of The Revenue Builder System&#8482;
             </h2>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))", gap: "2rem" }}>
+          <div className="value-line-items" style={{ marginBottom: "3rem" }}>
+            {[
+              { label: "Revenue Engine Website Build", value: "$4,500" },
+              { label: "Digital Presence Audit", value: "$1,500" },
+              { label: "Blind Spot Audit", value: "$1,500" },
+              { label: "Market Analysis & 5-Year Forecast", value: "$2,500" },
+              { label: "Revenue Growth Playbook", value: "$2,000" },
+              { label: "Revenue Builder Playbook", value: "$2,500" },
+              { label: "Lead Flow Playbook", value: "$2,000" },
+              { label: "Revenue Model Playbook", value: "$2,500" },
+              { label: "Master Plan Roadmap\u2122", value: "$1,500" },
+              { label: "12-Month Revenue Builder Retainer", value: "$18,000" },
+            ].map((item, idx) => (
+              <div key={idx} className="value-line-item">
+                <span style={{ color: "rgba(255,255,255,0.75)", fontSize: "1.05rem", fontWeight: "500" }}>{item.label}</span>
+                <span style={{ color: "rgba(255,255,255,0.4)", fontSize: "1.05rem", fontWeight: "700", fontFamily: "'Outfit', sans-serif" }}>{item.value}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Total */}
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "1.5rem 0", borderTop: "2px solid var(--industrial-orange)", marginBottom: "3rem" }}>
+            <span style={{ color: "white", fontSize: "1.25rem", fontWeight: "700" }}>Total Value</span>
+            <span style={{ color: "var(--industrial-orange)", fontSize: "2rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif" }}>$38,500</span>
+          </div>
+
+          {/* Investment */}
+          <div style={{ textAlign: "center", padding: "3rem", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "var(--border-radius)", marginBottom: "2rem" }}>
+            <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "1rem", fontWeight: "600", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "1rem" }}>
+              Your Investment
+            </p>
+            <div style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: "900", fontFamily: "'Outfit', sans-serif", color: "white", lineHeight: "1.2" }}>
+              $4,500 <span style={{ color: "rgba(255,255,255,0.4)", fontWeight: "500", fontSize: "1.25rem" }}>to build it</span> + $1,500/mo <span style={{ color: "rgba(255,255,255,0.4)", fontWeight: "500", fontSize: "1.25rem" }}>to grow it</span>
+            </div>
+            <p style={{ color: "var(--industrial-orange)", fontSize: "0.95rem", fontWeight: "600", marginTop: "1.5rem", marginBottom: "0" }}>
+              Price increases to $6,000 in May 2026 when the Sales Training module launches.
+            </p>
+          </div>
+
+          {/* CTAs */}
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.75rem", maxWidth: "400px", margin: "0 auto", width: "100%" }}>
+            <a href="https://buy.stripe.com/5kQ6oJ6Zb2sg5tO3hXejK01" target="_blank" rel="noopener noreferrer" className="btn" style={{ padding: "1rem 2.5rem", fontSize: "1rem", background: "#000", color: "#fff", border: "1px solid rgba(255,255,255,0.2)", width: "100%", textAlign: "center" }}>
+              Get Started
+            </a>
+            <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: "1rem 2.5rem", fontSize: "1rem", width: "100%", textAlign: "center" }}>
+              Book a Strategy Call
+            </a>
+          </div>
+        </div>
+      </section>
+
+
+
+      {/* ============================================================ */}
+      {/* SECTION 6 -- GUARANTEE */}
+      {/* ============================================================ */}
+      <section style={{ padding: "8rem 0", background: "var(--bg-color)" }} className="blueprint-bg">
+        <div className="container" style={{ maxWidth: "900px" }}>
+          <div style={{ textAlign: "center", marginBottom: "4rem" }}>
+            <div className="badge-premium" style={{ color: "var(--industrial-orange)", background: "transparent", border: "none", padding: 0, marginBottom: "1rem" }}>
+              Our Guarantee
+            </div>
+            <h2 className="section-title" style={{ marginBottom: "1rem" }}>
+              We guarantee results. Not just deliverables.
+            </h2>
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))", gap: "2rem", marginBottom: "3rem" }}>
             {/* 30-Day Unconditional */}
-            <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "var(--border-radius)", padding: "2.5rem" }}>
+            <div className="bento-card reveal-anim visible" style={{ borderLeft: "4px solid var(--industrial-orange)" }}>
               <div style={{ fontSize: "2.5rem", fontWeight: "900", color: "var(--industrial-orange)", opacity: 0.3, lineHeight: 1, marginBottom: "1rem" }}>30</div>
-              <h3 style={{ fontSize: "1.25rem", color: "white", marginBottom: "1rem", fontWeight: "700" }}>Day Satisfaction Guarantee</h3>
-              <p style={{ color: "rgba(255,255,255,0.65)", lineHeight: "1.7", fontSize: "0.95rem" }}>
-                If you're not completely satisfied with the website within 30 days of launch, we'll redesign any page for free — no questions asked.
+              <h3 style={{ fontSize: "1.25rem", color: "var(--text-dark)", marginBottom: "1rem", fontWeight: "700" }}>Day Unconditional Redesign Guarantee</h3>
+              <p style={{ color: "var(--text-muted)", lineHeight: "1.7", fontSize: "0.95rem" }}>
+                If you're not completely satisfied with the website within 30 days of launch, we redesign it for free. No questions asked. No fine print.
               </p>
             </div>
 
-            {/* 90-Day Conditional */}
-            <div style={{ background: "rgba(255,255,255,0.03)", border: "2px solid var(--industrial-orange)", borderRadius: "var(--border-radius)", padding: "2.5rem" }}>
+            {/* 90-Day Lead Guarantee */}
+            <div className="bento-card reveal-anim visible" style={{ border: "2px solid var(--industrial-orange)" }}>
               <div style={{ fontSize: "2.5rem", fontWeight: "900", color: "var(--industrial-orange)", opacity: 0.3, lineHeight: 1, marginBottom: "1rem" }}>90</div>
-              <h3 style={{ fontSize: "1.25rem", color: "white", marginBottom: "1rem", fontWeight: "700" }}>Day Lead Guarantee</h3>
-              <p style={{ color: "rgba(255,255,255,0.65)", lineHeight: "1.7", fontSize: "0.95rem" }}>
+              <h3 style={{ fontSize: "1.25rem", color: "var(--text-dark)", marginBottom: "1rem", fontWeight: "700" }}>Day Lead Guarantee</h3>
+              <p style={{ color: "var(--text-muted)", lineHeight: "1.7", fontSize: "0.95rem" }}>
                 We guarantee at least 1 qualified inbound lead within 90 days of launch. If we don't deliver, we keep working at no charge until you get one.
               </p>
             </div>
           </div>
+
+          <p style={{ textAlign: "center", fontSize: "1.25rem", fontWeight: "700", color: "var(--text-dark)", fontFamily: "'Outfit', sans-serif", margin: 0 }}>
+            We only win when you win.
+          </p>
         </div>
       </section>
 
-      {/* Pricing */}
-      <section style={{ padding: "10rem 0", background: "var(--bg-color)" }} id="pricing">
-        <div className="container" style={{ maxWidth: "1100px" }}>
-          <div style={{ marginBottom: "5rem" }}>
-            <div className="badge-premium" style={{ color: "var(--industrial-orange)", background: "transparent", border: "none", padding: 0, marginBottom: "1rem" }}>TRANSPARENT PRICING</div>
-            <h2 className="section-title">No Surprise Invoices.</h2>
-            <p className="section-subtitle" style={{ maxWidth: "700px" }}>
-              You know what you're paying before we start. Fixed-price packages tailored for B2B manufacturers.
+
+
+      {/* ============================================================ */}
+      {/* SECTION 7 -- ABOUT */}
+      {/* ============================================================ */}
+      <section style={{ padding: "8rem 0", background: "var(--dark-bg)" }} className="dark-section blueprint-bg">
+        <div className="container" style={{ maxWidth: "900px" }}>
+          <div style={{ marginBottom: "3rem" }}>
+            <div style={{ color: "var(--industrial-orange)", fontSize: "0.8125rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "1rem" }}>
+              Why Maker Web Studios
+            </div>
+            <h2 className="section-title" style={{ color: "white", marginBottom: "1.5rem" }}>
+              Built by someone who's been on your plant floor.
+            </h2>
+            <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "1.125rem", lineHeight: "1.75", maxWidth: "800px" }}>
+              Maker Web Studios was founded by Guillermo Aristi &mdash; a 16-year manufacturing veteran with GMP, ISO 9001, and SQF certifications who built and exited a regulated manufacturing facility in Texas. This isn't an agency that learned about manufacturing from a Google search. We know what a maquila operation looks like. We know what C-TPAT means. We know why your ISO certification matters to a procurement manager doing supplier qualification &mdash; and exactly where to put it on your homepage so they see it in the first 8 seconds. We speak manufacturer. Because we are one.
             </p>
           </div>
 
-          <div style={{ maxWidth: "900px", margin: "0 auto" }}>
-            <div className="bento-card reveal-anim visible" style={{ border: "2px solid var(--industrial-orange)", display: "flex", flexDirection: "column" }}>
-
-              {/* 2x2 Grid: GrowthEngine + CarePlan side by side */}
-              <div className="pricing-inner-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2.5rem" }}>
-
-                {/* Left: GrowthEngine */}
-                <div>
-                  <div style={{ color: "var(--industrial-orange)", fontSize: "0.75rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.75rem" }}>
-                    One-Time Build
-                  </div>
-                  <h3 style={{ color: "var(--text-dark)", fontSize: "2rem", marginBottom: "0.5rem", fontFamily: "'Outfit', sans-serif", fontWeight: "900", lineHeight: "1" }}>GrowthEngine</h3>
-                  <div style={{ fontSize: "2.5rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", color: "var(--industrial-orange)", marginBottom: "0.5rem", lineHeight: "1" }}>
-                    $4,500
-                  </div>
-                  <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>One-time &middot; 30-day delivery</div>
-
-                  <p style={{ color: "var(--text-muted)", marginBottom: "1.5rem", fontSize: "0.95rem" }}>
-                    Turn your website into a lead generation asset that works around the clock.
-                  </p>
-
-                  <div style={{ fontSize: "0.8rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-dark)", marginBottom: "0.75rem" }}>Deliverables</div>
-                  <ul style={{ listStyle: "none", padding: 0, marginBottom: "1.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1rem" }}>
-                    {[
-                      "Full website design and modernization \u2014 8\u201310 pages built for B2B buyers",
-                      "Capabilities page that qualifies procurement teams before they call",
-                      "RFQ form engineered as your #1 lead conversion tool",
-                      "Messaging written for engineers and buyers \u2014 not fluff",
-                      "On-page SEO foundation built into every page from day one",
-                      "Google Business Profile setup and full optimization",
-                      "Google Analytics 4 and Search Console connected and monitored",
-                      "Photography coordination included",
-                      "SSL and speed optimization",
-                      "You own your code \u2014 no lock-in, no proprietary builders",
-                    ].map((feat, i) => (
-                      <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "0.9rem", color: "var(--text-dark)" }}>
-                        <CheckCircle2 size={16} color="var(--industrial-orange)" style={{ flexShrink: 0, marginTop: "2px" }} />
-                        <span>{feat}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div style={{ fontSize: "0.8rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-dark)", marginBottom: "0.75rem" }}>Guarantees</div>
-                  <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1rem" }}>
-                    {[
-                      "Site delivered in 30 days or you don\u2019t pay for that month",
-                      "PageSpeed score of 85+ or we keep working until it hits",
-                      "If the finished site doesn\u2019t match approved design and scope we rebuild at no charge",
-                      "You own everything \u2014 code, domain, content \u2014 from day one",
-                    ].map((feat, i) => (
-                      <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "0.9rem", color: "var(--text-dark)" }}>
-                        <CheckCircle2 size={16} color="var(--industrial-orange)" style={{ flexShrink: 0, marginTop: "2px" }} />
-                        <span style={{ fontWeight: "600" }}>{feat}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Right: CarePlan */}
-                <div style={{ borderLeft: "1px solid var(--border-color)", paddingLeft: "2.5rem" }}>
-                  <div style={{ color: "var(--industrial-orange)", fontSize: "0.75rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.75rem" }}>
-                    Monthly Retainer
-                  </div>
-                  <h3 style={{ color: "var(--text-dark)", fontSize: "2rem", marginBottom: "0.5rem", fontFamily: "'Outfit', sans-serif", fontWeight: "900", lineHeight: "1" }}>CarePlan</h3>
-                  <div style={{ fontSize: "2.5rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", color: "var(--industrial-orange)", marginBottom: "0.5rem", lineHeight: "1" }}>
-                    $1,500<span style={{ fontSize: "0.85rem", fontWeight: "500", color: "var(--text-muted)" }}>/month</span>
-                  </div>
-                  <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>Cancel anytime &middot; No contracts</div>
-
-                  <p style={{ color: "var(--text-muted)", marginBottom: "1.5rem", fontSize: "0.95rem" }}>
-                    Ongoing SEO growth, monthly content, and full site maintenance so you can focus on production.
-                  </p>
-
-                  <div style={{ fontSize: "0.8rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-dark)", marginBottom: "0.75rem" }}>Deliverables</div>
-                  <ul style={{ listStyle: "none", padding: 0, marginBottom: "1.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1rem" }}>
-                    {[
-                      "Keyword research and buyer-intent targeting \u2014 updated quarterly",
-                      "2\u20134 SEO pages or blog posts published monthly",
-                      "Monthly keyword rank tracking and position reports",
-                      "Competitor SEO analysis \u2014 quarterly gap review",
-                      "Backlink building \u2014 directories, associations, industry listings",
-                      "Technical SEO monitoring \u2014 Core Web Vitals, crawl health, broken links",
-                      "Monthly performance report \u2014 rankings, traffic, leads, next steps",
-                      "Monthly strategy call \u2014 30 minutes, results review and priority alignment",
-                      "Hosting management and uptime monitoring",
-                      "Security monitoring, CMS and plugin updates",
-                      "Up to 4 content updates per month",
-                      "Weekly offsite backups \u2014 full site restore capability",
-                      "Priority support \u2014 real response times, not a ticket queue",
-                    ].map((feat, i) => (
-                      <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "0.9rem", color: "var(--text-dark)" }}>
-                        <CheckCircle2 size={16} color="var(--industrial-orange)" style={{ flexShrink: 0, marginTop: "2px" }} />
-                        <span>{feat}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div style={{ fontSize: "0.8rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-dark)", marginBottom: "0.75rem" }}>Guarantees</div>
-                  <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "0.75rem", borderTop: "1px solid var(--border-color)", paddingTop: "1rem" }}>
-                    {[
-                      "90-day ranking check-in \u2014 if no measurable keyword movement we audit and adjust at no cost",
-                      "99% uptime or we credit that month\u2019s retainer",
-                      "Any site-breaking issue resolved within 24 business hours or your next month is free",
-                      "Cancel anytime \u2014 no contracts, no penalties",
-                    ].map((feat, i) => (
-                      <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "0.9rem", color: "var(--text-dark)" }}>
-                        <CheckCircle2 size={16} color="var(--industrial-orange)" style={{ flexShrink: 0, marginTop: "2px" }} />
-                        <span style={{ fontWeight: "600" }}>{feat}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "2rem" }}>
+            {[
+              { num: "16", label: "Years in Manufacturing" },
+              { num: "3", label: "New Clients Per Month" },
+              { num: "90", label: "Day Lead Guarantee" },
+              { num: "100%", label: "Texas Focused" },
+            ].map((stat, idx) => (
+              <div key={idx} style={{ textAlign: "center" }}>
+                <div style={{ fontSize: "2.5rem", fontWeight: "900", color: "var(--industrial-orange)", fontFamily: "'Outfit', sans-serif", lineHeight: "1" }}>{stat.num}</div>
+                <div style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.5)", textTransform: "uppercase", letterSpacing: "0.05em", marginTop: "0.5rem", fontWeight: "600" }}>{stat.label}</div>
               </div>
-
-              {/* Single set of buttons at bottom */}
-              <div style={{ marginTop: "3rem", paddingTop: "2rem", borderTop: "1px solid var(--border-color)", display: "flex", flexDirection: "column", alignItems: "center", gap: "0.75rem", maxWidth: "400px", margin: "3rem auto 0", width: "100%" }}>
-                <a href="https://buy.stripe.com/5kQ6oJ6Zb2sg5tO3hXejK01" target="_blank" rel="noopener noreferrer" className="btn" style={{ padding: "1rem 3rem", fontSize: "1rem", background: "#000", color: "#fff", border: "1px solid var(--border-color)", width: "100%", textAlign: "center" }}>
-                  Get Started
-                </a>
-                <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: "1rem 3rem", fontSize: "1rem", width: "100%", textAlign: "center" }}>
-                  Book a Strategy Call
-                </a>
-              </div>
-            </div>
+            ))}
           </div>
-
-          <p style={{ textAlign: "center", marginTop: "2.5rem", fontSize: "1.1rem", fontWeight: "600", color: "var(--text-muted)", fontStyle: "italic" }}>
-            The $4,500 builds the factory. The $1,500/month runs it.
-          </p>
         </div>
       </section>
 
-      {/* Final CTA */}
+
+
+      {/* ============================================================ */}
+      {/* SECTION 8 -- SCARCITY / CTA */}
+      {/* ============================================================ */}
       <section style={{ padding: "8rem 0", background: "var(--bg-color)", textAlign: "center" }}>
         <div className="container" style={{ maxWidth: "700px", margin: "0 auto", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
-          <h2 className="section-title" style={{ color: "var(--text-dark)", textAlign: "center", marginBottom: "1.5rem", fontSize: "clamp(2.75rem, 6vw, 4.5rem)", lineHeight: "1", fontFamily: "'Outfit', sans-serif", fontWeight: "900" }}>Stop Losing Bids to a Better Website.</h2>
-          <p style={{ fontSize: "1.125rem", color: "var(--text-muted)", textAlign: "center", marginBottom: "2.5rem", lineHeight: "1.55", fontWeight: "500", opacity: 0.9, maxWidth: "600px", margin: "0 auto 2.5rem" }}>
-            Book a free strategy call. We'll audit your current site and show you exactly where you're losing buyers.
+          <div className="badge-premium" style={{ color: "var(--industrial-orange)", background: "transparent", border: "none", padding: 0, marginBottom: "1rem" }}>
+            Limited Availability
+          </div>
+          <h2 className="section-title" style={{ color: "var(--text-dark)", textAlign: "center", marginBottom: "1.5rem", fontSize: "clamp(2.25rem, 5vw, 3.5rem)", lineHeight: "1.1", fontFamily: "'Outfit', sans-serif", fontWeight: "900" }}>
+            We only take 3 new Revenue Builder clients per month.
+          </h2>
+          <p style={{ fontSize: "1.125rem", color: "var(--text-muted)", textAlign: "center", marginBottom: "2.5rem", lineHeight: "1.75", fontWeight: "500", opacity: 0.9, maxWidth: "650px" }}>
+            Not as a marketing tactic &mdash; as a quality commitment. Every client gets our full attention from discovery to launch. Three slots means your project never gets deprioritized. The May 2026 price increase to $6,000 is real. If you're reading this before then, you're looking at the last months of the $4,500 build rate.
           </p>
-          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
-            <a href="https://buy.stripe.com/5kQ6oJ6Zb2sg5tO3hXejK01" target="_blank" rel="noopener noreferrer" className="btn btn-dark" style={{ padding: "1.25rem 3rem", fontSize: "1.125rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", borderRadius: "4px", minWidth: "320px", textAlign: "center", flex: "1 1 320px", maxWidth: "400px" }}>
-              GET STARTED
-            </a>
-            <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: "1.25rem 3rem", fontSize: "1.125rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", borderRadius: "4px", minWidth: "320px", textAlign: "center", flex: "1 1 320px", maxWidth: "400px" }}>
-              BOOK A STRATEGY CALL
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.75rem", maxWidth: "400px", width: "100%" }}>
+            <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: "1.25rem 3rem", fontSize: "1.125rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", borderRadius: "4px", width: "100%", textAlign: "center" }}>
+              Claim Your Free Audit
             </a>
           </div>
+          <p style={{ fontSize: "0.9rem", color: "var(--text-muted)", marginTop: "1.25rem", opacity: 0.7, maxWidth: "500px" }}>
+            No cost. No commitment. Just a detailed look at what your digital presence is costing you.
+          </p>
         </div>
       </section>
+
+      {/* Footer Line */}
+      <div style={{ padding: "2rem 0", textAlign: "center", borderTop: "1px solid var(--border-color)", background: "var(--bg-color)" }}>
+        <p style={{ fontSize: "0.8rem", color: "var(--text-muted)", opacity: 0.6, margin: 0 }}>
+          &copy; 2026 Maker Web Studios. The Revenue Builder System&#8482; is a proprietary framework of Maker Web Studios.
+        </p>
+      </div>
 
     </div>
   );
