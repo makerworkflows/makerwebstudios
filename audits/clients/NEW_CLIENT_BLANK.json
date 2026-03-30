@@ -1,0 +1,86 @@
+{
+  "_instructions": "1. Duplicate this file and rename it to the client company name. 2. Fill in every field below. 3. Run: python3 mws_audit_fill.py clients/YOUR_CLIENT.json output/YOUR_CLIENT/",
+
+  "CLIENT_NAME":          "",
+  "CLIENT_WEBSITE":       "",
+  "INDUSTRY":             "",
+  "LOCATION":             "",
+  "MONTH_YEAR":           "",
+  "CURRENT_YEAR":         "2026",
+  "FOUNDED_YEAR":         "",
+  "EMPLOYEES":            "",
+  "REVENUE_ESTIMATE":     "",
+  "MARKET_NAME":          "",
+
+  "CERTIFICATIONS":       "",
+  "KEY_CLIENTS":          "",
+  "INDUSTRIES_SERVED":    "",
+
+  "CMS_PLATFORM":         "",
+  "LAST_SITE_UPDATE":     "",
+  "ANALYTICS_STATUS":     "None detected",
+  "CDN":                  "None",
+
+  "COMPETITORS":          "",
+  "CONTACT_NAME":         "",
+  "CONTACT_EMAIL":        "",
+  "PHONE":                "",
+  "RATE_TIER":            "Standard",
+
+  "AVATAR":               "",
+
+  "SCORE_OVERALL":        "",
+  "SCORE_DESIGN_UX":      "",
+  "SCORE_ONPAGE_SEO":     "",
+  "SCORE_TECHNICAL_SEO":  "",
+  "SCORE_CONTENT":        "",
+  "SCORE_CONVERSION":     "",
+  "SCORE_TRUST":          "",
+  "SCORE_DIGITAL":        "",
+
+  "TOP_BLIND_SPOT_1":     "",
+  "TOP_BLIND_SPOT_2":     "",
+  "TOP_BLIND_SPOT_3":     "",
+
+  "PITCH_ANGLE":          "",
+  "STRATEGIC_FINDING":    "",
+
+  "DREAM_OUTCOME_1":      "",
+  "DREAM_OUTCOME_2":      "",
+  "DREAM_OUTCOME_3":      "",
+  "DREAM_OUTCOME_4":      "",
+
+  "OFFER_NAME":           "The 90-Day Revenue Engine System for Texas Manufacturers",
+  "GUARANTEE_LAYER_1":    "30-day satisfaction guarantee — any page redesigned free if not satisfied",
+  "GUARANTEE_LAYER_2":    "1 qualified inbound lead within 90 days of launch or we keep working free",
+
+  "MARKET_GLOBAL_SIZE":   "",
+  "MARKET_REGION_SIZE":   "",
+  "MARKET_CAGR":          "",
+  "MARKET_SEGMENT":       "",
+  "MARKET_YEAR_START":    "2026",
+  "MARKET_YEAR_END":      "2031",
+
+  "Service 1":            "",
+  "Service 2":            "",
+  "Service 3":            "",
+
+  "Competitor 1":         "",
+  "Competitor 2":         "",
+  "Competitor 3":         "",
+
+  "Source 1 (Month Year)":"",
+  "Source 2 (Month Year)":"",
+  "Source 3":             "",
+
+  "Driver 1":             "",
+  "Driver 2":             "",
+  "Driver 3":             "",
+  "Driver 4":             "",
+
+  "Outcome":              "",
+  "Primary Deliverable":  "",
+  "Bonus Name":           "",
+
+  "X,000–Y,000":          "$4,500–$22,500"
+}

@@ -226,36 +226,6 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="bento-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))" }}>
-            {[
-              {
-                title: "Not Ranking on Google",
-                desc: "Procurement teams search for your exact service every day. If you're not on page one, someone else gets the call.",
-                icon: <TrendingDown size={28} />,
-                delay: "0.1s",
-              },
-              {
-                title: "No Inbound Leads",
-                desc: "Your site looks fine. But it doesn't convert. We build RFQ systems that qualify buyers before they pick up the phone.",
-                icon: <VolumeX size={28} />,
-                delay: "0.2s",
-              },
-              {
-                title: "Outdated Presence",
-                desc: "If your site looks like it was built for a trade show in 2012, buyers move on in seconds. First impressions are digital now.",
-                icon: <Factory size={28} />,
-                delay: "0.3s",
-              },
-            ].map((item, idx) => (
-              <div key={idx} className="bento-card reveal-anim visible" style={{ animationDelay: item.delay }}>
-                <div className="icon-badge orange-badge">
-                  {item.icon}
-                </div>
-                <h3 className="card-title" style={{ fontSize: "1.5rem", fontWeight: "800", fontFamily: "'Outfit', sans-serif", color: "white" }}>{item.title}</h3>
-                <p className="card-text" style={{ color: "rgba(255,255,255,0.65)" }}>{item.desc}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
