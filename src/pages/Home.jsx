@@ -54,7 +54,7 @@ const Home = () => {
               </a>
             </div>
 
-            <div className="hero-stat reveal-anim visible" style={{ animationDelay: "0.4s", marginTop: "4rem", display: "flex", gap: "3rem", justifyContent: "center", flexWrap: "wrap", textAlign: "center", width: "100%", maxWidth: "750px", marginLeft: "auto", marginRight: "auto" }}>
+            <div className="hero-stat reveal-anim visible" style={{ animationDelay: "0.4s", marginTop: "4rem", display: "flex", gap: "3rem", justifyContent: "center", alignItems: "center", flexWrap: "wrap", textAlign: "center", width: "100%", marginLeft: "auto", marginRight: "auto" }}>
               <div className="stat-item">
                 <div className="stat-label" style={{ fontSize: "0.85rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: "600" }}>Texas Manufacturers</div>
               </div>
