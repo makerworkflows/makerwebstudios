@@ -93,7 +93,7 @@ const Layout = ({ children }) => {
             </div>
           </div>
           <div className="footer-bottom">
-            <div>&copy; {new Date().getFullYear()} Maker Web Studio.</div>
+            <div>&copy; {new Date().getFullYear()} Maker Web Studios. The Revenue Builder System is a proprietary framework of Maker Web Studios.</div>
             <a
               href="https://www.linkedin.com/company/makerwebstudios/"
               target="_blank"
