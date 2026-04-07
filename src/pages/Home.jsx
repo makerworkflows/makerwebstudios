@@ -322,7 +322,7 @@ const Home = () => {
               Before Maker Web Studios, I ran a manufacturing operation with complete GMP and ISO frameworks built from the ground up in Texas. 17 employees. 70+ documented procedures. Six simultaneous regulatory certifications. We grew from $350,000 to $1.5 million in revenue across four years.
             </p>
             <p style={{ marginBottom: "1.5rem" }}>
-              When I looked at how other Texas manufacturers were finding customers in 2026, I saw the same gap everywhere: serious operations with broken digital presences. ISO-certified facilities with websites that didn&rsquo;t mention ISO. Companies doing real work with no way for buyers to find them online. Procurement managers Googling suppliers and bouncing off PageSpeed scores below 30.
+              When I looked at how other Texas manufacturers were finding customers in 2026, I saw the same gap everywhere: serious operations with broken digital presences. ISO-certified facilities with websites that didn&rsquo;t mention ISO. Companies doing real work with no way for buyers to find them online. Procurement managers Googling suppliers and bouncing off PageSpeed scores below 30. No conversion potential through their web presence.
             </p>
             <p style={{ marginBottom: "1.5rem" }}>
               That&rsquo;s the gap Maker Web Studios fixes &mdash; and it&rsquo;s why I built it the way I did. Not as a generic agency. As the digital infrastructure team I wish I&rsquo;d had when I was on the plant floor.
