@@ -336,7 +336,7 @@ const Home = () => {
             <p style={{ margin: 0, fontSize: "0.95rem", color: "var(--text-dark)", fontWeight: "600" }}>
               &mdash; Guillermo Aristi, Founder
               <span style={{ color: "var(--text-muted)", fontWeight: "500", marginLeft: "0.5rem" }}>
-                | 16 years manufacturing | GMP &middot; ISO 9001 &middot; SQF &middot; QMS &middot; 6S
+                | 16 years manufacturing | GMP &middot; ISO &middot; SQF &middot; QMS &middot; 6S
               </span>
             </p>
           </div>
