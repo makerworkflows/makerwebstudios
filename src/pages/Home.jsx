@@ -25,6 +25,12 @@ const Home = () => {
       <section className="blueprint-bg hero-premium">
         <div className="container relative z-10">
           <div className="hero-content text-center">
+            {/* Authority badge -- social proof above the fold (#4) + telling who it's for (#9) */}
+            <div className="hero-authority-badge reveal-anim visible" style={{ animationDelay: "0.05s" }}>
+              <span className="auth-dot" />
+              Built by a 16-year manufacturer who scaled a $1.5M GMP-certified facility
+            </div>
+
             <h1 className="hero-title reveal-anim visible" style={{ animationDelay: "0.1s" }}>
               The Revenue Builder System<br />
               <span className="text-accent">For Texas Manufacturers.</span>
@@ -33,9 +39,9 @@ const Home = () => {
               Your website should work as hard as your plant does.
             </p>
             <p className="hero-subtext reveal-anim visible" style={{ animationDelay: "0.2s" }}>
-              We build, optimize, and scale the digital infrastructure of manufacturing businesses across Texas &mdash; starting with a website that generates leads, and ending with a company worth selling.
+              For Texas manufacturers doing $500K&ndash;$10M in annual revenue with outdated websites that don&rsquo;t generate leads. We install the digital infrastructure your competitors already have &mdash; starting with a website that converts and ending with a company worth selling.
             </p>
-            <div className="hero-actions reveal-anim visible" style={{ animationDelay: "0.3s", display: "flex", flexDirection: "column", alignItems: "center", gap: "0.75rem", maxWidth: "400px", margin: "0 auto", width: "100%" }}>
+            <div className="hero-actions reveal-anim visible" style={{ animationDelay: "0.3s", display: "flex", flexDirection: "column", alignItems: "center", gap: "0.75rem", maxWidth: "440px", margin: "0 auto", width: "100%" }}>
               <a
                 href="https://calendly.com/hello-makerwebstudios/30min"
                 target="_blank"
@@ -43,16 +49,26 @@ const Home = () => {
                 className="btn btn-primary btn-lg-premium"
                 style={{ width: "100%", textAlign: "center" }}
               >
-                Get Your Free Audit
+                Get My Free Website Audit &rarr;
               </a>
               <a
                 href="#system"
                 className="btn btn-dark btn-lg-premium"
                 style={{ width: "100%", textAlign: "center" }}
               >
-                See What's Included
+                See Everything Inside The System
               </a>
+
+              {/* Reassurance under primary CTA (#50) + expectation setting (#59) */}
+              <p className="hero-reassurance">
+                No sales pitch. No commitment. Just an honest 15-minute audit of what your digital presence is costing you &mdash; delivered within 48 hours.
+              </p>
             </div>
+
+            {/* Gradual engagement (#22) -- micro-commitment for visitors not ready to book */}
+            <p className="hero-microcommit reveal-anim visible" style={{ animationDelay: "0.35s" }}>
+              Not ready to talk yet? <a href="#system">Read how the system works first &rarr;</a>
+            </p>
 
             <div className="hero-stat reveal-anim visible" style={{ animationDelay: "0.4s", marginTop: "4rem", display: "flex", gap: "3rem", justifyContent: "center", alignItems: "center", flexWrap: "wrap", textAlign: "center", width: "100%", marginLeft: "auto", marginRight: "auto" }}>
               <div className="stat-item">
@@ -111,6 +127,61 @@ const Home = () => {
           margin-bottom: 2.5rem;
           letter-spacing: 0.1em;
           text-transform: uppercase;
+        }
+
+        .hero-authority-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.6rem;
+          padding: 0.55rem 1.25rem;
+          background: rgba(255, 107, 0, 0.08);
+          border: 1px solid rgba(255, 107, 0, 0.25);
+          border-radius: 100px;
+          color: var(--text-dark);
+          font-size: 0.85rem;
+          font-weight: 600;
+          font-family: 'Outfit', sans-serif;
+          margin-bottom: 1.75rem;
+          letter-spacing: 0.01em;
+        }
+
+        .hero-authority-badge .auth-dot {
+          width: 8px;
+          height: 8px;
+          background: var(--industrial-orange);
+          border-radius: 50%;
+          flex-shrink: 0;
+          box-shadow: 0 0 0 4px rgba(255, 107, 0, 0.15);
+        }
+
+        .hero-reassurance {
+          font-size: 0.85rem;
+          color: var(--text-muted);
+          line-height: 1.55;
+          text-align: center;
+          margin: 0.75rem 0 0;
+          opacity: 0.85;
+          max-width: 440px;
+        }
+
+        .hero-microcommit {
+          font-size: 0.95rem;
+          color: var(--text-muted);
+          margin-top: 1.5rem;
+          opacity: 0.8;
+        }
+
+        .hero-microcommit a {
+          color: var(--industrial-orange);
+          font-weight: 600;
+          text-decoration: none;
+          border-bottom: 1px solid rgba(255, 107, 0, 0.3);
+          padding-bottom: 1px;
+          transition: border-color 0.2s;
+        }
+
+        .hero-microcommit a:hover {
+          border-bottom-color: var(--industrial-orange);
         }
 
         .hero-title {
@@ -226,6 +297,51 @@ const Home = () => {
             </p>
           </div>
 
+        </div>
+      </section>
+
+
+
+      {/* ============================================================ */}
+      {/* SECTION 3.5 -- FOUNDER STORY (Storytelling #64, Authenticity #65, Repetition #5) */}
+      {/* ============================================================ */}
+      <section style={{ padding: "8rem 0", background: "var(--bg-color)" }} className="blueprint-bg">
+        <div className="container" style={{ maxWidth: "850px" }}>
+          <div style={{ marginBottom: "2.5rem" }}>
+            <div style={{ color: "var(--industrial-orange)", fontSize: "0.8125rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "1rem" }}>
+              How We Got Here
+            </div>
+            <h2 className="section-title" style={{ marginBottom: "2rem", fontSize: "clamp(2rem, 4vw, 3rem)", lineHeight: "1.1" }}>
+              I built a $1.5M manufacturing facility from $350K. Then I lost it.
+            </h2>
+          </div>
+
+          <div style={{ fontSize: "1.125rem", lineHeight: "1.85", color: "var(--text-muted)" }}>
+            <p style={{ marginBottom: "1.5rem" }}>
+              Before Maker Web Studios, I ran a GMP-certified, ISO 9001 manufacturing operation in Texas. 17 employees. 70+ documented procedures. Six simultaneous regulatory certifications. We grew from $350,000 to $1.5 million in revenue across four years.
+            </p>
+            <p style={{ marginBottom: "1.5rem" }}>
+              Then a business partnership ended badly. I walked away from the building, the equipment, and the brand &mdash; and started over from zero.
+            </p>
+            <p style={{ marginBottom: "1.5rem" }}>
+              When I looked at how other Texas manufacturers were finding customers in 2026, I saw the same gap everywhere: serious operations with broken digital presences. ISO-certified facilities with websites that didn&rsquo;t mention ISO. Companies doing real work with no way for buyers to find them online. Procurement managers Googling suppliers and bouncing off PageSpeed scores below 30.
+            </p>
+            <p style={{ marginBottom: "1.5rem" }}>
+              That&rsquo;s the gap Maker Web Studios fixes &mdash; and it&rsquo;s why I built it the way I did. Not as a generic agency. As the digital infrastructure team I wish I&rsquo;d had when I was on the plant floor.
+            </p>
+            <p style={{ marginBottom: "0", fontStyle: "italic", color: "var(--text-dark)", fontWeight: "600" }}>
+              I&rsquo;m not a developer who learned about manufacturing. I&rsquo;m a manufacturer who learned to build websites. The difference shows up in every conversation.
+            </p>
+          </div>
+
+          <div style={{ marginTop: "2.5rem", padding: "1.5rem", background: "rgba(255, 107, 0, 0.05)", border: "1px solid rgba(255, 107, 0, 0.15)", borderRadius: "var(--border-radius)" }}>
+            <p style={{ margin: 0, fontSize: "0.95rem", color: "var(--text-dark)", fontWeight: "600" }}>
+              &mdash; Guillermo Aristi, Founder
+              <span style={{ color: "var(--text-muted)", fontWeight: "500", marginLeft: "0.5rem" }}>
+                | 16 years manufacturing | GMP &middot; ISO 9001 &middot; SQF &middot; C-TPAT
+              </span>
+            </p>
+          </div>
         </div>
       </section>
 
@@ -356,14 +472,18 @@ const Home = () => {
             </p>
           </div>
 
-          {/* CTAs */}
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.75rem", maxWidth: "400px", margin: "0 auto", width: "100%" }}>
-            <a href="https://buy.stripe.com/5kQ6oJ6Zb2sg5tO3hXejK01" target="_blank" rel="noopener noreferrer" className="btn" style={{ padding: "1rem 2.5rem", fontSize: "1rem", background: "#fff", color: "#000", border: "1px solid rgba(255,255,255,0.2)", width: "100%", textAlign: "center", fontWeight: "700" }}>
-              Get Started
+          {/* CTAs (#18 Benefit Buttons, #50 Reassurances, #59 Expectation Setting) */}
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.75rem", maxWidth: "440px", margin: "0 auto", width: "100%" }}>
+            <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: "1.25rem 2.5rem", fontSize: "1.0625rem", width: "100%", textAlign: "center", fontWeight: "800" }}>
+              Book a 15-Minute Strategy Call &rarr;
             </a>
-            <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: "1rem 2.5rem", fontSize: "1rem", width: "100%", textAlign: "center" }}>
-              Book a Strategy Call
+            <a href="https://buy.stripe.com/5kQ6oJ6Zb2sg5tO3hXejK01" target="_blank" rel="noopener noreferrer" className="btn" style={{ padding: "1rem 2.5rem", fontSize: "0.95rem", background: "transparent", color: "#fff", border: "1px solid rgba(255,255,255,0.25)", width: "100%", textAlign: "center", fontWeight: "600" }}>
+              Skip the call &mdash; Lock in $4,500 build now
             </a>
+
+            <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.55)", lineHeight: "1.55", textAlign: "center", margin: "0.75rem 0 0", maxWidth: "440px" }}>
+              The strategy call is 15 minutes, not 45. We&rsquo;ll talk through your current site, what&rsquo;s missing, and whether the Revenue Builder System is a fit. No pressure either way.
+            </p>
           </div>
         </div>
       </section>
@@ -451,23 +571,31 @@ const Home = () => {
       {/* SECTION 8 -- SCARCITY / CTA */}
       {/* ============================================================ */}
       <section style={{ padding: "8rem 0", background: "var(--bg-color)", textAlign: "center" }}>
-        <div className="container" style={{ maxWidth: "700px", margin: "0 auto", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <div className="container" style={{ maxWidth: "750px", margin: "0 auto", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
           <div className="badge-premium" style={{ color: "var(--industrial-orange)", background: "transparent", border: "none", padding: 0, marginBottom: "1rem" }}>
             Limited Availability
           </div>
           <h2 className="section-title" style={{ color: "var(--text-dark)", textAlign: "center", marginBottom: "1.5rem", fontSize: "clamp(2.25rem, 5vw, 3.5rem)", lineHeight: "1.1", fontFamily: "'Outfit', sans-serif", fontWeight: "900" }}>
             We only take 3 new Revenue Builder clients per month.
           </h2>
-          <p style={{ fontSize: "1.125rem", color: "var(--text-muted)", textAlign: "center", marginBottom: "2.5rem", lineHeight: "1.75", fontWeight: "500", opacity: 0.9, maxWidth: "650px" }}>
-            Not as a marketing tactic &mdash; as a quality commitment. Every client gets our full attention from discovery to launch. Three slots means your project never gets deprioritized. The May 2026 price increase to $6,000 is real. If you're reading this before then, you're looking at the last months of the $4,500 build rate.
+          <p style={{ fontSize: "1.125rem", color: "var(--text-muted)", textAlign: "center", marginBottom: "2rem", lineHeight: "1.75", fontWeight: "500", opacity: 0.9, maxWidth: "650px" }}>
+            Not as a marketing tactic &mdash; as a quality commitment. Every client gets our full attention from discovery to launch. Three slots means your project never gets deprioritized. The May 2026 price increase to $6,000 is real. If you&rsquo;re reading this before then, you&rsquo;re looking at the last months of the $4,500 build rate.
           </p>
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.75rem", maxWidth: "400px", width: "100%" }}>
+
+          {/* Curiosity hook (#49) */}
+          <div style={{ padding: "1.25rem 1.75rem", background: "rgba(255, 107, 0, 0.06)", border: "1px solid rgba(255, 107, 0, 0.2)", borderRadius: "var(--border-radius)", marginBottom: "2.5rem", maxWidth: "650px" }}>
+            <p style={{ fontSize: "1rem", color: "var(--text-dark)", margin: 0, fontWeight: "600", lineHeight: "1.6" }}>
+              There&rsquo;s one thing missing from almost every Texas manufacturer&rsquo;s website that&rsquo;s costing them 30&ndash;40% of their inbound leads. We find it on the audit call. Ask about it.
+            </p>
+          </div>
+
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.75rem", maxWidth: "440px", width: "100%" }}>
             <a href="https://calendly.com/hello-makerwebstudios/30min" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: "1.25rem 3rem", fontSize: "1.125rem", fontWeight: "900", fontFamily: "'Outfit', sans-serif", borderRadius: "4px", width: "100%", textAlign: "center" }}>
-              Claim Your Free Audit
+              Claim My Free 15-Minute Audit &rarr;
             </a>
           </div>
-          <p style={{ fontSize: "0.9rem", color: "var(--text-muted)", marginTop: "1.25rem", opacity: 0.7, maxWidth: "500px" }}>
-            No cost. No commitment. Just a detailed look at what your digital presence is costing you.
+          <p style={{ fontSize: "0.9rem", color: "var(--text-muted)", marginTop: "1.25rem", opacity: 0.75, maxWidth: "550px", lineHeight: "1.6" }}>
+            No cost. No sales pitch. No commitment. Just a detailed look at what your digital presence is costing you &mdash; delivered within 48 hours.
           </p>
         </div>
       </section>

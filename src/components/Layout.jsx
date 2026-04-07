@@ -43,7 +43,7 @@ const Layout = ({ children }) => {
                 rel="noopener noreferrer"
                 className="btn btn-sm btn-dark"
               >
-                Get Started
+                Lock In $4,500 Build
               </a>
               <a
                 href="https://calendly.com/hello-makerwebstudios/30min"
@@ -51,7 +51,7 @@ const Layout = ({ children }) => {
                 rel="noopener noreferrer"
                 className="btn btn-sm btn-primary"
               >
-                Book a Call
+                Get My Free Audit
               </a>
             </div>
           </nav>
