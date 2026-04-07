@@ -313,7 +313,7 @@ const Home = () => {
               How We Got Here
             </div>
             <h2 className="section-title" style={{ marginBottom: "2rem", fontSize: "clamp(2rem, 4vw, 3rem)", lineHeight: "1.1" }}>
-              I built a $1.5M manufacturing facility from $350K. Then I lost it.
+              I built a $1.5M manufacturing facility from $350K.
             </h2>
           </div>
 
