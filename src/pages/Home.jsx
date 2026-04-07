@@ -135,14 +135,15 @@ const Home = () => {
           gap: 0.6rem;
           padding: 0.55rem 1.25rem;
           background: rgba(255, 107, 0, 0.08);
-          border: 1px solid rgba(255, 107, 0, 0.25);
+          border: 1px solid rgba(255, 107, 0, 0.2);
           border-radius: 100px;
-          color: var(--text-dark);
-          font-size: 0.85rem;
+          color: var(--industrial-orange);
+          font-size: 0.78rem;
           font-weight: 600;
           font-family: 'Outfit', sans-serif;
           margin-bottom: 1.75rem;
-          letter-spacing: 0.01em;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
         }
 
         .hero-authority-badge .auth-dot {
