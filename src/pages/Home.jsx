@@ -528,7 +528,16 @@ const Home = () => {
             </div>
           </div>
 
-          <p style={{ textAlign: "center", fontSize: "1.25rem", fontWeight: "700", color: "var(--text-dark)", fontFamily: "'Outfit', sans-serif", margin: 0 }}>
+          <p style={{
+            textAlign: "center",
+            fontSize: "clamp(2rem, 4vw, 3.5rem)",
+            fontWeight: "900",
+            fontFamily: "'Outfit', sans-serif",
+            color: "var(--text-dark)",
+            lineHeight: "1.15",
+            letterSpacing: "-0.02em",
+            margin: "3rem 0 0",
+          }}>
             We only win when you win.
           </p>
         </div>
