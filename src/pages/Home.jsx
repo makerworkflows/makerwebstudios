@@ -504,8 +504,11 @@ const Home = () => {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))", gap: "2rem", marginBottom: "3rem" }}>
             {/* 30-Day Unconditional */}
             <div className="bento-card reveal-anim visible" style={{ borderLeft: "4px solid var(--industrial-orange)" }}>
-              <div style={{ fontSize: "2.5rem", fontWeight: "900", color: "var(--industrial-orange)", opacity: 0.3, lineHeight: 1, marginBottom: "1rem" }}>30</div>
-              <h3 style={{ fontSize: "1.25rem", color: "var(--text-dark)", marginBottom: "1rem", fontWeight: "700" }}>Day Unconditional Redesign Guarantee</h3>
+              <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", marginBottom: "1rem", color: "var(--industrial-orange)", opacity: 0.35, fontFamily: "'Outfit', sans-serif", lineHeight: 1 }}>
+                <span style={{ fontSize: "2.5rem", fontWeight: "900" }}>30</span>
+                <span style={{ fontSize: "1rem", fontWeight: "800", letterSpacing: "0.05em", textTransform: "uppercase" }}>Day</span>
+              </div>
+              <h3 style={{ fontSize: "1.25rem", color: "var(--text-dark)", marginBottom: "1rem", fontWeight: "700" }}>Unconditional Redesign Guarantee</h3>
               <p style={{ color: "var(--text-muted)", lineHeight: "1.7", fontSize: "0.95rem" }}>
                 If you're not completely satisfied with the website within 30 days of launch, we redesign it for free. No questions asked. No fine print.
               </p>
@@ -513,8 +516,11 @@ const Home = () => {
 
             {/* 90-Day Lead Guarantee */}
             <div className="bento-card reveal-anim visible" style={{ border: "2px solid var(--industrial-orange)" }}>
-              <div style={{ fontSize: "2.5rem", fontWeight: "900", color: "var(--industrial-orange)", opacity: 0.3, lineHeight: 1, marginBottom: "1rem" }}>90</div>
-              <h3 style={{ fontSize: "1.25rem", color: "var(--text-dark)", marginBottom: "1rem", fontWeight: "700" }}>Day Lead Guarantee</h3>
+              <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", marginBottom: "1rem", color: "var(--industrial-orange)", opacity: 0.35, fontFamily: "'Outfit', sans-serif", lineHeight: 1 }}>
+                <span style={{ fontSize: "2.5rem", fontWeight: "900" }}>90</span>
+                <span style={{ fontSize: "1rem", fontWeight: "800", letterSpacing: "0.05em", textTransform: "uppercase" }}>Day</span>
+              </div>
+              <h3 style={{ fontSize: "1.25rem", color: "var(--text-dark)", marginBottom: "1rem", fontWeight: "700" }}>Lead Guarantee</h3>
               <p style={{ color: "var(--text-muted)", lineHeight: "1.7", fontSize: "0.95rem" }}>
                 We guarantee at least 1 qualified inbound lead within 90 days of launch. If we don't deliver, we keep working at no charge until you get one.
               </p>
