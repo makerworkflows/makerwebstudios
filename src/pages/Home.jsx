@@ -28,7 +28,7 @@ const Home = () => {
             {/* Authority badge -- social proof above the fold (#4) + telling who it's for (#9) */}
             <div className="hero-authority-badge reveal-anim visible" style={{ animationDelay: "0.05s" }}>
               <span className="auth-dot" />
-              Built by a 16-year manufacturer who scaled a $1.5M GMP-certified facility
+              Built with 16 years of manufacturing experience
             </div>
 
             <h1 className="hero-title reveal-anim visible" style={{ animationDelay: "0.1s" }}>
@@ -318,10 +318,7 @@ const Home = () => {
 
           <div style={{ fontSize: "1.125rem", lineHeight: "1.85", color: "var(--text-muted)" }}>
             <p style={{ marginBottom: "1.5rem" }}>
-              Before Maker Web Studios, I ran a GMP-certified, ISO 9001 manufacturing operation in Texas. 17 employees. 70+ documented procedures. Six simultaneous regulatory certifications. We grew from $350,000 to $1.5 million in revenue across four years.
-            </p>
-            <p style={{ marginBottom: "1.5rem" }}>
-              Then a business partnership ended badly. I walked away from the building, the equipment, and the brand &mdash; and started over from zero.
+              Before Maker Web Studios, I ran a manufacturing operation with complete GMP and ISO frameworks built from the ground up in Texas. 17 employees. 70+ documented procedures. Six simultaneous regulatory certifications. We grew from $350,000 to $1.5 million in revenue across four years.
             </p>
             <p style={{ marginBottom: "1.5rem" }}>
               When I looked at how other Texas manufacturers were finding customers in 2026, I saw the same gap everywhere: serious operations with broken digital presences. ISO-certified facilities with websites that didn&rsquo;t mention ISO. Companies doing real work with no way for buyers to find them online. Procurement managers Googling suppliers and bouncing off PageSpeed scores below 30.
@@ -338,7 +335,7 @@ const Home = () => {
             <p style={{ margin: 0, fontSize: "0.95rem", color: "var(--text-dark)", fontWeight: "600" }}>
               &mdash; Guillermo Aristi, Founder
               <span style={{ color: "var(--text-muted)", fontWeight: "500", marginLeft: "0.5rem" }}>
-                | 16 years manufacturing | GMP &middot; ISO 9001 &middot; SQF &middot; C-TPAT
+                | 16 years manufacturing | GMP &middot; ISO 9001 &middot; SQF &middot; QMS &middot; 6S
               </span>
             </p>
           </div>
