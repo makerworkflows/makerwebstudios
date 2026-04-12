@@ -23,7 +23,7 @@ Most business owners use AI like a search engine — they type a question, get a
 | Knows your business | No — re-explain every session | Yes — reads your context automatically |
 | Knows your voice | No — generic output | Yes — writes like you, not like AI |
 | Remembers decisions | No | Yes — persistent memory |
-| Works on your phone | Basic | Yes — Telegram/WhatsApp agent |
+| Works on your phone | Basic | Yes — WhatsApp agent |
 | Integrates with your tools | No | Gmail, Drive, ClickUp |
 | Gets smarter over time | No | Yes — memory grows with use |
 

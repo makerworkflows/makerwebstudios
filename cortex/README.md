@@ -24,7 +24,7 @@ The complete installation. Built and configured by MWS on Claude Code.
 - Document control system (ISO-adapted, doc codes)
 - Financial operating system (Home Office workbook)
 - Gmail, Google Drive, ClickUp integrations via MCP
-- Telegram or WhatsApp agent (24/7 mobile access with tool use)
+- WhatsApp agent (24/7 mobile access with tool use)
 - Agent Teams for parallelized work (website builds, research, QA)
 - Automated daily backups to Google Drive
 - Security monitoring (encryption, VPN, backup health)
