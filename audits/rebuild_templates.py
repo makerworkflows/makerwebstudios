@@ -41,7 +41,7 @@ def full_cell_text(cell):
 # 1. DIGITAL PRESENCE AUDIT
 # ═══════════════════════════════════════════════════════════════════════════════
 print("Rebuilding: Digital Presence Audit...")
-doc = Document(os.path.join(TEMPLATE_DIR, "MWS-TEMPLATE_Digital-Presence-Audit.docx"))
+doc = Document(os.path.join(TEMPLATE_DIR, "MKT-AU01-MWS-2026-04.06-Digital Presence Audit TEMPLATE.docx"))
 
 CATEGORIES = ["Design UX", "OnPage SEO", "Technical SEO", "Content", "Conversion", "Trust", "Digital Presence"]
 cat_idx = -1
@@ -124,7 +124,7 @@ for ti, table in enumerate(doc.tables):
             replace_cell_text(cell, "[Description of their digital strengths]", "[Competitor 2 Strengths]")
             replace_cell_text(cell, "[Their real credentials vs. digital underperformance]", "[Competitor 3 Strengths]")
 
-doc.save(os.path.join(TEMPLATE_DIR, "MWS-TEMPLATE_Digital-Presence-Audit.docx"))
+doc.save(os.path.join(TEMPLATE_DIR, "MKT-AU01-MWS-2026-04.06-Digital Presence Audit TEMPLATE.docx"))
 print("  OK: Digital Presence Audit")
 
 
@@ -132,7 +132,7 @@ print("  OK: Digital Presence Audit")
 # 2. GRAND SLAM OFFER -> REVENUE GROWTH PLAYBOOK
 # ═══════════════════════════════════════════════════════════════════════════════
 print("Rebuilding: Grand Slam Offer -> Revenue Growth Playbook...")
-doc = Document(os.path.join(TEMPLATE_DIR, "MWS-TEMPLATE_Grand-Slam-Offer-Framework.docx"))
+doc = Document(os.path.join(TEMPLATE_DIR, "SAL-PP01-MWS-2026-04.06-Grand Slam Offer Framework TEMPLATE.docx"))
 
 # Rename everywhere
 for p in doc.paragraphs:
@@ -203,10 +203,10 @@ for ti, table in enumerate(doc.tables):
                 replace_cell_text(cell, "[What it should say/do]", f"[{elem} Recommended]")
 
 # Save with new name
-new_path = os.path.join(TEMPLATE_DIR, "MWS-TEMPLATE_Revenue-Growth-Playbook.docx")
+new_path = os.path.join(TEMPLATE_DIR, "MKT-PB02-MWS-2026-04.06-Revenue Growth Playbook TEMPLATE.docx")
 doc.save(new_path)
 # Remove old file
-old_path = os.path.join(TEMPLATE_DIR, "MWS-TEMPLATE_Grand-Slam-Offer-Framework.docx")
+old_path = os.path.join(TEMPLATE_DIR, "SAL-PP01-MWS-2026-04.06-Grand Slam Offer Framework TEMPLATE.docx")
 if os.path.exists(old_path):
     os.remove(old_path)
 print("  OK: Revenue Growth Playbook (renamed + cleaned)")
@@ -216,7 +216,7 @@ print("  OK: Revenue Growth Playbook (renamed + cleaned)")
 # 3. GROWTH PLAYBOOK - unique service rows, ROI rows, skills, outreach, actions
 # ═══════════════════════════════════════════════════════════════════════════════
 print("Rebuilding: Growth Playbook...")
-doc = Document(os.path.join(TEMPLATE_DIR, "MWS-TEMPLATE_Growth-Playbook.docx"))
+doc = Document(os.path.join(TEMPLATE_DIR, "MKT-PB02-MWS-2026-04.06-Revenue Growth Playbook TEMPLATE.docx"))
 
 # Services table (T1) - 4 rows
 svc_row = 0
@@ -320,7 +320,7 @@ for p in doc.paragraphs:
     replace_para_text(p, "[Describe the specific pain this capability eliminates. Why do buyers urgently need it? What happens without it?]",
                      "[Growth Pain Description]")
 
-doc.save(os.path.join(TEMPLATE_DIR, "MWS-TEMPLATE_Growth-Playbook.docx"))
+doc.save(os.path.join(TEMPLATE_DIR, "MKT-PB02-MWS-2026-04.06-Revenue Growth Playbook TEMPLATE.docx"))
 print("  OK: Growth Playbook")
 
 
@@ -328,7 +328,7 @@ print("  OK: Growth Playbook")
 # 4. MARKET ANALYSIS - unique drivers, regional factors, risks, milestones
 # ═══════════════════════════════════════════════════════════════════════════════
 print("Rebuilding: Market Analysis...")
-doc = Document(os.path.join(TEMPLATE_DIR, "MWS-TEMPLATE_Market-Analysis-5-Year-Forecast.docx"))
+doc = Document(os.path.join(TEMPLATE_DIR, "MKT-MF01-MWS-2026-04.06-Market Analysis 5-Year Forecast TEMPLATE.docx"))
 
 # Driver tables - 5 drivers with same description placeholder
 driver_num = 0
@@ -414,7 +414,7 @@ for ti, table in enumerate(doc.tables):
             replace_cell_text(cell, "[One sentence \u2014 why this specific location is strategically positioned for outsized growth in this market.]",
                             "[Location Advantage]")
 
-doc.save(os.path.join(TEMPLATE_DIR, "MWS-TEMPLATE_Market-Analysis-5-Year-Forecast.docx"))
+doc.save(os.path.join(TEMPLATE_DIR, "MKT-MF01-MWS-2026-04.06-Market Analysis 5-Year Forecast TEMPLATE.docx"))
 print("  OK: Market Analysis")
 
 
@@ -422,7 +422,7 @@ print("  OK: Market Analysis")
 # 5. REVENUE ACCELERATION PLAYBOOK - unique stat cards, guarantees, bonuses
 # ═══════════════════════════════════════════════════════════════════════════════
 print("Rebuilding: Revenue Acceleration Playbook...")
-doc = Document(os.path.join(TEMPLATE_DIR, "MWS-TEMPLATE_Revenue-Acceleration-Playbook.docx"))
+doc = Document(os.path.join(TEMPLATE_DIR, "MKT-PB03-MWS-2026-04.06-Revenue Acceleration Playbook TEMPLATE.docx"))
 
 # Stat card table
 for ti, table in enumerate(doc.tables):
@@ -445,7 +445,7 @@ for p in doc.paragraphs:
             # Find the full text and replace
             replace_para_text(p, full.strip(), f"[Bonus {bn} Description]")
 
-doc.save(os.path.join(TEMPLATE_DIR, "MWS-TEMPLATE_Revenue-Acceleration-Playbook.docx"))
+doc.save(os.path.join(TEMPLATE_DIR, "MKT-PB03-MWS-2026-04.06-Revenue Acceleration Playbook TEMPLATE.docx"))
 print("  OK: Revenue Acceleration Playbook")
 
 
@@ -453,7 +453,7 @@ print("  OK: Revenue Acceleration Playbook")
 # 6. BLIND SPOT AUDIT - already mostly working, just fix the repeated [Fix] pattern
 # ═══════════════════════════════════════════════════════════════════════════════
 print("Rebuilding: Blind Spot Audit...")
-doc = Document(os.path.join(TEMPLATE_DIR, "MWS-TEMPLATE_Blind-Spot-Audit.docx"))
+doc = Document(os.path.join(TEMPLATE_DIR, "MKT-AU02-MWS-2026-04.06-Blind Spot Audit TEMPLATE.docx"))
 
 # The fix placeholders repeat 5 times. Make them unique.
 blind_spot_num = 0
@@ -485,7 +485,7 @@ for i, p in enumerate(doc.paragraphs):
         if "[Fix #4]" in full:
             replace_para_text(p, "[Fix #4]", f"[Fix {blind_spot_num}-4]")
 
-doc.save(os.path.join(TEMPLATE_DIR, "MWS-TEMPLATE_Blind-Spot-Audit.docx"))
+doc.save(os.path.join(TEMPLATE_DIR, "MKT-AU02-MWS-2026-04.06-Blind Spot Audit TEMPLATE.docx"))
 print("  OK: Blind Spot Audit")
 
 print("\nAll templates rebuilt with unique placeholders.")

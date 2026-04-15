@@ -59,15 +59,24 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "ProfessionalService",
+        "@type": ["ProfessionalService", "LocalBusiness"],
         "name": "Maker Web Studios",
         "url": "https://makerwebstudios.com",
         "description": "We install The Revenue Builder System in manufacturing businesses across Texas. Starting with a website that works as hard as your plant does — guaranteed.",
+        "telephone": "(512) 635-9629",
+        "email": "hello@makerwebstudios.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Mission",
+          "addressRegion": "TX",
+          "postalCode": "78572",
+          "addressCountry": "US"
+        },
         "areaServed": { "@type": "Place", "name": "Texas" },
-        "serviceType": "Web design for manufacturers"
+        "serviceType": "Web design for manufacturers",
+        "priceRange": "$$"
       }
     </script>
-    <!-- Add address + telephone to the JSON-LD above when you have canonical NAP (see directives/local_seo_cowork_system.md) -->
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

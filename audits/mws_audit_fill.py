@@ -23,11 +23,11 @@ from docx import Document
 TEMPLATE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "templates")
 
 TEMPLATE_FILES = [
-    "MWS-TEMPLATE_Digital-Presence-Audit.docx",
-    "MWS-TEMPLATE_Blind-Spot-Audit.docx",
-    "MWS-TEMPLATE_Revenue-Growth-Playbook.docx",
-    "MWS-TEMPLATE_Sales-Playbook.docx",
-    "MWS-TEMPLATE_Market-Analysis-5-Year-Forecast.docx",
+    "MKT-AU01-MWS-2026-04.06-Digital Presence Audit TEMPLATE.docx",
+    "MKT-AU02-MWS-2026-04.06-Blind Spot Audit TEMPLATE.docx",
+    "MKT-PB02-MWS-2026-04.06-Revenue Growth Playbook TEMPLATE.docx",
+    "SAL-PB01-MWS-2026-04.06-Sales Playbook TEMPLATE.docx",
+    "MKT-MF01-MWS-2026-04.06-Market Analysis 5-Year Forecast TEMPLATE.docx",
 ]
 
 # ── LAYER 1: JSON -> template placeholder mapping ────────────────────────────
@@ -513,7 +513,7 @@ def process_client(json_path, md_dir, output_dir):
         if not os.path.exists(tp):
             print(f"  SKIP: {tf}")
             continue
-        dt = tf.replace("MWS-TEMPLATE_", "").replace(".docx", "")
+        dt = re.sub(r'^[A-Z]{3}-[A-Z]{2}\d{2}-MWS-[\d.]+-', '', tf).replace(" TEMPLATE", "").replace(".docx", "")
         of = f"{client_slug}_{dt}.docx"
         op = os.path.join(output_dir, of)
         try:

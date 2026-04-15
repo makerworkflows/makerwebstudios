@@ -70,22 +70,11 @@ const Home = () => {
               Not ready to talk yet? <a href="#system">Read how the system works first &rarr;</a>
             </p>
 
-            <div className="hero-stat reveal-anim visible" style={{ animationDelay: "0.4s", marginTop: "4rem", display: "flex", gap: "3rem", justifyContent: "center", alignItems: "center", flexWrap: "wrap", textAlign: "center", width: "100%", marginLeft: "auto", marginRight: "auto" }}>
-              <div className="stat-item">
-                <div className="stat-label" style={{ fontSize: "0.85rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: "600" }}>Texas Manufacturers</div>
-              </div>
-              <div className="stat-item" style={{ color: "var(--border-color)" }}>|</div>
-              <div className="stat-item">
-                <div className="stat-label" style={{ fontSize: "0.85rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: "600" }}>ISO &amp; GMP Specialists</div>
-              </div>
-              <div className="stat-item" style={{ color: "var(--border-color)" }}>|</div>
-              <div className="stat-item">
-                <div className="stat-label" style={{ fontSize: "0.85rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: "600" }}>16 Years on the Shop Floor</div>
-              </div>
-              <div className="stat-item" style={{ color: "var(--border-color)" }}>|</div>
-              <div className="stat-item">
-                <div className="stat-label" style={{ fontSize: "0.85rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: "600" }}>90-Day Lead Guarantee</div>
-              </div>
+            <div className="hero-badges reveal-anim visible" style={{ animationDelay: "0.4s", marginTop: "4rem", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem 2rem", justifyItems: "center", textAlign: "center", width: "100%", maxWidth: "500px", marginLeft: "auto", marginRight: "auto" }}>
+              <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: "600" }}>Texas Manufacturers</div>
+              <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: "600" }}>ISO &amp; GMP Specialists</div>
+              <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: "600" }}>16 Years on the Shop Floor</div>
+              <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: "600" }}>90-Day Lead Guarantee</div>
             </div>
           </div>
         </div>
@@ -101,7 +90,7 @@ const Home = () => {
           align-items: center;
           justify-content: center;
           padding-top: 8rem;
-          padding-bottom: 10rem;
+          padding-bottom: 3rem;
           overflow: hidden;
         }
 
@@ -367,42 +356,42 @@ const Home = () => {
               {
                 num: "01",
                 title: "Digital Presence Audit",
-                desc: "A full diagnostic of your current website, SEO performance, Google Business Profile, and online visibility. We find every gap costing you leads.",
+                desc: "Every gap costing you leads — found and documented.",
               },
               {
                 num: "02",
                 title: "Blind Spot Audit",
-                desc: "We analyze what your competitors are doing that you are not. From backlinks to content strategy to paid media, we surface the opportunities hiding in plain sight.",
+                desc: "What your competitors are doing that you're not.",
               },
               {
                 num: "03",
                 title: "Market Analysis & 5-Year Forecast",
-                desc: "Industry-specific research on your market, buyer trends, regulatory shifts, and growth projections. You see the landscape before you invest in it.",
+                desc: "Your market landscape before you invest in it.",
               },
               {
                 num: "04",
                 title: "Revenue Growth Playbook",
-                desc: "A step-by-step plan to increase revenue from your existing operations. Pricing strategy, upsell frameworks, and margin optimization tailored to your business.",
+                desc: "More revenue from your existing operations.",
               },
               {
                 num: "05",
                 title: "Revenue Builder Playbook",
-                desc: "The master execution plan. What to build, in what order, and why. This is the operating system for your digital growth engine.",
+                desc: "The master execution plan — what to build and in what order.",
               },
               {
                 num: "06",
                 title: "Lead Flow Playbook",
-                desc: "How to generate, capture, qualify, and convert inbound leads consistently. From RFQ form design to follow-up sequences to CRM setup.",
+                desc: "Generate, capture, and convert inbound leads consistently.",
               },
               {
                 num: "07",
                 title: "Revenue Model Playbook",
-                desc: "A financial model built around your actual numbers. Revenue targets, customer acquisition cost, lifetime value, and the levers that move each one.",
+                desc: "Your actual numbers modeled into targets you can hit.",
               },
               {
                 num: "08",
                 title: "Master Plan Roadmap",
-                desc: "A 12-month execution timeline that ties every deliverable together into a single, sequenced plan. This is your strategic GPS from launch to scale.",
+                desc: "12 months of execution tied into one sequenced plan.",
               },
             ].map((item, idx) => (
               <div key={idx} className="bento-card reveal-anim visible" style={{ animationDelay: `${0.05 * idx}s`, position: "relative" }}>
@@ -412,6 +401,65 @@ const Home = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+
+
+      {/* ============================================================ */}
+      {/* SECTION 4B -- SEO / GEO / AIO */}
+      {/* ============================================================ */}
+      <section style={{ padding: "8rem 0", background: "var(--dark-bg)" }} className="dark-section blueprint-bg">
+        <div className="container" style={{ maxWidth: "900px" }}>
+          <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+            <div style={{ color: "var(--industrial-orange)", fontSize: "0.8125rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "1rem" }}>
+              How Buyers Find You in 2026
+            </div>
+            <h2 className="section-title" style={{ color: "white", marginBottom: "1.5rem" }}>
+              SEO alone isn't enough anymore.
+            </h2>
+            <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "1.05rem", lineHeight: "1.8", maxWidth: "750px", margin: "0 auto" }}>
+              Your buyers search on Google, ask ChatGPT, and check AI Overviews before they ever pick up the phone.
+              We build your digital presence to rank across all three.
+            </p>
+          </div>
+
+          <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+            {[
+              { abbr: "SEO", color: "var(--industrial-orange)", title: "Search Engine Optimization", desc: "Google and Bing rankings. Keywords, schema, backlinks, service pages. Still 80% of search traffic." },
+              { abbr: "GEO", color: "#10b981", title: "Generative Engine Optimization", desc: "Getting cited by ChatGPT, Perplexity, and Claude when buyers ask AI for recommendations in your category." },
+              { abbr: "AIO", color: "#6366f1", title: "AI Overview Optimization", desc: "Showing up in Google's AI summary box — which now appears on 88% of informational searches." },
+            ].map((item, i) => (
+              <div key={i} style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "1.5rem",
+                padding: "1.5rem 2rem",
+                background: "rgba(255,255,255,0.03)",
+                border: "1px solid rgba(255,255,255,0.1)",
+                borderLeft: `3px solid ${item.color}`,
+                borderRadius: "var(--border-radius)",
+              }}>
+                <div style={{ fontSize: "1.1rem", fontWeight: "800", color: item.color, fontFamily: "'Outfit', sans-serif", minWidth: "40px", letterSpacing: "0.05em" }}>{item.abbr}</div>
+                <div>
+                  <div style={{ color: "#fff", fontSize: "1rem", fontWeight: "700", fontFamily: "'Outfit', sans-serif", marginBottom: "0.25rem" }}>{item.title}</div>
+                  <div style={{ color: "rgba(255,255,255,0.55)", fontSize: "0.9rem", lineHeight: "1.6" }}>{item.desc}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* SECTION 4C -- SEO/GEO/AIO CLOSER */}
+      {/* ============================================================ */}
+      <section style={{ padding: "6rem 0", background: "var(--bg-color)", textAlign: "center" }}>
+        <div className="container" style={{ maxWidth: "900px" }}>
+          <h2 className="section-title" style={{ color: "var(--text-dark)", fontSize: "clamp(1.75rem, 4vw, 2.75rem)", lineHeight: "1.2", fontFamily: "'Outfit', sans-serif", fontWeight: "900", margin: "0 auto", maxWidth: "800px" }}>
+            Most agencies optimize for Google alone. We optimize for every system your buyer uses to make a decision.
+          </h2>
         </div>
       </section>
 
@@ -466,7 +514,7 @@ const Home = () => {
               $4,500 <span style={{ color: "rgba(255,255,255,0.4)", fontWeight: "500", fontSize: "1.25rem" }}>to build it</span> + $1,500/mo <span style={{ color: "rgba(255,255,255,0.4)", fontWeight: "500", fontSize: "1.25rem" }}>to grow it</span>
             </div>
             <p style={{ color: "var(--industrial-orange)", fontSize: "0.95rem", fontWeight: "600", marginTop: "1.5rem", marginBottom: "0" }}>
-              Price increases to $6,000 in May 2026 when the Sales Training module launches.
+              Price increases to $6,000 in June 2026 when the Sales Training module launches.
             </p>
           </div>
 
@@ -546,6 +594,86 @@ const Home = () => {
 
 
       {/* ============================================================ */}
+      {/* SECTION 6B -- HOW WE WORK */}
+      {/* ============================================================ */}
+      <section style={{ padding: "8rem 0", background: "var(--dark-bg)" }} className="dark-section blueprint-bg">
+        <div className="container" style={{ maxWidth: "1100px" }}>
+          <div style={{ textAlign: "center", marginBottom: "4rem" }}>
+            <div style={{ color: "var(--industrial-orange)", fontSize: "0.8125rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "1rem" }}>
+              How We Work
+            </div>
+            <h2 className="section-title" style={{ color: "white", marginBottom: "1rem" }}>
+              A process this thorough is rare. That's the point.
+            </h2>
+            <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "1.05rem", lineHeight: "1.8", maxWidth: "750px", margin: "0 auto" }}>
+              Most agencies hand you a website and disappear. We run a 16-phase delivery system &mdash; the same rigor Fortune 500 companies pay consultants to design, built for manufacturers and industrial businesses in Texas.
+            </p>
+          </div>
+
+          {/* Stats row */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1.5rem", marginBottom: "3rem" }}>
+            {[
+              { num: "250+", label: "Checkpoints cleared before we call it done" },
+              { num: "16", label: "Phases from discovery to ongoing retainer" },
+              { num: "90-Day", label: "Results guarantee — or we keep working" },
+            ].map((s, i) => (
+              <div key={i} style={{ padding: "1.5rem", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "var(--border-radius)", textAlign: "center" }}>
+                <div style={{ fontSize: "2rem", fontWeight: "900", color: "var(--industrial-orange)", fontFamily: "'Outfit', sans-serif", lineHeight: "1", marginBottom: "0.5rem" }}>{s.num}</div>
+                <div style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.5)", fontWeight: "500", lineHeight: "1.4" }}>{s.label}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Phase cards grid */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1rem", marginBottom: "3rem" }}>
+            {[
+              { num: "Phase 0", name: "Discovery & Onboarding", detail: "18 checkpoints" },
+              { num: "Phase 1", name: "Audit Suite", detail: "6 audits delivered to client" },
+              { num: "Phase 2", name: "Infrastructure", detail: "Domain, Cloudflare, SSL, Git" },
+              { num: "Phase 3", name: "Design & Build", detail: "Mobile, cross-browser, client-approved" },
+              { num: "Phase 4", name: "Analytics & Tracking", detail: "GA4, GSC, GTM, conversions" },
+              { num: "Phase 5", name: "SEO Foundation", detail: "Schema, sitemap, keywords mapped" },
+              { num: "Phase 6", name: "Service + City Pages", detail: "Local landing pages per market" },
+              { num: "Phase 7", name: "Google Business Profile", detail: "Fully optimized, review system live" },
+              { num: "Phase 8", name: "Directory Citations", detail: "12+ directories, NAP verified" },
+              { num: "Phase 9", name: "PageSpeed & Technical", detail: "85+ score, Core Web Vitals green" },
+              { num: "Phases 10-12", name: "Content & Growth", detail: "90 days of SEO content, GBP posts, backlinks" },
+              { num: "Phases 13-16", name: "Reporting & Retainer", detail: "Monthly reports, ongoing optimization" },
+            ].map((p, i) => (
+              <div key={i} style={{
+                padding: "1.25rem 1.5rem",
+                background: "rgba(255,255,255,0.03)",
+                border: "1px solid rgba(255,255,255,0.08)",
+                borderRadius: "var(--border-radius)",
+                transition: "border-color 0.2s ease, box-shadow 0.2s ease",
+              }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = "rgba(255,107,0,0.3)"; e.currentTarget.style.boxShadow = "0 2px 12px rgba(255,107,0,0.08)"; }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)"; e.currentTarget.style.boxShadow = "none"; }}
+              >
+                <div style={{ fontSize: "0.7rem", fontWeight: "700", color: "var(--industrial-orange)", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "0.4rem" }}>{p.num}</div>
+                <div style={{ fontSize: "0.95rem", fontWeight: "700", color: "#fff", fontFamily: "'Outfit', sans-serif", marginBottom: "0.35rem", lineHeight: "1.3" }}>{p.name}</div>
+                <div style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.45)", lineHeight: "1.4" }}>{p.detail}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Guarantee callout */}
+          <div style={{ borderLeft: "3px solid var(--industrial-orange)", background: "rgba(255,107,0,0.05)", padding: "1.25rem 1.75rem", borderRadius: "0 var(--border-radius) var(--border-radius) 0", marginBottom: "2.5rem" }}>
+            <p style={{ margin: 0, fontSize: "1rem", color: "rgba(255,255,255,0.8)", lineHeight: "1.7", fontWeight: "400" }}>
+              <strong style={{ color: "#fff" }}>90-day guarantee:</strong> If your Google Search Console impressions don&rsquo;t increase by at least 50% within 90 days of launch, we keep working &mdash; at no additional cost &mdash; until they do.
+            </p>
+          </div>
+
+          {/* Footnote */}
+          <p style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.35)", textAlign: "center", margin: 0 }}>
+            Every project includes a QA gate at the end of each phase. Work doesn&rsquo;t advance until it passes.
+          </p>
+        </div>
+      </section>
+
+
+
+      {/* ============================================================ */}
       {/* SECTION 7 -- ABOUT */}
       {/* ============================================================ */}
       <section style={{ padding: "8rem 0", background: "var(--dark-bg)" }} className="dark-section blueprint-bg">
@@ -558,7 +686,7 @@ const Home = () => {
               Built by someone who's been on your plant floor.
             </h2>
             <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "1.125rem", lineHeight: "1.75", maxWidth: "800px" }}>
-              Maker Web Studios was founded by Guillermo Aristi &mdash; a 16-year manufacturing veteran with GMP, ISO 9001, and SQF certifications who built and exited a regulated manufacturing facility in Texas. This isn't an agency that learned about manufacturing from a Google search. We know what a maquila operation looks like. We know what C-TPAT means. We know why your ISO certification matters to a procurement manager doing supplier qualification &mdash; and exactly where to put it on your homepage so they see it in the first 8 seconds. We speak manufacturer. Because we are one.
+              Maker Web Studios was founded by Guillermo Aristi &mdash; a 16-year manufacturing veteran with GMP, ISO 9001, and SQF certifications who built and exited a regulated manufacturing facility in Texas. This isn't an agency that learned about manufacturing from a Google search. We know what a maquila operation looks like. We've written SOPs, run HPLC analyses, and walked clean rooms. We know the difference between a COA and a batch record &mdash; and why your GMP and ISO certifications matter to a procurement manager doing supplier qualification. We know exactly where to put it on your homepage so they see it in the first 8 seconds. We speak manufacturer. Because we are one.
             </p>
           </div>
 
@@ -592,7 +720,7 @@ const Home = () => {
             We only take 3 new Revenue Builder clients per month.
           </h2>
           <p style={{ fontSize: "1.125rem", color: "var(--text-muted)", textAlign: "center", marginBottom: "2rem", lineHeight: "1.75", fontWeight: "500", opacity: 0.9, maxWidth: "650px" }}>
-            Not as a marketing tactic &mdash; as a quality commitment. Every client gets our full attention from discovery to launch. Three slots means your project never gets deprioritized. The May 2026 price increase to $6,000 is real. If you&rsquo;re reading this before then, you&rsquo;re looking at the last months of the $4,500 build rate.
+            Not as a marketing tactic &mdash; as a quality commitment. Every client gets our full attention from discovery to launch. Three slots means your project never gets deprioritized. The June 2026 price increase to $6,000 is real. If you&rsquo;re reading this before then, you&rsquo;re looking at the last months of the $4,500 build rate.
           </p>
 
           {/* Curiosity hook (#49) */}

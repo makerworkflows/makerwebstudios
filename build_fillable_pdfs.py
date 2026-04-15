@@ -33,7 +33,7 @@ MWS_DIR = "/Users/guillermo/Desktop/Rex/Rex/projects/Maker Web Studios"
 
 # ── Document configurations: which fields each form needs ──────────────────
 DOC_CONFIG = {
-    "MWS-CT01 - Client Services Agreement": {
+    "LEG-CT01-MWS - Client Services Agreement": {
         "title": "CLIENT SERVICES AGREEMENT",
         "subtitle": "Master Services Agreement between Maker Web Studios and Client",
         "fields": [
@@ -46,7 +46,7 @@ DOC_CONFIG = {
         ],
         "needs_signature": True,
     },
-    "MWS-CT02 - Statement of Work Template": {
+    "LEG-CT02-MWS - Statement of Work Template": {
         "title": "STATEMENT OF WORK",
         "subtitle": "SOW under the Master Services Agreement",
         "fields": [
@@ -60,7 +60,7 @@ DOC_CONFIG = {
         ],
         "needs_signature": True,
     },
-    "MWS-CT03 - Monthly Retainer Agreement": {
+    "LEG-CT03-MWS - Monthly Retainer Agreement": {
         "title": "MONTHLY RETAINER AGREEMENT",
         "subtitle": "Ongoing services under monthly retainer",
         "fields": [
@@ -73,7 +73,7 @@ DOC_CONFIG = {
         ],
         "needs_signature": True,
     },
-    "MWS-CT04 - Non-Disclosure Agreement": {
+    "LEG-CT04-MWS - Non-Disclosure Agreement": {
         "title": "NON-DISCLOSURE AGREEMENT",
         "subtitle": "Mutual Confidentiality Agreement",
         "fields": [
@@ -85,7 +85,7 @@ DOC_CONFIG = {
         ],
         "needs_signature": True,
     },
-    "MWS-CT05 - Website Maintenance Agreement": {
+    "LEG-CT05-MWS - Website Maintenance Agreement": {
         "title": "WEBSITE MAINTENANCE AGREEMENT",
         "subtitle": "Care Plan and Ongoing Support Services",
         "fields": [
@@ -97,7 +97,7 @@ DOC_CONFIG = {
         ],
         "needs_signature": True,
     },
-    "MWS-IN01 - Invoice Template": {
+    "FIN-IN01-MWS - Invoice Template": {
         "title": "INVOICE",
         "subtitle": "Maker Web Studios | Mission, TX | hello@makerwebstudios.com",
         "fields": [

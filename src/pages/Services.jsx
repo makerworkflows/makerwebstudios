@@ -200,6 +200,57 @@ const Services = () => (
       <p className="sequence-line">
         The $4,500 builds the factory. The $1,500/month runs it.
       </p>
+
+      {/* 90-Day Confidence Guarantee */}
+      <div className="guarantee-banner reveal-anim" style={{
+        maxWidth: "900px",
+        margin: "5rem auto 0",
+        padding: "3rem 3.5rem",
+        background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
+        borderRadius: "16px",
+        border: "1px solid rgba(255, 107, 0, 0.3)",
+        textAlign: "center",
+        position: "relative",
+        overflow: "hidden",
+      }}>
+        <div style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          height: "3px",
+          background: "linear-gradient(90deg, transparent, var(--industrial-orange), transparent)",
+        }} />
+        <div style={{
+          fontSize: "0.75rem",
+          fontWeight: "700",
+          textTransform: "uppercase",
+          letterSpacing: "0.15em",
+          color: "var(--industrial-orange)",
+          marginBottom: "1rem",
+        }}>
+          90-Day Confidence Guarantee
+        </div>
+        <h3 style={{
+          fontFamily: "var(--font-display)",
+          fontSize: "1.6rem",
+          fontWeight: "700",
+          color: "#fff",
+          marginBottom: "1.25rem",
+          lineHeight: "1.3",
+        }}>
+          If your search impressions haven't increased by at least 50% in 90 days, we work the next month free.
+        </h3>
+        <p style={{
+          color: "rgba(255, 255, 255, 0.6)",
+          fontSize: "1rem",
+          lineHeight: "1.7",
+          maxWidth: "650px",
+          margin: "0 auto",
+        }}>
+          We build the infrastructure that makes ranking inevitable — service pages, schema markup, sitemap, Google Business Profile, directory citations. The work virtually guarantees increased visibility. We put our time on the line because we know the system works.
+        </p>
+      </div>
     </div>
 
     <style>{`

@@ -440,6 +440,55 @@ a:hover {
   align-items: center;
 }
 
+/* Mobile Bottom Bar */
+.mobile-bottom-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #0D1B2A;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 9999;
+  padding: 0.5rem 0;
+  padding-bottom: calc(0.5rem + env(safe-area-inset-bottom));
+  gap: 0;
+  justify-content: space-evenly;
+}
+
+.bottom-bar-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  flex: 1;
+  text-align: center;
+}
+
+.bottom-bar-btn:hover,
+.bottom-bar-btn:active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.bottom-bar-cta {
+  color: #FF6B00;
+}
+
+.bottom-bar-cta:hover,
+.bottom-bar-cta:active {
+  color: #FF6B00;
+  background: rgba(255, 107, 0, 0.15);
+}
+
 /* Footer Styling */
 .footer {
   padding: 5rem 0 2rem;
@@ -568,9 +617,21 @@ a:hover {
     display: none; /* Hide text links on mobile for now, focus on buttons */
   }
 
+  .nav-phone-text {
+    display: none !important;
+  }
+
+  .mobile-bottom-bar {
+    display: flex !important;
+  }
+
+  .footer {
+    padding-bottom: 4.5rem !important;
+  }
+
   .nav-button-group .btn-sm {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.75rem;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.65rem;
   }
 
   .footer-grid {
@@ -584,16 +645,16 @@ a:hover {
   }
 
   .navbar-logo {
-    height: 32px;
+    height: 36px;
   }
 
   .nav-button-group {
-    gap: 0.5rem;
+    gap: 0.75rem;
   }
 
   .nav-button-group .btn-sm {
-    padding: 0.4rem 0.5rem;
-    font-size: 0.65rem;
+    padding: 0.35rem 0.5rem;
+    font-size: 0.6rem;
   }
 
   .theme-toggle {
