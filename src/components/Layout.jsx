@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import CookieBanner from "./CookieBanner";
 
 const Layout = ({ children }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -100,7 +101,7 @@ const Layout = ({ children }) => {
             </div>
           </div>
           <div className="footer-bottom">
-            <div>&copy; {new Date().getFullYear()} Maker Web Studios. The Revenue Builder System is a proprietary framework of Maker Web Studios.</div>
+            <div>&copy; {new Date().getFullYear()} Maker Web Studios. The Revenue Builder System is a proprietary framework of Maker Web Studios. &nbsp;|&nbsp; <a href="/privacy" style={{ color: "rgba(255,255,255,0.5)", textDecoration: "none" }}>Privacy Policy</a></div>
             <a
               href="https://www.linkedin.com/company/makerwebstudios/"
               target="_blank"
@@ -125,6 +126,8 @@ const Layout = ({ children }) => {
           </div>
         </div>
       </footer>
+
+      <CookieBanner />
 
       {/* Mobile Bottom Bar -- phone + email, visible only on mobile */}
       <div className="mobile-bottom-bar">
