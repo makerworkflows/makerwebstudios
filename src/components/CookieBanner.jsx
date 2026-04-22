@@ -1,27 +1,39 @@
 import { useState, useEffect } from "react";
 
+function loadRB2B() {
+  if (window.reb2b) return;
+  window.reb2b = { loaded: true };
+  var s = document.createElement("script");
+  s.async = true;
+  s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/1N5W0H7QP1O5/1N5W0H7QP1O5.js.gz";
+  document.head.appendChild(s);
+}
+
 const CookieBanner = () => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const consent = localStorage.getItem("mws_cookie_consent");
-    if (!consent) {
-      // Small delay so it doesn't flash on page load
+    if (consent === "accepted") {
+      // Previously accepted -- load tracking scripts immediately
+      loadRB2B();
+    } else if (!consent) {
+      // No choice yet -- show banner after a short delay
       const timer = setTimeout(() => setVisible(true), 1500);
       return () => clearTimeout(timer);
     }
+    // If "declined", do nothing -- no tracking, no banner
   }, []);
 
   const accept = () => {
     localStorage.setItem("mws_cookie_consent", "accepted");
     setVisible(false);
+    loadRB2B();
   };
 
   const decline = () => {
     localStorage.setItem("mws_cookie_consent", "declined");
     setVisible(false);
-    // Disable GA4 tracking
-    window["ga-disable-G-XXXXXXXXXX"] = true;
   };
 
   if (!visible) return null;
