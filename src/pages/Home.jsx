@@ -611,7 +611,7 @@ const Home = () => {
           </div>
 
           {/* Stats row */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1.5rem", marginBottom: "3rem" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem", marginBottom: "3rem" }}>
             {[
               { num: "250+", label: "Checkpoints cleared before we call it done" },
               { num: "16", label: "Phases from discovery to ongoing retainer" },
@@ -668,6 +668,34 @@ const Home = () => {
           <p style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.35)", textAlign: "center", margin: 0 }}>
             Every project includes a QA gate at the end of each phase. Work doesn&rsquo;t advance until it passes.
           </p>
+        </div>
+      </section>
+
+
+
+      {/* ============================================================ */}
+      {/* SECTION 6C -- PORTFOLIO TEASER */}
+      {/* ============================================================ */}
+      <section style={{ padding: "8rem 0", background: "var(--bg-color)", textAlign: "center" }} className="blueprint-bg">
+        <div className="container" style={{ maxWidth: "750px", margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center" }}>
+          <div style={{ color: "var(--industrial-orange)", fontSize: "0.8125rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "1rem" }}>
+            Portfolio
+          </div>
+          <h2 className="section-title" style={{ marginBottom: "1.5rem" }}>
+            Built for Manufacturers.<br />
+            <span className="text-accent">By a Manufacturer.</span>
+          </h2>
+          <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "1.25rem", lineHeight: "1.75", maxWidth: "700px", marginBottom: "2.5rem" }}>
+            Every project started the same way: a great company with a terrible website.
+          </p>
+          <a
+            href="/portfolio"
+            className="btn btn-primary btn-lg-premium"
+            style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem" }}
+          >
+            See Our Work
+            <ArrowRight size={18} />
+          </a>
         </div>
       </section>
 
